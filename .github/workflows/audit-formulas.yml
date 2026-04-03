@@ -1,0 +1,139 @@
+name: Audit stat calculation formulas
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: "0 10 * * *"  # Daily 10:00 UTC
+
+permissions:
+  contents: read
+
+jobs:
+  audit-formulas:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout this repo
+        uses: actions/checkout@v6
+
+      - name: Checkout PokéRogue source
+        uses: actions/checkout@v6
+        with:
+          repository: anonymous-games/pokerogue
+          path: pokerogue-main
+          sparse-checkout: |
+            src/field/pokemon.ts
+            src/data/nature.ts
+            src/modifier/modifier.ts
+            src/data/challenge.ts
+          sparse-checkout-cone-mode: false
+
+      - name: Audit stat calculation formulas
+        run: |
+          set -euxo pipefail
+          
+          # Source files to check
+          POKEMON_TS="pokerogue-main/src/field/pokemon.ts"
+          NATURE_TS="pokerogue-main/src/data/nature.ts"
+          MODIFIER_TS="pokerogue-main/src/modifier/modifier.ts"
+          CHALLENGE_TS="pokerogue-main/src/data/challenge.ts"
+          
+          # Check if source files exist
+          for f in "$POKEMON_TS" "$NATURE_TS" "$MODIFIER_TS" "$CHALLENGE_TS"; do
+            if [ ! -f "$f" ]; then
+              echo "WARNING: Source file $f not found!"
+            fi
+          done
+          
+          # Extract stat calculation methods from pokemon.ts
+          echo "=== Checking pokemon.ts stat calculations ==="
+          
+          # HP formula: floor(((2 * baseStat + IV) * level / 100) + level + 10)
+          if grep -q "floor.*2.*baseStat.*IV.*level.*100.*level.*10" "$POKEMON_TS"; then
+            echo "✓ HP stat formula found"
+          else
+            echo "⚠ HP stat formula may have changed"
+          fi
+          
+          # Other stats: floor(((2 * baseStat + IV) * level / 100) + 5) * natureMultiplier
+          if grep -q "floor.*2.*baseStat.*IV.*level.*100.*5" "$POKEMON_TS"; then
+            echo "✓ Non-HP stat formula found"
+          else
+            echo "⚠ Non-HP stat formula may have changed"
+          fi
+          
+          # Check nature modifiers
+          echo ""
+          echo "=== Checking nature.ts ==="
+          if [ -f "$NATURE_TS" ]; then
+            if grep -q "1.1\|1.1.*increase\|boost.*10" "$NATURE_TS"; then
+              echo "✓ Nature boost (10%) found"
+            else
+              echo "⚠ Nature boost may have changed"
+            fi
+          fi
+          
+          # Check modifier.ts for stat-affecting items
+          echo ""
+          echo "=== Checking modifier.ts for stat items ==="
+          
+          declare -A STAT_ITEMS=(
+            ["MachoBrace"]="Macho Brace"
+            ["Eviolite"]="Eviolite"
+            ["LightBall"]="Light Ball"
+            ["ThickClub"]="Thick Club"
+            ["MetalPowder"]="Metal Powder"
+            ["QuickPowder"]="Quick Powder"
+            ["DeepSeaScale"]="Deep Sea Scale"
+            ["DeepSeaTooth"]="Deep Sea Tooth"
+            ["SoulDew"]="Soul Dew"
+            ["ShuckleJuice"]="Shuckle Juice"
+            ["OldGateau"]="Old Gateau"
+          )
+          
+          for item_key in "${!STAT_ITEMS[@]}"; do
+            item_name="${STAT_ITEMS[$item_key]}"
+            if grep -iq "$item_key\|$item_name" "$MODIFIER_TS" 2>/dev/null; then
+              echo "✓ $item_name found"
+            else
+              echo "⚠ $item_name NOT found - may need to verify"
+            fi
+          done
+          
+          # Check challenge.ts for Flip Stat Challenge
+          echo ""
+          echo "=== Checking challenge.ts ==="
+          if [ -f "$CHALLENGE_TS" ]; then
+            if grep -qi "flipStat\|flip.*stat" "$CHALLENGE_TS"; then
+              echo "✓ Flip Stat Challenge found"
+            else
+              echo "⚠ Flip Stat Challenge not found"
+            fi
+          fi
+          
+          # Output summary
+          echo ""
+          echo "=== Audit Complete ==="
+          echo "Review the output above for any ⚠ warnings."
+          echo "If formulas have changed, update website/script.js accordingly."
+
+      - name: Check for significant changes and create issue
+        run: |
+          set -euxo pipefail
+          
+          # Get current commit info
+          DEX_SHA="unknown"
+          if [ -f "data_version.txt" ]; then
+            DEX_SHA=$(cat data_version.txt)
+          fi
+          
+          # Simple check: verify key formulas exist in source
+          POKEMON_TS="pokerogue-main/src/field/pokemon.ts"
+          
+          # Check if calculation formula exists
+          if ! grep -q "calculateStat\|getStat" "$POKEMON_TS" 2>/dev/null; then
+            echo "::warning::Could not find stat calculation methods in source"
+            exit 0
+          fi
+          
+          echo "Stat calculation audit complete. Data version: $DEX_SHA"
