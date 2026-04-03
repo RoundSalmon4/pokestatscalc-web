@@ -18,6 +18,27 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    position: relative;
+}
+
+.top-links {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.external-link {
+    color: #4ecdc4;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 6px 12px;
+    background: #3a3a3a;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.external-link:hover {
+    background: #4a4a4a;
 }
 
 h1 {
@@ -51,11 +72,12 @@ h4 small {
     display: flex;
     gap: 20px;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     padding: 15px;
     background: #3a3a3a;
     border-radius: 8px;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .controls-bar label {
@@ -93,7 +115,7 @@ h4 small {
     margin-bottom: 20px;
 }
 
-.btn-primary, .btn-danger {
+.btn-primary, .btn-secondary, .btn-danger {
     padding: 12px 24px;
     border: none;
     border-radius: 4px;
@@ -109,6 +131,15 @@ h4 small {
 
 .btn-primary:hover {
     background: #ff5252;
+}
+
+.btn-secondary {
+    background: #4ecdc4;
+    color: #2a2a2a;
+}
+
+.btn-secondary:hover {
+    background: #45b7af;
 }
 
 .btn-danger {
