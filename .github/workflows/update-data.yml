@@ -23,6 +23,7 @@ jobs:
         id: fetch
         run: |
           set -euxo pipefail
+          mkdir -p lang
 
           # Download SearchDex data (generated from the PokéRogue game source)
           curl -fL -o pokedex_data.js \
