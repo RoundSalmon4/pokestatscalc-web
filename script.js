@@ -547,27 +547,28 @@ function drawStatPentagon(stats) {
     if (!canvas) return;
     
     // If no stats provided, calculate from current IV inputs (default 15)
+    // NOTE: Do NOT apply held items to pentagon - it should show base stat potential (IVs), not final stats
     if (!stats && selectedPokemon) {
         const pokemon = POKEMON_DATA[selectedPokemon];
         const level = parseInt(document.getElementById('level').value) || 50;
         const natureName = document.getElementById('nature').value;
         const ivs = STAT_KEYS.map(key => parseInt(document.getElementById(`iv${key}`).value) || 15);
         
-        // Get base stats with Flip Stat, Shuckle Juice, Old Gateau
+        // Get base stats with Flip Stat, Shuckle Juice, Old Gateau only (not held items)
         let baseStats = [pokemon.hp, pokemon.attack, pokemon.defense, pokemon.spAttack, pokemon.spDefense, pokemon.speed];
         if (document.getElementById('flipStat')?.checked) baseStats = applyFlipStat(baseStats);
         if (document.getElementById('shuckleJuice')?.checked) baseStats = applyShuckleJuice(baseStats);
         if (document.getElementById('oldGateau')?.checked) baseStats = applyOldGateau(baseStats);
         
-        // Apply held items
-        const machoBrace = parseInt(document.getElementById('machoBrace').value) || 0;
-        baseStats = applyHeldItems(baseStats, selectedPokemon, machoBrace, ivs);
+        // Apply vitamins to base stats (part of base stat potential)
+        const vitamins = getVitamins();
+        baseStats = applyVitaminsToBaseStats(baseStats, vitamins);
         
         stats = {};
         STAT_KEYS.forEach((key, i) => {
             const base = baseStats[i];
             let natureMult = getNatureMultiplier(natureName, key);
-            // Apply Soul Dew
+            // Apply Soul Dew (nature modifier)
             const soulDew = parseInt(document.getElementById('soulDew').value) || 0;
             if (natureMult !== 1.0 && soulDew > 0) {
                 const sign = natureMult > 1 ? 1 : -1;
