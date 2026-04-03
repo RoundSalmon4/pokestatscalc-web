@@ -19,7 +19,7 @@ jobs:
       - name: Checkout PokéRogue source
         uses: actions/checkout@v6
         with:
-          repository: anonymous-games/pokerogue
+          repository: pagefaultgames/pokerogue
           path: pokerogue-main
           sparse-checkout: |
             src/field/pokemon.ts
