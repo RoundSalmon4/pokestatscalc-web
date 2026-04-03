@@ -1,5 +1,6 @@
 const POKEMON_DATA = {
   "Bulbasaur": {
+    "name": "Bulbasaur",
     "id": 1,
     "hp": 45,
     "attack": 49,
@@ -12,10 +13,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Overgrow, Chlorophyll",
     "passive": "Grassy Surge",
-    "evolution": "Bulbasaur, Ivysaur, Venusaur, Mega Venusaur, Gigantamax Venusaur",
+    "evolution line": "Bulbasaur, Ivysaur, Venusaur, Mega Venusaur, Gigantamax Venusaur",
     "img": "1"
   },
   "Ivysaur": {
+    "name": "Ivysaur",
     "id": 2,
     "hp": 60,
     "attack": 62,
@@ -28,10 +30,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Overgrow, Chlorophyll",
     "passive": "Grassy Surge",
-    "evolution": "Bulbasaur, Ivysaur, Venusaur, Mega Venusaur, Gigantamax Venusaur",
+    "evolution line": "Bulbasaur, Ivysaur, Venusaur, Mega Venusaur, Gigantamax Venusaur",
     "img": "2"
   },
   "Venusaur": {
+    "name": "Venusaur",
     "id": 3,
     "hp": 80,
     "attack": 82,
@@ -44,10 +47,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Overgrow, Chlorophyll",
     "passive": "Grassy Surge",
-    "evolution": "Bulbasaur, Ivysaur, Venusaur, Mega Venusaur, Gigantamax Venusaur",
+    "evolution line": "Bulbasaur, Ivysaur, Venusaur, Mega Venusaur, Gigantamax Venusaur",
     "img": "3"
   },
   "Mega Venusaur": {
+    "name": "Mega Venusaur",
     "id": 3,
     "hp": 80,
     "attack": 100,
@@ -60,10 +64,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Thick Fat",
     "passive": "Seed Sower",
-    "evolution": "Bulbasaur, Ivysaur, Venusaur, Mega Venusaur, Gigantamax Venusaur",
+    "evolution line": "Bulbasaur, Ivysaur, Venusaur, Mega Venusaur, Gigantamax Venusaur",
     "img": "3-mega"
   },
   "Gigantamax Venusaur": {
+    "name": "Gigantamax Venusaur",
     "id": 3,
     "hp": 120,
     "attack": 122,
@@ -76,10 +81,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Effect Spore",
     "passive": "Flower Veil",
-    "evolution": "Bulbasaur, Ivysaur, Venusaur, Mega Venusaur, Gigantamax Venusaur",
+    "evolution line": "Bulbasaur, Ivysaur, Venusaur, Mega Venusaur, Gigantamax Venusaur",
     "img": "3-gigantamax"
   },
   "Charmander": {
+    "name": "Charmander",
     "id": 4,
     "hp": 39,
     "attack": 52,
@@ -92,10 +98,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Blaze, Solar Power",
     "passive": "Sheer Force",
-    "evolution": "Charmander, Charmeleon, Charizard, Mega X Charizard, Mega Y Charizard, Gigantamax Charizard",
+    "evolution line": "Charmander, Charmeleon, Charizard, Mega X Charizard, Mega Y Charizard, Gigantamax Charizard",
     "img": "4"
   },
   "Charmeleon": {
+    "name": "Charmeleon",
     "id": 5,
     "hp": 58,
     "attack": 64,
@@ -108,10 +115,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Blaze, Solar Power",
     "passive": "Sheer Force",
-    "evolution": "Charmander, Charmeleon, Charizard, Mega X Charizard, Mega Y Charizard, Gigantamax Charizard",
+    "evolution line": "Charmander, Charmeleon, Charizard, Mega X Charizard, Mega Y Charizard, Gigantamax Charizard",
     "img": "5"
   },
   "Charizard": {
+    "name": "Charizard",
     "id": 6,
     "hp": 78,
     "attack": 84,
@@ -124,10 +132,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Blaze, Solar Power",
     "passive": "Battle Bond",
-    "evolution": "Charmander, Charmeleon, Charizard, Mega X Charizard, Mega Y Charizard, Gigantamax Charizard",
+    "evolution line": "Charmander, Charmeleon, Charizard, Mega X Charizard, Mega Y Charizard, Gigantamax Charizard",
     "img": "6"
   },
   "Mega X Charizard": {
+    "name": "Mega X Charizard",
     "id": 6,
     "hp": 78,
     "attack": 130,
@@ -140,10 +149,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Tough Claws",
     "passive": "Levitate",
-    "evolution": "Charmander, Charmeleon, Charizard, Mega X Charizard, Mega Y Charizard, Gigantamax Charizard",
+    "evolution line": "Charmander, Charmeleon, Charizard, Mega X Charizard, Mega Y Charizard, Gigantamax Charizard",
     "img": "6-mega-x"
   },
   "Mega Y Charizard": {
+    "name": "Mega Y Charizard",
     "id": 6,
     "hp": 78,
     "attack": 104,
@@ -156,10 +166,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Drought",
     "passive": "Turboblaze",
-    "evolution": "Charmander, Charmeleon, Charizard, Mega X Charizard, Mega Y Charizard, Gigantamax Charizard",
+    "evolution line": "Charmander, Charmeleon, Charizard, Mega X Charizard, Mega Y Charizard, Gigantamax Charizard",
     "img": "6-mega-y"
   },
   "Gigantamax Charizard": {
+    "name": "Gigantamax Charizard",
     "id": 6,
     "hp": 118,
     "attack": 99,
@@ -172,10 +183,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Berserk",
     "passive": "Unnerve",
-    "evolution": "Charmander, Charmeleon, Charizard, Mega X Charizard, Mega Y Charizard, Gigantamax Charizard",
+    "evolution line": "Charmander, Charmeleon, Charizard, Mega X Charizard, Mega Y Charizard, Gigantamax Charizard",
     "img": "6-gigantamax"
   },
   "Squirtle": {
+    "name": "Squirtle",
     "id": 7,
     "hp": 44,
     "attack": 48,
@@ -188,10 +200,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Torrent, Rain Dish",
     "passive": "Bulletproof",
-    "evolution": "Squirtle, Wartortle, Blastoise, Mega Blastoise, Gigantamax Blastoise",
+    "evolution line": "Squirtle, Wartortle, Blastoise, Mega Blastoise, Gigantamax Blastoise",
     "img": "7"
   },
   "Wartortle": {
+    "name": "Wartortle",
     "id": 8,
     "hp": 59,
     "attack": 63,
@@ -204,10 +217,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Torrent, Rain Dish",
     "passive": "Bulletproof",
-    "evolution": "Squirtle, Wartortle, Blastoise, Mega Blastoise, Gigantamax Blastoise",
+    "evolution line": "Squirtle, Wartortle, Blastoise, Mega Blastoise, Gigantamax Blastoise",
     "img": "8"
   },
   "Blastoise": {
+    "name": "Blastoise",
     "id": 9,
     "hp": 79,
     "attack": 83,
@@ -220,10 +234,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Torrent, Rain Dish",
     "passive": "Bulletproof",
-    "evolution": "Squirtle, Wartortle, Blastoise, Mega Blastoise, Gigantamax Blastoise",
+    "evolution line": "Squirtle, Wartortle, Blastoise, Mega Blastoise, Gigantamax Blastoise",
     "img": "9"
   },
   "Mega Blastoise": {
+    "name": "Mega Blastoise",
     "id": 9,
     "hp": 79,
     "attack": 103,
@@ -236,10 +251,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Mega Launcher",
     "passive": "Bulletproof",
-    "evolution": "Squirtle, Wartortle, Blastoise, Mega Blastoise, Gigantamax Blastoise",
+    "evolution line": "Squirtle, Wartortle, Blastoise, Mega Blastoise, Gigantamax Blastoise",
     "img": "9-mega"
   },
   "Gigantamax Blastoise": {
+    "name": "Gigantamax Blastoise",
     "id": 9,
     "hp": 119,
     "attack": 108,
@@ -252,10 +268,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Shell Armor",
     "passive": "Bulletproof",
-    "evolution": "Squirtle, Wartortle, Blastoise, Mega Blastoise, Gigantamax Blastoise",
+    "evolution line": "Squirtle, Wartortle, Blastoise, Mega Blastoise, Gigantamax Blastoise",
     "img": "9-gigantamax"
   },
   "Caterpie": {
+    "name": "Caterpie",
     "id": 10,
     "hp": 45,
     "attack": 30,
@@ -268,10 +285,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shield Dust, Run Away",
     "passive": "Gluttony",
-    "evolution": "Caterpie, Metapod, Butterfree, Gigantamax Butterfree",
+    "evolution line": "Caterpie, Metapod, Butterfree, Gigantamax Butterfree",
     "img": "10"
   },
   "Metapod": {
+    "name": "Metapod",
     "id": 11,
     "hp": 50,
     "attack": 20,
@@ -284,10 +302,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shed Skin",
     "passive": "Sturdy",
-    "evolution": "Caterpie, Metapod, Butterfree, Gigantamax Butterfree",
+    "evolution line": "Caterpie, Metapod, Butterfree, Gigantamax Butterfree",
     "img": "11"
   },
   "Butterfree": {
+    "name": "Butterfree",
     "id": 12,
     "hp": 60,
     "attack": 45,
@@ -300,10 +319,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Compound Eyes, Tinted Lens",
     "passive": "Magician",
-    "evolution": "Caterpie, Metapod, Butterfree, Gigantamax Butterfree",
+    "evolution line": "Caterpie, Metapod, Butterfree, Gigantamax Butterfree",
     "img": "12"
   },
   "Gigantamax Butterfree": {
+    "name": "Gigantamax Butterfree",
     "id": 12,
     "hp": 80,
     "attack": 40,
@@ -316,10 +336,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Compound Eyes",
     "passive": "Magician",
-    "evolution": "Caterpie, Metapod, Butterfree, Gigantamax Butterfree",
+    "evolution line": "Caterpie, Metapod, Butterfree, Gigantamax Butterfree",
     "img": "12-gigantamax"
   },
   "Weedle": {
+    "name": "Weedle",
     "id": 13,
     "hp": 40,
     "attack": 35,
@@ -332,10 +353,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Shield Dust, Run Away",
     "passive": "Poison Touch",
-    "evolution": "Weedle, Kakuna, Beedrill, Mega Beedrill",
+    "evolution line": "Weedle, Kakuna, Beedrill, Mega Beedrill",
     "img": "13"
   },
   "Kakuna": {
+    "name": "Kakuna",
     "id": 14,
     "hp": 45,
     "attack": 25,
@@ -348,10 +370,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Shed Skin",
     "passive": "Sturdy",
-    "evolution": "Weedle, Kakuna, Beedrill, Mega Beedrill",
+    "evolution line": "Weedle, Kakuna, Beedrill, Mega Beedrill",
     "img": "14"
   },
   "Beedrill": {
+    "name": "Beedrill",
     "id": 15,
     "hp": 65,
     "attack": 90,
@@ -364,10 +387,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Swarm, Sniper",
     "passive": "Adaptability",
-    "evolution": "Weedle, Kakuna, Beedrill, Mega Beedrill",
+    "evolution line": "Weedle, Kakuna, Beedrill, Mega Beedrill",
     "img": "15"
   },
   "Mega Beedrill": {
+    "name": "Mega Beedrill",
     "id": 15,
     "hp": 65,
     "attack": 150,
@@ -380,10 +404,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Adaptability",
     "passive": "Tinted Lens",
-    "evolution": "Weedle, Kakuna, Beedrill, Mega Beedrill",
+    "evolution line": "Weedle, Kakuna, Beedrill, Mega Beedrill",
     "img": "15-mega"
   },
   "Pidgey": {
+    "name": "Pidgey",
     "id": 16,
     "hp": 40,
     "attack": 45,
@@ -396,10 +421,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Keen Eye, Tangled Feet, Big Pecks",
     "passive": "Sheer Force",
-    "evolution": "Pidgey, Pidgeotto, Pidgeot, Mega Pidgeot",
+    "evolution line": "Pidgey, Pidgeotto, Pidgeot, Mega Pidgeot",
     "img": "16"
   },
   "Pidgeotto": {
+    "name": "Pidgeotto",
     "id": 17,
     "hp": 63,
     "attack": 60,
@@ -412,10 +438,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Keen Eye, Tangled Feet, Big Pecks",
     "passive": "Sheer Force",
-    "evolution": "Pidgey, Pidgeotto, Pidgeot, Mega Pidgeot",
+    "evolution line": "Pidgey, Pidgeotto, Pidgeot, Mega Pidgeot",
     "img": "17"
   },
   "Pidgeot": {
+    "name": "Pidgeot",
     "id": 18,
     "hp": 83,
     "attack": 80,
@@ -428,10 +455,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Keen Eye, Tangled Feet, Big Pecks",
     "passive": "Sheer Force",
-    "evolution": "Pidgey, Pidgeotto, Pidgeot, Mega Pidgeot",
+    "evolution line": "Pidgey, Pidgeotto, Pidgeot, Mega Pidgeot",
     "img": "18"
   },
   "Mega Pidgeot": {
+    "name": "Mega Pidgeot",
     "id": 18,
     "hp": 83,
     "attack": 80,
@@ -444,10 +472,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "No Guard",
     "passive": "Sheer Force",
-    "evolution": "Pidgey, Pidgeotto, Pidgeot, Mega Pidgeot",
+    "evolution line": "Pidgey, Pidgeotto, Pidgeot, Mega Pidgeot",
     "img": "18-mega"
   },
   "Rattata": {
+    "name": "Rattata",
     "id": 19,
     "hp": 30,
     "attack": 56,
@@ -460,10 +489,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Run Away, Guts, Hustle",
     "passive": "Strong Jaw",
-    "evolution": "Rattata, Raticate",
+    "evolution line": "Rattata, Raticate",
     "img": "19"
   },
   "Raticate": {
+    "name": "Raticate",
     "id": 20,
     "hp": 55,
     "attack": 81,
@@ -476,10 +506,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Run Away, Guts, Hustle",
     "passive": "Strong Jaw",
-    "evolution": "Rattata, Raticate",
+    "evolution line": "Rattata, Raticate",
     "img": "20"
   },
   "Spearow": {
+    "name": "Spearow",
     "id": 21,
     "hp": 40,
     "attack": 60,
@@ -492,10 +523,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Keen Eye, Sniper",
     "passive": "Speed Boost",
-    "evolution": "Spearow, Fearow",
+    "evolution line": "Spearow, Fearow",
     "img": "21"
   },
   "Fearow": {
+    "name": "Fearow",
     "id": 22,
     "hp": 65,
     "attack": 90,
@@ -508,10 +540,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Keen Eye, Sniper",
     "passive": "Speed Boost",
-    "evolution": "Spearow, Fearow",
+    "evolution line": "Spearow, Fearow",
     "img": "22"
   },
   "Ekans": {
+    "name": "Ekans",
     "id": 23,
     "hp": 35,
     "attack": 60,
@@ -524,10 +557,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Intimidate, Shed Skin, Unnerve",
     "passive": "Regenerator",
-    "evolution": "Ekans, Arbok",
+    "evolution line": "Ekans, Arbok",
     "img": "23"
   },
   "Arbok": {
+    "name": "Arbok",
     "id": 24,
     "hp": 60,
     "attack": 95,
@@ -540,10 +574,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Intimidate, Shed Skin, Unnerve",
     "passive": "Regenerator",
-    "evolution": "Ekans, Arbok",
+    "evolution line": "Ekans, Arbok",
     "img": "24"
   },
   "Pikachu": {
+    "name": "Pikachu",
     "id": 25,
     "hp": 35,
     "attack": 55,
@@ -556,10 +591,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Lightning Rod",
     "passive": "Electric Surge",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
+    "evolution line": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "25"
   },
   "Partner Pikachu": {
+    "name": "Partner Pikachu",
     "id": 25,
     "hp": 45,
     "attack": 80,
@@ -572,10 +608,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Lightning Rod",
     "passive": "Sturdy",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
+    "evolution line": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "25-partner"
   },
   "Cosplay Pikachu": {
+    "name": "Cosplay Pikachu",
     "id": 25,
     "hp": 45,
     "attack": 80,
@@ -588,10 +625,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Lightning Rod",
     "passive": "Costar",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
+    "evolution line": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "25-cosplay"
   },
   "Cool Cosplay Pikachu": {
+    "name": "Cool Cosplay Pikachu",
     "id": 25,
     "hp": 45,
     "attack": 80,
@@ -604,10 +642,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Lightning Rod",
     "passive": "Iron Fist",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
+    "evolution line": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "25-cool-cosplay"
   },
   "Beauty Cosplay Pikachu": {
+    "name": "Beauty Cosplay Pikachu",
     "id": 25,
     "hp": 45,
     "attack": 80,
@@ -620,10 +659,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Lightning Rod",
     "passive": "Queenly Majesty",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
+    "evolution line": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "25-beauty-cosplay"
   },
   "Cute Cosplay Pikachu": {
+    "name": "Cute Cosplay Pikachu",
     "id": 25,
     "hp": 45,
     "attack": 80,
@@ -636,10 +676,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Lightning Rod",
     "passive": "Misty Surge",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
+    "evolution line": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "25-cute-cosplay"
   },
   "Smart Cosplay Pikachu": {
+    "name": "Smart Cosplay Pikachu",
     "id": 25,
     "hp": 45,
     "attack": 80,
@@ -652,10 +693,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Lightning Rod",
     "passive": "Tinted Lens",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
+    "evolution line": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "25-smart-cosplay"
   },
   "Tough Cosplay Pikachu": {
+    "name": "Tough Cosplay Pikachu",
     "id": 25,
     "hp": 45,
     "attack": 80,
@@ -668,10 +710,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Lightning Rod",
     "passive": "Libero",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
+    "evolution line": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "25-tough-cosplay"
   },
   "Gigantamax Pikachu": {
+    "name": "Gigantamax Pikachu",
     "id": 25,
     "hp": 125,
     "attack": 95,
@@ -684,10 +727,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Lightning Rod",
     "passive": "Thick Fat",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
+    "evolution line": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "25-gigantamax"
   },
   "Raichu": {
+    "name": "Raichu",
     "id": 26,
     "hp": 60,
     "attack": 90,
@@ -700,10 +744,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Lightning Rod",
     "passive": "Electric Surge",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
+    "evolution line": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "26"
   },
   "Sandshrew": {
+    "name": "Sandshrew",
     "id": 27,
     "hp": 50,
     "attack": 75,
@@ -716,10 +761,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sand Veil, Sand Rush",
     "passive": "Tough Claws",
-    "evolution": "Sandshrew, Sandslash",
+    "evolution line": "Sandshrew, Sandslash",
     "img": "27"
   },
   "Sandslash": {
+    "name": "Sandslash",
     "id": 28,
     "hp": 75,
     "attack": 100,
@@ -732,10 +778,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sand Veil, Sand Rush",
     "passive": "Tough Claws",
-    "evolution": "Sandshrew, Sandslash",
+    "evolution line": "Sandshrew, Sandslash",
     "img": "28"
   },
   "Female Nidoran": {
+    "name": "Female Nidoran",
     "id": 29,
     "hp": 55,
     "attack": 47,
@@ -748,10 +795,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Poison Point, Rivalry, Hustle",
     "passive": "Toxic Debris",
-    "evolution": "Female Nidoran, Nidorina, Nidoqueen",
+    "evolution line": "Female Nidoran, Nidorina, Nidoqueen",
     "img": "29"
   },
   "Nidorina": {
+    "name": "Nidorina",
     "id": 30,
     "hp": 70,
     "attack": 62,
@@ -764,10 +812,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Poison Point, Rivalry, Hustle",
     "passive": "Toxic Debris",
-    "evolution": "Female Nidoran, Nidorina, Nidoqueen",
+    "evolution line": "Female Nidoran, Nidorina, Nidoqueen",
     "img": "30"
   },
   "Nidoqueen": {
+    "name": "Nidoqueen",
     "id": 31,
     "hp": 90,
     "attack": 92,
@@ -780,10 +829,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Poison Point, Rivalry, Sheer Force",
     "passive": "Toxic Debris",
-    "evolution": "Female Nidoran, Nidorina, Nidoqueen",
+    "evolution line": "Female Nidoran, Nidorina, Nidoqueen",
     "img": "31"
   },
   "Male Nidoran": {
+    "name": "Male Nidoran",
     "id": 32,
     "hp": 46,
     "attack": 57,
@@ -796,10 +846,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Poison Point, Rivalry, Hustle",
     "passive": "Guts",
-    "evolution": "Male Nidoran, Nidorino, Nidoking",
+    "evolution line": "Male Nidoran, Nidorino, Nidoking",
     "img": "32"
   },
   "Nidorino": {
+    "name": "Nidorino",
     "id": 33,
     "hp": 61,
     "attack": 72,
@@ -812,10 +863,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Poison Point, Rivalry, Hustle",
     "passive": "Guts",
-    "evolution": "Male Nidoran, Nidorino, Nidoking",
+    "evolution line": "Male Nidoran, Nidorino, Nidoking",
     "img": "33"
   },
   "Nidoking": {
+    "name": "Nidoking",
     "id": 34,
     "hp": 81,
     "attack": 102,
@@ -828,10 +880,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Poison Point, Rivalry, Sheer Force",
     "passive": "Guts",
-    "evolution": "Male Nidoran, Nidorino, Nidoking",
+    "evolution line": "Male Nidoran, Nidorino, Nidoking",
     "img": "34"
   },
   "Clefairy": {
+    "name": "Clefairy",
     "id": 35,
     "hp": 70,
     "attack": 45,
@@ -844,10 +897,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Cute Charm, Magic Guard, Friend Guard",
     "passive": "Prankster",
-    "evolution": "Clefairy, Clefable, Cleffa",
+    "evolution line": "Clefairy, Clefable, Cleffa",
     "img": "35"
   },
   "Clefable": {
+    "name": "Clefable",
     "id": 36,
     "hp": 95,
     "attack": 70,
@@ -860,10 +914,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Cute Charm, Magic Guard, Unaware",
     "passive": "Analytic",
-    "evolution": "Clefairy, Clefable, Cleffa",
+    "evolution line": "Clefairy, Clefable, Cleffa",
     "img": "36"
   },
   "Vulpix": {
+    "name": "Vulpix",
     "id": 37,
     "hp": 38,
     "attack": 41,
@@ -876,10 +931,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Flash Fire, Drought",
     "passive": "Fur Coat",
-    "evolution": "Vulpix, Ninetales",
+    "evolution line": "Vulpix, Ninetales",
     "img": "37"
   },
   "Ninetales": {
+    "name": "Ninetales",
     "id": 38,
     "hp": 73,
     "attack": 76,
@@ -892,10 +948,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Flash Fire, Drought",
     "passive": "Fur Coat",
-    "evolution": "Vulpix, Ninetales",
+    "evolution line": "Vulpix, Ninetales",
     "img": "38"
   },
   "Jigglypuff": {
+    "name": "Jigglypuff",
     "id": 39,
     "hp": 115,
     "attack": 45,
@@ -908,10 +965,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Cute Charm, Competitive, Friend Guard",
     "passive": "Huge Power",
-    "evolution": "Jigglypuff, Wigglytuff, Igglybuff",
+    "evolution line": "Jigglypuff, Wigglytuff, Igglybuff",
     "img": "39"
   },
   "Wigglytuff": {
+    "name": "Wigglytuff",
     "id": 40,
     "hp": 140,
     "attack": 70,
@@ -924,10 +982,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Cute Charm, Competitive, Frisk",
     "passive": "Huge Power",
-    "evolution": "Jigglypuff, Wigglytuff, Igglybuff",
+    "evolution line": "Jigglypuff, Wigglytuff, Igglybuff",
     "img": "40"
   },
   "Zubat": {
+    "name": "Zubat",
     "id": 41,
     "hp": 40,
     "attack": 45,
@@ -940,10 +999,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Inner Focus, Infiltrator",
     "passive": "Intimidate",
-    "evolution": "Zubat, Golbat, Crobat",
+    "evolution line": "Zubat, Golbat, Crobat",
     "img": "41"
   },
   "Golbat": {
+    "name": "Golbat",
     "id": 42,
     "hp": 75,
     "attack": 80,
@@ -956,10 +1016,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Inner Focus, Infiltrator",
     "passive": "Intimidate",
-    "evolution": "Zubat, Golbat, Crobat",
+    "evolution line": "Zubat, Golbat, Crobat",
     "img": "42"
   },
   "Oddish": {
+    "name": "Oddish",
     "id": 43,
     "hp": 45,
     "attack": 50,
@@ -972,10 +1033,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Chlorophyll, Run Away",
     "passive": "Triage",
-    "evolution": "Oddish, Gloom, Vileplume, Bellossom",
+    "evolution line": "Oddish, Gloom, Vileplume, Bellossom",
     "img": "43"
   },
   "Gloom": {
+    "name": "Gloom",
     "id": 44,
     "hp": 60,
     "attack": 65,
@@ -988,10 +1050,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Chlorophyll, Stench",
     "passive": "Triage",
-    "evolution": "Oddish, Gloom, Vileplume, Bellossom",
+    "evolution line": "Oddish, Gloom, Vileplume, Bellossom",
     "img": "44"
   },
   "Vileplume": {
+    "name": "Vileplume",
     "id": 45,
     "hp": 75,
     "attack": 80,
@@ -1004,10 +1067,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Chlorophyll, Effect Spore",
     "passive": "Triage",
-    "evolution": "Oddish, Gloom, Vileplume, Bellossom",
+    "evolution line": "Oddish, Gloom, Vileplume, Bellossom",
     "img": "45"
   },
   "Paras": {
+    "name": "Paras",
     "id": 46,
     "hp": 35,
     "attack": 70,
@@ -1020,10 +1084,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Effect Spore, Dry Skin, Damp",
     "passive": "Triage",
-    "evolution": "Paras, Parasect",
+    "evolution line": "Paras, Parasect",
     "img": "46"
   },
   "Parasect": {
+    "name": "Parasect",
     "id": 47,
     "hp": 60,
     "attack": 95,
@@ -1036,10 +1101,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Effect Spore, Dry Skin, Damp",
     "passive": "Triage",
-    "evolution": "Paras, Parasect",
+    "evolution line": "Paras, Parasect",
     "img": "47"
   },
   "Venonat": {
+    "name": "Venonat",
     "id": 48,
     "hp": 60,
     "attack": 55,
@@ -1052,10 +1118,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Compound Eyes, Tinted Lens, Run Away",
     "passive": "Fluffy",
-    "evolution": "Venonat, Venomoth",
+    "evolution line": "Venonat, Venomoth",
     "img": "48"
   },
   "Venomoth": {
+    "name": "Venomoth",
     "id": 49,
     "hp": 70,
     "attack": 65,
@@ -1068,10 +1135,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Shield Dust, Tinted Lens, Wonder Skin",
     "passive": "Simple",
-    "evolution": "Venonat, Venomoth",
+    "evolution line": "Venonat, Venomoth",
     "img": "49"
   },
   "Diglett": {
+    "name": "Diglett",
     "id": 50,
     "hp": 10,
     "attack": 55,
@@ -1084,10 +1152,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sand Veil, Arena Trap, Sand Force",
     "passive": "Sturdy",
-    "evolution": "Diglett, Dugtrio",
+    "evolution line": "Diglett, Dugtrio",
     "img": "50"
   },
   "Dugtrio": {
+    "name": "Dugtrio",
     "id": 51,
     "hp": 35,
     "attack": 100,
@@ -1100,10 +1169,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sand Veil, Arena Trap, Sand Force",
     "passive": "Sturdy",
-    "evolution": "Diglett, Dugtrio",
+    "evolution line": "Diglett, Dugtrio",
     "img": "51"
   },
   "Meowth": {
+    "name": "Meowth",
     "id": 52,
     "hp": 40,
     "attack": 45,
@@ -1116,10 +1186,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Pickup, Technician, Unnerve",
     "passive": "Tough Claws",
-    "evolution": "Meowth, Gigantamax Meowth, Persian",
+    "evolution line": "Meowth, Gigantamax Meowth, Persian",
     "img": "52"
   },
   "Gigantamax Meowth": {
+    "name": "Gigantamax Meowth",
     "id": 52,
     "hp": 115,
     "attack": 110,
@@ -1132,10 +1203,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Technician",
     "passive": "Tough Claws",
-    "evolution": "Meowth, Gigantamax Meowth, Persian",
+    "evolution line": "Meowth, Gigantamax Meowth, Persian",
     "img": "52-gigantamax"
   },
   "Persian": {
+    "name": "Persian",
     "id": 53,
     "hp": 65,
     "attack": 70,
@@ -1148,10 +1220,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Limber, Technician, Unnerve",
     "passive": "Tough Claws",
-    "evolution": "Meowth, Gigantamax Meowth, Persian",
+    "evolution line": "Meowth, Gigantamax Meowth, Persian",
     "img": "53"
   },
   "Psyduck": {
+    "name": "Psyduck",
     "id": 54,
     "hp": 50,
     "attack": 52,
@@ -1164,10 +1237,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Damp, Cloud Nine, Swift Swim",
     "passive": "Simple",
-    "evolution": "Psyduck, Golduck",
+    "evolution line": "Psyduck, Golduck",
     "img": "54"
   },
   "Golduck": {
+    "name": "Golduck",
     "id": 55,
     "hp": 80,
     "attack": 82,
@@ -1180,10 +1254,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Damp, Cloud Nine, Swift Swim",
     "passive": "Simple",
-    "evolution": "Psyduck, Golduck",
+    "evolution line": "Psyduck, Golduck",
     "img": "55"
   },
   "Mankey": {
+    "name": "Mankey",
     "id": 56,
     "hp": 40,
     "attack": 80,
@@ -1196,10 +1271,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Vital Spirit, Anger Point, Defiant",
     "passive": "Iron Fist",
-    "evolution": "Mankey, Primeape, Annihilape",
+    "evolution line": "Mankey, Primeape, Annihilape",
     "img": "56"
   },
   "Primeape": {
+    "name": "Primeape",
     "id": 57,
     "hp": 65,
     "attack": 105,
@@ -1212,10 +1288,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Vital Spirit, Anger Point, Defiant",
     "passive": "Iron Fist",
-    "evolution": "Mankey, Primeape, Annihilape",
+    "evolution line": "Mankey, Primeape, Annihilape",
     "img": "57"
   },
   "Growlithe": {
+    "name": "Growlithe",
     "id": 58,
     "hp": 55,
     "attack": 70,
@@ -1228,10 +1305,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Intimidate, Flash Fire, Justified",
     "passive": "Fluffy",
-    "evolution": "Growlithe, Arcanine",
+    "evolution line": "Growlithe, Arcanine",
     "img": "58"
   },
   "Arcanine": {
+    "name": "Arcanine",
     "id": 59,
     "hp": 90,
     "attack": 110,
@@ -1244,10 +1322,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Intimidate, Flash Fire, Justified",
     "passive": "Fluffy",
-    "evolution": "Growlithe, Arcanine",
+    "evolution line": "Growlithe, Arcanine",
     "img": "59"
   },
   "Poliwag": {
+    "name": "Poliwag",
     "id": 60,
     "hp": 40,
     "attack": 50,
@@ -1260,10 +1339,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Water Absorb, Damp, Swift Swim",
     "passive": "No Guard",
-    "evolution": "Poliwag, Poliwhirl, Poliwrath, Politoed",
+    "evolution line": "Poliwag, Poliwhirl, Poliwrath, Politoed",
     "img": "60"
   },
   "Poliwhirl": {
+    "name": "Poliwhirl",
     "id": 61,
     "hp": 65,
     "attack": 65,
@@ -1276,10 +1356,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Water Absorb, Damp, Swift Swim",
     "passive": "No Guard",
-    "evolution": "Poliwag, Poliwhirl, Poliwrath, Politoed",
+    "evolution line": "Poliwag, Poliwhirl, Poliwrath, Politoed",
     "img": "61"
   },
   "Poliwrath": {
+    "name": "Poliwrath",
     "id": 62,
     "hp": 90,
     "attack": 95,
@@ -1292,10 +1373,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Water Absorb, Damp, Swift Swim",
     "passive": "No Guard",
-    "evolution": "Poliwag, Poliwhirl, Poliwrath, Politoed",
+    "evolution line": "Poliwag, Poliwhirl, Poliwrath, Politoed",
     "img": "62"
   },
   "Abra": {
+    "name": "Abra",
     "id": 63,
     "hp": 25,
     "attack": 20,
@@ -1308,10 +1390,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Synchronize, Inner Focus, Magic Guard",
     "passive": "Comatose",
-    "evolution": "Abra, Kadabra, Alakazam, Mega Alakazam",
+    "evolution line": "Abra, Kadabra, Alakazam, Mega Alakazam",
     "img": "63"
   },
   "Kadabra": {
+    "name": "Kadabra",
     "id": 64,
     "hp": 40,
     "attack": 35,
@@ -1324,10 +1407,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Synchronize, Inner Focus, Magic Guard",
     "passive": "Magician",
-    "evolution": "Abra, Kadabra, Alakazam, Mega Alakazam",
+    "evolution line": "Abra, Kadabra, Alakazam, Mega Alakazam",
     "img": "64"
   },
   "Alakazam": {
+    "name": "Alakazam",
     "id": 65,
     "hp": 55,
     "attack": 50,
@@ -1340,10 +1424,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Synchronize, Inner Focus, Magic Guard",
     "passive": "Magician",
-    "evolution": "Abra, Kadabra, Alakazam, Mega Alakazam",
+    "evolution line": "Abra, Kadabra, Alakazam, Mega Alakazam",
     "img": "65"
   },
   "Mega Alakazam": {
+    "name": "Mega Alakazam",
     "id": 65,
     "hp": 55,
     "attack": 50,
@@ -1356,10 +1441,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Trace",
     "passive": "Magician",
-    "evolution": "Abra, Kadabra, Alakazam, Mega Alakazam",
+    "evolution line": "Abra, Kadabra, Alakazam, Mega Alakazam",
     "img": "65-mega"
   },
   "Machop": {
+    "name": "Machop",
     "id": 66,
     "hp": 70,
     "attack": 80,
@@ -1372,10 +1458,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Guts, No Guard, Steadfast",
     "passive": "Quick Feet",
-    "evolution": "Machop, Machoke, Machamp, Gigantamax Machamp",
+    "evolution line": "Machop, Machoke, Machamp, Gigantamax Machamp",
     "img": "66"
   },
   "Machoke": {
+    "name": "Machoke",
     "id": 67,
     "hp": 80,
     "attack": 100,
@@ -1388,10 +1475,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Guts, No Guard, Steadfast",
     "passive": "Quick Feet",
-    "evolution": "Machop, Machoke, Machamp, Gigantamax Machamp",
+    "evolution line": "Machop, Machoke, Machamp, Gigantamax Machamp",
     "img": "67"
   },
   "Machamp": {
+    "name": "Machamp",
     "id": 68,
     "hp": 90,
     "attack": 130,
@@ -1404,10 +1492,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Guts, No Guard, Steadfast",
     "passive": "Quick Feet",
-    "evolution": "Machop, Machoke, Machamp, Gigantamax Machamp",
+    "evolution line": "Machop, Machoke, Machamp, Gigantamax Machamp",
     "img": "68"
   },
   "Gigantamax Machamp": {
+    "name": "Gigantamax Machamp",
     "id": 68,
     "hp": 120,
     "attack": 170,
@@ -1420,10 +1509,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Guts",
     "passive": "Quick Feet",
-    "evolution": "Machop, Machoke, Machamp, Gigantamax Machamp",
+    "evolution line": "Machop, Machoke, Machamp, Gigantamax Machamp",
     "img": "68-gigantamax"
   },
   "Bellsprout": {
+    "name": "Bellsprout",
     "id": 69,
     "hp": 50,
     "attack": 75,
@@ -1436,10 +1526,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Chlorophyll, Gluttony",
     "passive": "Flower Gift",
-    "evolution": "Bellsprout, Weepinbell, Victreebel",
+    "evolution line": "Bellsprout, Weepinbell, Victreebel",
     "img": "69"
   },
   "Weepinbell": {
+    "name": "Weepinbell",
     "id": 70,
     "hp": 65,
     "attack": 90,
@@ -1452,10 +1543,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Chlorophyll, Gluttony",
     "passive": "Flower Gift",
-    "evolution": "Bellsprout, Weepinbell, Victreebel",
+    "evolution line": "Bellsprout, Weepinbell, Victreebel",
     "img": "70"
   },
   "Victreebel": {
+    "name": "Victreebel",
     "id": 71,
     "hp": 80,
     "attack": 105,
@@ -1468,10 +1560,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Chlorophyll, Gluttony",
     "passive": "Flower Gift",
-    "evolution": "Bellsprout, Weepinbell, Victreebel",
+    "evolution line": "Bellsprout, Weepinbell, Victreebel",
     "img": "71"
   },
   "Tentacool": {
+    "name": "Tentacool",
     "id": 72,
     "hp": 40,
     "attack": 40,
@@ -1484,10 +1577,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Clear Body, Liquid Ooze, Rain Dish",
     "passive": "Toxic Chain",
-    "evolution": "Tentacool, Tentacruel",
+    "evolution line": "Tentacool, Tentacruel",
     "img": "72"
   },
   "Tentacruel": {
+    "name": "Tentacruel",
     "id": 73,
     "hp": 80,
     "attack": 70,
@@ -1500,10 +1594,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Clear Body, Liquid Ooze, Rain Dish",
     "passive": "Toxic Chain",
-    "evolution": "Tentacool, Tentacruel",
+    "evolution line": "Tentacool, Tentacruel",
     "img": "73"
   },
   "Geodude": {
+    "name": "Geodude",
     "id": 74,
     "hp": 40,
     "attack": 80,
@@ -1516,10 +1611,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Rock Head, Sturdy, Sand Veil",
     "passive": "Dry Skin",
-    "evolution": "Geodude, Graveler, Golem",
+    "evolution line": "Geodude, Graveler, Golem",
     "img": "74"
   },
   "Graveler": {
+    "name": "Graveler",
     "id": 75,
     "hp": 55,
     "attack": 95,
@@ -1532,10 +1628,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Rock Head, Sturdy, Sand Veil",
     "passive": "Dry Skin",
-    "evolution": "Geodude, Graveler, Golem",
+    "evolution line": "Geodude, Graveler, Golem",
     "img": "75"
   },
   "Golem": {
+    "name": "Golem",
     "id": 76,
     "hp": 80,
     "attack": 120,
@@ -1548,10 +1645,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Rock Head, Sturdy, Sand Veil",
     "passive": "Dry Skin",
-    "evolution": "Geodude, Graveler, Golem",
+    "evolution line": "Geodude, Graveler, Golem",
     "img": "76"
   },
   "Ponyta": {
+    "name": "Ponyta",
     "id": 77,
     "hp": 50,
     "attack": 85,
@@ -1564,10 +1662,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Run Away, Flash Fire, Flame Body",
     "passive": "Magic Guard",
-    "evolution": "Ponyta, Rapidash",
+    "evolution line": "Ponyta, Rapidash",
     "img": "77"
   },
   "Rapidash": {
+    "name": "Rapidash",
     "id": 78,
     "hp": 65,
     "attack": 100,
@@ -1580,10 +1679,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Run Away, Flash Fire, Flame Body",
     "passive": "Magic Guard",
-    "evolution": "Ponyta, Rapidash",
+    "evolution line": "Ponyta, Rapidash",
     "img": "78"
   },
   "Slowpoke": {
+    "name": "Slowpoke",
     "id": 79,
     "hp": 90,
     "attack": 65,
@@ -1596,10 +1696,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Oblivious, Own Tempo, Regenerator",
     "passive": "Unaware",
-    "evolution": "Slowpoke, Slowbro, Mega Slowbro, Slowking",
+    "evolution line": "Slowpoke, Slowbro, Mega Slowbro, Slowking",
     "img": "79"
   },
   "Slowbro": {
+    "name": "Slowbro",
     "id": 80,
     "hp": 95,
     "attack": 75,
@@ -1612,10 +1713,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Oblivious, Own Tempo, Regenerator",
     "passive": "Unaware",
-    "evolution": "Slowpoke, Slowbro, Mega Slowbro, Slowking",
+    "evolution line": "Slowpoke, Slowbro, Mega Slowbro, Slowking",
     "img": "80"
   },
   "Mega Slowbro": {
+    "name": "Mega Slowbro",
     "id": 80,
     "hp": 95,
     "attack": 75,
@@ -1628,10 +1730,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Shell Armor",
     "passive": "Regenerator",
-    "evolution": "Slowpoke, Slowbro, Mega Slowbro, Slowking",
+    "evolution line": "Slowpoke, Slowbro, Mega Slowbro, Slowking",
     "img": "80-mega"
   },
   "Magnemite": {
+    "name": "Magnemite",
     "id": 81,
     "hp": 25,
     "attack": 35,
@@ -1644,10 +1747,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Magnet Pull, Sturdy, Analytic",
     "passive": "Levitate",
-    "evolution": "Magnemite, Magneton, Magnezone",
+    "evolution line": "Magnemite, Magneton, Magnezone",
     "img": "81"
   },
   "Magneton": {
+    "name": "Magneton",
     "id": 82,
     "hp": 50,
     "attack": 60,
@@ -1660,10 +1764,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Magnet Pull, Sturdy, Analytic",
     "passive": "Levitate",
-    "evolution": "Magnemite, Magneton, Magnezone",
+    "evolution line": "Magnemite, Magneton, Magnezone",
     "img": "82"
   },
   "Farfetch’d": {
+    "name": "Farfetch’d",
     "id": 83,
     "hp": 52,
     "attack": 90,
@@ -1676,10 +1781,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Keen Eye, Inner Focus, Defiant",
     "passive": "Sniper",
-    "evolution": "Farfetch’d",
+    "evolution line": "Farfetch’d",
     "img": "83"
   },
   "Doduo": {
+    "name": "Doduo",
     "id": 84,
     "hp": 35,
     "attack": 85,
@@ -1692,10 +1798,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Run Away, Early Bird, Tangled Feet",
     "passive": "Parental Bond",
-    "evolution": "Doduo, Dodrio",
+    "evolution line": "Doduo, Dodrio",
     "img": "84"
   },
   "Dodrio": {
+    "name": "Dodrio",
     "id": 85,
     "hp": 60,
     "attack": 110,
@@ -1708,10 +1815,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Run Away, Early Bird, Tangled Feet",
     "passive": "Parental Bond",
-    "evolution": "Doduo, Dodrio",
+    "evolution line": "Doduo, Dodrio",
     "img": "85"
   },
   "Seel": {
+    "name": "Seel",
     "id": 86,
     "hp": 65,
     "attack": 45,
@@ -1724,10 +1832,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Thick Fat, Hydration, Ice Body",
     "passive": "Water Bubble",
-    "evolution": "Seel, Dewgong",
+    "evolution line": "Seel, Dewgong",
     "img": "86"
   },
   "Dewgong": {
+    "name": "Dewgong",
     "id": 87,
     "hp": 90,
     "attack": 70,
@@ -1740,10 +1849,11 @@ const POKEMON_DATA = {
     "type2": "Ice",
     "abilities": "Thick Fat, Hydration, Ice Body",
     "passive": "Water Bubble",
-    "evolution": "Seel, Dewgong",
+    "evolution line": "Seel, Dewgong",
     "img": "87"
   },
   "Grimer": {
+    "name": "Grimer",
     "id": 88,
     "hp": 80,
     "attack": 80,
@@ -1756,10 +1866,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Stench, Sticky Hold, Poison Touch",
     "passive": "Water Absorb",
-    "evolution": "Grimer, Muk",
+    "evolution line": "Grimer, Muk",
     "img": "88"
   },
   "Muk": {
+    "name": "Muk",
     "id": 89,
     "hp": 105,
     "attack": 105,
@@ -1772,10 +1883,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Stench, Sticky Hold, Poison Touch",
     "passive": "Water Absorb",
-    "evolution": "Grimer, Muk",
+    "evolution line": "Grimer, Muk",
     "img": "89"
   },
   "Shellder": {
+    "name": "Shellder",
     "id": 90,
     "hp": 30,
     "attack": 65,
@@ -1788,10 +1900,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shell Armor, Skill Link, Overcoat",
     "passive": "Sturdy",
-    "evolution": "Shellder, Cloyster",
+    "evolution line": "Shellder, Cloyster",
     "img": "90"
   },
   "Cloyster": {
+    "name": "Cloyster",
     "id": 91,
     "hp": 50,
     "attack": 95,
@@ -1804,10 +1917,11 @@ const POKEMON_DATA = {
     "type2": "Ice",
     "abilities": "Shell Armor, Skill Link, Overcoat",
     "passive": "Ice Scales",
-    "evolution": "Shellder, Cloyster",
+    "evolution line": "Shellder, Cloyster",
     "img": "91"
   },
   "Gastly": {
+    "name": "Gastly",
     "id": 92,
     "hp": 30,
     "attack": 35,
@@ -1820,10 +1934,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Levitate",
     "passive": "Prankster",
-    "evolution": "Gastly, Haunter, Gengar, Mega Gengar, Gigantamax Gengar",
+    "evolution line": "Gastly, Haunter, Gengar, Mega Gengar, Gigantamax Gengar",
     "img": "92"
   },
   "Haunter": {
+    "name": "Haunter",
     "id": 93,
     "hp": 45,
     "attack": 50,
@@ -1836,10 +1951,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Levitate",
     "passive": "Prankster",
-    "evolution": "Gastly, Haunter, Gengar, Mega Gengar, Gigantamax Gengar",
+    "evolution line": "Gastly, Haunter, Gengar, Mega Gengar, Gigantamax Gengar",
     "img": "93"
   },
   "Gengar": {
+    "name": "Gengar",
     "id": 94,
     "hp": 60,
     "attack": 65,
@@ -1852,10 +1968,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Cursed Body",
     "passive": "Levitate",
-    "evolution": "Gastly, Haunter, Gengar, Mega Gengar, Gigantamax Gengar",
+    "evolution line": "Gastly, Haunter, Gengar, Mega Gengar, Gigantamax Gengar",
     "img": "94"
   },
   "Mega Gengar": {
+    "name": "Mega Gengar",
     "id": 94,
     "hp": 60,
     "attack": 65,
@@ -1868,10 +1985,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Shadow Tag",
     "passive": "Unnerve",
-    "evolution": "Gastly, Haunter, Gengar, Mega Gengar, Gigantamax Gengar",
+    "evolution line": "Gastly, Haunter, Gengar, Mega Gengar, Gigantamax Gengar",
     "img": "94-mega"
   },
   "Gigantamax Gengar": {
+    "name": "Gigantamax Gengar",
     "id": 94,
     "hp": 150,
     "attack": 50,
@@ -1884,10 +2002,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Shadow Tag",
     "passive": "Regenerator",
-    "evolution": "Gastly, Haunter, Gengar, Mega Gengar, Gigantamax Gengar",
+    "evolution line": "Gastly, Haunter, Gengar, Mega Gengar, Gigantamax Gengar",
     "img": "94-gigantamax"
   },
   "Onix": {
+    "name": "Onix",
     "id": 95,
     "hp": 35,
     "attack": 45,
@@ -1900,10 +2019,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Rock Head, Sturdy, Weak Armor",
     "passive": "Rocky Payload",
-    "evolution": "Onix, Steelix, Mega Steelix",
+    "evolution line": "Onix, Steelix, Mega Steelix",
     "img": "95"
   },
   "Drowzee": {
+    "name": "Drowzee",
     "id": 96,
     "hp": 60,
     "attack": 48,
@@ -1916,10 +2036,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Insomnia, Forewarn, Inner Focus",
     "passive": "Magician",
-    "evolution": "Drowzee, Hypno",
+    "evolution line": "Drowzee, Hypno",
     "img": "96"
   },
   "Hypno": {
+    "name": "Hypno",
     "id": 97,
     "hp": 85,
     "attack": 73,
@@ -1932,10 +2053,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Insomnia, Forewarn, Inner Focus",
     "passive": "Magician",
-    "evolution": "Drowzee, Hypno",
+    "evolution line": "Drowzee, Hypno",
     "img": "97"
   },
   "Krabby": {
+    "name": "Krabby",
     "id": 98,
     "hp": 30,
     "attack": 105,
@@ -1948,10 +2070,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Hyper Cutter, Shell Armor, Sheer Force",
     "passive": "Unburden",
-    "evolution": "Krabby, Kingler, Gigantamax Kingler",
+    "evolution line": "Krabby, Kingler, Gigantamax Kingler",
     "img": "98"
   },
   "Kingler": {
+    "name": "Kingler",
     "id": 99,
     "hp": 55,
     "attack": 130,
@@ -1964,10 +2087,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Hyper Cutter, Shell Armor, Sheer Force",
     "passive": "Unburden",
-    "evolution": "Krabby, Kingler, Gigantamax Kingler",
+    "evolution line": "Krabby, Kingler, Gigantamax Kingler",
     "img": "99"
   },
   "Gigantamax Kingler": {
+    "name": "Gigantamax Kingler",
     "id": 99,
     "hp": 92,
     "attack": 145,
@@ -1980,10 +2104,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Tough Claws",
     "passive": "Unburden",
-    "evolution": "Krabby, Kingler, Gigantamax Kingler",
+    "evolution line": "Krabby, Kingler, Gigantamax Kingler",
     "img": "99-gigantamax"
   },
   "Voltorb": {
+    "name": "Voltorb",
     "id": 100,
     "hp": 40,
     "attack": 30,
@@ -1996,10 +2121,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Soundproof, Static, Aftermath",
     "passive": "Transistor",
-    "evolution": "Voltorb, Electrode",
+    "evolution line": "Voltorb, Electrode",
     "img": "100"
   },
   "Electrode": {
+    "name": "Electrode",
     "id": 101,
     "hp": 60,
     "attack": 50,
@@ -2012,10 +2138,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Soundproof, Static, Aftermath",
     "passive": "Transistor",
-    "evolution": "Voltorb, Electrode",
+    "evolution line": "Voltorb, Electrode",
     "img": "101"
   },
   "Exeggcute": {
+    "name": "Exeggcute",
     "id": 102,
     "hp": 60,
     "attack": 40,
@@ -2028,10 +2155,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Chlorophyll, Harvest",
     "passive": "Ripen",
-    "evolution": "Exeggcute, Exeggutor, Alola Exeggutor",
+    "evolution line": "Exeggcute, Exeggutor, Alola Exeggutor",
     "img": "102"
   },
   "Exeggutor": {
+    "name": "Exeggutor",
     "id": 103,
     "hp": 95,
     "attack": 95,
@@ -2044,10 +2172,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Chlorophyll, Harvest",
     "passive": "Ripen",
-    "evolution": "Exeggcute, Exeggutor, Alola Exeggutor",
+    "evolution line": "Exeggcute, Exeggutor, Alola Exeggutor",
     "img": "103"
   },
   "Cubone": {
+    "name": "Cubone",
     "id": 104,
     "hp": 50,
     "attack": 50,
@@ -2060,10 +2189,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rock Head, Lightning Rod, Battle Armor",
     "passive": "Parental Bond",
-    "evolution": "Cubone, Marowak, Alola Marowak",
+    "evolution line": "Cubone, Marowak, Alola Marowak",
     "img": "104"
   },
   "Marowak": {
+    "name": "Marowak",
     "id": 105,
     "hp": 60,
     "attack": 80,
@@ -2076,10 +2206,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rock Head, Lightning Rod, Battle Armor",
     "passive": "Parental Bond",
-    "evolution": "Cubone, Marowak, Alola Marowak",
+    "evolution line": "Cubone, Marowak, Alola Marowak",
     "img": "105"
   },
   "Hitmonlee": {
+    "name": "Hitmonlee",
     "id": 106,
     "hp": 50,
     "attack": 120,
@@ -2092,10 +2223,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Limber, Reckless, Unburden",
     "passive": "Sheer Force",
-    "evolution": "Hitmonlee, Hitmonchan, Tyrogue, Hitmontop",
+    "evolution line": "Hitmonlee, Hitmonchan, Tyrogue, Hitmontop",
     "img": "106"
   },
   "Hitmonchan": {
+    "name": "Hitmonchan",
     "id": 107,
     "hp": 50,
     "attack": 105,
@@ -2108,10 +2240,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Keen Eye, Iron Fist, Inner Focus",
     "passive": "Moxie",
-    "evolution": "Hitmonlee, Hitmonchan, Tyrogue, Hitmontop",
+    "evolution line": "Hitmonlee, Hitmonchan, Tyrogue, Hitmontop",
     "img": "107"
   },
   "Lickitung": {
+    "name": "Lickitung",
     "id": 108,
     "hp": 90,
     "attack": 55,
@@ -2124,10 +2257,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Own Tempo, Oblivious, Cloud Nine",
     "passive": "Cheek Pouch",
-    "evolution": "Lickitung, Lickilicky",
+    "evolution line": "Lickitung, Lickilicky",
     "img": "108"
   },
   "Koffing": {
+    "name": "Koffing",
     "id": 109,
     "hp": 40,
     "attack": 65,
@@ -2140,10 +2274,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate, Neutralizing Gas, Stench",
     "passive": "White Smoke",
-    "evolution": "Koffing, Weezing, Galar Weezing",
+    "evolution line": "Koffing, Weezing, Galar Weezing",
     "img": "109"
   },
   "Weezing": {
+    "name": "Weezing",
     "id": 110,
     "hp": 65,
     "attack": 90,
@@ -2156,10 +2291,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate, Neutralizing Gas, Stench",
     "passive": "Parental Bond",
-    "evolution": "Koffing, Weezing, Galar Weezing",
+    "evolution line": "Koffing, Weezing, Galar Weezing",
     "img": "110"
   },
   "Rhyhorn": {
+    "name": "Rhyhorn",
     "id": 111,
     "hp": 80,
     "attack": 85,
@@ -2172,10 +2308,11 @@ const POKEMON_DATA = {
     "type2": "Rock",
     "abilities": "Lightning Rod, Rock Head, Reckless",
     "passive": "Solid Rock",
-    "evolution": "Rhyhorn, Rhydon, Rhyperior",
+    "evolution line": "Rhyhorn, Rhydon, Rhyperior",
     "img": "111"
   },
   "Rhydon": {
+    "name": "Rhydon",
     "id": 112,
     "hp": 105,
     "attack": 130,
@@ -2188,10 +2325,11 @@ const POKEMON_DATA = {
     "type2": "Rock",
     "abilities": "Lightning Rod, Rock Head, Reckless",
     "passive": "Solid Rock",
-    "evolution": "Rhyhorn, Rhydon, Rhyperior",
+    "evolution line": "Rhyhorn, Rhydon, Rhyperior",
     "img": "112"
   },
   "Chansey": {
+    "name": "Chansey",
     "id": 113,
     "hp": 250,
     "attack": 5,
@@ -2204,10 +2342,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Natural Cure, Serene Grace, Healer",
     "passive": "Friend Guard",
-    "evolution": "Chansey, Blissey, Happiny",
+    "evolution line": "Chansey, Blissey, Happiny",
     "img": "113"
   },
   "Tangela": {
+    "name": "Tangela",
     "id": 114,
     "hp": 65,
     "attack": 55,
@@ -2220,10 +2359,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Chlorophyll, Leaf Guard, Regenerator",
     "passive": "Tangling Hair",
-    "evolution": "Tangela, Tangrowth",
+    "evolution line": "Tangela, Tangrowth",
     "img": "114"
   },
   "Kangaskhan": {
+    "name": "Kangaskhan",
     "id": 115,
     "hp": 105,
     "attack": 95,
@@ -2236,10 +2376,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Early Bird, Scrappy, Inner Focus",
     "passive": "Technician",
-    "evolution": "Kangaskhan, Mega Kangaskhan",
+    "evolution line": "Kangaskhan, Mega Kangaskhan",
     "img": "115"
   },
   "Mega Kangaskhan": {
+    "name": "Mega Kangaskhan",
     "id": 115,
     "hp": 105,
     "attack": 125,
@@ -2252,10 +2393,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Parental Bond",
     "passive": "Technician",
-    "evolution": "Kangaskhan, Mega Kangaskhan",
+    "evolution line": "Kangaskhan, Mega Kangaskhan",
     "img": "115-mega"
   },
   "Horsea": {
+    "name": "Horsea",
     "id": 116,
     "hp": 30,
     "attack": 40,
@@ -2268,10 +2410,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Swift Swim, Sniper, Damp",
     "passive": "Dragons Maw",
-    "evolution": "Horsea, Seadra, Kingdra",
+    "evolution line": "Horsea, Seadra, Kingdra",
     "img": "116"
   },
   "Seadra": {
+    "name": "Seadra",
     "id": 117,
     "hp": 55,
     "attack": 65,
@@ -2284,10 +2427,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Poison Point, Sniper, Damp",
     "passive": "Dragons Maw",
-    "evolution": "Horsea, Seadra, Kingdra",
+    "evolution line": "Horsea, Seadra, Kingdra",
     "img": "117"
   },
   "Goldeen": {
+    "name": "Goldeen",
     "id": 118,
     "hp": 45,
     "attack": 67,
@@ -2300,10 +2444,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Swift Swim, Water Veil, Lightning Rod",
     "passive": "Multiscale",
-    "evolution": "Goldeen, Seaking",
+    "evolution line": "Goldeen, Seaking",
     "img": "118"
   },
   "Seaking": {
+    "name": "Seaking",
     "id": 119,
     "hp": 80,
     "attack": 92,
@@ -2316,10 +2461,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Swift Swim, Water Veil, Lightning Rod",
     "passive": "Multiscale",
-    "evolution": "Goldeen, Seaking",
+    "evolution line": "Goldeen, Seaking",
     "img": "119"
   },
   "Staryu": {
+    "name": "Staryu",
     "id": 120,
     "hp": 30,
     "attack": 45,
@@ -2332,10 +2478,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Illuminate, Natural Cure, Analytic",
     "passive": "Regenerator",
-    "evolution": "Staryu, Starmie",
+    "evolution line": "Staryu, Starmie",
     "img": "120"
   },
   "Starmie": {
+    "name": "Starmie",
     "id": 121,
     "hp": 60,
     "attack": 75,
@@ -2348,10 +2495,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Illuminate, Natural Cure, Analytic",
     "passive": "Regenerator",
-    "evolution": "Staryu, Starmie",
+    "evolution line": "Staryu, Starmie",
     "img": "121"
   },
   "Mr. Mime": {
+    "name": "Mr. Mime",
     "id": 122,
     "hp": 40,
     "attack": 45,
@@ -2364,10 +2512,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Soundproof, Filter, Technician",
     "passive": "Prankster",
-    "evolution": "Mr. Mime, Mime Jr., Mr. Rime, Galar Mr. Mime",
+    "evolution line": "Mr. Mime, Mime Jr., Mr. Rime, Galar Mr. Mime",
     "img": "122"
   },
   "Scyther": {
+    "name": "Scyther",
     "id": 123,
     "hp": 70,
     "attack": 110,
@@ -2380,10 +2529,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Swarm, Technician, Steadfast",
     "passive": "Tinted Lens",
-    "evolution": "Scyther, Scizor, Mega Scizor, Kleavor",
+    "evolution line": "Scyther, Scizor, Mega Scizor, Kleavor",
     "img": "123"
   },
   "Jynx": {
+    "name": "Jynx",
     "id": 124,
     "hp": 65,
     "attack": 50,
@@ -2396,10 +2546,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Oblivious, Forewarn, Dry Skin",
     "passive": "Psychic Surge",
-    "evolution": "Jynx, Smoochum",
+    "evolution line": "Jynx, Smoochum",
     "img": "124"
   },
   "Electabuzz": {
+    "name": "Electabuzz",
     "id": 125,
     "hp": 65,
     "attack": 83,
@@ -2412,10 +2563,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Vital Spirit",
     "passive": "Sheer Force",
-    "evolution": "Electabuzz, Elekid, Electivire",
+    "evolution line": "Electabuzz, Elekid, Electivire",
     "img": "125"
   },
   "Magmar": {
+    "name": "Magmar",
     "id": 126,
     "hp": 65,
     "attack": 95,
@@ -2428,10 +2580,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Flame Body, Vital Spirit",
     "passive": "Sheer Force",
-    "evolution": "Magmar, Magby, Magmortar",
+    "evolution line": "Magmar, Magby, Magmortar",
     "img": "126"
   },
   "Pinsir": {
+    "name": "Pinsir",
     "id": 127,
     "hp": 65,
     "attack": 125,
@@ -2444,10 +2597,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Hyper Cutter, Mold Breaker, Moxie",
     "passive": "Tinted Lens",
-    "evolution": "Pinsir, Mega Pinsir",
+    "evolution line": "Pinsir, Mega Pinsir",
     "img": "127"
   },
   "Mega Pinsir": {
+    "name": "Mega Pinsir",
     "id": 127,
     "hp": 65,
     "attack": 155,
@@ -2460,10 +2614,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Aerilate",
     "passive": "Mold Breaker",
-    "evolution": "Pinsir, Mega Pinsir",
+    "evolution line": "Pinsir, Mega Pinsir",
     "img": "127-mega"
   },
   "Tauros": {
+    "name": "Tauros",
     "id": 128,
     "hp": 75,
     "attack": 100,
@@ -2476,10 +2631,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Intimidate, Anger Point, Sheer Force",
     "passive": "Moxie",
-    "evolution": "Tauros",
+    "evolution line": "Tauros",
     "img": "128"
   },
   "Magikarp": {
+    "name": "Magikarp",
     "id": 129,
     "hp": 20,
     "attack": 10,
@@ -2492,10 +2648,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Swift Swim, Rattled",
     "passive": "Multiscale",
-    "evolution": "Magikarp, Gyarados, Mega Gyarados",
+    "evolution line": "Magikarp, Gyarados, Mega Gyarados",
     "img": "129"
   },
   "Gyarados": {
+    "name": "Gyarados",
     "id": 130,
     "hp": 95,
     "attack": 125,
@@ -2508,10 +2665,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Intimidate, Moxie",
     "passive": "Multiscale",
-    "evolution": "Magikarp, Gyarados, Mega Gyarados",
+    "evolution line": "Magikarp, Gyarados, Mega Gyarados",
     "img": "130"
   },
   "Mega Gyarados": {
+    "name": "Mega Gyarados",
     "id": 130,
     "hp": 95,
     "attack": 155,
@@ -2524,10 +2682,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Mold Breaker",
     "passive": "Multiscale",
-    "evolution": "Magikarp, Gyarados, Mega Gyarados",
+    "evolution line": "Magikarp, Gyarados, Mega Gyarados",
     "img": "130-mega"
   },
   "Lapras": {
+    "name": "Lapras",
     "id": 131,
     "hp": 130,
     "attack": 85,
@@ -2540,10 +2699,11 @@ const POKEMON_DATA = {
     "type2": "Ice",
     "abilities": "Water Absorb, Shell Armor, Hydration",
     "passive": "Filter",
-    "evolution": "Lapras, Gigantamax Lapras",
+    "evolution line": "Lapras, Gigantamax Lapras",
     "img": "131"
   },
   "Gigantamax Lapras": {
+    "name": "Gigantamax Lapras",
     "id": 131,
     "hp": 170,
     "attack": 97,
@@ -2556,10 +2716,11 @@ const POKEMON_DATA = {
     "type2": "Ice",
     "abilities": "Shield Dust",
     "passive": "Filter",
-    "evolution": "Lapras, Gigantamax Lapras",
+    "evolution line": "Lapras, Gigantamax Lapras",
     "img": "131-gigantamax"
   },
   "Ditto": {
+    "name": "Ditto",
     "id": 132,
     "hp": 48,
     "attack": 48,
@@ -2572,10 +2733,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Limber, Imposter",
     "passive": "Adaptability",
-    "evolution": "Ditto",
+    "evolution line": "Ditto",
     "img": "132"
   },
   "Eevee": {
+    "name": "Eevee",
     "id": 133,
     "hp": 55,
     "attack": 55,
@@ -2588,10 +2750,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Run Away, Adaptability, Anticipation",
     "passive": "Pickup",
-    "evolution": "Eevee, Partner Eevee, Gigantamax Eevee, Vaporeon, Jolteon, Flareon, Espeon, Umbreon, Leafeon, Glaceon, Sylveon",
+    "evolution line": "Eevee, Partner Eevee, Gigantamax Eevee, Vaporeon, Jolteon, Flareon, Espeon, Umbreon, Leafeon, Glaceon, Sylveon",
     "img": "133"
   },
   "Partner Eevee": {
+    "name": "Partner Eevee",
     "id": 133,
     "hp": 65,
     "attack": 75,
@@ -2604,10 +2767,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Run Away, Adaptability, Anticipation",
     "passive": "Pickup",
-    "evolution": "Eevee, Partner Eevee, Gigantamax Eevee, Vaporeon, Jolteon, Flareon, Espeon, Umbreon, Leafeon, Glaceon, Sylveon",
+    "evolution line": "Eevee, Partner Eevee, Gigantamax Eevee, Vaporeon, Jolteon, Flareon, Espeon, Umbreon, Leafeon, Glaceon, Sylveon",
     "img": "133-partner"
   },
   "Gigantamax Eevee": {
+    "name": "Gigantamax Eevee",
     "id": 133,
     "hp": 110,
     "attack": 95,
@@ -2620,10 +2784,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Protean",
     "passive": "Fluffy",
-    "evolution": "Eevee, Partner Eevee, Gigantamax Eevee, Vaporeon, Jolteon, Flareon, Espeon, Umbreon, Leafeon, Glaceon, Sylveon",
+    "evolution line": "Eevee, Partner Eevee, Gigantamax Eevee, Vaporeon, Jolteon, Flareon, Espeon, Umbreon, Leafeon, Glaceon, Sylveon",
     "img": "133-gigantamax"
   },
   "Vaporeon": {
+    "name": "Vaporeon",
     "id": 134,
     "hp": 130,
     "attack": 65,
@@ -2636,10 +2801,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Water Absorb, Hydration",
     "passive": "Regenerator",
-    "evolution": "Eevee, Partner Eevee, Gigantamax Eevee, Vaporeon, Jolteon, Flareon, Espeon, Umbreon, Leafeon, Glaceon, Sylveon",
+    "evolution line": "Eevee, Partner Eevee, Gigantamax Eevee, Vaporeon, Jolteon, Flareon, Espeon, Umbreon, Leafeon, Glaceon, Sylveon",
     "img": "134"
   },
   "Jolteon": {
+    "name": "Jolteon",
     "id": 135,
     "hp": 65,
     "attack": 65,
@@ -2652,10 +2818,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Volt Absorb, Quick Feet",
     "passive": "Transistor",
-    "evolution": "Eevee, Partner Eevee, Gigantamax Eevee, Vaporeon, Jolteon, Flareon, Espeon, Umbreon, Leafeon, Glaceon, Sylveon",
+    "evolution line": "Eevee, Partner Eevee, Gigantamax Eevee, Vaporeon, Jolteon, Flareon, Espeon, Umbreon, Leafeon, Glaceon, Sylveon",
     "img": "135"
   },
   "Flareon": {
+    "name": "Flareon",
     "id": 136,
     "hp": 65,
     "attack": 130,
@@ -2668,10 +2835,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Flash Fire, Guts",
     "passive": "Fur Coat",
-    "evolution": "Eevee, Partner Eevee, Gigantamax Eevee, Vaporeon, Jolteon, Flareon, Espeon, Umbreon, Leafeon, Glaceon, Sylveon",
+    "evolution line": "Eevee, Partner Eevee, Gigantamax Eevee, Vaporeon, Jolteon, Flareon, Espeon, Umbreon, Leafeon, Glaceon, Sylveon",
     "img": "136"
   },
   "Porygon": {
+    "name": "Porygon",
     "id": 137,
     "hp": 65,
     "attack": 60,
@@ -2684,10 +2852,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Trace, Download, Analytic",
     "passive": "Transistor",
-    "evolution": "Porygon, Porygon2, Porygon-Z",
+    "evolution line": "Porygon, Porygon2, Porygon-Z",
     "img": "137"
   },
   "Omanyte": {
+    "name": "Omanyte",
     "id": 138,
     "hp": 35,
     "attack": 40,
@@ -2700,10 +2869,11 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Swift Swim, Shell Armor, Weak Armor",
     "passive": "Sturdy",
-    "evolution": "Omanyte, Omastar",
+    "evolution line": "Omanyte, Omastar",
     "img": "138"
   },
   "Omastar": {
+    "name": "Omastar",
     "id": 139,
     "hp": 70,
     "attack": 60,
@@ -2716,10 +2886,11 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Swift Swim, Shell Armor, Weak Armor",
     "passive": "Sturdy",
-    "evolution": "Omanyte, Omastar",
+    "evolution line": "Omanyte, Omastar",
     "img": "139"
   },
   "Kabuto": {
+    "name": "Kabuto",
     "id": 140,
     "hp": 30,
     "attack": 80,
@@ -2732,10 +2903,11 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Swift Swim, Battle Armor, Weak Armor",
     "passive": "Tough Claws",
-    "evolution": "Kabuto, Kabutops",
+    "evolution line": "Kabuto, Kabutops",
     "img": "140"
   },
   "Kabutops": {
+    "name": "Kabutops",
     "id": 141,
     "hp": 60,
     "attack": 115,
@@ -2748,10 +2920,11 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Swift Swim, Battle Armor, Weak Armor",
     "passive": "Tough Claws",
-    "evolution": "Kabuto, Kabutops",
+    "evolution line": "Kabuto, Kabutops",
     "img": "141"
   },
   "Aerodactyl": {
+    "name": "Aerodactyl",
     "id": 142,
     "hp": 80,
     "attack": 105,
@@ -2764,10 +2937,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Rock Head, Pressure, Unnerve",
     "passive": "Intimidate",
-    "evolution": "Aerodactyl, Mega Aerodactyl",
+    "evolution line": "Aerodactyl, Mega Aerodactyl",
     "img": "142"
   },
   "Mega Aerodactyl": {
+    "name": "Mega Aerodactyl",
     "id": 142,
     "hp": 80,
     "attack": 135,
@@ -2780,10 +2954,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Tough Claws",
     "passive": "Rocky Payload",
-    "evolution": "Aerodactyl, Mega Aerodactyl",
+    "evolution line": "Aerodactyl, Mega Aerodactyl",
     "img": "142-mega"
   },
   "Snorlax": {
+    "name": "Snorlax",
     "id": 143,
     "hp": 160,
     "attack": 110,
@@ -2796,10 +2971,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Immunity, Thick Fat, Gluttony",
     "passive": "Cheek Pouch",
-    "evolution": "Snorlax, Gigantamax Snorlax, Munchlax",
+    "evolution line": "Snorlax, Gigantamax Snorlax, Munchlax",
     "img": "143"
   },
   "Gigantamax Snorlax": {
+    "name": "Gigantamax Snorlax",
     "id": 143,
     "hp": 210,
     "attack": 130,
@@ -2812,10 +2988,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Harvest",
     "passive": "Ripen",
-    "evolution": "Snorlax, Gigantamax Snorlax, Munchlax",
+    "evolution line": "Snorlax, Gigantamax Snorlax, Munchlax",
     "img": "143-gigantamax"
   },
   "Articuno": {
+    "name": "Articuno",
     "id": 144,
     "hp": 90,
     "attack": 85,
@@ -2828,10 +3005,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Pressure, Snow Cloak",
     "passive": "Snow Warning",
-    "evolution": "Articuno",
+    "evolution line": "Articuno",
     "img": "144"
   },
   "Zapdos": {
+    "name": "Zapdos",
     "id": 145,
     "hp": 90,
     "attack": 90,
@@ -2844,10 +3022,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Pressure, Static",
     "passive": "Drizzle",
-    "evolution": "Zapdos",
+    "evolution line": "Zapdos",
     "img": "145"
   },
   "Moltres": {
+    "name": "Moltres",
     "id": 146,
     "hp": 90,
     "attack": 100,
@@ -2860,10 +3039,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Pressure, Flame Body",
     "passive": "Drought",
-    "evolution": "Moltres",
+    "evolution line": "Moltres",
     "img": "146"
   },
   "Dratini": {
+    "name": "Dratini",
     "id": 147,
     "hp": 41,
     "attack": 64,
@@ -2876,10 +3056,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shed Skin, Marvel Scale",
     "passive": "Multiscale",
-    "evolution": "Dratini, Dragonair, Dragonite",
+    "evolution line": "Dratini, Dragonair, Dragonite",
     "img": "147"
   },
   "Dragonair": {
+    "name": "Dragonair",
     "id": 148,
     "hp": 61,
     "attack": 84,
@@ -2892,10 +3073,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shed Skin, Marvel Scale",
     "passive": "Multiscale",
-    "evolution": "Dratini, Dragonair, Dragonite",
+    "evolution line": "Dratini, Dragonair, Dragonite",
     "img": "148"
   },
   "Dragonite": {
+    "name": "Dragonite",
     "id": 149,
     "hp": 91,
     "attack": 134,
@@ -2908,10 +3090,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Inner Focus, Multiscale",
     "passive": "Aerilate",
-    "evolution": "Dratini, Dragonair, Dragonite",
+    "evolution line": "Dratini, Dragonair, Dragonite",
     "img": "149"
   },
   "Mewtwo": {
+    "name": "Mewtwo",
     "id": 150,
     "hp": 106,
     "attack": 110,
@@ -2924,10 +3107,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Pressure, Unnerve",
     "passive": "Neuroforce",
-    "evolution": "Mewtwo, Mega X Mewtwo, Mega Y Mewtwo",
+    "evolution line": "Mewtwo, Mega X Mewtwo, Mega Y Mewtwo",
     "img": "150"
   },
   "Mega X Mewtwo": {
+    "name": "Mega X Mewtwo",
     "id": 150,
     "hp": 106,
     "attack": 190,
@@ -2940,10 +3124,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Steadfast",
     "passive": "Neuroforce",
-    "evolution": "Mewtwo, Mega X Mewtwo, Mega Y Mewtwo",
+    "evolution line": "Mewtwo, Mega X Mewtwo, Mega Y Mewtwo",
     "img": "150-mega-x"
   },
   "Mega Y Mewtwo": {
+    "name": "Mega Y Mewtwo",
     "id": 150,
     "hp": 106,
     "attack": 150,
@@ -2956,10 +3141,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Insomnia",
     "passive": "Neuroforce",
-    "evolution": "Mewtwo, Mega X Mewtwo, Mega Y Mewtwo",
+    "evolution line": "Mewtwo, Mega X Mewtwo, Mega Y Mewtwo",
     "img": "150-mega-y"
   },
   "Mew": {
+    "name": "Mew",
     "id": 151,
     "hp": 100,
     "attack": 100,
@@ -2972,10 +3158,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Synchronize",
     "passive": "Protean",
-    "evolution": "Mew",
+    "evolution line": "Mew",
     "img": "151"
   },
   "Chikorita": {
+    "name": "Chikorita",
     "id": 152,
     "hp": 45,
     "attack": 49,
@@ -2988,10 +3175,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Overgrow, Leaf Guard",
     "passive": "Cute Charm",
-    "evolution": "Chikorita, Bayleef, Meganium",
+    "evolution line": "Chikorita, Bayleef, Meganium",
     "img": "152"
   },
   "Bayleef": {
+    "name": "Bayleef",
     "id": 153,
     "hp": 60,
     "attack": 62,
@@ -3004,10 +3192,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Overgrow, Leaf Guard",
     "passive": "Thick Fat",
-    "evolution": "Chikorita, Bayleef, Meganium",
+    "evolution line": "Chikorita, Bayleef, Meganium",
     "img": "153"
   },
   "Meganium": {
+    "name": "Meganium",
     "id": 154,
     "hp": 80,
     "attack": 82,
@@ -3020,10 +3209,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Overgrow, Leaf Guard",
     "passive": "Thick Fat",
-    "evolution": "Chikorita, Bayleef, Meganium",
+    "evolution line": "Chikorita, Bayleef, Meganium",
     "img": "154"
   },
   "Cyndaquil": {
+    "name": "Cyndaquil",
     "id": 155,
     "hp": 39,
     "attack": 52,
@@ -3036,10 +3226,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Blaze, Flash Fire",
     "passive": "White Smoke",
-    "evolution": "Cyndaquil, Quilava, Typhlosion, Hisui Typhlosion",
+    "evolution line": "Cyndaquil, Quilava, Typhlosion, Hisui Typhlosion",
     "img": "155"
   },
   "Quilava": {
+    "name": "Quilava",
     "id": 156,
     "hp": 58,
     "attack": 64,
@@ -3052,10 +3243,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Blaze, Flash Fire",
     "passive": "Drought",
-    "evolution": "Cyndaquil, Quilava, Typhlosion, Hisui Typhlosion",
+    "evolution line": "Cyndaquil, Quilava, Typhlosion, Hisui Typhlosion",
     "img": "156"
   },
   "Typhlosion": {
+    "name": "Typhlosion",
     "id": 157,
     "hp": 78,
     "attack": 84,
@@ -3068,10 +3260,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Blaze, Flash Fire",
     "passive": "Drought",
-    "evolution": "Cyndaquil, Quilava, Typhlosion, Hisui Typhlosion",
+    "evolution line": "Cyndaquil, Quilava, Typhlosion, Hisui Typhlosion",
     "img": "157"
   },
   "Totodile": {
+    "name": "Totodile",
     "id": 158,
     "hp": 50,
     "attack": 65,
@@ -3084,10 +3277,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Torrent, Sheer Force",
     "passive": "Strong Jaw",
-    "evolution": "Totodile, Croconaw, Feraligatr",
+    "evolution line": "Totodile, Croconaw, Feraligatr",
     "img": "158"
   },
   "Croconaw": {
+    "name": "Croconaw",
     "id": 159,
     "hp": 65,
     "attack": 80,
@@ -3100,10 +3294,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Torrent, Sheer Force",
     "passive": "Strong Jaw",
-    "evolution": "Totodile, Croconaw, Feraligatr",
+    "evolution line": "Totodile, Croconaw, Feraligatr",
     "img": "159"
   },
   "Feraligatr": {
+    "name": "Feraligatr",
     "id": 160,
     "hp": 85,
     "attack": 105,
@@ -3116,10 +3311,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Torrent, Sheer Force",
     "passive": "Strong Jaw",
-    "evolution": "Totodile, Croconaw, Feraligatr",
+    "evolution line": "Totodile, Croconaw, Feraligatr",
     "img": "160"
   },
   "Sentret": {
+    "name": "Sentret",
     "id": 161,
     "hp": 35,
     "attack": 46,
@@ -3132,10 +3328,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Run Away, Keen Eye, Frisk",
     "passive": "Pickup",
-    "evolution": "Sentret, Furret",
+    "evolution line": "Sentret, Furret",
     "img": "161"
   },
   "Furret": {
+    "name": "Furret",
     "id": 162,
     "hp": 85,
     "attack": 76,
@@ -3148,10 +3345,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Run Away, Keen Eye, Frisk",
     "passive": "Pickup",
-    "evolution": "Sentret, Furret",
+    "evolution line": "Sentret, Furret",
     "img": "162"
   },
   "Hoothoot": {
+    "name": "Hoothoot",
     "id": 163,
     "hp": 60,
     "attack": 30,
@@ -3164,10 +3362,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Insomnia, Keen Eye, Tinted Lens",
     "passive": "Aerilate",
-    "evolution": "Hoothoot, Noctowl",
+    "evolution line": "Hoothoot, Noctowl",
     "img": "163"
   },
   "Noctowl": {
+    "name": "Noctowl",
     "id": 164,
     "hp": 100,
     "attack": 50,
@@ -3180,10 +3379,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Insomnia, Keen Eye, Tinted Lens",
     "passive": "Aerilate",
-    "evolution": "Hoothoot, Noctowl",
+    "evolution line": "Hoothoot, Noctowl",
     "img": "164"
   },
   "Ledyba": {
+    "name": "Ledyba",
     "id": 165,
     "hp": 40,
     "attack": 20,
@@ -3196,10 +3396,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Swarm, Early Bird, Rattled",
     "passive": "Prankster",
-    "evolution": "Ledyba, Ledian",
+    "evolution line": "Ledyba, Ledian",
     "img": "165"
   },
   "Ledian": {
+    "name": "Ledian",
     "id": 166,
     "hp": 55,
     "attack": 35,
@@ -3212,10 +3413,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Swarm, Early Bird, Iron Fist",
     "passive": "Prankster",
-    "evolution": "Ledyba, Ledian",
+    "evolution line": "Ledyba, Ledian",
     "img": "166"
   },
   "Spinarak": {
+    "name": "Spinarak",
     "id": 167,
     "hp": 40,
     "attack": 60,
@@ -3228,10 +3430,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Swarm, Insomnia, Sniper",
     "passive": "Prankster",
-    "evolution": "Spinarak, Ariados",
+    "evolution line": "Spinarak, Ariados",
     "img": "167"
   },
   "Ariados": {
+    "name": "Ariados",
     "id": 168,
     "hp": 70,
     "attack": 90,
@@ -3244,10 +3447,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Swarm, Insomnia, Sniper",
     "passive": "Prankster",
-    "evolution": "Spinarak, Ariados",
+    "evolution line": "Spinarak, Ariados",
     "img": "168"
   },
   "Crobat": {
+    "name": "Crobat",
     "id": 169,
     "hp": 85,
     "attack": 90,
@@ -3260,10 +3464,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Inner Focus, Infiltrator",
     "passive": "Intimidate",
-    "evolution": "Zubat, Golbat, Crobat",
+    "evolution line": "Zubat, Golbat, Crobat",
     "img": "169"
   },
   "Chinchou": {
+    "name": "Chinchou",
     "id": 170,
     "hp": 75,
     "attack": 38,
@@ -3276,10 +3481,11 @@ const POKEMON_DATA = {
     "type2": "Electric",
     "abilities": "Volt Absorb, Illuminate, Water Absorb",
     "passive": "Regenerator",
-    "evolution": "Chinchou, Lanturn",
+    "evolution line": "Chinchou, Lanturn",
     "img": "170"
   },
   "Lanturn": {
+    "name": "Lanturn",
     "id": 171,
     "hp": 125,
     "attack": 58,
@@ -3292,10 +3498,11 @@ const POKEMON_DATA = {
     "type2": "Electric",
     "abilities": "Volt Absorb, Illuminate, Water Absorb",
     "passive": "Regenerator",
-    "evolution": "Chinchou, Lanturn",
+    "evolution line": "Chinchou, Lanturn",
     "img": "171"
   },
   "Pichu": {
+    "name": "Pichu",
     "id": 172,
     "hp": 20,
     "attack": 40,
@@ -3308,10 +3515,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Lightning Rod",
     "passive": "Electric Surge",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
+    "evolution line": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "172"
   },
   "Spiky-Eared Pichu": {
+    "name": "Spiky-Eared Pichu",
     "id": 172,
     "hp": 20,
     "attack": 40,
@@ -3324,10 +3532,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Lightning Rod",
     "passive": "Sturdy",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
+    "evolution line": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "172-spiky"
   },
   "Cleffa": {
+    "name": "Cleffa",
     "id": 173,
     "hp": 50,
     "attack": 25,
@@ -3340,10 +3549,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Cute Charm, Magic Guard, Friend Guard",
     "passive": "Prankster",
-    "evolution": "Clefairy, Clefable, Cleffa",
+    "evolution line": "Clefairy, Clefable, Cleffa",
     "img": "173"
   },
   "Igglybuff": {
+    "name": "Igglybuff",
     "id": 174,
     "hp": 90,
     "attack": 30,
@@ -3356,10 +3566,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Cute Charm, Competitive, Friend Guard",
     "passive": "Huge Power",
-    "evolution": "Jigglypuff, Wigglytuff, Igglybuff",
+    "evolution line": "Jigglypuff, Wigglytuff, Igglybuff",
     "img": "174"
   },
   "Togepi": {
+    "name": "Togepi",
     "id": 175,
     "hp": 35,
     "attack": 20,
@@ -3372,10 +3583,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Hustle, Serene Grace, Super Luck",
     "passive": "Pixilate",
-    "evolution": "Togepi, Togetic, Togekiss",
+    "evolution line": "Togepi, Togetic, Togekiss",
     "img": "175"
   },
   "Togetic": {
+    "name": "Togetic",
     "id": 176,
     "hp": 55,
     "attack": 40,
@@ -3388,10 +3600,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Hustle, Serene Grace, Super Luck",
     "passive": "Pixilate",
-    "evolution": "Togepi, Togetic, Togekiss",
+    "evolution line": "Togepi, Togetic, Togekiss",
     "img": "176"
   },
   "Natu": {
+    "name": "Natu",
     "id": 177,
     "hp": 40,
     "attack": 50,
@@ -3404,10 +3617,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Synchronize, Early Bird, Magic Bounce",
     "passive": "Tinted Lens",
-    "evolution": "Natu, Xatu",
+    "evolution line": "Natu, Xatu",
     "img": "177"
   },
   "Xatu": {
+    "name": "Xatu",
     "id": 178,
     "hp": 65,
     "attack": 75,
@@ -3420,10 +3634,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Synchronize, Early Bird, Magic Bounce",
     "passive": "Sheer Force",
-    "evolution": "Natu, Xatu",
+    "evolution line": "Natu, Xatu",
     "img": "178"
   },
   "Mareep": {
+    "name": "Mareep",
     "id": 179,
     "hp": 55,
     "attack": 40,
@@ -3436,10 +3651,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Plus",
     "passive": "Electromorphosis",
-    "evolution": "Mareep, Flaaffy, Ampharos, Mega Ampharos",
+    "evolution line": "Mareep, Flaaffy, Ampharos, Mega Ampharos",
     "img": "179"
   },
   "Flaaffy": {
+    "name": "Flaaffy",
     "id": 180,
     "hp": 70,
     "attack": 55,
@@ -3452,10 +3668,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Plus",
     "passive": "Electromorphosis",
-    "evolution": "Mareep, Flaaffy, Ampharos, Mega Ampharos",
+    "evolution line": "Mareep, Flaaffy, Ampharos, Mega Ampharos",
     "img": "180"
   },
   "Ampharos": {
+    "name": "Ampharos",
     "id": 181,
     "hp": 90,
     "attack": 75,
@@ -3468,10 +3685,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Plus",
     "passive": "Electromorphosis",
-    "evolution": "Mareep, Flaaffy, Ampharos, Mega Ampharos",
+    "evolution line": "Mareep, Flaaffy, Ampharos, Mega Ampharos",
     "img": "181"
   },
   "Mega Ampharos": {
+    "name": "Mega Ampharos",
     "id": 181,
     "hp": 90,
     "attack": 95,
@@ -3484,10 +3702,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Mold Breaker",
     "passive": "Fluffy",
-    "evolution": "Mareep, Flaaffy, Ampharos, Mega Ampharos",
+    "evolution line": "Mareep, Flaaffy, Ampharos, Mega Ampharos",
     "img": "181-mega"
   },
   "Bellossom": {
+    "name": "Bellossom",
     "id": 182,
     "hp": 75,
     "attack": 80,
@@ -3500,10 +3719,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Chlorophyll, Healer",
     "passive": "Triage",
-    "evolution": "Oddish, Gloom, Vileplume, Bellossom",
+    "evolution line": "Oddish, Gloom, Vileplume, Bellossom",
     "img": "182"
   },
   "Marill": {
+    "name": "Marill",
     "id": 183,
     "hp": 70,
     "attack": 20,
@@ -3516,10 +3736,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Thick Fat, Huge Power, Sap Sipper",
     "passive": "Misty Surge",
-    "evolution": "Marill, Azumarill, Azurill",
+    "evolution line": "Marill, Azumarill, Azurill",
     "img": "183"
   },
   "Azumarill": {
+    "name": "Azumarill",
     "id": 184,
     "hp": 100,
     "attack": 50,
@@ -3532,10 +3753,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Thick Fat, Huge Power, Sap Sipper",
     "passive": "Misty Surge",
-    "evolution": "Marill, Azumarill, Azurill",
+    "evolution line": "Marill, Azumarill, Azurill",
     "img": "184"
   },
   "Sudowoodo": {
+    "name": "Sudowoodo",
     "id": 185,
     "hp": 70,
     "attack": 100,
@@ -3548,10 +3770,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sturdy, Rock Head, Rattled",
     "passive": "Sap Sipper",
-    "evolution": "Sudowoodo, Bonsly",
+    "evolution line": "Sudowoodo, Bonsly",
     "img": "185"
   },
   "Politoed": {
+    "name": "Politoed",
     "id": 186,
     "hp": 90,
     "attack": 75,
@@ -3564,10 +3787,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Water Absorb, Damp, Drizzle",
     "passive": "No Guard",
-    "evolution": "Poliwag, Poliwhirl, Poliwrath, Politoed",
+    "evolution line": "Poliwag, Poliwhirl, Poliwrath, Politoed",
     "img": "186"
   },
   "Hoppip": {
+    "name": "Hoppip",
     "id": 187,
     "hp": 35,
     "attack": 35,
@@ -3580,10 +3804,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Chlorophyll, Leaf Guard, Infiltrator",
     "passive": "Wind Rider",
-    "evolution": "Hoppip, Skiploom, Jumpluff",
+    "evolution line": "Hoppip, Skiploom, Jumpluff",
     "img": "187"
   },
   "Skiploom": {
+    "name": "Skiploom",
     "id": 188,
     "hp": 55,
     "attack": 45,
@@ -3596,10 +3821,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Chlorophyll, Leaf Guard, Infiltrator",
     "passive": "Wind Rider",
-    "evolution": "Hoppip, Skiploom, Jumpluff",
+    "evolution line": "Hoppip, Skiploom, Jumpluff",
     "img": "188"
   },
   "Jumpluff": {
+    "name": "Jumpluff",
     "id": 189,
     "hp": 75,
     "attack": 55,
@@ -3612,10 +3838,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Chlorophyll, Leaf Guard, Infiltrator",
     "passive": "Fluffy",
-    "evolution": "Hoppip, Skiploom, Jumpluff",
+    "evolution line": "Hoppip, Skiploom, Jumpluff",
     "img": "189"
   },
   "Aipom": {
+    "name": "Aipom",
     "id": 190,
     "hp": 55,
     "attack": 70,
@@ -3628,10 +3855,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Run Away, Pickup, Skill Link",
     "passive": "Scrappy",
-    "evolution": "Aipom, Ambipom",
+    "evolution line": "Aipom, Ambipom",
     "img": "190"
   },
   "Sunkern": {
+    "name": "Sunkern",
     "id": 191,
     "hp": 30,
     "attack": 30,
@@ -3644,10 +3872,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Chlorophyll, Solar Power, Early Bird",
     "passive": "Drought",
-    "evolution": "Sunkern, Sunflora",
+    "evolution line": "Sunkern, Sunflora",
     "img": "191"
   },
   "Sunflora": {
+    "name": "Sunflora",
     "id": 192,
     "hp": 75,
     "attack": 75,
@@ -3660,10 +3889,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Chlorophyll, Solar Power, Early Bird",
     "passive": "Drought",
-    "evolution": "Sunkern, Sunflora",
+    "evolution line": "Sunkern, Sunflora",
     "img": "192"
   },
   "Yanma": {
+    "name": "Yanma",
     "id": 193,
     "hp": 65,
     "attack": 65,
@@ -3676,10 +3906,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Speed Boost, Compound Eyes, Frisk",
     "passive": "Technician",
-    "evolution": "Yanma, Yanmega",
+    "evolution line": "Yanma, Yanmega",
     "img": "193"
   },
   "Wooper": {
+    "name": "Wooper",
     "id": 194,
     "hp": 55,
     "attack": 45,
@@ -3692,10 +3923,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Damp, Water Absorb, Unaware",
     "passive": "Water Veil",
-    "evolution": "Wooper, Quagsire",
+    "evolution line": "Wooper, Quagsire",
     "img": "194"
   },
   "Quagsire": {
+    "name": "Quagsire",
     "id": 195,
     "hp": 95,
     "attack": 85,
@@ -3708,10 +3940,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Damp, Water Absorb, Unaware",
     "passive": "Comatose",
-    "evolution": "Wooper, Quagsire",
+    "evolution line": "Wooper, Quagsire",
     "img": "195"
   },
   "Espeon": {
+    "name": "Espeon",
     "id": 196,
     "hp": 65,
     "attack": 65,
@@ -3724,10 +3957,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Synchronize, Magic Bounce",
     "passive": "Magician",
-    "evolution": "Eevee, Partner Eevee, Gigantamax Eevee, Vaporeon, Jolteon, Flareon, Espeon, Umbreon, Leafeon, Glaceon, Sylveon",
+    "evolution line": "Eevee, Partner Eevee, Gigantamax Eevee, Vaporeon, Jolteon, Flareon, Espeon, Umbreon, Leafeon, Glaceon, Sylveon",
     "img": "196"
   },
   "Umbreon": {
+    "name": "Umbreon",
     "id": 197,
     "hp": 95,
     "attack": 65,
@@ -3740,10 +3974,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Synchronize, Inner Focus",
     "passive": "Toxic Chain",
-    "evolution": "Eevee, Partner Eevee, Gigantamax Eevee, Vaporeon, Jolteon, Flareon, Espeon, Umbreon, Leafeon, Glaceon, Sylveon",
+    "evolution line": "Eevee, Partner Eevee, Gigantamax Eevee, Vaporeon, Jolteon, Flareon, Espeon, Umbreon, Leafeon, Glaceon, Sylveon",
     "img": "197"
   },
   "Murkrow": {
+    "name": "Murkrow",
     "id": 198,
     "hp": 60,
     "attack": 85,
@@ -3756,10 +3991,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Insomnia, Super Luck, Prankster",
     "passive": "Unnerve",
-    "evolution": "Murkrow, Honchkrow",
+    "evolution line": "Murkrow, Honchkrow",
     "img": "198"
   },
   "Slowking": {
+    "name": "Slowking",
     "id": 199,
     "hp": 95,
     "attack": 75,
@@ -3772,10 +4008,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Oblivious, Own Tempo, Regenerator",
     "passive": "Unaware",
-    "evolution": "Slowpoke, Slowbro, Mega Slowbro, Slowking",
+    "evolution line": "Slowpoke, Slowbro, Mega Slowbro, Slowking",
     "img": "199"
   },
   "Misdreavus": {
+    "name": "Misdreavus",
     "id": 200,
     "hp": 60,
     "attack": 60,
@@ -3788,10 +4025,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Beads Of Ruin",
-    "evolution": "Misdreavus, Mismagius",
+    "evolution line": "Misdreavus, Mismagius",
     "img": "200"
   },
   "A Unown": {
+    "name": "A Unown",
     "id": 201,
     "hp": 48,
     "attack": 72,
@@ -3804,10 +4042,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Adaptability",
-    "evolution": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
+    "evolution line": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
     "img": "201-a"
   },
   "B Unown": {
+    "name": "B Unown",
     "id": 201,
     "hp": 48,
     "attack": 72,
@@ -3820,10 +4059,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Beast Boost",
-    "evolution": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
+    "evolution line": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
     "img": "201-b"
   },
   "C Unown": {
+    "name": "C Unown",
     "id": 201,
     "hp": 48,
     "attack": 72,
@@ -3836,10 +4076,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Contrary",
-    "evolution": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
+    "evolution line": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
     "img": "201-c"
   },
   "D Unown": {
+    "name": "D Unown",
     "id": 201,
     "hp": 48,
     "attack": 72,
@@ -3852,10 +4093,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Dazzling",
-    "evolution": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
+    "evolution line": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
     "img": "201-d"
   },
   "E Unown": {
+    "name": "E Unown",
     "id": 201,
     "hp": 48,
     "attack": 72,
@@ -3868,10 +4110,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Emergency Exit",
-    "evolution": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
+    "evolution line": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
     "img": "201-e"
   },
   "F Unown": {
+    "name": "F Unown",
     "id": 201,
     "hp": 48,
     "attack": 72,
@@ -3884,10 +4127,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Friend Guard",
-    "evolution": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
+    "evolution line": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
     "img": "201-f"
   },
   "G Unown": {
+    "name": "G Unown",
     "id": 201,
     "hp": 48,
     "attack": 72,
@@ -3900,10 +4144,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Good As Gold",
-    "evolution": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
+    "evolution line": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
     "img": "201-g"
   },
   "H Unown": {
+    "name": "H Unown",
     "id": 201,
     "hp": 48,
     "attack": 72,
@@ -3916,10 +4161,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Honey Gather",
-    "evolution": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
+    "evolution line": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
     "img": "201-h"
   },
   "I Unown": {
+    "name": "I Unown",
     "id": 201,
     "hp": 48,
     "attack": 72,
@@ -3932,10 +4178,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Imposter",
-    "evolution": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
+    "evolution line": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
     "img": "201-i"
   },
   "J Unown": {
+    "name": "J Unown",
     "id": 201,
     "hp": 48,
     "attack": 72,
@@ -3948,10 +4195,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Justified",
-    "evolution": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
+    "evolution line": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
     "img": "201-j"
   },
   "K Unown": {
+    "name": "K Unown",
     "id": 201,
     "hp": 48,
     "attack": 72,
@@ -3964,10 +4212,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Klutz",
-    "evolution": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
+    "evolution line": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
     "img": "201-k"
   },
   "L Unown": {
+    "name": "L Unown",
     "id": 201,
     "hp": 48,
     "attack": 72,
@@ -3980,10 +4229,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Libero",
-    "evolution": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
+    "evolution line": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
     "img": "201-l"
   },
   "M Unown": {
+    "name": "M Unown",
     "id": 201,
     "hp": 48,
     "attack": 72,
@@ -3996,10 +4246,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Moody",
-    "evolution": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
+    "evolution line": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
     "img": "201-m"
   },
   "N Unown": {
+    "name": "N Unown",
     "id": 201,
     "hp": 48,
     "attack": 72,
@@ -4012,10 +4263,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Neutralizing Gas",
-    "evolution": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
+    "evolution line": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
     "img": "201-n"
   },
   "O Unown": {
+    "name": "O Unown",
     "id": 201,
     "hp": 48,
     "attack": 72,
@@ -4028,10 +4280,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Opportunist",
-    "evolution": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
+    "evolution line": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
     "img": "201-o"
   },
   "P Unown": {
+    "name": "P Unown",
     "id": 201,
     "hp": 48,
     "attack": 72,
@@ -4044,10 +4297,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Pickup",
-    "evolution": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
+    "evolution line": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
     "img": "201-p"
   },
   "Q Unown": {
+    "name": "Q Unown",
     "id": 201,
     "hp": 48,
     "attack": 72,
@@ -4060,10 +4314,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Quick Draw",
-    "evolution": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
+    "evolution line": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
     "img": "201-q"
   },
   "R Unown": {
+    "name": "R Unown",
     "id": 201,
     "hp": 48,
     "attack": 72,
@@ -4076,10 +4331,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Run Away",
-    "evolution": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
+    "evolution line": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
     "img": "201-r"
   },
   "S Unown": {
+    "name": "S Unown",
     "id": 201,
     "hp": 48,
     "attack": 72,
@@ -4092,10 +4348,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Simple",
-    "evolution": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
+    "evolution line": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
     "img": "201-s"
   },
   "T Unown": {
+    "name": "T Unown",
     "id": 201,
     "hp": 48,
     "attack": 72,
@@ -4108,10 +4365,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Trace",
-    "evolution": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
+    "evolution line": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
     "img": "201-t"
   },
   "U Unown": {
+    "name": "U Unown",
     "id": 201,
     "hp": 48,
     "attack": 72,
@@ -4124,10 +4382,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Unnerve",
-    "evolution": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
+    "evolution line": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
     "img": "201-u"
   },
   "V Unown": {
+    "name": "V Unown",
     "id": 201,
     "hp": 48,
     "attack": 72,
@@ -4140,10 +4399,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Victory Star",
-    "evolution": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
+    "evolution line": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
     "img": "201-v"
   },
   "W Unown": {
+    "name": "W Unown",
     "id": 201,
     "hp": 48,
     "attack": 72,
@@ -4156,10 +4416,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Wandering Spirit",
-    "evolution": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
+    "evolution line": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
     "img": "201-w"
   },
   "X Unown": {
+    "name": "X Unown",
     "id": 201,
     "hp": 48,
     "attack": 72,
@@ -4172,10 +4433,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Fairy Aura",
-    "evolution": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
+    "evolution line": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
     "img": "201-x"
   },
   "Y Unown": {
+    "name": "Y Unown",
     "id": 201,
     "hp": 48,
     "attack": 72,
@@ -4188,10 +4450,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Dark Aura",
-    "evolution": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
+    "evolution line": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
     "img": "201-y"
   },
   "Z Unown": {
+    "name": "Z Unown",
     "id": 201,
     "hp": 48,
     "attack": 72,
@@ -4204,10 +4467,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Aura Break",
-    "evolution": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
+    "evolution line": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
     "img": "201-z"
   },
   "Exclamation Unown": {
+    "name": "Exclamation Unown",
     "id": 201,
     "hp": 48,
     "attack": 72,
@@ -4220,10 +4484,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Pure Power",
-    "evolution": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
+    "evolution line": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
     "img": "201-exclamation"
   },
   "Question Unown": {
+    "name": "Question Unown",
     "id": 201,
     "hp": 48,
     "attack": 72,
@@ -4236,10 +4501,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Unaware",
-    "evolution": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
+    "evolution line": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
     "img": "201-question"
   },
   "Wobbuffet": {
+    "name": "Wobbuffet",
     "id": 202,
     "hp": 190,
     "attack": 33,
@@ -4252,10 +4518,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shadow Tag, Telepathy",
     "passive": "Sturdy",
-    "evolution": "Wobbuffet, Wynaut",
+    "evolution line": "Wobbuffet, Wynaut",
     "img": "202"
   },
   "Girafarig": {
+    "name": "Girafarig",
     "id": 203,
     "hp": 70,
     "attack": 80,
@@ -4268,10 +4535,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Inner Focus, Early Bird, Sap Sipper",
     "passive": "Parental Bond",
-    "evolution": "Girafarig, Farigiraf",
+    "evolution line": "Girafarig, Farigiraf",
     "img": "203"
   },
   "Pineco": {
+    "name": "Pineco",
     "id": 204,
     "hp": 50,
     "attack": 65,
@@ -4284,10 +4552,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sturdy, Overcoat",
     "passive": "Rough Skin",
-    "evolution": "Pineco, Forretress",
+    "evolution line": "Pineco, Forretress",
     "img": "204"
   },
   "Forretress": {
+    "name": "Forretress",
     "id": 205,
     "hp": 75,
     "attack": 90,
@@ -4300,10 +4569,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Sturdy, Overcoat",
     "passive": "Iron Barbs",
-    "evolution": "Pineco, Forretress",
+    "evolution line": "Pineco, Forretress",
     "img": "205"
   },
   "Dunsparce": {
+    "name": "Dunsparce",
     "id": 206,
     "hp": 100,
     "attack": 70,
@@ -4316,10 +4586,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Serene Grace, Run Away, Rattled",
     "passive": "Unaware",
-    "evolution": "Dunsparce, Two-Segment Dudunsparce, Three-Segment Dudunsparce",
+    "evolution line": "Dunsparce, Two-Segment Dudunsparce, Three-Segment Dudunsparce",
     "img": "206"
   },
   "Gligar": {
+    "name": "Gligar",
     "id": 207,
     "hp": 65,
     "attack": 75,
@@ -4332,10 +4603,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Hyper Cutter, Sand Veil, Immunity",
     "passive": "Poison Touch",
-    "evolution": "Gligar, Gliscor",
+    "evolution line": "Gligar, Gliscor",
     "img": "207"
   },
   "Steelix": {
+    "name": "Steelix",
     "id": 208,
     "hp": 75,
     "attack": 85,
@@ -4348,10 +4620,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Rock Head, Sturdy, Sheer Force",
     "passive": "Rocky Payload",
-    "evolution": "Onix, Steelix, Mega Steelix",
+    "evolution line": "Onix, Steelix, Mega Steelix",
     "img": "208"
   },
   "Mega Steelix": {
+    "name": "Mega Steelix",
     "id": 208,
     "hp": 75,
     "attack": 125,
@@ -4364,10 +4637,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Sand Force",
     "passive": "Sand Spit",
-    "evolution": "Onix, Steelix, Mega Steelix",
+    "evolution line": "Onix, Steelix, Mega Steelix",
     "img": "208-mega"
   },
   "Snubbull": {
+    "name": "Snubbull",
     "id": 209,
     "hp": 60,
     "attack": 80,
@@ -4380,10 +4654,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Intimidate, Run Away, Rattled",
     "passive": "Pixilate",
-    "evolution": "Snubbull, Granbull",
+    "evolution line": "Snubbull, Granbull",
     "img": "209"
   },
   "Granbull": {
+    "name": "Granbull",
     "id": 210,
     "hp": 90,
     "attack": 120,
@@ -4396,10 +4671,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Intimidate, Quick Feet, Rattled",
     "passive": "Pixilate",
-    "evolution": "Snubbull, Granbull",
+    "evolution line": "Snubbull, Granbull",
     "img": "210"
   },
   "Qwilfish": {
+    "name": "Qwilfish",
     "id": 211,
     "hp": 65,
     "attack": 95,
@@ -4412,10 +4688,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Poison Point, Swift Swim, Intimidate",
     "passive": "Toxic Debris",
-    "evolution": "Qwilfish",
+    "evolution line": "Qwilfish",
     "img": "211"
   },
   "Scizor": {
+    "name": "Scizor",
     "id": 212,
     "hp": 70,
     "attack": 130,
@@ -4428,10 +4705,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Swarm, Technician, Light Metal",
     "passive": "Tough Claws",
-    "evolution": "Scyther, Scizor, Mega Scizor, Kleavor",
+    "evolution line": "Scyther, Scizor, Mega Scizor, Kleavor",
     "img": "212"
   },
   "Mega Scizor": {
+    "name": "Mega Scizor",
     "id": 212,
     "hp": 70,
     "attack": 150,
@@ -4444,10 +4722,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Technician",
     "passive": "Tough Claws",
-    "evolution": "Scyther, Scizor, Mega Scizor, Kleavor",
+    "evolution line": "Scyther, Scizor, Mega Scizor, Kleavor",
     "img": "212-mega"
   },
   "Shuckle": {
+    "name": "Shuckle",
     "id": 213,
     "hp": 20,
     "attack": 10,
@@ -4460,10 +4739,11 @@ const POKEMON_DATA = {
     "type2": "Rock",
     "abilities": "Sturdy, Gluttony, Contrary",
     "passive": "Harvest",
-    "evolution": "Shuckle",
+    "evolution line": "Shuckle",
     "img": "213"
   },
   "Heracross": {
+    "name": "Heracross",
     "id": 214,
     "hp": 80,
     "attack": 125,
@@ -4476,10 +4756,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Swarm, Guts, Moxie",
     "passive": "Technician",
-    "evolution": "Heracross, Mega Heracross",
+    "evolution line": "Heracross, Mega Heracross",
     "img": "214"
   },
   "Mega Heracross": {
+    "name": "Mega Heracross",
     "id": 214,
     "hp": 80,
     "attack": 185,
@@ -4492,10 +4773,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Skill Link",
     "passive": "Technician",
-    "evolution": "Heracross, Mega Heracross",
+    "evolution line": "Heracross, Mega Heracross",
     "img": "214-mega"
   },
   "Sneasel": {
+    "name": "Sneasel",
     "id": 215,
     "hp": 55,
     "attack": 95,
@@ -4508,10 +4790,11 @@ const POKEMON_DATA = {
     "type2": "Ice",
     "abilities": "Inner Focus, Keen Eye, Pickpocket",
     "passive": "Tough Claws",
-    "evolution": "Sneasel, Weavile",
+    "evolution line": "Sneasel, Weavile",
     "img": "215"
   },
   "Teddiursa": {
+    "name": "Teddiursa",
     "id": 216,
     "hp": 60,
     "attack": 80,
@@ -4524,10 +4807,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Pickup, Quick Feet, Honey Gather",
     "passive": "Run Away",
-    "evolution": "Teddiursa, Ursaring, Ursaluna",
+    "evolution line": "Teddiursa, Ursaring, Ursaluna",
     "img": "216"
   },
   "Ursaring": {
+    "name": "Ursaring",
     "id": 217,
     "hp": 90,
     "attack": 130,
@@ -4540,10 +4824,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Guts, Quick Feet, Unnerve",
     "passive": "Thick Fat",
-    "evolution": "Teddiursa, Ursaring, Ursaluna",
+    "evolution line": "Teddiursa, Ursaring, Ursaluna",
     "img": "217"
   },
   "Slugma": {
+    "name": "Slugma",
     "id": 218,
     "hp": 40,
     "attack": 40,
@@ -4556,10 +4841,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Magma Armor, Flame Body, Weak Armor",
     "passive": "Drought",
-    "evolution": "Slugma, Magcargo",
+    "evolution line": "Slugma, Magcargo",
     "img": "218"
   },
   "Magcargo": {
+    "name": "Magcargo",
     "id": 219,
     "hp": 60,
     "attack": 50,
@@ -4572,10 +4858,11 @@ const POKEMON_DATA = {
     "type2": "Rock",
     "abilities": "Magma Armor, Flame Body, Weak Armor",
     "passive": "Desolate Land",
-    "evolution": "Slugma, Magcargo",
+    "evolution line": "Slugma, Magcargo",
     "img": "219"
   },
   "Swinub": {
+    "name": "Swinub",
     "id": 220,
     "hp": 50,
     "attack": 50,
@@ -4588,10 +4875,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Oblivious, Snow Cloak, Thick Fat",
     "passive": "Unaware",
-    "evolution": "Swinub, Piloswine, Mamoswine",
+    "evolution line": "Swinub, Piloswine, Mamoswine",
     "img": "220"
   },
   "Piloswine": {
+    "name": "Piloswine",
     "id": 221,
     "hp": 100,
     "attack": 100,
@@ -4604,10 +4892,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Oblivious, Snow Cloak, Thick Fat",
     "passive": "Unaware",
-    "evolution": "Swinub, Piloswine, Mamoswine",
+    "evolution line": "Swinub, Piloswine, Mamoswine",
     "img": "221"
   },
   "Corsola": {
+    "name": "Corsola",
     "id": 222,
     "hp": 65,
     "attack": 55,
@@ -4620,10 +4909,11 @@ const POKEMON_DATA = {
     "type2": "Rock",
     "abilities": "Hustle, Natural Cure, Regenerator",
     "passive": "Storm Drain",
-    "evolution": "Corsola",
+    "evolution line": "Corsola",
     "img": "222"
   },
   "Remoraid": {
+    "name": "Remoraid",
     "id": 223,
     "hp": 35,
     "attack": 65,
@@ -4636,10 +4926,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Hustle, Sniper, Moody",
     "passive": "Simple",
-    "evolution": "Remoraid, Octillery",
+    "evolution line": "Remoraid, Octillery",
     "img": "223"
   },
   "Octillery": {
+    "name": "Octillery",
     "id": 224,
     "hp": 75,
     "attack": 105,
@@ -4652,10 +4943,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Suction Cups, Sniper, Moody",
     "passive": "Simple",
-    "evolution": "Remoraid, Octillery",
+    "evolution line": "Remoraid, Octillery",
     "img": "224"
   },
   "Delibird": {
+    "name": "Delibird",
     "id": 225,
     "hp": 45,
     "attack": 55,
@@ -4668,10 +4960,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Vital Spirit, Hustle, Insomnia",
     "passive": "Huge Power",
-    "evolution": "Delibird",
+    "evolution line": "Delibird",
     "img": "225"
   },
   "Mantine": {
+    "name": "Mantine",
     "id": 226,
     "hp": 85,
     "attack": 40,
@@ -4684,10 +4977,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Swift Swim, Water Absorb, Water Veil",
     "passive": "Unaware",
-    "evolution": "Mantine, Mantyke",
+    "evolution line": "Mantine, Mantyke",
     "img": "226"
   },
   "Skarmory": {
+    "name": "Skarmory",
     "id": 227,
     "hp": 65,
     "attack": 80,
@@ -4700,10 +4994,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Keen Eye, Sturdy, Weak Armor",
     "passive": "Tough Claws",
-    "evolution": "Skarmory",
+    "evolution line": "Skarmory",
     "img": "227"
   },
   "Houndour": {
+    "name": "Houndour",
     "id": 228,
     "hp": 45,
     "attack": 60,
@@ -4716,10 +5011,11 @@ const POKEMON_DATA = {
     "type2": "Fire",
     "abilities": "Early Bird, Flash Fire, Unnerve",
     "passive": "Ball Fetch",
-    "evolution": "Houndour, Houndoom, Mega Houndoom",
+    "evolution line": "Houndour, Houndoom, Mega Houndoom",
     "img": "228"
   },
   "Houndoom": {
+    "name": "Houndoom",
     "id": 229,
     "hp": 75,
     "attack": 90,
@@ -4732,10 +5028,11 @@ const POKEMON_DATA = {
     "type2": "Fire",
     "abilities": "Early Bird, Flash Fire, Unnerve",
     "passive": "Lightning Rod",
-    "evolution": "Houndour, Houndoom, Mega Houndoom",
+    "evolution line": "Houndour, Houndoom, Mega Houndoom",
     "img": "229"
   },
   "Mega Houndoom": {
+    "name": "Mega Houndoom",
     "id": 229,
     "hp": 75,
     "attack": 90,
@@ -4748,10 +5045,11 @@ const POKEMON_DATA = {
     "type2": "Fire",
     "abilities": "Solar Power",
     "passive": "Lightning Rod",
-    "evolution": "Houndour, Houndoom, Mega Houndoom",
+    "evolution line": "Houndour, Houndoom, Mega Houndoom",
     "img": "229-mega"
   },
   "Kingdra": {
+    "name": "Kingdra",
     "id": 230,
     "hp": 75,
     "attack": 95,
@@ -4764,10 +5062,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Swift Swim, Sniper, Damp",
     "passive": "Multiscale",
-    "evolution": "Horsea, Seadra, Kingdra",
+    "evolution line": "Horsea, Seadra, Kingdra",
     "img": "230"
   },
   "Phanpy": {
+    "name": "Phanpy",
     "id": 231,
     "hp": 90,
     "attack": 60,
@@ -4780,10 +5079,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Pickup, Sand Veil",
     "passive": "Sturdy",
-    "evolution": "Phanpy, Donphan",
+    "evolution line": "Phanpy, Donphan",
     "img": "231"
   },
   "Donphan": {
+    "name": "Donphan",
     "id": 232,
     "hp": 90,
     "attack": 120,
@@ -4796,10 +5096,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sturdy, Sand Veil",
     "passive": "Speed Boost",
-    "evolution": "Phanpy, Donphan",
+    "evolution line": "Phanpy, Donphan",
     "img": "232"
   },
   "Porygon2": {
+    "name": "Porygon2",
     "id": 233,
     "hp": 85,
     "attack": 80,
@@ -4812,10 +5113,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Trace, Download, Analytic",
     "passive": "Transistor",
-    "evolution": "Porygon, Porygon2, Porygon-Z",
+    "evolution line": "Porygon, Porygon2, Porygon-Z",
     "img": "233"
   },
   "Stantler": {
+    "name": "Stantler",
     "id": 234,
     "hp": 73,
     "attack": 95,
@@ -4828,10 +5130,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Intimidate, Frisk, Sap Sipper",
     "passive": "Speed Boost",
-    "evolution": "Stantler, Wyrdeer",
+    "evolution line": "Stantler, Wyrdeer",
     "img": "234"
   },
   "Smeargle": {
+    "name": "Smeargle",
     "id": 235,
     "hp": 55,
     "attack": 20,
@@ -4844,10 +5147,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Own Tempo, Technician, Moody",
     "passive": "Prankster",
-    "evolution": "Smeargle",
+    "evolution line": "Smeargle",
     "img": "235"
   },
   "Tyrogue": {
+    "name": "Tyrogue",
     "id": 236,
     "hp": 35,
     "attack": 35,
@@ -4860,10 +5164,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Guts, Steadfast, Vital Spirit",
     "passive": "Defiant",
-    "evolution": "Hitmonlee, Hitmonchan, Tyrogue, Hitmontop",
+    "evolution line": "Hitmonlee, Hitmonchan, Tyrogue, Hitmontop",
     "img": "236"
   },
   "Hitmontop": {
+    "name": "Hitmontop",
     "id": 237,
     "hp": 50,
     "attack": 95,
@@ -4876,10 +5181,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Intimidate, Technician, Steadfast",
     "passive": "Speed Boost",
-    "evolution": "Hitmonlee, Hitmonchan, Tyrogue, Hitmontop",
+    "evolution line": "Hitmonlee, Hitmonchan, Tyrogue, Hitmontop",
     "img": "237"
   },
   "Smoochum": {
+    "name": "Smoochum",
     "id": 238,
     "hp": 45,
     "attack": 30,
@@ -4892,10 +5198,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Oblivious, Forewarn, Hydration",
     "passive": "Psychic Surge",
-    "evolution": "Jynx, Smoochum",
+    "evolution line": "Jynx, Smoochum",
     "img": "238"
   },
   "Elekid": {
+    "name": "Elekid",
     "id": 239,
     "hp": 45,
     "attack": 63,
@@ -4908,10 +5215,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Vital Spirit",
     "passive": "Sheer Force",
-    "evolution": "Electabuzz, Elekid, Electivire",
+    "evolution line": "Electabuzz, Elekid, Electivire",
     "img": "239"
   },
   "Magby": {
+    "name": "Magby",
     "id": 240,
     "hp": 45,
     "attack": 75,
@@ -4924,10 +5232,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Flame Body, Vital Spirit",
     "passive": "Sheer Force",
-    "evolution": "Magmar, Magby, Magmortar",
+    "evolution line": "Magmar, Magby, Magmortar",
     "img": "240"
   },
   "Miltank": {
+    "name": "Miltank",
     "id": 241,
     "hp": 95,
     "attack": 80,
@@ -4940,10 +5249,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Thick Fat, Scrappy, Sap Sipper",
     "passive": "Stamina",
-    "evolution": "Miltank",
+    "evolution line": "Miltank",
     "img": "241"
   },
   "Blissey": {
+    "name": "Blissey",
     "id": 242,
     "hp": 255,
     "attack": 10,
@@ -4956,10 +5266,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Natural Cure, Serene Grace, Healer",
     "passive": "Fur Coat",
-    "evolution": "Chansey, Blissey, Happiny",
+    "evolution line": "Chansey, Blissey, Happiny",
     "img": "242"
   },
   "Raikou": {
+    "name": "Raikou",
     "id": 243,
     "hp": 90,
     "attack": 85,
@@ -4972,10 +5283,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Pressure, Inner Focus",
     "passive": "Beast Boost",
-    "evolution": "Raikou",
+    "evolution line": "Raikou",
     "img": "243"
   },
   "Entei": {
+    "name": "Entei",
     "id": 244,
     "hp": 115,
     "attack": 115,
@@ -4988,10 +5300,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Pressure, Inner Focus",
     "passive": "Beast Boost",
-    "evolution": "Entei",
+    "evolution line": "Entei",
     "img": "244"
   },
   "Suicune": {
+    "name": "Suicune",
     "id": 245,
     "hp": 100,
     "attack": 75,
@@ -5004,10 +5317,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Pressure, Inner Focus",
     "passive": "Beast Boost",
-    "evolution": "Suicune",
+    "evolution line": "Suicune",
     "img": "245"
   },
   "Larvitar": {
+    "name": "Larvitar",
     "id": 246,
     "hp": 50,
     "attack": 64,
@@ -5020,10 +5334,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Guts, Sand Veil",
     "passive": "Solid Rock",
-    "evolution": "Larvitar, Pupitar, Tyranitar, Mega Tyranitar",
+    "evolution line": "Larvitar, Pupitar, Tyranitar, Mega Tyranitar",
     "img": "246"
   },
   "Pupitar": {
+    "name": "Pupitar",
     "id": 247,
     "hp": 70,
     "attack": 84,
@@ -5036,10 +5351,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Shed Skin",
     "passive": "Solid Rock",
-    "evolution": "Larvitar, Pupitar, Tyranitar, Mega Tyranitar",
+    "evolution line": "Larvitar, Pupitar, Tyranitar, Mega Tyranitar",
     "img": "247"
   },
   "Tyranitar": {
+    "name": "Tyranitar",
     "id": 248,
     "hp": 100,
     "attack": 134,
@@ -5052,10 +5368,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Sand Stream, Unnerve",
     "passive": "Solid Rock",
-    "evolution": "Larvitar, Pupitar, Tyranitar, Mega Tyranitar",
+    "evolution line": "Larvitar, Pupitar, Tyranitar, Mega Tyranitar",
     "img": "248"
   },
   "Mega Tyranitar": {
+    "name": "Mega Tyranitar",
     "id": 248,
     "hp": 100,
     "attack": 164,
@@ -5068,10 +5385,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Sand Stream",
     "passive": "Solid Rock",
-    "evolution": "Larvitar, Pupitar, Tyranitar, Mega Tyranitar",
+    "evolution line": "Larvitar, Pupitar, Tyranitar, Mega Tyranitar",
     "img": "248-mega"
   },
   "Lugia": {
+    "name": "Lugia",
     "id": 249,
     "hp": 106,
     "attack": 90,
@@ -5084,10 +5402,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Pressure, Multiscale",
     "passive": "Delta Stream",
-    "evolution": "Lugia",
+    "evolution line": "Lugia",
     "img": "249"
   },
   "Ho-Oh": {
+    "name": "Ho-Oh",
     "id": 250,
     "hp": 106,
     "attack": 130,
@@ -5100,10 +5419,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Pressure, Regenerator",
     "passive": "Serene Grace",
-    "evolution": "Ho-Oh",
+    "evolution line": "Ho-Oh",
     "img": "250"
   },
   "Celebi": {
+    "name": "Celebi",
     "id": 251,
     "hp": 100,
     "attack": 100,
@@ -5116,10 +5436,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Natural Cure",
     "passive": "Psychic Surge",
-    "evolution": "Celebi",
+    "evolution line": "Celebi",
     "img": "251"
   },
   "Treecko": {
+    "name": "Treecko",
     "id": 252,
     "hp": 40,
     "attack": 45,
@@ -5132,10 +5453,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Overgrow, Unburden",
     "passive": "Tinted Lens",
-    "evolution": "Treecko, Grovyle, Sceptile, Mega Sceptile",
+    "evolution line": "Treecko, Grovyle, Sceptile, Mega Sceptile",
     "img": "252"
   },
   "Grovyle": {
+    "name": "Grovyle",
     "id": 253,
     "hp": 50,
     "attack": 65,
@@ -5148,10 +5470,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Overgrow, Unburden",
     "passive": "Tinted Lens",
-    "evolution": "Treecko, Grovyle, Sceptile, Mega Sceptile",
+    "evolution line": "Treecko, Grovyle, Sceptile, Mega Sceptile",
     "img": "253"
   },
   "Sceptile": {
+    "name": "Sceptile",
     "id": 254,
     "hp": 70,
     "attack": 85,
@@ -5164,10 +5487,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Overgrow, Unburden",
     "passive": "Tinted Lens",
-    "evolution": "Treecko, Grovyle, Sceptile, Mega Sceptile",
+    "evolution line": "Treecko, Grovyle, Sceptile, Mega Sceptile",
     "img": "254"
   },
   "Mega Sceptile": {
+    "name": "Mega Sceptile",
     "id": 254,
     "hp": 70,
     "attack": 110,
@@ -5180,10 +5504,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Lightning Rod",
     "passive": "Tinted Lens",
-    "evolution": "Treecko, Grovyle, Sceptile, Mega Sceptile",
+    "evolution line": "Treecko, Grovyle, Sceptile, Mega Sceptile",
     "img": "254-mega"
   },
   "Torchic": {
+    "name": "Torchic",
     "id": 255,
     "hp": 45,
     "attack": 60,
@@ -5196,10 +5521,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Blaze, Speed Boost",
     "passive": "Defiant",
-    "evolution": "Torchic, Combusken, Blaziken, Mega Blaziken",
+    "evolution line": "Torchic, Combusken, Blaziken, Mega Blaziken",
     "img": "255"
   },
   "Combusken": {
+    "name": "Combusken",
     "id": 256,
     "hp": 60,
     "attack": 85,
@@ -5212,10 +5538,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Blaze, Speed Boost",
     "passive": "Defiant",
-    "evolution": "Torchic, Combusken, Blaziken, Mega Blaziken",
+    "evolution line": "Torchic, Combusken, Blaziken, Mega Blaziken",
     "img": "256"
   },
   "Blaziken": {
+    "name": "Blaziken",
     "id": 257,
     "hp": 80,
     "attack": 120,
@@ -5228,10 +5555,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Blaze, Speed Boost",
     "passive": "Defiant",
-    "evolution": "Torchic, Combusken, Blaziken, Mega Blaziken",
+    "evolution line": "Torchic, Combusken, Blaziken, Mega Blaziken",
     "img": "257"
   },
   "Mega Blaziken": {
+    "name": "Mega Blaziken",
     "id": 257,
     "hp": 80,
     "attack": 160,
@@ -5244,10 +5572,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Speed Boost",
     "passive": "Defiant",
-    "evolution": "Torchic, Combusken, Blaziken, Mega Blaziken",
+    "evolution line": "Torchic, Combusken, Blaziken, Mega Blaziken",
     "img": "257-mega"
   },
   "Mudkip": {
+    "name": "Mudkip",
     "id": 258,
     "hp": 50,
     "attack": 70,
@@ -5260,10 +5589,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Torrent, Damp",
     "passive": "Regenerator",
-    "evolution": "Mudkip, Marshtomp, Swampert, Mega Swampert",
+    "evolution line": "Mudkip, Marshtomp, Swampert, Mega Swampert",
     "img": "258"
   },
   "Marshtomp": {
+    "name": "Marshtomp",
     "id": 259,
     "hp": 70,
     "attack": 85,
@@ -5276,10 +5606,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Torrent, Damp",
     "passive": "Regenerator",
-    "evolution": "Mudkip, Marshtomp, Swampert, Mega Swampert",
+    "evolution line": "Mudkip, Marshtomp, Swampert, Mega Swampert",
     "img": "259"
   },
   "Swampert": {
+    "name": "Swampert",
     "id": 260,
     "hp": 100,
     "attack": 110,
@@ -5292,10 +5623,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Torrent, Damp",
     "passive": "Regenerator",
-    "evolution": "Mudkip, Marshtomp, Swampert, Mega Swampert",
+    "evolution line": "Mudkip, Marshtomp, Swampert, Mega Swampert",
     "img": "260"
   },
   "Mega Swampert": {
+    "name": "Mega Swampert",
     "id": 260,
     "hp": 100,
     "attack": 150,
@@ -5308,10 +5640,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Swift Swim",
     "passive": "Drizzle",
-    "evolution": "Mudkip, Marshtomp, Swampert, Mega Swampert",
+    "evolution line": "Mudkip, Marshtomp, Swampert, Mega Swampert",
     "img": "260-mega"
   },
   "Poochyena": {
+    "name": "Poochyena",
     "id": 261,
     "hp": 35,
     "attack": 55,
@@ -5324,10 +5657,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Run Away, Quick Feet, Rattled",
     "passive": "Tough Claws",
-    "evolution": "Poochyena, Mightyena",
+    "evolution line": "Poochyena, Mightyena",
     "img": "261"
   },
   "Mightyena": {
+    "name": "Mightyena",
     "id": 262,
     "hp": 70,
     "attack": 90,
@@ -5340,10 +5674,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Intimidate, Quick Feet, Moxie",
     "passive": "Tough Claws",
-    "evolution": "Poochyena, Mightyena",
+    "evolution line": "Poochyena, Mightyena",
     "img": "262"
   },
   "Zigzagoon": {
+    "name": "Zigzagoon",
     "id": 263,
     "hp": 38,
     "attack": 30,
@@ -5356,10 +5691,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Pickup, Gluttony, Quick Feet",
     "passive": "Run Away",
-    "evolution": "Zigzagoon, Linoone",
+    "evolution line": "Zigzagoon, Linoone",
     "img": "263"
   },
   "Linoone": {
+    "name": "Linoone",
     "id": 264,
     "hp": 78,
     "attack": 70,
@@ -5372,10 +5708,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Pickup, Gluttony, Quick Feet",
     "passive": "Run Away",
-    "evolution": "Zigzagoon, Linoone",
+    "evolution line": "Zigzagoon, Linoone",
     "img": "264"
   },
   "Wurmple": {
+    "name": "Wurmple",
     "id": 265,
     "hp": 45,
     "attack": 45,
@@ -5388,10 +5725,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shield Dust, Run Away",
     "passive": "Gluttony",
-    "evolution": "Wurmple, Silcoon, Beautifly, Cascoon, Dustox",
+    "evolution line": "Wurmple, Silcoon, Beautifly, Cascoon, Dustox",
     "img": "265"
   },
   "Silcoon": {
+    "name": "Silcoon",
     "id": 266,
     "hp": 50,
     "attack": 35,
@@ -5404,10 +5742,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shed Skin",
     "passive": "Sturdy",
-    "evolution": "Wurmple, Silcoon, Beautifly, Cascoon, Dustox",
+    "evolution line": "Wurmple, Silcoon, Beautifly, Cascoon, Dustox",
     "img": "266"
   },
   "Beautifly": {
+    "name": "Beautifly",
     "id": 267,
     "hp": 60,
     "attack": 70,
@@ -5420,10 +5759,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Swarm, Rivalry",
     "passive": "Simple",
-    "evolution": "Wurmple, Silcoon, Beautifly, Cascoon, Dustox",
+    "evolution line": "Wurmple, Silcoon, Beautifly, Cascoon, Dustox",
     "img": "267"
   },
   "Cascoon": {
+    "name": "Cascoon",
     "id": 268,
     "hp": 50,
     "attack": 35,
@@ -5436,10 +5776,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shed Skin",
     "passive": "Sturdy",
-    "evolution": "Wurmple, Silcoon, Beautifly, Cascoon, Dustox",
+    "evolution line": "Wurmple, Silcoon, Beautifly, Cascoon, Dustox",
     "img": "268"
   },
   "Dustox": {
+    "name": "Dustox",
     "id": 269,
     "hp": 60,
     "attack": 50,
@@ -5452,10 +5793,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Shield Dust, Compound Eyes",
     "passive": "Simple",
-    "evolution": "Wurmple, Silcoon, Beautifly, Cascoon, Dustox",
+    "evolution line": "Wurmple, Silcoon, Beautifly, Cascoon, Dustox",
     "img": "269"
   },
   "Lotad": {
+    "name": "Lotad",
     "id": 270,
     "hp": 40,
     "attack": 30,
@@ -5468,10 +5810,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Swift Swim, Rain Dish, Own Tempo",
     "passive": "Drizzle",
-    "evolution": "Lotad, Lombre, Ludicolo",
+    "evolution line": "Lotad, Lombre, Ludicolo",
     "img": "270"
   },
   "Lombre": {
+    "name": "Lombre",
     "id": 271,
     "hp": 60,
     "attack": 50,
@@ -5484,10 +5827,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Swift Swim, Rain Dish, Own Tempo",
     "passive": "Drizzle",
-    "evolution": "Lotad, Lombre, Ludicolo",
+    "evolution line": "Lotad, Lombre, Ludicolo",
     "img": "271"
   },
   "Ludicolo": {
+    "name": "Ludicolo",
     "id": 272,
     "hp": 80,
     "attack": 70,
@@ -5500,10 +5844,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Swift Swim, Rain Dish, Own Tempo",
     "passive": "Drizzle",
-    "evolution": "Lotad, Lombre, Ludicolo",
+    "evolution line": "Lotad, Lombre, Ludicolo",
     "img": "272"
   },
   "Seedot": {
+    "name": "Seedot",
     "id": 273,
     "hp": 40,
     "attack": 40,
@@ -5516,10 +5861,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Chlorophyll, Early Bird, Pickpocket",
     "passive": "Sturdy",
-    "evolution": "Seedot, Nuzleaf, Shiftry",
+    "evolution line": "Seedot, Nuzleaf, Shiftry",
     "img": "273"
   },
   "Nuzleaf": {
+    "name": "Nuzleaf",
     "id": 274,
     "hp": 70,
     "attack": 70,
@@ -5532,10 +5878,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Chlorophyll, Early Bird, Pickpocket",
     "passive": "Sharpness",
-    "evolution": "Seedot, Nuzleaf, Shiftry",
+    "evolution line": "Seedot, Nuzleaf, Shiftry",
     "img": "274"
   },
   "Shiftry": {
+    "name": "Shiftry",
     "id": 275,
     "hp": 90,
     "attack": 100,
@@ -5548,10 +5895,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Chlorophyll, Wind Rider, Pickpocket",
     "passive": "Sharpness",
-    "evolution": "Seedot, Nuzleaf, Shiftry",
+    "evolution line": "Seedot, Nuzleaf, Shiftry",
     "img": "275"
   },
   "Taillow": {
+    "name": "Taillow",
     "id": 276,
     "hp": 40,
     "attack": 55,
@@ -5564,10 +5912,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Guts, Scrappy",
     "passive": "Flare Boost",
-    "evolution": "Taillow, Swellow",
+    "evolution line": "Taillow, Swellow",
     "img": "276"
   },
   "Swellow": {
+    "name": "Swellow",
     "id": 277,
     "hp": 60,
     "attack": 85,
@@ -5580,10 +5929,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Guts, Scrappy",
     "passive": "Flare Boost",
-    "evolution": "Taillow, Swellow",
+    "evolution line": "Taillow, Swellow",
     "img": "277"
   },
   "Wingull": {
+    "name": "Wingull",
     "id": 278,
     "hp": 40,
     "attack": 30,
@@ -5596,10 +5946,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Keen Eye, Hydration, Rain Dish",
     "passive": "Water Absorb",
-    "evolution": "Wingull, Pelipper",
+    "evolution line": "Wingull, Pelipper",
     "img": "278"
   },
   "Pelipper": {
+    "name": "Pelipper",
     "id": 279,
     "hp": 60,
     "attack": 50,
@@ -5612,10 +5963,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Keen Eye, Drizzle, Rain Dish",
     "passive": "Swift Swim",
-    "evolution": "Wingull, Pelipper",
+    "evolution line": "Wingull, Pelipper",
     "img": "279"
   },
   "Ralts": {
+    "name": "Ralts",
     "id": 280,
     "hp": 28,
     "attack": 25,
@@ -5628,10 +5980,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Synchronize, Trace, Telepathy",
     "passive": "Neuroforce",
-    "evolution": "Ralts, Kirlia, Gardevoir, Mega Gardevoir, Gallade, Mega Gallade",
+    "evolution line": "Ralts, Kirlia, Gardevoir, Mega Gardevoir, Gallade, Mega Gallade",
     "img": "280"
   },
   "Kirlia": {
+    "name": "Kirlia",
     "id": 281,
     "hp": 38,
     "attack": 35,
@@ -5644,10 +5997,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Synchronize, Trace, Telepathy",
     "passive": "Neuroforce",
-    "evolution": "Ralts, Kirlia, Gardevoir, Mega Gardevoir, Gallade, Mega Gallade",
+    "evolution line": "Ralts, Kirlia, Gardevoir, Mega Gardevoir, Gallade, Mega Gallade",
     "img": "281"
   },
   "Gardevoir": {
+    "name": "Gardevoir",
     "id": 282,
     "hp": 68,
     "attack": 65,
@@ -5660,10 +6014,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Synchronize, Trace, Telepathy",
     "passive": "Neuroforce",
-    "evolution": "Ralts, Kirlia, Gardevoir, Mega Gardevoir, Gallade, Mega Gallade",
+    "evolution line": "Ralts, Kirlia, Gardevoir, Mega Gardevoir, Gallade, Mega Gallade",
     "img": "282"
   },
   "Mega Gardevoir": {
+    "name": "Mega Gardevoir",
     "id": 282,
     "hp": 68,
     "attack": 85,
@@ -5676,10 +6031,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Pixilate",
     "passive": "Psychic Surge",
-    "evolution": "Ralts, Kirlia, Gardevoir, Mega Gardevoir, Gallade, Mega Gallade",
+    "evolution line": "Ralts, Kirlia, Gardevoir, Mega Gardevoir, Gallade, Mega Gallade",
     "img": "282-mega"
   },
   "Surskit": {
+    "name": "Surskit",
     "id": 283,
     "hp": 40,
     "attack": 30,
@@ -5692,10 +6048,11 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Swift Swim, Rain Dish",
     "passive": "Water Bubble",
-    "evolution": "Surskit, Masquerain",
+    "evolution line": "Surskit, Masquerain",
     "img": "283"
   },
   "Masquerain": {
+    "name": "Masquerain",
     "id": 284,
     "hp": 70,
     "attack": 60,
@@ -5708,10 +6065,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Intimidate, Unnerve",
     "passive": "Water Bubble",
-    "evolution": "Surskit, Masquerain",
+    "evolution line": "Surskit, Masquerain",
     "img": "284"
   },
   "Shroomish": {
+    "name": "Shroomish",
     "id": 285,
     "hp": 60,
     "attack": 40,
@@ -5724,10 +6082,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Effect Spore, Poison Heal, Quick Feet",
     "passive": "Guts",
-    "evolution": "Shroomish, Breloom",
+    "evolution line": "Shroomish, Breloom",
     "img": "285"
   },
   "Breloom": {
+    "name": "Breloom",
     "id": 286,
     "hp": 60,
     "attack": 130,
@@ -5740,10 +6099,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Effect Spore, Poison Heal, Technician",
     "passive": "Guts",
-    "evolution": "Shroomish, Breloom",
+    "evolution line": "Shroomish, Breloom",
     "img": "286"
   },
   "Slakoth": {
+    "name": "Slakoth",
     "id": 287,
     "hp": 60,
     "attack": 60,
@@ -5756,10 +6116,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Truant, Stall",
     "passive": "Comatose",
-    "evolution": "Slakoth, Vigoroth, Slaking",
+    "evolution line": "Slakoth, Vigoroth, Slaking",
     "img": "287"
   },
   "Vigoroth": {
+    "name": "Vigoroth",
     "id": 288,
     "hp": 80,
     "attack": 80,
@@ -5772,10 +6133,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Vital Spirit, Insomnia",
     "passive": "Tough Claws",
-    "evolution": "Slakoth, Vigoroth, Slaking",
+    "evolution line": "Slakoth, Vigoroth, Slaking",
     "img": "288"
   },
   "Slaking": {
+    "name": "Slaking",
     "id": 289,
     "hp": 150,
     "attack": 160,
@@ -5788,10 +6150,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Truant, Stall",
     "passive": "Comatose",
-    "evolution": "Slakoth, Vigoroth, Slaking",
+    "evolution line": "Slakoth, Vigoroth, Slaking",
     "img": "289"
   },
   "Nincada": {
+    "name": "Nincada",
     "id": 290,
     "hp": 31,
     "attack": 45,
@@ -5804,10 +6167,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Compound Eyes, Run Away",
     "passive": "Technician",
-    "evolution": "Nincada, Ninjask, Shedinja",
+    "evolution line": "Nincada, Ninjask, Shedinja",
     "img": "290"
   },
   "Ninjask": {
+    "name": "Ninjask",
     "id": 291,
     "hp": 61,
     "attack": 90,
@@ -5820,10 +6184,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Speed Boost, Infiltrator",
     "passive": "Technician",
-    "evolution": "Nincada, Ninjask, Shedinja",
+    "evolution line": "Nincada, Ninjask, Shedinja",
     "img": "291"
   },
   "Shedinja": {
+    "name": "Shedinja",
     "id": 292,
     "hp": 1,
     "attack": 90,
@@ -5836,10 +6201,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Wonder Guard",
     "passive": "Magic Guard",
-    "evolution": "Nincada, Ninjask, Shedinja",
+    "evolution line": "Nincada, Ninjask, Shedinja",
     "img": "292"
   },
   "Whismur": {
+    "name": "Whismur",
     "id": 293,
     "hp": 64,
     "attack": 51,
@@ -5852,10 +6218,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Soundproof, Rattled",
     "passive": "Punk Rock",
-    "evolution": "Whismur, Loudred, Exploud",
+    "evolution line": "Whismur, Loudred, Exploud",
     "img": "293"
   },
   "Loudred": {
+    "name": "Loudred",
     "id": 294,
     "hp": 84,
     "attack": 71,
@@ -5868,10 +6235,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Soundproof, Scrappy",
     "passive": "Punk Rock",
-    "evolution": "Whismur, Loudred, Exploud",
+    "evolution line": "Whismur, Loudred, Exploud",
     "img": "294"
   },
   "Exploud": {
+    "name": "Exploud",
     "id": 295,
     "hp": 104,
     "attack": 91,
@@ -5884,10 +6252,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Soundproof, Scrappy",
     "passive": "Punk Rock",
-    "evolution": "Whismur, Loudred, Exploud",
+    "evolution line": "Whismur, Loudred, Exploud",
     "img": "295"
   },
   "Makuhita": {
+    "name": "Makuhita",
     "id": 296,
     "hp": 72,
     "attack": 60,
@@ -5900,10 +6269,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Thick Fat, Guts, Sheer Force",
     "passive": "Stamina",
-    "evolution": "Makuhita, Hariyama",
+    "evolution line": "Makuhita, Hariyama",
     "img": "296"
   },
   "Hariyama": {
+    "name": "Hariyama",
     "id": 297,
     "hp": 144,
     "attack": 120,
@@ -5916,10 +6286,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Thick Fat, Guts, Sheer Force",
     "passive": "Stamina",
-    "evolution": "Makuhita, Hariyama",
+    "evolution line": "Makuhita, Hariyama",
     "img": "297"
   },
   "Azurill": {
+    "name": "Azurill",
     "id": 298,
     "hp": 50,
     "attack": 20,
@@ -5932,10 +6303,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Thick Fat, Huge Power, Sap Sipper",
     "passive": "Misty Surge",
-    "evolution": "Marill, Azumarill, Azurill",
+    "evolution line": "Marill, Azumarill, Azurill",
     "img": "298"
   },
   "Nosepass": {
+    "name": "Nosepass",
     "id": 299,
     "hp": 30,
     "attack": 45,
@@ -5948,10 +6320,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sturdy, Magnet Pull, Sand Force",
     "passive": "Solid Rock",
-    "evolution": "Nosepass, Probopass",
+    "evolution line": "Nosepass, Probopass",
     "img": "299"
   },
   "Skitty": {
+    "name": "Skitty",
     "id": 300,
     "hp": 50,
     "attack": 45,
@@ -5964,10 +6337,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Cute Charm, Normalize, Wonder Skin",
     "passive": "Scrappy",
-    "evolution": "Skitty, Delcatty",
+    "evolution line": "Skitty, Delcatty",
     "img": "300"
   },
   "Delcatty": {
+    "name": "Delcatty",
     "id": 301,
     "hp": 70,
     "attack": 65,
@@ -5980,10 +6354,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Cute Charm, Normalize, Wonder Skin",
     "passive": "Scrappy",
-    "evolution": "Skitty, Delcatty",
+    "evolution line": "Skitty, Delcatty",
     "img": "301"
   },
   "Sableye": {
+    "name": "Sableye",
     "id": 302,
     "hp": 50,
     "attack": 75,
@@ -5996,10 +6371,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Keen Eye, Stall, Prankster",
     "passive": "Unnerve",
-    "evolution": "Sableye, Mega Sableye",
+    "evolution line": "Sableye, Mega Sableye",
     "img": "302"
   },
   "Mega Sableye": {
+    "name": "Mega Sableye",
     "id": 302,
     "hp": 50,
     "attack": 85,
@@ -6012,10 +6388,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Magic Bounce",
     "passive": "Unnerve",
-    "evolution": "Sableye, Mega Sableye",
+    "evolution line": "Sableye, Mega Sableye",
     "img": "302-mega"
   },
   "Mawile": {
+    "name": "Mawile",
     "id": 303,
     "hp": 50,
     "attack": 85,
@@ -6028,10 +6405,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Hyper Cutter, Intimidate, Sheer Force",
     "passive": "Adaptability",
-    "evolution": "Mawile, Mega Mawile",
+    "evolution line": "Mawile, Mega Mawile",
     "img": "303"
   },
   "Mega Mawile": {
+    "name": "Mega Mawile",
     "id": 303,
     "hp": 50,
     "attack": 105,
@@ -6044,10 +6422,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Huge Power",
     "passive": "Intimidate",
-    "evolution": "Mawile, Mega Mawile",
+    "evolution line": "Mawile, Mega Mawile",
     "img": "303-mega"
   },
   "Aron": {
+    "name": "Aron",
     "id": 304,
     "hp": 50,
     "attack": 70,
@@ -6060,10 +6439,11 @@ const POKEMON_DATA = {
     "type2": "Rock",
     "abilities": "Sturdy, Rock Head, Heavy Metal",
     "passive": "Earth Eater",
-    "evolution": "Aron, Lairon, Aggron, Mega Aggron",
+    "evolution line": "Aron, Lairon, Aggron, Mega Aggron",
     "img": "304"
   },
   "Lairon": {
+    "name": "Lairon",
     "id": 305,
     "hp": 60,
     "attack": 90,
@@ -6076,10 +6456,11 @@ const POKEMON_DATA = {
     "type2": "Rock",
     "abilities": "Sturdy, Rock Head, Heavy Metal",
     "passive": "Earth Eater",
-    "evolution": "Aron, Lairon, Aggron, Mega Aggron",
+    "evolution line": "Aron, Lairon, Aggron, Mega Aggron",
     "img": "305"
   },
   "Aggron": {
+    "name": "Aggron",
     "id": 306,
     "hp": 70,
     "attack": 110,
@@ -6092,10 +6473,11 @@ const POKEMON_DATA = {
     "type2": "Rock",
     "abilities": "Sturdy, Rock Head, Heavy Metal",
     "passive": "Earth Eater",
-    "evolution": "Aron, Lairon, Aggron, Mega Aggron",
+    "evolution line": "Aron, Lairon, Aggron, Mega Aggron",
     "img": "306"
   },
   "Mega Aggron": {
+    "name": "Mega Aggron",
     "id": 306,
     "hp": 70,
     "attack": 140,
@@ -6108,10 +6490,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Filter",
     "passive": "Rocky Payload",
-    "evolution": "Aron, Lairon, Aggron, Mega Aggron",
+    "evolution line": "Aron, Lairon, Aggron, Mega Aggron",
     "img": "306-mega"
   },
   "Meditite": {
+    "name": "Meditite",
     "id": 307,
     "hp": 30,
     "attack": 40,
@@ -6124,10 +6507,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Pure Power, Telepathy",
     "passive": "Minds Eye",
-    "evolution": "Meditite, Medicham, Mega Medicham",
+    "evolution line": "Meditite, Medicham, Mega Medicham",
     "img": "307"
   },
   "Medicham": {
+    "name": "Medicham",
     "id": 308,
     "hp": 60,
     "attack": 60,
@@ -6140,10 +6524,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Pure Power, Telepathy",
     "passive": "Minds Eye",
-    "evolution": "Meditite, Medicham, Mega Medicham",
+    "evolution line": "Meditite, Medicham, Mega Medicham",
     "img": "308"
   },
   "Mega Medicham": {
+    "name": "Mega Medicham",
     "id": 308,
     "hp": 60,
     "attack": 100,
@@ -6156,10 +6541,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Pure Power",
     "passive": "Minds Eye",
-    "evolution": "Meditite, Medicham, Mega Medicham",
+    "evolution line": "Meditite, Medicham, Mega Medicham",
     "img": "308-mega"
   },
   "Electrike": {
+    "name": "Electrike",
     "id": 309,
     "hp": 40,
     "attack": 45,
@@ -6172,10 +6558,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Lightning Rod, Minus",
     "passive": "Ball Fetch",
-    "evolution": "Electrike, Manectric, Mega Manectric",
+    "evolution line": "Electrike, Manectric, Mega Manectric",
     "img": "309"
   },
   "Manectric": {
+    "name": "Manectric",
     "id": 310,
     "hp": 70,
     "attack": 75,
@@ -6188,10 +6575,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Lightning Rod, Minus",
     "passive": "Flash Fire",
-    "evolution": "Electrike, Manectric, Mega Manectric",
+    "evolution line": "Electrike, Manectric, Mega Manectric",
     "img": "310"
   },
   "Mega Manectric": {
+    "name": "Mega Manectric",
     "id": 310,
     "hp": 70,
     "attack": 75,
@@ -6204,10 +6592,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Intimidate",
     "passive": "Flash Fire",
-    "evolution": "Electrike, Manectric, Mega Manectric",
+    "evolution line": "Electrike, Manectric, Mega Manectric",
     "img": "310-mega"
   },
   "Plusle": {
+    "name": "Plusle",
     "id": 311,
     "hp": 60,
     "attack": 50,
@@ -6220,10 +6609,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Plus, Lightning Rod",
     "passive": "Power Spot",
-    "evolution": "Plusle",
+    "evolution line": "Plusle",
     "img": "311"
   },
   "Minun": {
+    "name": "Minun",
     "id": 312,
     "hp": 60,
     "attack": 40,
@@ -6236,10 +6626,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Minus, Volt Absorb",
     "passive": "Power Spot",
-    "evolution": "Minun",
+    "evolution line": "Minun",
     "img": "312"
   },
   "Volbeat": {
+    "name": "Volbeat",
     "id": 313,
     "hp": 65,
     "attack": 73,
@@ -6252,10 +6643,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Illuminate, Swarm, Prankster",
     "passive": "Honey Gather",
-    "evolution": "Volbeat",
+    "evolution line": "Volbeat",
     "img": "313"
   },
   "Illumise": {
+    "name": "Illumise",
     "id": 314,
     "hp": 65,
     "attack": 47,
@@ -6268,10 +6660,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Oblivious, Tinted Lens, Prankster",
     "passive": "Honey Gather",
-    "evolution": "Illumise",
+    "evolution line": "Illumise",
     "img": "314"
   },
   "Roselia": {
+    "name": "Roselia",
     "id": 315,
     "hp": 50,
     "attack": 60,
@@ -6284,10 +6677,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Natural Cure, Poison Point, Leaf Guard",
     "passive": "Grassy Surge",
-    "evolution": "Roselia, Budew, Roserade",
+    "evolution line": "Roselia, Budew, Roserade",
     "img": "315"
   },
   "Gulpin": {
+    "name": "Gulpin",
     "id": 316,
     "hp": 70,
     "attack": 43,
@@ -6300,10 +6694,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Liquid Ooze, Sticky Hold, Gluttony",
     "passive": "Earth Eater",
-    "evolution": "Gulpin, Swalot",
+    "evolution line": "Gulpin, Swalot",
     "img": "316"
   },
   "Swalot": {
+    "name": "Swalot",
     "id": 317,
     "hp": 100,
     "attack": 73,
@@ -6316,10 +6711,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Liquid Ooze, Sticky Hold, Gluttony",
     "passive": "Earth Eater",
-    "evolution": "Gulpin, Swalot",
+    "evolution line": "Gulpin, Swalot",
     "img": "317"
   },
   "Carvanha": {
+    "name": "Carvanha",
     "id": 318,
     "hp": 45,
     "attack": 90,
@@ -6332,10 +6728,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Rough Skin, Speed Boost",
     "passive": "Sheer Force",
-    "evolution": "Carvanha, Sharpedo, Mega Sharpedo",
+    "evolution line": "Carvanha, Sharpedo, Mega Sharpedo",
     "img": "318"
   },
   "Sharpedo": {
+    "name": "Sharpedo",
     "id": 319,
     "hp": 70,
     "attack": 120,
@@ -6348,10 +6745,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Rough Skin, Speed Boost",
     "passive": "Sheer Force",
-    "evolution": "Carvanha, Sharpedo, Mega Sharpedo",
+    "evolution line": "Carvanha, Sharpedo, Mega Sharpedo",
     "img": "319"
   },
   "Mega Sharpedo": {
+    "name": "Mega Sharpedo",
     "id": 319,
     "hp": 70,
     "attack": 140,
@@ -6364,10 +6762,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Strong Jaw",
     "passive": "Speed Boost",
-    "evolution": "Carvanha, Sharpedo, Mega Sharpedo",
+    "evolution line": "Carvanha, Sharpedo, Mega Sharpedo",
     "img": "319-mega"
   },
   "Wailmer": {
+    "name": "Wailmer",
     "id": 320,
     "hp": 130,
     "attack": 70,
@@ -6380,10 +6779,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Water Veil, Oblivious, Pressure",
     "passive": "Levitate",
-    "evolution": "Wailmer, Wailord",
+    "evolution line": "Wailmer, Wailord",
     "img": "320"
   },
   "Wailord": {
+    "name": "Wailord",
     "id": 321,
     "hp": 170,
     "attack": 90,
@@ -6396,10 +6796,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Water Veil, Oblivious, Pressure",
     "passive": "Levitate",
-    "evolution": "Wailmer, Wailord",
+    "evolution line": "Wailmer, Wailord",
     "img": "321"
   },
   "Numel": {
+    "name": "Numel",
     "id": 322,
     "hp": 60,
     "attack": 60,
@@ -6412,10 +6813,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Oblivious, Simple, Own Tempo",
     "passive": "Solid Rock",
-    "evolution": "Numel, Camerupt, Mega Camerupt",
+    "evolution line": "Numel, Camerupt, Mega Camerupt",
     "img": "322"
   },
   "Camerupt": {
+    "name": "Camerupt",
     "id": 323,
     "hp": 70,
     "attack": 100,
@@ -6428,10 +6830,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Magma Armor, Solid Rock, Anger Point",
     "passive": "Fur Coat",
-    "evolution": "Numel, Camerupt, Mega Camerupt",
+    "evolution line": "Numel, Camerupt, Mega Camerupt",
     "img": "323"
   },
   "Mega Camerupt": {
+    "name": "Mega Camerupt",
     "id": 323,
     "hp": 70,
     "attack": 120,
@@ -6444,10 +6847,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Sheer Force",
     "passive": "Stamina",
-    "evolution": "Numel, Camerupt, Mega Camerupt",
+    "evolution line": "Numel, Camerupt, Mega Camerupt",
     "img": "323-mega"
   },
   "Torkoal": {
+    "name": "Torkoal",
     "id": 324,
     "hp": 70,
     "attack": 85,
@@ -6460,10 +6864,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "White Smoke, Drought, Shell Armor",
     "passive": "Analytic",
-    "evolution": "Torkoal",
+    "evolution line": "Torkoal",
     "img": "324"
   },
   "Spoink": {
+    "name": "Spoink",
     "id": 325,
     "hp": 60,
     "attack": 25,
@@ -6476,10 +6881,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Thick Fat, Own Tempo, Gluttony",
     "passive": "Psychic Surge",
-    "evolution": "Spoink, Grumpig",
+    "evolution line": "Spoink, Grumpig",
     "img": "325"
   },
   "Grumpig": {
+    "name": "Grumpig",
     "id": 326,
     "hp": 80,
     "attack": 45,
@@ -6492,10 +6898,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Thick Fat, Own Tempo, Gluttony",
     "passive": "Psychic Surge",
-    "evolution": "Spoink, Grumpig",
+    "evolution line": "Spoink, Grumpig",
     "img": "326"
   },
   "Spinda": {
+    "name": "Spinda",
     "id": 327,
     "hp": 60,
     "attack": 60,
@@ -6508,10 +6915,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Own Tempo, Tangled Feet, Contrary",
     "passive": "Simple",
-    "evolution": "Spinda",
+    "evolution line": "Spinda",
     "img": "327"
   },
   "Trapinch": {
+    "name": "Trapinch",
     "id": 328,
     "hp": 45,
     "attack": 100,
@@ -6524,10 +6932,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Hyper Cutter, Arena Trap, Sheer Force",
     "passive": "Adaptability",
-    "evolution": "Trapinch, Vibrava, Flygon",
+    "evolution line": "Trapinch, Vibrava, Flygon",
     "img": "328"
   },
   "Vibrava": {
+    "name": "Vibrava",
     "id": 329,
     "hp": 50,
     "attack": 70,
@@ -6540,10 +6949,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Levitate",
     "passive": "Adaptability",
-    "evolution": "Trapinch, Vibrava, Flygon",
+    "evolution line": "Trapinch, Vibrava, Flygon",
     "img": "329"
   },
   "Flygon": {
+    "name": "Flygon",
     "id": 330,
     "hp": 80,
     "attack": 100,
@@ -6556,10 +6966,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Levitate",
     "passive": "Adaptability",
-    "evolution": "Trapinch, Vibrava, Flygon",
+    "evolution line": "Trapinch, Vibrava, Flygon",
     "img": "330"
   },
   "Cacnea": {
+    "name": "Cacnea",
     "id": 331,
     "hp": 50,
     "attack": 85,
@@ -6572,10 +6983,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sand Veil, Water Absorb",
     "passive": "Sand Rush",
-    "evolution": "Cacnea, Cacturne",
+    "evolution line": "Cacnea, Cacturne",
     "img": "331"
   },
   "Cacturne": {
+    "name": "Cacturne",
     "id": 332,
     "hp": 70,
     "attack": 115,
@@ -6588,10 +7000,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Sand Veil, Water Absorb",
     "passive": "Sand Rush",
-    "evolution": "Cacnea, Cacturne",
+    "evolution line": "Cacnea, Cacturne",
     "img": "332"
   },
   "Swablu": {
+    "name": "Swablu",
     "id": 333,
     "hp": 45,
     "attack": 40,
@@ -6604,10 +7017,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Natural Cure, Cloud Nine",
     "passive": "Fluffy",
-    "evolution": "Swablu, Altaria, Mega Altaria",
+    "evolution line": "Swablu, Altaria, Mega Altaria",
     "img": "333"
   },
   "Altaria": {
+    "name": "Altaria",
     "id": 334,
     "hp": 75,
     "attack": 70,
@@ -6620,10 +7034,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Natural Cure, Cloud Nine",
     "passive": "Fluffy",
-    "evolution": "Swablu, Altaria, Mega Altaria",
+    "evolution line": "Swablu, Altaria, Mega Altaria",
     "img": "334"
   },
   "Mega Altaria": {
+    "name": "Mega Altaria",
     "id": 334,
     "hp": 75,
     "attack": 110,
@@ -6636,10 +7051,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Pixilate",
     "passive": "Fluffy",
-    "evolution": "Swablu, Altaria, Mega Altaria",
+    "evolution line": "Swablu, Altaria, Mega Altaria",
     "img": "334-mega"
   },
   "Zangoose": {
+    "name": "Zangoose",
     "id": 335,
     "hp": 73,
     "attack": 115,
@@ -6652,10 +7068,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Immunity, Toxic Boost",
     "passive": "Poison Heal",
-    "evolution": "Zangoose",
+    "evolution line": "Zangoose",
     "img": "335"
   },
   "Seviper": {
+    "name": "Seviper",
     "id": 336,
     "hp": 73,
     "attack": 100,
@@ -6668,10 +7085,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shed Skin, Infiltrator",
     "passive": "Multiscale",
-    "evolution": "Seviper",
+    "evolution line": "Seviper",
     "img": "336"
   },
   "Lunatone": {
+    "name": "Lunatone",
     "id": 337,
     "hp": 90,
     "attack": 55,
@@ -6684,10 +7102,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Levitate",
     "passive": "Shadow Shield",
-    "evolution": "Lunatone",
+    "evolution line": "Lunatone",
     "img": "337"
   },
   "Solrock": {
+    "name": "Solrock",
     "id": 338,
     "hp": 90,
     "attack": 95,
@@ -6700,10 +7119,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Levitate",
     "passive": "Drought",
-    "evolution": "Solrock",
+    "evolution line": "Solrock",
     "img": "338"
   },
   "Barboach": {
+    "name": "Barboach",
     "id": 339,
     "hp": 50,
     "attack": 48,
@@ -6716,10 +7136,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Oblivious, Anticipation, Hydration",
     "passive": "Simple",
-    "evolution": "Barboach, Whiscash",
+    "evolution line": "Barboach, Whiscash",
     "img": "339"
   },
   "Whiscash": {
+    "name": "Whiscash",
     "id": 340,
     "hp": 110,
     "attack": 78,
@@ -6732,10 +7153,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Oblivious, Anticipation, Hydration",
     "passive": "Simple",
-    "evolution": "Barboach, Whiscash",
+    "evolution line": "Barboach, Whiscash",
     "img": "340"
   },
   "Corphish": {
+    "name": "Corphish",
     "id": 341,
     "hp": 43,
     "attack": 80,
@@ -6748,10 +7170,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Hyper Cutter, Shell Armor, Adaptability",
     "passive": "Tough Claws",
-    "evolution": "Corphish, Crawdaunt",
+    "evolution line": "Corphish, Crawdaunt",
     "img": "341"
   },
   "Crawdaunt": {
+    "name": "Crawdaunt",
     "id": 342,
     "hp": 63,
     "attack": 120,
@@ -6764,10 +7187,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Hyper Cutter, Shell Armor, Adaptability",
     "passive": "Tough Claws",
-    "evolution": "Corphish, Crawdaunt",
+    "evolution line": "Corphish, Crawdaunt",
     "img": "342"
   },
   "Baltoy": {
+    "name": "Baltoy",
     "id": 343,
     "hp": 40,
     "attack": 40,
@@ -6780,10 +7204,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Levitate",
     "passive": "Well Baked Body",
-    "evolution": "Baltoy, Claydol",
+    "evolution line": "Baltoy, Claydol",
     "img": "343"
   },
   "Claydol": {
+    "name": "Claydol",
     "id": 344,
     "hp": 60,
     "attack": 70,
@@ -6796,10 +7221,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Levitate",
     "passive": "Well Baked Body",
-    "evolution": "Baltoy, Claydol",
+    "evolution line": "Baltoy, Claydol",
     "img": "344"
   },
   "Lileep": {
+    "name": "Lileep",
     "id": 345,
     "hp": 66,
     "attack": 41,
@@ -6812,10 +7238,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Suction Cups, Storm Drain",
     "passive": "Seed Sower",
-    "evolution": "Lileep, Cradily",
+    "evolution line": "Lileep, Cradily",
     "img": "345"
   },
   "Cradily": {
+    "name": "Cradily",
     "id": 346,
     "hp": 86,
     "attack": 81,
@@ -6828,10 +7255,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Suction Cups, Storm Drain",
     "passive": "Seed Sower",
-    "evolution": "Lileep, Cradily",
+    "evolution line": "Lileep, Cradily",
     "img": "346"
   },
   "Anorith": {
+    "name": "Anorith",
     "id": 347,
     "hp": 45,
     "attack": 95,
@@ -6844,10 +7272,11 @@ const POKEMON_DATA = {
     "type2": "Bug",
     "abilities": "Battle Armor, Swift Swim",
     "passive": "Water Absorb",
-    "evolution": "Anorith, Armaldo",
+    "evolution line": "Anorith, Armaldo",
     "img": "347"
   },
   "Armaldo": {
+    "name": "Armaldo",
     "id": 348,
     "hp": 75,
     "attack": 125,
@@ -6860,10 +7289,11 @@ const POKEMON_DATA = {
     "type2": "Bug",
     "abilities": "Battle Armor, Swift Swim",
     "passive": "Water Absorb",
-    "evolution": "Anorith, Armaldo",
+    "evolution line": "Anorith, Armaldo",
     "img": "348"
   },
   "Feebas": {
+    "name": "Feebas",
     "id": 349,
     "hp": 20,
     "attack": 15,
@@ -6876,10 +7306,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Swift Swim, Oblivious, Adaptability",
     "passive": "Multiscale",
-    "evolution": "Feebas, Milotic",
+    "evolution line": "Feebas, Milotic",
     "img": "349"
   },
   "Milotic": {
+    "name": "Milotic",
     "id": 350,
     "hp": 95,
     "attack": 60,
@@ -6892,10 +7323,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Marvel Scale, Competitive, Cute Charm",
     "passive": "Magic Guard",
-    "evolution": "Feebas, Milotic",
+    "evolution line": "Feebas, Milotic",
     "img": "350"
   },
   "Castform": {
+    "name": "Castform",
     "id": 351,
     "hp": 70,
     "attack": 70,
@@ -6908,10 +7340,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Forecast",
     "passive": "Adaptability",
-    "evolution": "Castform, Sunny Castform, Rainy Castform, Snowy Castform",
+    "evolution line": "Castform, Sunny Castform, Rainy Castform, Snowy Castform",
     "img": "351"
   },
   "Sunny Castform": {
+    "name": "Sunny Castform",
     "id": 351,
     "hp": 70,
     "attack": 70,
@@ -6924,10 +7357,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Forecast",
     "passive": "Adaptability",
-    "evolution": "Castform, Sunny Castform, Rainy Castform, Snowy Castform",
+    "evolution line": "Castform, Sunny Castform, Rainy Castform, Snowy Castform",
     "img": "351-sunny"
   },
   "Rainy Castform": {
+    "name": "Rainy Castform",
     "id": 351,
     "hp": 70,
     "attack": 70,
@@ -6940,10 +7374,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Forecast",
     "passive": "Adaptability",
-    "evolution": "Castform, Sunny Castform, Rainy Castform, Snowy Castform",
+    "evolution line": "Castform, Sunny Castform, Rainy Castform, Snowy Castform",
     "img": "351-rainy"
   },
   "Snowy Castform": {
+    "name": "Snowy Castform",
     "id": 351,
     "hp": 70,
     "attack": 70,
@@ -6956,10 +7391,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Forecast",
     "passive": "Adaptability",
-    "evolution": "Castform, Sunny Castform, Rainy Castform, Snowy Castform",
+    "evolution line": "Castform, Sunny Castform, Rainy Castform, Snowy Castform",
     "img": "351-snowy"
   },
   "Kecleon": {
+    "name": "Kecleon",
     "id": 352,
     "hp": 60,
     "attack": 90,
@@ -6972,10 +7408,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Color Change, Protean",
     "passive": "Adaptability",
-    "evolution": "Kecleon",
+    "evolution line": "Kecleon",
     "img": "352"
   },
   "Shuppet": {
+    "name": "Shuppet",
     "id": 353,
     "hp": 44,
     "attack": 75,
@@ -6988,10 +7425,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Insomnia, Frisk, Cursed Body",
     "passive": "Shadow Shield",
-    "evolution": "Shuppet, Banette, Mega Banette",
+    "evolution line": "Shuppet, Banette, Mega Banette",
     "img": "353"
   },
   "Banette": {
+    "name": "Banette",
     "id": 354,
     "hp": 64,
     "attack": 115,
@@ -7004,10 +7442,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Insomnia, Frisk, Cursed Body",
     "passive": "Shadow Shield",
-    "evolution": "Shuppet, Banette, Mega Banette",
+    "evolution line": "Shuppet, Banette, Mega Banette",
     "img": "354"
   },
   "Mega Banette": {
+    "name": "Mega Banette",
     "id": 354,
     "hp": 64,
     "attack": 165,
@@ -7020,10 +7459,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Prankster",
     "passive": "Shadow Shield",
-    "evolution": "Shuppet, Banette, Mega Banette",
+    "evolution line": "Shuppet, Banette, Mega Banette",
     "img": "354-mega"
   },
   "Duskull": {
+    "name": "Duskull",
     "id": 355,
     "hp": 20,
     "attack": 40,
@@ -7036,10 +7476,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate, Frisk",
     "passive": "Unnerve",
-    "evolution": "Duskull, Dusclops, Dusknoir",
+    "evolution line": "Duskull, Dusclops, Dusknoir",
     "img": "355"
   },
   "Dusclops": {
+    "name": "Dusclops",
     "id": 356,
     "hp": 40,
     "attack": 70,
@@ -7052,10 +7493,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Pressure, Frisk",
     "passive": "Unnerve",
-    "evolution": "Duskull, Dusclops, Dusknoir",
+    "evolution line": "Duskull, Dusclops, Dusknoir",
     "img": "356"
   },
   "Tropius": {
+    "name": "Tropius",
     "id": 357,
     "hp": 99,
     "attack": 68,
@@ -7068,10 +7510,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Chlorophyll, Solar Power, Harvest",
     "passive": "Ripen",
-    "evolution": "Tropius",
+    "evolution line": "Tropius",
     "img": "357"
   },
   "Chimecho": {
+    "name": "Chimecho",
     "id": 358,
     "hp": 75,
     "attack": 50,
@@ -7084,10 +7527,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Punk Rock",
-    "evolution": "Chimecho, Chingling",
+    "evolution line": "Chimecho, Chingling",
     "img": "358"
   },
   "Absol": {
+    "name": "Absol",
     "id": 359,
     "hp": 65,
     "attack": 130,
@@ -7100,10 +7544,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Pressure, Super Luck, Justified",
     "passive": "Sharpness",
-    "evolution": "Absol, Mega Absol",
+    "evolution line": "Absol, Mega Absol",
     "img": "359"
   },
   "Mega Absol": {
+    "name": "Mega Absol",
     "id": 359,
     "hp": 65,
     "attack": 150,
@@ -7116,10 +7561,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Magic Bounce",
     "passive": "Sharpness",
-    "evolution": "Absol, Mega Absol",
+    "evolution line": "Absol, Mega Absol",
     "img": "359-mega"
   },
   "Wynaut": {
+    "name": "Wynaut",
     "id": 360,
     "hp": 95,
     "attack": 23,
@@ -7132,10 +7578,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shadow Tag, Telepathy",
     "passive": "Sturdy",
-    "evolution": "Wobbuffet, Wynaut",
+    "evolution line": "Wobbuffet, Wynaut",
     "img": "360"
   },
   "Snorunt": {
+    "name": "Snorunt",
     "id": 361,
     "hp": 50,
     "attack": 50,
@@ -7148,10 +7595,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Inner Focus, Ice Body, Moody",
     "passive": "Snow Warning",
-    "evolution": "Snorunt, Glalie, Mega Glalie, Froslass",
+    "evolution line": "Snorunt, Glalie, Mega Glalie, Froslass",
     "img": "361"
   },
   "Glalie": {
+    "name": "Glalie",
     "id": 362,
     "hp": 80,
     "attack": 80,
@@ -7164,10 +7612,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Inner Focus, Ice Body, Moody",
     "passive": "Snow Warning",
-    "evolution": "Snorunt, Glalie, Mega Glalie, Froslass",
+    "evolution line": "Snorunt, Glalie, Mega Glalie, Froslass",
     "img": "362"
   },
   "Mega Glalie": {
+    "name": "Mega Glalie",
     "id": 362,
     "hp": 80,
     "attack": 120,
@@ -7180,10 +7629,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Refrigerate",
     "passive": "Snow Warning",
-    "evolution": "Snorunt, Glalie, Mega Glalie, Froslass",
+    "evolution line": "Snorunt, Glalie, Mega Glalie, Froslass",
     "img": "362-mega"
   },
   "Spheal": {
+    "name": "Spheal",
     "id": 363,
     "hp": 70,
     "attack": 40,
@@ -7196,10 +7646,11 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Thick Fat, Ice Body, Oblivious",
     "passive": "Unaware",
-    "evolution": "Spheal, Sealeo, Walrein",
+    "evolution line": "Spheal, Sealeo, Walrein",
     "img": "363"
   },
   "Sealeo": {
+    "name": "Sealeo",
     "id": 364,
     "hp": 90,
     "attack": 60,
@@ -7212,10 +7663,11 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Thick Fat, Ice Body, Oblivious",
     "passive": "Unaware",
-    "evolution": "Spheal, Sealeo, Walrein",
+    "evolution line": "Spheal, Sealeo, Walrein",
     "img": "364"
   },
   "Walrein": {
+    "name": "Walrein",
     "id": 365,
     "hp": 110,
     "attack": 80,
@@ -7228,10 +7680,11 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Thick Fat, Ice Body, Oblivious",
     "passive": "Unaware",
-    "evolution": "Spheal, Sealeo, Walrein",
+    "evolution line": "Spheal, Sealeo, Walrein",
     "img": "365"
   },
   "Clamperl": {
+    "name": "Clamperl",
     "id": 366,
     "hp": 35,
     "attack": 64,
@@ -7244,10 +7697,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shell Armor, Rattled",
     "passive": "Comatose",
-    "evolution": "Clamperl, Huntail, Gorebyss",
+    "evolution line": "Clamperl, Huntail, Gorebyss",
     "img": "366"
   },
   "Huntail": {
+    "name": "Huntail",
     "id": 367,
     "hp": 55,
     "attack": 104,
@@ -7260,10 +7714,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Swift Swim, Water Veil",
     "passive": "Arena Trap",
-    "evolution": "Clamperl, Huntail, Gorebyss",
+    "evolution line": "Clamperl, Huntail, Gorebyss",
     "img": "367"
   },
   "Gorebyss": {
+    "name": "Gorebyss",
     "id": 368,
     "hp": 55,
     "attack": 84,
@@ -7276,10 +7731,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Swift Swim, Hydration",
     "passive": "Arena Trap",
-    "evolution": "Clamperl, Huntail, Gorebyss",
+    "evolution line": "Clamperl, Huntail, Gorebyss",
     "img": "368"
   },
   "Relicanth": {
+    "name": "Relicanth",
     "id": 369,
     "hp": 100,
     "attack": 90,
@@ -7292,10 +7748,11 @@ const POKEMON_DATA = {
     "type2": "Rock",
     "abilities": "Swift Swim, Rock Head, Sturdy",
     "passive": "Primordial Sea",
-    "evolution": "Relicanth",
+    "evolution line": "Relicanth",
     "img": "369"
   },
   "Luvdisc": {
+    "name": "Luvdisc",
     "id": 370,
     "hp": 43,
     "attack": 30,
@@ -7308,10 +7765,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Swift Swim, Hydration",
     "passive": "Multiscale",
-    "evolution": "Luvdisc",
+    "evolution line": "Luvdisc",
     "img": "370"
   },
   "Bagon": {
+    "name": "Bagon",
     "id": 371,
     "hp": 45,
     "attack": 75,
@@ -7324,10 +7782,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rock Head, Sheer Force",
     "passive": "Intimidate",
-    "evolution": "Bagon, Shelgon, Salamence, Mega Salamence",
+    "evolution line": "Bagon, Shelgon, Salamence, Mega Salamence",
     "img": "371"
   },
   "Shelgon": {
+    "name": "Shelgon",
     "id": 372,
     "hp": 65,
     "attack": 95,
@@ -7340,10 +7799,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rock Head, Overcoat",
     "passive": "Anger Shell",
-    "evolution": "Bagon, Shelgon, Salamence, Mega Salamence",
+    "evolution line": "Bagon, Shelgon, Salamence, Mega Salamence",
     "img": "372"
   },
   "Salamence": {
+    "name": "Salamence",
     "id": 373,
     "hp": 95,
     "attack": 135,
@@ -7356,10 +7816,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Intimidate, Moxie",
     "passive": "Gale Wings",
-    "evolution": "Bagon, Shelgon, Salamence, Mega Salamence",
+    "evolution line": "Bagon, Shelgon, Salamence, Mega Salamence",
     "img": "373"
   },
   "Mega Salamence": {
+    "name": "Mega Salamence",
     "id": 373,
     "hp": 95,
     "attack": 145,
@@ -7372,10 +7833,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Aerilate",
     "passive": "Rock Head",
-    "evolution": "Bagon, Shelgon, Salamence, Mega Salamence",
+    "evolution line": "Bagon, Shelgon, Salamence, Mega Salamence",
     "img": "373-mega"
   },
   "Beldum": {
+    "name": "Beldum",
     "id": 374,
     "hp": 40,
     "attack": 55,
@@ -7388,10 +7850,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Clear Body, Light Metal",
     "passive": "Rock Head",
-    "evolution": "Beldum, Metang, Metagross, Mega Metagross",
+    "evolution line": "Beldum, Metang, Metagross, Mega Metagross",
     "img": "374"
   },
   "Metang": {
+    "name": "Metang",
     "id": 375,
     "hp": 60,
     "attack": 75,
@@ -7404,10 +7867,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Clear Body, Light Metal",
     "passive": "Iron Fist",
-    "evolution": "Beldum, Metang, Metagross, Mega Metagross",
+    "evolution line": "Beldum, Metang, Metagross, Mega Metagross",
     "img": "375"
   },
   "Metagross": {
+    "name": "Metagross",
     "id": 376,
     "hp": 80,
     "attack": 135,
@@ -7420,10 +7884,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Clear Body, Light Metal",
     "passive": "Iron Fist",
-    "evolution": "Beldum, Metang, Metagross, Mega Metagross",
+    "evolution line": "Beldum, Metang, Metagross, Mega Metagross",
     "img": "376"
   },
   "Mega Metagross": {
+    "name": "Mega Metagross",
     "id": 376,
     "hp": 80,
     "attack": 145,
@@ -7436,10 +7901,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Tough Claws",
     "passive": "Full Metal Body",
-    "evolution": "Beldum, Metang, Metagross, Mega Metagross",
+    "evolution line": "Beldum, Metang, Metagross, Mega Metagross",
     "img": "376-mega"
   },
   "Regirock": {
+    "name": "Regirock",
     "id": 377,
     "hp": 80,
     "attack": 100,
@@ -7452,10 +7918,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Clear Body, Sturdy",
     "passive": "Sand Stream",
-    "evolution": "Regirock",
+    "evolution line": "Regirock",
     "img": "377"
   },
   "Regice": {
+    "name": "Regice",
     "id": 378,
     "hp": 80,
     "attack": 50,
@@ -7468,10 +7935,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Clear Body, Ice Body",
     "passive": "Snow Warning",
-    "evolution": "Regice",
+    "evolution line": "Regice",
     "img": "378"
   },
   "Registeel": {
+    "name": "Registeel",
     "id": 379,
     "hp": 80,
     "attack": 75,
@@ -7484,10 +7952,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Clear Body, Light Metal",
     "passive": "Steely Spirit",
-    "evolution": "Registeel",
+    "evolution line": "Registeel",
     "img": "379"
   },
   "Latias": {
+    "name": "Latias",
     "id": 380,
     "hp": 80,
     "attack": 80,
@@ -7500,10 +7969,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Levitate",
     "passive": "Prism Armor",
-    "evolution": "Latias, Mega Latias",
+    "evolution line": "Latias, Mega Latias",
     "img": "380"
   },
   "Mega Latias": {
+    "name": "Mega Latias",
     "id": 380,
     "hp": 80,
     "attack": 100,
@@ -7516,10 +7986,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Levitate",
     "passive": "Prism Armor",
-    "evolution": "Latias, Mega Latias",
+    "evolution line": "Latias, Mega Latias",
     "img": "380-mega"
   },
   "Latios": {
+    "name": "Latios",
     "id": 381,
     "hp": 80,
     "attack": 90,
@@ -7532,10 +8003,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Levitate",
     "passive": "Neuroforce",
-    "evolution": "Latios, Mega Latios",
+    "evolution line": "Latios, Mega Latios",
     "img": "381"
   },
   "Mega Latios": {
+    "name": "Mega Latios",
     "id": 381,
     "hp": 80,
     "attack": 130,
@@ -7548,10 +8020,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Levitate",
     "passive": "Neuroforce",
-    "evolution": "Latios, Mega Latios",
+    "evolution line": "Latios, Mega Latios",
     "img": "381-mega"
   },
   "Kyogre": {
+    "name": "Kyogre",
     "id": 382,
     "hp": 100,
     "attack": 100,
@@ -7564,10 +8037,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Drizzle",
     "passive": "Mold Breaker",
-    "evolution": "Kyogre, Primal Kyogre",
+    "evolution line": "Kyogre, Primal Kyogre",
     "img": "382"
   },
   "Primal Kyogre": {
+    "name": "Primal Kyogre",
     "id": 382,
     "hp": 100,
     "attack": 150,
@@ -7580,10 +8054,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Primordial Sea",
     "passive": "Teravolt",
-    "evolution": "Kyogre, Primal Kyogre",
+    "evolution line": "Kyogre, Primal Kyogre",
     "img": "382-primal"
   },
   "Groudon": {
+    "name": "Groudon",
     "id": 383,
     "hp": 100,
     "attack": 150,
@@ -7596,10 +8071,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Drought",
     "passive": "Mold Breaker",
-    "evolution": "Groudon, Primal Groudon",
+    "evolution line": "Groudon, Primal Groudon",
     "img": "383"
   },
   "Primal Groudon": {
+    "name": "Primal Groudon",
     "id": 383,
     "hp": 100,
     "attack": 180,
@@ -7612,10 +8088,11 @@ const POKEMON_DATA = {
     "type2": "Fire",
     "abilities": "Desolate Land",
     "passive": "Turboblaze",
-    "evolution": "Groudon, Primal Groudon",
+    "evolution line": "Groudon, Primal Groudon",
     "img": "383-primal"
   },
   "Rayquaza": {
+    "name": "Rayquaza",
     "id": 384,
     "hp": 105,
     "attack": 150,
@@ -7628,10 +8105,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Air Lock",
     "passive": "Unnerve",
-    "evolution": "Rayquaza, Mega Rayquaza",
+    "evolution line": "Rayquaza, Mega Rayquaza",
     "img": "384"
   },
   "Mega Rayquaza": {
+    "name": "Mega Rayquaza",
     "id": 384,
     "hp": 105,
     "attack": 180,
@@ -7644,10 +8122,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Delta Stream",
     "passive": "Unnerve",
-    "evolution": "Rayquaza, Mega Rayquaza",
+    "evolution line": "Rayquaza, Mega Rayquaza",
     "img": "384-mega"
   },
   "Jirachi": {
+    "name": "Jirachi",
     "id": 385,
     "hp": 100,
     "attack": 100,
@@ -7660,10 +8139,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Serene Grace",
     "passive": "Purifying Salt",
-    "evolution": "Jirachi",
+    "evolution line": "Jirachi",
     "img": "385"
   },
   "Normal Deoxys": {
+    "name": "Normal Deoxys",
     "id": 386,
     "hp": 50,
     "attack": 150,
@@ -7676,10 +8156,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Pressure",
     "passive": "Protean",
-    "evolution": "Normal Deoxys, Attack Deoxys, Defense Deoxys, Speed Deoxys",
+    "evolution line": "Normal Deoxys, Attack Deoxys, Defense Deoxys, Speed Deoxys",
     "img": "386"
   },
   "Attack Deoxys": {
+    "name": "Attack Deoxys",
     "id": 386,
     "hp": 50,
     "attack": 180,
@@ -7692,10 +8173,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Pressure",
     "passive": "Adaptability",
-    "evolution": "Normal Deoxys, Attack Deoxys, Defense Deoxys, Speed Deoxys",
+    "evolution line": "Normal Deoxys, Attack Deoxys, Defense Deoxys, Speed Deoxys",
     "img": "386-attack"
   },
   "Defense Deoxys": {
+    "name": "Defense Deoxys",
     "id": 386,
     "hp": 50,
     "attack": 70,
@@ -7708,10 +8190,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Pressure",
     "passive": "Regenerator",
-    "evolution": "Normal Deoxys, Attack Deoxys, Defense Deoxys, Speed Deoxys",
+    "evolution line": "Normal Deoxys, Attack Deoxys, Defense Deoxys, Speed Deoxys",
     "img": "386-defense"
   },
   "Speed Deoxys": {
+    "name": "Speed Deoxys",
     "id": 386,
     "hp": 50,
     "attack": 95,
@@ -7724,10 +8207,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Pressure",
     "passive": "Shadow Shield",
-    "evolution": "Normal Deoxys, Attack Deoxys, Defense Deoxys, Speed Deoxys",
+    "evolution line": "Normal Deoxys, Attack Deoxys, Defense Deoxys, Speed Deoxys",
     "img": "386-speed"
   },
   "Turtwig": {
+    "name": "Turtwig",
     "id": 387,
     "hp": 55,
     "attack": 68,
@@ -7740,10 +8224,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Overgrow, Shell Armor",
     "passive": "Solid Rock",
-    "evolution": "Turtwig, Grotle, Torterra",
+    "evolution line": "Turtwig, Grotle, Torterra",
     "img": "387"
   },
   "Grotle": {
+    "name": "Grotle",
     "id": 388,
     "hp": 75,
     "attack": 89,
@@ -7756,10 +8241,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Overgrow, Shell Armor",
     "passive": "Solid Rock",
-    "evolution": "Turtwig, Grotle, Torterra",
+    "evolution line": "Turtwig, Grotle, Torterra",
     "img": "388"
   },
   "Torterra": {
+    "name": "Torterra",
     "id": 389,
     "hp": 95,
     "attack": 109,
@@ -7772,10 +8258,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Overgrow, Shell Armor",
     "passive": "Thick Fat",
-    "evolution": "Turtwig, Grotle, Torterra",
+    "evolution line": "Turtwig, Grotle, Torterra",
     "img": "389"
   },
   "Chimchar": {
+    "name": "Chimchar",
     "id": 390,
     "hp": 44,
     "attack": 58,
@@ -7788,10 +8275,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Blaze, Iron Fist",
     "passive": "Defiant",
-    "evolution": "Chimchar, Monferno, Infernape",
+    "evolution line": "Chimchar, Monferno, Infernape",
     "img": "390"
   },
   "Monferno": {
+    "name": "Monferno",
     "id": 391,
     "hp": 64,
     "attack": 78,
@@ -7804,10 +8292,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Blaze, Iron Fist",
     "passive": "Defiant",
-    "evolution": "Chimchar, Monferno, Infernape",
+    "evolution line": "Chimchar, Monferno, Infernape",
     "img": "391"
   },
   "Infernape": {
+    "name": "Infernape",
     "id": 392,
     "hp": 76,
     "attack": 104,
@@ -7820,10 +8309,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Blaze, Iron Fist",
     "passive": "Battle Bond",
-    "evolution": "Chimchar, Monferno, Infernape",
+    "evolution line": "Chimchar, Monferno, Infernape",
     "img": "392"
   },
   "Piplup": {
+    "name": "Piplup",
     "id": 393,
     "hp": 53,
     "attack": 51,
@@ -7836,10 +8326,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Torrent, Competitive",
     "passive": "Cute Charm",
-    "evolution": "Piplup, Prinplup, Empoleon",
+    "evolution line": "Piplup, Prinplup, Empoleon",
     "img": "393"
   },
   "Prinplup": {
+    "name": "Prinplup",
     "id": 394,
     "hp": 64,
     "attack": 66,
@@ -7852,10 +8343,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Torrent, Competitive",
     "passive": "Drizzle",
-    "evolution": "Piplup, Prinplup, Empoleon",
+    "evolution line": "Piplup, Prinplup, Empoleon",
     "img": "394"
   },
   "Empoleon": {
+    "name": "Empoleon",
     "id": 395,
     "hp": 84,
     "attack": 86,
@@ -7868,10 +8360,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Torrent, Competitive",
     "passive": "Drizzle",
-    "evolution": "Piplup, Prinplup, Empoleon",
+    "evolution line": "Piplup, Prinplup, Empoleon",
     "img": "395"
   },
   "Starly": {
+    "name": "Starly",
     "id": 396,
     "hp": 40,
     "attack": 55,
@@ -7884,10 +8377,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Keen Eye, Reckless",
     "passive": "Intimidate",
-    "evolution": "Starly, Staravia, Staraptor",
+    "evolution line": "Starly, Staravia, Staraptor",
     "img": "396"
   },
   "Staravia": {
+    "name": "Staravia",
     "id": 397,
     "hp": 55,
     "attack": 75,
@@ -7900,10 +8394,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Intimidate, Reckless",
     "passive": "Rock Head",
-    "evolution": "Starly, Staravia, Staraptor",
+    "evolution line": "Starly, Staravia, Staraptor",
     "img": "397"
   },
   "Staraptor": {
+    "name": "Staraptor",
     "id": 398,
     "hp": 85,
     "attack": 120,
@@ -7916,10 +8411,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Intimidate, Reckless",
     "passive": "Rock Head",
-    "evolution": "Starly, Staravia, Staraptor",
+    "evolution line": "Starly, Staravia, Staraptor",
     "img": "398"
   },
   "Bidoof": {
+    "name": "Bidoof",
     "id": 399,
     "hp": 59,
     "attack": 45,
@@ -7932,10 +8428,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Simple, Unaware, Moody",
     "passive": "Sap Sipper",
-    "evolution": "Bidoof, Bibarel",
+    "evolution line": "Bidoof, Bibarel",
     "img": "399"
   },
   "Bibarel": {
+    "name": "Bibarel",
     "id": 400,
     "hp": 79,
     "attack": 85,
@@ -7948,10 +8445,11 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Simple, Unaware, Moody",
     "passive": "Sap Sipper",
-    "evolution": "Bidoof, Bibarel",
+    "evolution line": "Bidoof, Bibarel",
     "img": "400"
   },
   "Kricketot": {
+    "name": "Kricketot",
     "id": 401,
     "hp": 37,
     "attack": 25,
@@ -7964,10 +8462,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shed Skin, Run Away",
     "passive": "Honey Gather",
-    "evolution": "Kricketot, Kricketune",
+    "evolution line": "Kricketot, Kricketune",
     "img": "401"
   },
   "Kricketune": {
+    "name": "Kricketune",
     "id": 402,
     "hp": 77,
     "attack": 85,
@@ -7980,10 +8479,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Swarm, Technician",
     "passive": "Sharpness",
-    "evolution": "Kricketot, Kricketune",
+    "evolution line": "Kricketot, Kricketune",
     "img": "402"
   },
   "Shinx": {
+    "name": "Shinx",
     "id": 403,
     "hp": 45,
     "attack": 65,
@@ -7996,10 +8496,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rivalry, Intimidate, Guts",
     "passive": "Speed Boost",
-    "evolution": "Shinx, Luxio, Luxray",
+    "evolution line": "Shinx, Luxio, Luxray",
     "img": "403"
   },
   "Luxio": {
+    "name": "Luxio",
     "id": 404,
     "hp": 60,
     "attack": 85,
@@ -8012,10 +8513,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rivalry, Intimidate, Guts",
     "passive": "Speed Boost",
-    "evolution": "Shinx, Luxio, Luxray",
+    "evolution line": "Shinx, Luxio, Luxray",
     "img": "404"
   },
   "Luxray": {
+    "name": "Luxray",
     "id": 405,
     "hp": 80,
     "attack": 120,
@@ -8028,10 +8530,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rivalry, Intimidate, Guts",
     "passive": "Speed Boost",
-    "evolution": "Shinx, Luxio, Luxray",
+    "evolution line": "Shinx, Luxio, Luxray",
     "img": "405"
   },
   "Budew": {
+    "name": "Budew",
     "id": 406,
     "hp": 40,
     "attack": 30,
@@ -8044,10 +8547,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Natural Cure, Poison Point, Leaf Guard",
     "passive": "Seed Sower",
-    "evolution": "Roselia, Budew, Roserade",
+    "evolution line": "Roselia, Budew, Roserade",
     "img": "406"
   },
   "Roserade": {
+    "name": "Roserade",
     "id": 407,
     "hp": 60,
     "attack": 70,
@@ -8060,10 +8564,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Natural Cure, Poison Point, Technician",
     "passive": "Grassy Surge",
-    "evolution": "Roselia, Budew, Roserade",
+    "evolution line": "Roselia, Budew, Roserade",
     "img": "407"
   },
   "Cranidos": {
+    "name": "Cranidos",
     "id": 408,
     "hp": 67,
     "attack": 125,
@@ -8076,10 +8581,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Mold Breaker, Sheer Force",
     "passive": "Rock Head",
-    "evolution": "Cranidos, Rampardos",
+    "evolution line": "Cranidos, Rampardos",
     "img": "408"
   },
   "Rampardos": {
+    "name": "Rampardos",
     "id": 409,
     "hp": 97,
     "attack": 165,
@@ -8092,10 +8598,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Mold Breaker, Sheer Force",
     "passive": "Rock Head",
-    "evolution": "Cranidos, Rampardos",
+    "evolution line": "Cranidos, Rampardos",
     "img": "409"
   },
   "Shieldon": {
+    "name": "Shieldon",
     "id": 410,
     "hp": 30,
     "attack": 42,
@@ -8108,10 +8615,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Sturdy, Soundproof",
     "passive": "Earth Eater",
-    "evolution": "Shieldon, Bastiodon",
+    "evolution line": "Shieldon, Bastiodon",
     "img": "410"
   },
   "Bastiodon": {
+    "name": "Bastiodon",
     "id": 411,
     "hp": 60,
     "attack": 52,
@@ -8124,10 +8632,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Sturdy, Soundproof",
     "passive": "Earth Eater",
-    "evolution": "Shieldon, Bastiodon",
+    "evolution line": "Shieldon, Bastiodon",
     "img": "411"
   },
   "Plant Burmy": {
+    "name": "Plant Burmy",
     "id": 412,
     "hp": 40,
     "attack": 29,
@@ -8140,10 +8649,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shed Skin, Overcoat",
     "passive": "Sturdy",
-    "evolution": "Plant Burmy, Sandy Burmy, Trash Burmy, Plant Wormadam, Sandy Wormadam, Trash Wormadam, Mothim",
+    "evolution line": "Plant Burmy, Sandy Burmy, Trash Burmy, Plant Wormadam, Sandy Wormadam, Trash Wormadam, Mothim",
     "img": "412-plant"
   },
   "Sandy Burmy": {
+    "name": "Sandy Burmy",
     "id": 412,
     "hp": 40,
     "attack": 29,
@@ -8156,10 +8666,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shed Skin, Overcoat",
     "passive": "Sturdy",
-    "evolution": "Plant Burmy, Sandy Burmy, Trash Burmy, Plant Wormadam, Sandy Wormadam, Trash Wormadam, Mothim",
+    "evolution line": "Plant Burmy, Sandy Burmy, Trash Burmy, Plant Wormadam, Sandy Wormadam, Trash Wormadam, Mothim",
     "img": "412-sandy"
   },
   "Trash Burmy": {
+    "name": "Trash Burmy",
     "id": 412,
     "hp": 40,
     "attack": 29,
@@ -8172,10 +8683,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shed Skin, Overcoat",
     "passive": "Sturdy",
-    "evolution": "Plant Burmy, Sandy Burmy, Trash Burmy, Plant Wormadam, Sandy Wormadam, Trash Wormadam, Mothim",
+    "evolution line": "Plant Burmy, Sandy Burmy, Trash Burmy, Plant Wormadam, Sandy Wormadam, Trash Wormadam, Mothim",
     "img": "412-trash"
   },
   "Plant Wormadam": {
+    "name": "Plant Wormadam",
     "id": 413,
     "hp": 60,
     "attack": 59,
@@ -8188,10 +8700,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Anticipation, Overcoat",
     "passive": "Sturdy",
-    "evolution": "Plant Burmy, Sandy Burmy, Trash Burmy, Plant Wormadam, Sandy Wormadam, Trash Wormadam, Mothim",
+    "evolution line": "Plant Burmy, Sandy Burmy, Trash Burmy, Plant Wormadam, Sandy Wormadam, Trash Wormadam, Mothim",
     "img": "413-plant"
   },
   "Sandy Wormadam": {
+    "name": "Sandy Wormadam",
     "id": 413,
     "hp": 60,
     "attack": 79,
@@ -8204,10 +8717,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Anticipation, Overcoat",
     "passive": "Sturdy",
-    "evolution": "Plant Burmy, Sandy Burmy, Trash Burmy, Plant Wormadam, Sandy Wormadam, Trash Wormadam, Mothim",
+    "evolution line": "Plant Burmy, Sandy Burmy, Trash Burmy, Plant Wormadam, Sandy Wormadam, Trash Wormadam, Mothim",
     "img": "413-sandy"
   },
   "Trash Wormadam": {
+    "name": "Trash Wormadam",
     "id": 413,
     "hp": 60,
     "attack": 69,
@@ -8220,10 +8734,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Anticipation, Overcoat",
     "passive": "Sturdy",
-    "evolution": "Plant Burmy, Sandy Burmy, Trash Burmy, Plant Wormadam, Sandy Wormadam, Trash Wormadam, Mothim",
+    "evolution line": "Plant Burmy, Sandy Burmy, Trash Burmy, Plant Wormadam, Sandy Wormadam, Trash Wormadam, Mothim",
     "img": "413-trash"
   },
   "Mothim": {
+    "name": "Mothim",
     "id": 414,
     "hp": 70,
     "attack": 94,
@@ -8236,10 +8751,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Swarm, Tinted Lens",
     "passive": "Speed Boost",
-    "evolution": "Plant Burmy, Sandy Burmy, Trash Burmy, Plant Wormadam, Sandy Wormadam, Trash Wormadam, Mothim",
+    "evolution line": "Plant Burmy, Sandy Burmy, Trash Burmy, Plant Wormadam, Sandy Wormadam, Trash Wormadam, Mothim",
     "img": "414"
   },
   "Combee": {
+    "name": "Combee",
     "id": 415,
     "hp": 30,
     "attack": 30,
@@ -8252,10 +8768,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Honey Gather, Hustle",
     "passive": "Run Away",
-    "evolution": "Combee, Vespiquen",
+    "evolution line": "Combee, Vespiquen",
     "img": "415"
   },
   "Vespiquen": {
+    "name": "Vespiquen",
     "id": 416,
     "hp": 70,
     "attack": 80,
@@ -8268,10 +8785,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Pressure, Unnerve",
     "passive": "Intimidate",
-    "evolution": "Combee, Vespiquen",
+    "evolution line": "Combee, Vespiquen",
     "img": "416"
   },
   "Pachirisu": {
+    "name": "Pachirisu",
     "id": 417,
     "hp": 60,
     "attack": 45,
@@ -8284,10 +8802,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Run Away, Pickup, Volt Absorb",
     "passive": "Honey Gather",
-    "evolution": "Pachirisu",
+    "evolution line": "Pachirisu",
     "img": "417"
   },
   "Buizel": {
+    "name": "Buizel",
     "id": 418,
     "hp": 55,
     "attack": 65,
@@ -8300,10 +8819,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Swift Swim, Water Veil",
     "passive": "Moxie",
-    "evolution": "Buizel, Floatzel",
+    "evolution line": "Buizel, Floatzel",
     "img": "418"
   },
   "Floatzel": {
+    "name": "Floatzel",
     "id": 419,
     "hp": 85,
     "attack": 105,
@@ -8316,10 +8836,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Swift Swim, Water Veil",
     "passive": "Moxie",
-    "evolution": "Buizel, Floatzel",
+    "evolution line": "Buizel, Floatzel",
     "img": "419"
   },
   "Cherubi": {
+    "name": "Cherubi",
     "id": 420,
     "hp": 45,
     "attack": 35,
@@ -8332,10 +8853,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Chlorophyll",
     "passive": "Drought",
-    "evolution": "Cherubi, Overcast Cherrim, Sunshine Cherrim",
+    "evolution line": "Cherubi, Overcast Cherrim, Sunshine Cherrim",
     "img": "420"
   },
   "Overcast Cherrim": {
+    "name": "Overcast Cherrim",
     "id": 421,
     "hp": 70,
     "attack": 60,
@@ -8348,10 +8870,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Flower Gift",
     "passive": "Drought",
-    "evolution": "Cherubi, Overcast Cherrim, Sunshine Cherrim",
+    "evolution line": "Cherubi, Overcast Cherrim, Sunshine Cherrim",
     "img": "421-overcast"
   },
   "Sunshine Cherrim": {
+    "name": "Sunshine Cherrim",
     "id": 421,
     "hp": 70,
     "attack": 60,
@@ -8364,10 +8887,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Flower Gift",
     "passive": "Chlorophyll",
-    "evolution": "Cherubi, Overcast Cherrim, Sunshine Cherrim",
+    "evolution line": "Cherubi, Overcast Cherrim, Sunshine Cherrim",
     "img": "421-sunshine"
   },
   "East Shellos": {
+    "name": "East Shellos",
     "id": 422,
     "hp": 76,
     "attack": 48,
@@ -8380,10 +8904,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sticky Hold, Storm Drain, Sand Force",
     "passive": "Regenerator",
-    "evolution": "East Shellos, West Shellos, East Gastrodon, West Gastrodon",
+    "evolution line": "East Shellos, West Shellos, East Gastrodon, West Gastrodon",
     "img": "422-east"
   },
   "West Shellos": {
+    "name": "West Shellos",
     "id": 422,
     "hp": 76,
     "attack": 48,
@@ -8396,10 +8921,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sticky Hold, Storm Drain, Sand Force",
     "passive": "Regenerator",
-    "evolution": "East Shellos, West Shellos, East Gastrodon, West Gastrodon",
+    "evolution line": "East Shellos, West Shellos, East Gastrodon, West Gastrodon",
     "img": "422-west"
   },
   "East Gastrodon": {
+    "name": "East Gastrodon",
     "id": 423,
     "hp": 111,
     "attack": 83,
@@ -8412,10 +8938,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Sticky Hold, Storm Drain, Sand Force",
     "passive": "Regenerator",
-    "evolution": "East Shellos, West Shellos, East Gastrodon, West Gastrodon",
+    "evolution line": "East Shellos, West Shellos, East Gastrodon, West Gastrodon",
     "img": "423-east"
   },
   "West Gastrodon": {
+    "name": "West Gastrodon",
     "id": 423,
     "hp": 111,
     "attack": 83,
@@ -8428,10 +8955,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Sticky Hold, Storm Drain, Sand Force",
     "passive": "Regenerator",
-    "evolution": "East Shellos, West Shellos, East Gastrodon, West Gastrodon",
+    "evolution line": "East Shellos, West Shellos, East Gastrodon, West Gastrodon",
     "img": "423-west"
   },
   "Ambipom": {
+    "name": "Ambipom",
     "id": 424,
     "hp": 75,
     "attack": 100,
@@ -8444,10 +8972,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Technician, Pickup, Skill Link",
     "passive": "Scrappy",
-    "evolution": "Aipom, Ambipom",
+    "evolution line": "Aipom, Ambipom",
     "img": "424"
   },
   "Drifloon": {
+    "name": "Drifloon",
     "id": 425,
     "hp": 90,
     "attack": 50,
@@ -8460,10 +8989,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Aftermath, Unburden, Flare Boost",
     "passive": "Magic Guard",
-    "evolution": "Drifloon, Drifblim",
+    "evolution line": "Drifloon, Drifblim",
     "img": "425"
   },
   "Drifblim": {
+    "name": "Drifblim",
     "id": 426,
     "hp": 150,
     "attack": 80,
@@ -8476,10 +9006,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Aftermath, Unburden, Flare Boost",
     "passive": "Magic Guard",
-    "evolution": "Drifloon, Drifblim",
+    "evolution line": "Drifloon, Drifblim",
     "img": "426"
   },
   "Buneary": {
+    "name": "Buneary",
     "id": 427,
     "hp": 55,
     "attack": 66,
@@ -8492,10 +9023,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Run Away, Klutz, Limber",
     "passive": "Adaptability",
-    "evolution": "Buneary, Lopunny, Mega Lopunny",
+    "evolution line": "Buneary, Lopunny, Mega Lopunny",
     "img": "427"
   },
   "Lopunny": {
+    "name": "Lopunny",
     "id": 428,
     "hp": 65,
     "attack": 76,
@@ -8508,10 +9040,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Cute Charm, Klutz, Limber",
     "passive": "Adaptability",
-    "evolution": "Buneary, Lopunny, Mega Lopunny",
+    "evolution line": "Buneary, Lopunny, Mega Lopunny",
     "img": "428"
   },
   "Mega Lopunny": {
+    "name": "Mega Lopunny",
     "id": 428,
     "hp": 65,
     "attack": 136,
@@ -8524,10 +9057,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Scrappy",
     "passive": "Adaptability",
-    "evolution": "Buneary, Lopunny, Mega Lopunny",
+    "evolution line": "Buneary, Lopunny, Mega Lopunny",
     "img": "428-mega"
   },
   "Mismagius": {
+    "name": "Mismagius",
     "id": 429,
     "hp": 60,
     "attack": 60,
@@ -8540,10 +9074,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Beads Of Ruin",
-    "evolution": "Misdreavus, Mismagius",
+    "evolution line": "Misdreavus, Mismagius",
     "img": "429"
   },
   "Honchkrow": {
+    "name": "Honchkrow",
     "id": 430,
     "hp": 100,
     "attack": 125,
@@ -8556,10 +9091,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Insomnia, Super Luck, Moxie",
     "passive": "Intimidate",
-    "evolution": "Murkrow, Honchkrow",
+    "evolution line": "Murkrow, Honchkrow",
     "img": "430"
   },
   "Glameow": {
+    "name": "Glameow",
     "id": 431,
     "hp": 49,
     "attack": 55,
@@ -8572,10 +9108,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Limber, Own Tempo, Keen Eye",
     "passive": "Intimidate",
-    "evolution": "Glameow, Purugly",
+    "evolution line": "Glameow, Purugly",
     "img": "431"
   },
   "Purugly": {
+    "name": "Purugly",
     "id": 432,
     "hp": 71,
     "attack": 82,
@@ -8588,10 +9125,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Thick Fat, Own Tempo, Defiant",
     "passive": "Intimidate",
-    "evolution": "Glameow, Purugly",
+    "evolution line": "Glameow, Purugly",
     "img": "432"
   },
   "Chingling": {
+    "name": "Chingling",
     "id": 433,
     "hp": 45,
     "attack": 30,
@@ -8604,10 +9142,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Punk Rock",
-    "evolution": "Chimecho, Chingling",
+    "evolution line": "Chimecho, Chingling",
     "img": "433"
   },
   "Stunky": {
+    "name": "Stunky",
     "id": 434,
     "hp": 63,
     "attack": 63,
@@ -8620,10 +9159,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Stench, Aftermath, Keen Eye",
     "passive": "Neutralizing Gas",
-    "evolution": "Stunky, Skuntank",
+    "evolution line": "Stunky, Skuntank",
     "img": "434"
   },
   "Skuntank": {
+    "name": "Skuntank",
     "id": 435,
     "hp": 103,
     "attack": 93,
@@ -8636,10 +9176,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Stench, Aftermath, Keen Eye",
     "passive": "Neutralizing Gas",
-    "evolution": "Stunky, Skuntank",
+    "evolution line": "Stunky, Skuntank",
     "img": "435"
   },
   "Bronzor": {
+    "name": "Bronzor",
     "id": 436,
     "hp": 57,
     "attack": 24,
@@ -8652,10 +9193,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Levitate, Heatproof, Heavy Metal",
     "passive": "Mirror Armor",
-    "evolution": "Bronzor, Bronzong",
+    "evolution line": "Bronzor, Bronzong",
     "img": "436"
   },
   "Bronzong": {
+    "name": "Bronzong",
     "id": 437,
     "hp": 67,
     "attack": 89,
@@ -8668,10 +9210,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Levitate, Heatproof, Heavy Metal",
     "passive": "Mirror Armor",
-    "evolution": "Bronzor, Bronzong",
+    "evolution line": "Bronzor, Bronzong",
     "img": "437"
   },
   "Bonsly": {
+    "name": "Bonsly",
     "id": 438,
     "hp": 50,
     "attack": 80,
@@ -8684,10 +9227,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sturdy, Rock Head, Rattled",
     "passive": "Sap Sipper",
-    "evolution": "Sudowoodo, Bonsly",
+    "evolution line": "Sudowoodo, Bonsly",
     "img": "438"
   },
   "Mime Jr.": {
+    "name": "Mime Jr.",
     "id": 439,
     "hp": 20,
     "attack": 25,
@@ -8700,10 +9244,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Soundproof, Filter, Technician",
     "passive": "Prankster",
-    "evolution": "Mr. Mime, Mime Jr., Mr. Rime, Galar Mr. Mime",
+    "evolution line": "Mr. Mime, Mime Jr., Mr. Rime, Galar Mr. Mime",
     "img": "439"
   },
   "Happiny": {
+    "name": "Happiny",
     "id": 440,
     "hp": 100,
     "attack": 5,
@@ -8716,10 +9261,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Natural Cure, Serene Grace, Friend Guard",
     "passive": "Hospitality",
-    "evolution": "Chansey, Blissey, Happiny",
+    "evolution line": "Chansey, Blissey, Happiny",
     "img": "440"
   },
   "Chatot": {
+    "name": "Chatot",
     "id": 441,
     "hp": 76,
     "attack": 65,
@@ -8732,10 +9278,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Keen Eye, Tangled Feet, Big Pecks",
     "passive": "Punk Rock",
-    "evolution": "Chatot",
+    "evolution line": "Chatot",
     "img": "441"
   },
   "Spiritomb": {
+    "name": "Spiritomb",
     "id": 442,
     "hp": 50,
     "attack": 92,
@@ -8748,10 +9295,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Pressure, Infiltrator",
     "passive": "Vessel Of Ruin",
-    "evolution": "Spiritomb",
+    "evolution line": "Spiritomb",
     "img": "442"
   },
   "Gible": {
+    "name": "Gible",
     "id": 443,
     "hp": 58,
     "attack": 70,
@@ -8764,10 +9312,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Sand Veil, Rough Skin",
     "passive": "Arena Trap",
-    "evolution": "Gible, Gabite, Garchomp, Mega Garchomp",
+    "evolution line": "Gible, Gabite, Garchomp, Mega Garchomp",
     "img": "443"
   },
   "Gabite": {
+    "name": "Gabite",
     "id": 444,
     "hp": 68,
     "attack": 90,
@@ -8780,10 +9329,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Sand Veil, Rough Skin",
     "passive": "Arena Trap",
-    "evolution": "Gible, Gabite, Garchomp, Mega Garchomp",
+    "evolution line": "Gible, Gabite, Garchomp, Mega Garchomp",
     "img": "444"
   },
   "Garchomp": {
+    "name": "Garchomp",
     "id": 445,
     "hp": 108,
     "attack": 130,
@@ -8796,10 +9346,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Sand Veil, Rough Skin",
     "passive": "Arena Trap",
-    "evolution": "Gible, Gabite, Garchomp, Mega Garchomp",
+    "evolution line": "Gible, Gabite, Garchomp, Mega Garchomp",
     "img": "445"
   },
   "Mega Garchomp": {
+    "name": "Mega Garchomp",
     "id": 445,
     "hp": 108,
     "attack": 170,
@@ -8812,10 +9363,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Sand Force",
     "passive": "Sand Rush",
-    "evolution": "Gible, Gabite, Garchomp, Mega Garchomp",
+    "evolution line": "Gible, Gabite, Garchomp, Mega Garchomp",
     "img": "445-mega"
   },
   "Munchlax": {
+    "name": "Munchlax",
     "id": 446,
     "hp": 135,
     "attack": 85,
@@ -8828,10 +9380,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Pickup, Thick Fat, Gluttony",
     "passive": "Cheek Pouch",
-    "evolution": "Snorlax, Gigantamax Snorlax, Munchlax",
+    "evolution line": "Snorlax, Gigantamax Snorlax, Munchlax",
     "img": "446"
   },
   "Riolu": {
+    "name": "Riolu",
     "id": 447,
     "hp": 40,
     "attack": 70,
@@ -8844,10 +9397,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Steadfast, Inner Focus, Prankster",
     "passive": "Minds Eye",
-    "evolution": "Riolu, Lucario, Mega Lucario",
+    "evolution line": "Riolu, Lucario, Mega Lucario",
     "img": "447"
   },
   "Lucario": {
+    "name": "Lucario",
     "id": 448,
     "hp": 70,
     "attack": 110,
@@ -8860,10 +9414,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Steadfast, Inner Focus, Justified",
     "passive": "Minds Eye",
-    "evolution": "Riolu, Lucario, Mega Lucario",
+    "evolution line": "Riolu, Lucario, Mega Lucario",
     "img": "448"
   },
   "Mega Lucario": {
+    "name": "Mega Lucario",
     "id": 448,
     "hp": 70,
     "attack": 145,
@@ -8876,10 +9431,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Adaptability",
     "passive": "Minds Eye",
-    "evolution": "Riolu, Lucario, Mega Lucario",
+    "evolution line": "Riolu, Lucario, Mega Lucario",
     "img": "448-mega"
   },
   "Hippopotas": {
+    "name": "Hippopotas",
     "id": 449,
     "hp": 68,
     "attack": 72,
@@ -8892,10 +9448,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sand Stream, Sand Force",
     "passive": "Unaware",
-    "evolution": "Hippopotas, Hippowdon",
+    "evolution line": "Hippopotas, Hippowdon",
     "img": "449"
   },
   "Hippowdon": {
+    "name": "Hippowdon",
     "id": 450,
     "hp": 108,
     "attack": 112,
@@ -8908,10 +9465,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sand Stream, Sand Force",
     "passive": "Unaware",
-    "evolution": "Hippopotas, Hippowdon",
+    "evolution line": "Hippopotas, Hippowdon",
     "img": "450"
   },
   "Skorupi": {
+    "name": "Skorupi",
     "id": 451,
     "hp": 40,
     "attack": 50,
@@ -8924,10 +9482,11 @@ const POKEMON_DATA = {
     "type2": "Bug",
     "abilities": "Battle Armor, Sniper, Keen Eye",
     "passive": "Super Luck",
-    "evolution": "Skorupi, Drapion",
+    "evolution line": "Skorupi, Drapion",
     "img": "451"
   },
   "Drapion": {
+    "name": "Drapion",
     "id": 452,
     "hp": 70,
     "attack": 90,
@@ -8940,10 +9499,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Battle Armor, Sniper, Keen Eye",
     "passive": "Super Luck",
-    "evolution": "Skorupi, Drapion",
+    "evolution line": "Skorupi, Drapion",
     "img": "452"
   },
   "Croagunk": {
+    "name": "Croagunk",
     "id": 453,
     "hp": 48,
     "attack": 61,
@@ -8956,10 +9516,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Anticipation, Dry Skin, Poison Touch",
     "passive": "Moxie",
-    "evolution": "Croagunk, Toxicroak",
+    "evolution line": "Croagunk, Toxicroak",
     "img": "453"
   },
   "Toxicroak": {
+    "name": "Toxicroak",
     "id": 454,
     "hp": 83,
     "attack": 106,
@@ -8972,10 +9533,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Anticipation, Dry Skin, Poison Touch",
     "passive": "Moxie",
-    "evolution": "Croagunk, Toxicroak",
+    "evolution line": "Croagunk, Toxicroak",
     "img": "454"
   },
   "Carnivine": {
+    "name": "Carnivine",
     "id": 455,
     "hp": 74,
     "attack": 100,
@@ -8988,10 +9550,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Arena Trap",
-    "evolution": "Carnivine",
+    "evolution line": "Carnivine",
     "img": "455"
   },
   "Finneon": {
+    "name": "Finneon",
     "id": 456,
     "hp": 49,
     "attack": 49,
@@ -9004,10 +9567,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Swift Swim, Storm Drain, Water Veil",
     "passive": "Water Bubble",
-    "evolution": "Finneon, Lumineon",
+    "evolution line": "Finneon, Lumineon",
     "img": "456"
   },
   "Lumineon": {
+    "name": "Lumineon",
     "id": 457,
     "hp": 69,
     "attack": 69,
@@ -9020,10 +9584,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Swift Swim, Storm Drain, Water Veil",
     "passive": "Water Bubble",
-    "evolution": "Finneon, Lumineon",
+    "evolution line": "Finneon, Lumineon",
     "img": "457"
   },
   "Mantyke": {
+    "name": "Mantyke",
     "id": 458,
     "hp": 45,
     "attack": 20,
@@ -9036,10 +9601,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Swift Swim, Water Absorb, Water Veil",
     "passive": "Unaware",
-    "evolution": "Mantine, Mantyke",
+    "evolution line": "Mantine, Mantyke",
     "img": "458"
   },
   "Snover": {
+    "name": "Snover",
     "id": 459,
     "hp": 60,
     "attack": 62,
@@ -9052,10 +9618,11 @@ const POKEMON_DATA = {
     "type2": "Ice",
     "abilities": "Snow Warning, Soundproof",
     "passive": "Slush Rush",
-    "evolution": "Snover, Abomasnow, Mega Abomasnow",
+    "evolution line": "Snover, Abomasnow, Mega Abomasnow",
     "img": "459"
   },
   "Abomasnow": {
+    "name": "Abomasnow",
     "id": 460,
     "hp": 90,
     "attack": 92,
@@ -9068,10 +9635,11 @@ const POKEMON_DATA = {
     "type2": "Ice",
     "abilities": "Snow Warning, Soundproof",
     "passive": "Slush Rush",
-    "evolution": "Snover, Abomasnow, Mega Abomasnow",
+    "evolution line": "Snover, Abomasnow, Mega Abomasnow",
     "img": "460"
   },
   "Mega Abomasnow": {
+    "name": "Mega Abomasnow",
     "id": 460,
     "hp": 90,
     "attack": 132,
@@ -9084,10 +9652,11 @@ const POKEMON_DATA = {
     "type2": "Ice",
     "abilities": "Snow Warning",
     "passive": "Grassy Surge",
-    "evolution": "Snover, Abomasnow, Mega Abomasnow",
+    "evolution line": "Snover, Abomasnow, Mega Abomasnow",
     "img": "460-mega"
   },
   "Weavile": {
+    "name": "Weavile",
     "id": 461,
     "hp": 70,
     "attack": 120,
@@ -9100,10 +9669,11 @@ const POKEMON_DATA = {
     "type2": "Ice",
     "abilities": "Pressure, Pickpocket",
     "passive": "Tough Claws",
-    "evolution": "Sneasel, Weavile",
+    "evolution line": "Sneasel, Weavile",
     "img": "461"
   },
   "Magnezone": {
+    "name": "Magnezone",
     "id": 462,
     "hp": 70,
     "attack": 70,
@@ -9116,10 +9686,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Magnet Pull, Sturdy, Analytic",
     "passive": "Levitate",
-    "evolution": "Magnemite, Magneton, Magnezone",
+    "evolution line": "Magnemite, Magneton, Magnezone",
     "img": "462"
   },
   "Lickilicky": {
+    "name": "Lickilicky",
     "id": 463,
     "hp": 110,
     "attack": 85,
@@ -9132,10 +9703,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Own Tempo, Oblivious, Cloud Nine",
     "passive": "Cheek Pouch",
-    "evolution": "Lickitung, Lickilicky",
+    "evolution line": "Lickitung, Lickilicky",
     "img": "463"
   },
   "Rhyperior": {
+    "name": "Rhyperior",
     "id": 464,
     "hp": 115,
     "attack": 140,
@@ -9148,10 +9720,11 @@ const POKEMON_DATA = {
     "type2": "Rock",
     "abilities": "Lightning Rod, Solid Rock, Reckless",
     "passive": "Filter",
-    "evolution": "Rhyhorn, Rhydon, Rhyperior",
+    "evolution line": "Rhyhorn, Rhydon, Rhyperior",
     "img": "464"
   },
   "Tangrowth": {
+    "name": "Tangrowth",
     "id": 465,
     "hp": 100,
     "attack": 100,
@@ -9164,10 +9737,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Chlorophyll, Leaf Guard, Regenerator",
     "passive": "Tangling Hair",
-    "evolution": "Tangela, Tangrowth",
+    "evolution line": "Tangela, Tangrowth",
     "img": "465"
   },
   "Electivire": {
+    "name": "Electivire",
     "id": 466,
     "hp": 75,
     "attack": 123,
@@ -9180,10 +9754,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Motor Drive, Vital Spirit",
     "passive": "Sheer Force",
-    "evolution": "Electabuzz, Elekid, Electivire",
+    "evolution line": "Electabuzz, Elekid, Electivire",
     "img": "466"
   },
   "Magmortar": {
+    "name": "Magmortar",
     "id": 467,
     "hp": 75,
     "attack": 95,
@@ -9196,10 +9771,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Flame Body, Vital Spirit",
     "passive": "Sheer Force",
-    "evolution": "Magmar, Magby, Magmortar",
+    "evolution line": "Magmar, Magby, Magmortar",
     "img": "467"
   },
   "Togekiss": {
+    "name": "Togekiss",
     "id": 468,
     "hp": 85,
     "attack": 50,
@@ -9212,10 +9788,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Hustle, Serene Grace, Super Luck",
     "passive": "Pixilate",
-    "evolution": "Togepi, Togetic, Togekiss",
+    "evolution line": "Togepi, Togetic, Togekiss",
     "img": "468"
   },
   "Yanmega": {
+    "name": "Yanmega",
     "id": 469,
     "hp": 86,
     "attack": 76,
@@ -9228,10 +9805,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Speed Boost, Tinted Lens, Frisk",
     "passive": "Sheer Force",
-    "evolution": "Yanma, Yanmega",
+    "evolution line": "Yanma, Yanmega",
     "img": "469"
   },
   "Leafeon": {
+    "name": "Leafeon",
     "id": 470,
     "hp": 65,
     "attack": 110,
@@ -9244,10 +9822,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Leaf Guard, Chlorophyll",
     "passive": "Grassy Surge",
-    "evolution": "Eevee, Partner Eevee, Gigantamax Eevee, Vaporeon, Jolteon, Flareon, Espeon, Umbreon, Leafeon, Glaceon, Sylveon",
+    "evolution line": "Eevee, Partner Eevee, Gigantamax Eevee, Vaporeon, Jolteon, Flareon, Espeon, Umbreon, Leafeon, Glaceon, Sylveon",
     "img": "470"
   },
   "Glaceon": {
+    "name": "Glaceon",
     "id": 471,
     "hp": 65,
     "attack": 60,
@@ -9260,10 +9839,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Snow Cloak, Ice Body",
     "passive": "Snow Warning",
-    "evolution": "Eevee, Partner Eevee, Gigantamax Eevee, Vaporeon, Jolteon, Flareon, Espeon, Umbreon, Leafeon, Glaceon, Sylveon",
+    "evolution line": "Eevee, Partner Eevee, Gigantamax Eevee, Vaporeon, Jolteon, Flareon, Espeon, Umbreon, Leafeon, Glaceon, Sylveon",
     "img": "471"
   },
   "Gliscor": {
+    "name": "Gliscor",
     "id": 472,
     "hp": 75,
     "attack": 95,
@@ -9276,10 +9856,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Hyper Cutter, Sand Veil, Poison Heal",
     "passive": "Toxic Boost",
-    "evolution": "Gligar, Gliscor",
+    "evolution line": "Gligar, Gliscor",
     "img": "472"
   },
   "Mamoswine": {
+    "name": "Mamoswine",
     "id": 473,
     "hp": 110,
     "attack": 130,
@@ -9292,10 +9873,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Oblivious, Snow Cloak, Thick Fat",
     "passive": "Slush Rush",
-    "evolution": "Swinub, Piloswine, Mamoswine",
+    "evolution line": "Swinub, Piloswine, Mamoswine",
     "img": "473"
   },
   "Porygon-Z": {
+    "name": "Porygon-Z",
     "id": 474,
     "hp": 85,
     "attack": 80,
@@ -9308,10 +9890,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Adaptability, Download, Analytic",
     "passive": "Protean",
-    "evolution": "Porygon, Porygon2, Porygon-Z",
+    "evolution line": "Porygon, Porygon2, Porygon-Z",
     "img": "474"
   },
   "Gallade": {
+    "name": "Gallade",
     "id": 475,
     "hp": 68,
     "attack": 125,
@@ -9324,10 +9907,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Steadfast, Sharpness, Justified",
     "passive": "Neuroforce",
-    "evolution": "Ralts, Kirlia, Gardevoir, Mega Gardevoir, Gallade, Mega Gallade",
+    "evolution line": "Ralts, Kirlia, Gardevoir, Mega Gardevoir, Gallade, Mega Gallade",
     "img": "475"
   },
   "Mega Gallade": {
+    "name": "Mega Gallade",
     "id": 475,
     "hp": 68,
     "attack": 165,
@@ -9340,10 +9924,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Inner Focus",
     "passive": "Sharpness",
-    "evolution": "Ralts, Kirlia, Gardevoir, Mega Gardevoir, Gallade, Mega Gallade",
+    "evolution line": "Ralts, Kirlia, Gardevoir, Mega Gardevoir, Gallade, Mega Gallade",
     "img": "475-mega"
   },
   "Probopass": {
+    "name": "Probopass",
     "id": 476,
     "hp": 60,
     "attack": 55,
@@ -9356,10 +9941,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Sturdy, Magnet Pull, Sand Force",
     "passive": "Levitate",
-    "evolution": "Nosepass, Probopass",
+    "evolution line": "Nosepass, Probopass",
     "img": "476"
   },
   "Dusknoir": {
+    "name": "Dusknoir",
     "id": 477,
     "hp": 45,
     "attack": 100,
@@ -9372,10 +9958,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Pressure, Frisk",
     "passive": "Levitate",
-    "evolution": "Duskull, Dusclops, Dusknoir",
+    "evolution line": "Duskull, Dusclops, Dusknoir",
     "img": "477"
   },
   "Froslass": {
+    "name": "Froslass",
     "id": 478,
     "hp": 70,
     "attack": 80,
@@ -9388,10 +9975,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Snow Cloak, Cursed Body",
     "passive": "Snow Warning",
-    "evolution": "Snorunt, Glalie, Mega Glalie, Froslass",
+    "evolution line": "Snorunt, Glalie, Mega Glalie, Froslass",
     "img": "478"
   },
   "Rotom": {
+    "name": "Rotom",
     "id": 479,
     "hp": 50,
     "attack": 50,
@@ -9404,10 +9992,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Levitate",
     "passive": "Hadron Engine",
-    "evolution": "Rotom, Heat Rotom, Wash Rotom, Frost Rotom, Fan Rotom, Mow Rotom",
+    "evolution line": "Rotom, Heat Rotom, Wash Rotom, Frost Rotom, Fan Rotom, Mow Rotom",
     "img": "479"
   },
   "Heat Rotom": {
+    "name": "Heat Rotom",
     "id": 479,
     "hp": 50,
     "attack": 65,
@@ -9420,10 +10009,11 @@ const POKEMON_DATA = {
     "type2": "Fire",
     "abilities": "Levitate",
     "passive": "Hadron Engine",
-    "evolution": "Rotom, Heat Rotom, Wash Rotom, Frost Rotom, Fan Rotom, Mow Rotom",
+    "evolution line": "Rotom, Heat Rotom, Wash Rotom, Frost Rotom, Fan Rotom, Mow Rotom",
     "img": "479-heat"
   },
   "Wash Rotom": {
+    "name": "Wash Rotom",
     "id": 479,
     "hp": 50,
     "attack": 65,
@@ -9436,10 +10026,11 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Levitate",
     "passive": "Hadron Engine",
-    "evolution": "Rotom, Heat Rotom, Wash Rotom, Frost Rotom, Fan Rotom, Mow Rotom",
+    "evolution line": "Rotom, Heat Rotom, Wash Rotom, Frost Rotom, Fan Rotom, Mow Rotom",
     "img": "479-wash"
   },
   "Frost Rotom": {
+    "name": "Frost Rotom",
     "id": 479,
     "hp": 50,
     "attack": 65,
@@ -9452,10 +10043,11 @@ const POKEMON_DATA = {
     "type2": "Ice",
     "abilities": "Levitate",
     "passive": "Hadron Engine",
-    "evolution": "Rotom, Heat Rotom, Wash Rotom, Frost Rotom, Fan Rotom, Mow Rotom",
+    "evolution line": "Rotom, Heat Rotom, Wash Rotom, Frost Rotom, Fan Rotom, Mow Rotom",
     "img": "479-frost"
   },
   "Fan Rotom": {
+    "name": "Fan Rotom",
     "id": 479,
     "hp": 50,
     "attack": 65,
@@ -9468,10 +10060,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Levitate",
     "passive": "Hadron Engine",
-    "evolution": "Rotom, Heat Rotom, Wash Rotom, Frost Rotom, Fan Rotom, Mow Rotom",
+    "evolution line": "Rotom, Heat Rotom, Wash Rotom, Frost Rotom, Fan Rotom, Mow Rotom",
     "img": "479-fan"
   },
   "Mow Rotom": {
+    "name": "Mow Rotom",
     "id": 479,
     "hp": 50,
     "attack": 65,
@@ -9484,10 +10077,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Levitate",
     "passive": "Hadron Engine",
-    "evolution": "Rotom, Heat Rotom, Wash Rotom, Frost Rotom, Fan Rotom, Mow Rotom",
+    "evolution line": "Rotom, Heat Rotom, Wash Rotom, Frost Rotom, Fan Rotom, Mow Rotom",
     "img": "479-mow"
   },
   "Uxie": {
+    "name": "Uxie",
     "id": 480,
     "hp": 75,
     "attack": 75,
@@ -9500,10 +10094,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Magic Bounce",
-    "evolution": "Uxie",
+    "evolution line": "Uxie",
     "img": "480"
   },
   "Mesprit": {
+    "name": "Mesprit",
     "id": 481,
     "hp": 80,
     "attack": 105,
@@ -9516,10 +10111,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Moody",
-    "evolution": "Mesprit",
+    "evolution line": "Mesprit",
     "img": "481"
   },
   "Azelf": {
+    "name": "Azelf",
     "id": 482,
     "hp": 75,
     "attack": 125,
@@ -9532,10 +10128,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Neuroforce",
-    "evolution": "Azelf",
+    "evolution line": "Azelf",
     "img": "482"
   },
   "Dialga": {
+    "name": "Dialga",
     "id": 483,
     "hp": 100,
     "attack": 120,
@@ -9548,10 +10145,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Pressure, Telepathy",
     "passive": "Berserk",
-    "evolution": "Dialga, Origin Dialga",
+    "evolution line": "Dialga, Origin Dialga",
     "img": "483"
   },
   "Origin Dialga": {
+    "name": "Origin Dialga",
     "id": 483,
     "hp": 100,
     "attack": 100,
@@ -9564,10 +10162,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Pressure, Telepathy",
     "passive": "Berserk",
-    "evolution": "Dialga, Origin Dialga",
+    "evolution line": "Dialga, Origin Dialga",
     "img": "483-origin"
   },
   "Palkia": {
+    "name": "Palkia",
     "id": 484,
     "hp": 90,
     "attack": 120,
@@ -9580,10 +10179,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Pressure, Telepathy",
     "passive": "Berserk",
-    "evolution": "Palkia, Origin Palkia",
+    "evolution line": "Palkia, Origin Palkia",
     "img": "484"
   },
   "Origin Palkia": {
+    "name": "Origin Palkia",
     "id": 484,
     "hp": 90,
     "attack": 100,
@@ -9596,10 +10196,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Pressure, Telepathy",
     "passive": "Berserk",
-    "evolution": "Palkia, Origin Palkia",
+    "evolution line": "Palkia, Origin Palkia",
     "img": "484-origin"
   },
   "Heatran": {
+    "name": "Heatran",
     "id": 485,
     "hp": 91,
     "attack": 90,
@@ -9612,10 +10213,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Flash Fire, Flame Body",
     "passive": "Filter",
-    "evolution": "Heatran",
+    "evolution line": "Heatran",
     "img": "485"
   },
   "Regigigas": {
+    "name": "Regigigas",
     "id": 486,
     "hp": 110,
     "attack": 160,
@@ -9628,10 +10230,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Slow Start, Normalize",
     "passive": "Scrappy",
-    "evolution": "Regigigas",
+    "evolution line": "Regigigas",
     "img": "486"
   },
   "Altered Giratina": {
+    "name": "Altered Giratina",
     "id": 487,
     "hp": 150,
     "attack": 100,
@@ -9644,10 +10247,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Pressure, Telepathy",
     "passive": "Shadow Shield",
-    "evolution": "Altered Giratina, Origin Giratina",
+    "evolution line": "Altered Giratina, Origin Giratina",
     "img": "487-altered"
   },
   "Origin Giratina": {
+    "name": "Origin Giratina",
     "id": 487,
     "hp": 150,
     "attack": 120,
@@ -9660,10 +10264,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Levitate",
     "passive": "Shadow Shield",
-    "evolution": "Altered Giratina, Origin Giratina",
+    "evolution line": "Altered Giratina, Origin Giratina",
     "img": "487-origin"
   },
   "Cresselia": {
+    "name": "Cresselia",
     "id": 488,
     "hp": 120,
     "attack": 70,
@@ -9676,10 +10281,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Shadow Shield",
-    "evolution": "Cresselia",
+    "evolution line": "Cresselia",
     "img": "488"
   },
   "Phione": {
+    "name": "Phione",
     "id": 489,
     "hp": 80,
     "attack": 80,
@@ -9692,10 +10298,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Hydration",
     "passive": "Simple",
-    "evolution": "Phione",
+    "evolution line": "Phione",
     "img": "489"
   },
   "Manaphy": {
+    "name": "Manaphy",
     "id": 490,
     "hp": 100,
     "attack": 100,
@@ -9708,10 +10315,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Hydration",
     "passive": "Primordial Sea",
-    "evolution": "Manaphy",
+    "evolution line": "Manaphy",
     "img": "490"
   },
   "Darkrai": {
+    "name": "Darkrai",
     "id": 491,
     "hp": 70,
     "attack": 90,
@@ -9724,10 +10332,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Bad Dreams",
     "passive": "Unnerve",
-    "evolution": "Darkrai",
+    "evolution line": "Darkrai",
     "img": "491"
   },
   "Land Shaymin": {
+    "name": "Land Shaymin",
     "id": 492,
     "hp": 100,
     "attack": 100,
@@ -9740,10 +10349,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Natural Cure",
     "passive": "Grassy Surge",
-    "evolution": "Land Shaymin, Sky Shaymin",
+    "evolution line": "Land Shaymin, Sky Shaymin",
     "img": "492-land"
   },
   "Sky Shaymin": {
+    "name": "Sky Shaymin",
     "id": 492,
     "hp": 100,
     "attack": 103,
@@ -9756,10 +10366,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Serene Grace",
     "passive": "Delta Stream",
-    "evolution": "Land Shaymin, Sky Shaymin",
+    "evolution line": "Land Shaymin, Sky Shaymin",
     "img": "492-sky"
   },
   "Normal Arceus": {
+    "name": "Normal Arceus",
     "id": 493,
     "hp": 120,
     "attack": 120,
@@ -9772,10 +10383,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Multitype",
     "passive": "Adaptability",
-    "evolution": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
+    "evolution line": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
     "img": "493-normal"
   },
   "Fighting Arceus": {
+    "name": "Fighting Arceus",
     "id": 493,
     "hp": 120,
     "attack": 120,
@@ -9788,10 +10400,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Multitype",
     "passive": "Adaptability",
-    "evolution": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
+    "evolution line": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
     "img": "493-fighting"
   },
   "Flying Arceus": {
+    "name": "Flying Arceus",
     "id": 493,
     "hp": 120,
     "attack": 120,
@@ -9804,10 +10417,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Multitype",
     "passive": "Adaptability",
-    "evolution": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
+    "evolution line": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
     "img": "493-flying"
   },
   "Poison Arceus": {
+    "name": "Poison Arceus",
     "id": 493,
     "hp": 120,
     "attack": 120,
@@ -9820,10 +10434,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Multitype",
     "passive": "Adaptability",
-    "evolution": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
+    "evolution line": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
     "img": "493-poison"
   },
   "Ground Arceus": {
+    "name": "Ground Arceus",
     "id": 493,
     "hp": 120,
     "attack": 120,
@@ -9836,10 +10451,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Multitype",
     "passive": "Adaptability",
-    "evolution": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
+    "evolution line": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
     "img": "493-ground"
   },
   "Rock Arceus": {
+    "name": "Rock Arceus",
     "id": 493,
     "hp": 120,
     "attack": 120,
@@ -9852,10 +10468,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Multitype",
     "passive": "Adaptability",
-    "evolution": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
+    "evolution line": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
     "img": "493-rock"
   },
   "Bug Arceus": {
+    "name": "Bug Arceus",
     "id": 493,
     "hp": 120,
     "attack": 120,
@@ -9868,10 +10485,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Multitype",
     "passive": "Adaptability",
-    "evolution": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
+    "evolution line": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
     "img": "493-bug"
   },
   "Ghost Arceus": {
+    "name": "Ghost Arceus",
     "id": 493,
     "hp": 120,
     "attack": 120,
@@ -9884,10 +10502,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Multitype",
     "passive": "Adaptability",
-    "evolution": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
+    "evolution line": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
     "img": "493-ghost"
   },
   "Steel Arceus": {
+    "name": "Steel Arceus",
     "id": 493,
     "hp": 120,
     "attack": 120,
@@ -9900,10 +10519,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Multitype",
     "passive": "Adaptability",
-    "evolution": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
+    "evolution line": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
     "img": "493-steel"
   },
   "Fire Arceus": {
+    "name": "Fire Arceus",
     "id": 493,
     "hp": 120,
     "attack": 120,
@@ -9916,10 +10536,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Multitype",
     "passive": "Adaptability",
-    "evolution": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
+    "evolution line": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
     "img": "493-fire"
   },
   "Water Arceus": {
+    "name": "Water Arceus",
     "id": 493,
     "hp": 120,
     "attack": 120,
@@ -9932,10 +10553,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Multitype",
     "passive": "Adaptability",
-    "evolution": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
+    "evolution line": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
     "img": "493-water"
   },
   "Grass Arceus": {
+    "name": "Grass Arceus",
     "id": 493,
     "hp": 120,
     "attack": 120,
@@ -9948,10 +10570,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Multitype",
     "passive": "Adaptability",
-    "evolution": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
+    "evolution line": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
     "img": "493-grass"
   },
   "Electric Arceus": {
+    "name": "Electric Arceus",
     "id": 493,
     "hp": 120,
     "attack": 120,
@@ -9964,10 +10587,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Multitype",
     "passive": "Adaptability",
-    "evolution": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
+    "evolution line": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
     "img": "493-electric"
   },
   "Psychic Arceus": {
+    "name": "Psychic Arceus",
     "id": 493,
     "hp": 120,
     "attack": 120,
@@ -9980,10 +10604,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Multitype",
     "passive": "Adaptability",
-    "evolution": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
+    "evolution line": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
     "img": "493-psychic"
   },
   "Ice Arceus": {
+    "name": "Ice Arceus",
     "id": 493,
     "hp": 120,
     "attack": 120,
@@ -9996,10 +10621,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Multitype",
     "passive": "Adaptability",
-    "evolution": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
+    "evolution line": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
     "img": "493-ice"
   },
   "Dragon Arceus": {
+    "name": "Dragon Arceus",
     "id": 493,
     "hp": 120,
     "attack": 120,
@@ -10012,10 +10638,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Multitype",
     "passive": "Adaptability",
-    "evolution": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
+    "evolution line": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
     "img": "493-dragon"
   },
   "Dark Arceus": {
+    "name": "Dark Arceus",
     "id": 493,
     "hp": 120,
     "attack": 120,
@@ -10028,10 +10655,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Multitype",
     "passive": "Adaptability",
-    "evolution": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
+    "evolution line": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
     "img": "493-dark"
   },
   "Fairy Arceus": {
+    "name": "Fairy Arceus",
     "id": 493,
     "hp": 120,
     "attack": 120,
@@ -10044,10 +10672,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Multitype",
     "passive": "Adaptability",
-    "evolution": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
+    "evolution line": "Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",
     "img": "493-fairy"
   },
   "Victini": {
+    "name": "Victini",
     "id": 494,
     "hp": 100,
     "attack": 100,
@@ -10060,10 +10689,11 @@ const POKEMON_DATA = {
     "type2": "Fire",
     "abilities": "Victory Star",
     "passive": "Serene Grace",
-    "evolution": "Victini",
+    "evolution line": "Victini",
     "img": "494"
   },
   "Snivy": {
+    "name": "Snivy",
     "id": 495,
     "hp": 45,
     "attack": 45,
@@ -10076,10 +10706,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Overgrow, Contrary",
     "passive": "Multiscale",
-    "evolution": "Snivy, Servine, Serperior",
+    "evolution line": "Snivy, Servine, Serperior",
     "img": "495"
   },
   "Servine": {
+    "name": "Servine",
     "id": 496,
     "hp": 60,
     "attack": 60,
@@ -10092,10 +10723,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Overgrow, Contrary",
     "passive": "Multiscale",
-    "evolution": "Snivy, Servine, Serperior",
+    "evolution line": "Snivy, Servine, Serperior",
     "img": "496"
   },
   "Serperior": {
+    "name": "Serperior",
     "id": 497,
     "hp": 75,
     "attack": 75,
@@ -10108,10 +10740,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Overgrow, Contrary",
     "passive": "Multiscale",
-    "evolution": "Snivy, Servine, Serperior",
+    "evolution line": "Snivy, Servine, Serperior",
     "img": "497"
   },
   "Tepig": {
+    "name": "Tepig",
     "id": 498,
     "hp": 65,
     "attack": 63,
@@ -10124,10 +10757,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Blaze, Thick Fat",
     "passive": "Gluttony",
-    "evolution": "Tepig, Pignite, Emboar",
+    "evolution line": "Tepig, Pignite, Emboar",
     "img": "498"
   },
   "Pignite": {
+    "name": "Pignite",
     "id": 499,
     "hp": 90,
     "attack": 93,
@@ -10140,10 +10774,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Blaze, Thick Fat",
     "passive": "Rock Head",
-    "evolution": "Tepig, Pignite, Emboar",
+    "evolution line": "Tepig, Pignite, Emboar",
     "img": "499"
   },
   "Emboar": {
+    "name": "Emboar",
     "id": 500,
     "hp": 110,
     "attack": 123,
@@ -10156,10 +10791,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Blaze, Reckless",
     "passive": "Rock Head",
-    "evolution": "Tepig, Pignite, Emboar",
+    "evolution line": "Tepig, Pignite, Emboar",
     "img": "500"
   },
   "Oshawott": {
+    "name": "Oshawott",
     "id": 501,
     "hp": 55,
     "attack": 55,
@@ -10172,10 +10808,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Torrent, Shell Armor",
     "passive": "Mold Breaker",
-    "evolution": "Oshawott, Dewott, Samurott, Hisui Samurott",
+    "evolution line": "Oshawott, Dewott, Samurott, Hisui Samurott",
     "img": "501"
   },
   "Dewott": {
+    "name": "Dewott",
     "id": 502,
     "hp": 75,
     "attack": 75,
@@ -10188,10 +10825,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Torrent, Shell Armor",
     "passive": "Mold Breaker",
-    "evolution": "Oshawott, Dewott, Samurott, Hisui Samurott",
+    "evolution line": "Oshawott, Dewott, Samurott, Hisui Samurott",
     "img": "502"
   },
   "Samurott": {
+    "name": "Samurott",
     "id": 503,
     "hp": 95,
     "attack": 100,
@@ -10204,10 +10842,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Torrent, Shell Armor",
     "passive": "Lightning Rod",
-    "evolution": "Oshawott, Dewott, Samurott, Hisui Samurott",
+    "evolution line": "Oshawott, Dewott, Samurott, Hisui Samurott",
     "img": "503"
   },
   "Patrat": {
+    "name": "Patrat",
     "id": 504,
     "hp": 45,
     "attack": 55,
@@ -10220,10 +10859,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Run Away, Keen Eye, Analytic",
     "passive": "No Guard",
-    "evolution": "Patrat, Watchog",
+    "evolution line": "Patrat, Watchog",
     "img": "504"
   },
   "Watchog": {
+    "name": "Watchog",
     "id": 505,
     "hp": 60,
     "attack": 85,
@@ -10236,10 +10876,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Illuminate, Keen Eye, Analytic",
     "passive": "No Guard",
-    "evolution": "Patrat, Watchog",
+    "evolution line": "Patrat, Watchog",
     "img": "505"
   },
   "Lillipup": {
+    "name": "Lillipup",
     "id": 506,
     "hp": 45,
     "attack": 60,
@@ -10252,10 +10893,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Vital Spirit, Pickup, Run Away",
     "passive": "Ball Fetch",
-    "evolution": "Lillipup, Herdier, Stoutland",
+    "evolution line": "Lillipup, Herdier, Stoutland",
     "img": "506"
   },
   "Herdier": {
+    "name": "Herdier",
     "id": 507,
     "hp": 65,
     "attack": 80,
@@ -10268,10 +10910,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Intimidate, Sand Rush, Scrappy",
     "passive": "Fur Coat",
-    "evolution": "Lillipup, Herdier, Stoutland",
+    "evolution line": "Lillipup, Herdier, Stoutland",
     "img": "507"
   },
   "Stoutland": {
+    "name": "Stoutland",
     "id": 508,
     "hp": 85,
     "attack": 110,
@@ -10284,10 +10927,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Intimidate, Sand Rush, Scrappy",
     "passive": "Fur Coat",
-    "evolution": "Lillipup, Herdier, Stoutland",
+    "evolution line": "Lillipup, Herdier, Stoutland",
     "img": "508"
   },
   "Purrloin": {
+    "name": "Purrloin",
     "id": 509,
     "hp": 41,
     "attack": 50,
@@ -10300,10 +10944,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Limber, Unburden, Prankster",
     "passive": "Pickup",
-    "evolution": "Purrloin, Liepard",
+    "evolution line": "Purrloin, Liepard",
     "img": "509"
   },
   "Liepard": {
+    "name": "Liepard",
     "id": 510,
     "hp": 64,
     "attack": 88,
@@ -10316,10 +10961,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Limber, Unburden, Prankster",
     "passive": "Pickup",
-    "evolution": "Purrloin, Liepard",
+    "evolution line": "Purrloin, Liepard",
     "img": "510"
   },
   "Pansage": {
+    "name": "Pansage",
     "id": 511,
     "hp": 50,
     "attack": 53,
@@ -10332,10 +10978,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Gluttony, Overgrow",
     "passive": "Well Baked Body",
-    "evolution": "Pansage, Simisage",
+    "evolution line": "Pansage, Simisage",
     "img": "511"
   },
   "Simisage": {
+    "name": "Simisage",
     "id": 512,
     "hp": 75,
     "attack": 98,
@@ -10348,10 +10995,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Gluttony, Overgrow",
     "passive": "Well Baked Body",
-    "evolution": "Pansage, Simisage",
+    "evolution line": "Pansage, Simisage",
     "img": "512"
   },
   "Pansear": {
+    "name": "Pansear",
     "id": 513,
     "hp": 50,
     "attack": 53,
@@ -10364,10 +11012,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Gluttony, Blaze",
     "passive": "Water Absorb",
-    "evolution": "Pansear, Simisear",
+    "evolution line": "Pansear, Simisear",
     "img": "513"
   },
   "Simisear": {
+    "name": "Simisear",
     "id": 514,
     "hp": 75,
     "attack": 98,
@@ -10380,10 +11029,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Gluttony, Blaze",
     "passive": "Water Absorb",
-    "evolution": "Pansear, Simisear",
+    "evolution line": "Pansear, Simisear",
     "img": "514"
   },
   "Panpour": {
+    "name": "Panpour",
     "id": 515,
     "hp": 50,
     "attack": 53,
@@ -10396,10 +11046,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Gluttony, Torrent",
     "passive": "Sap Sipper",
-    "evolution": "Panpour, Simipour",
+    "evolution line": "Panpour, Simipour",
     "img": "515"
   },
   "Simipour": {
+    "name": "Simipour",
     "id": 516,
     "hp": 75,
     "attack": 98,
@@ -10412,10 +11063,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Gluttony, Torrent",
     "passive": "Sap Sipper",
-    "evolution": "Panpour, Simipour",
+    "evolution line": "Panpour, Simipour",
     "img": "516"
   },
   "Munna": {
+    "name": "Munna",
     "id": 517,
     "hp": 76,
     "attack": 25,
@@ -10428,10 +11080,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Forewarn, Synchronize, Telepathy",
     "passive": "Neutralizing Gas",
-    "evolution": "Munna, Musharna",
+    "evolution line": "Munna, Musharna",
     "img": "517"
   },
   "Musharna": {
+    "name": "Musharna",
     "id": 518,
     "hp": 116,
     "attack": 55,
@@ -10444,10 +11097,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Forewarn, Synchronize, Telepathy",
     "passive": "Neutralizing Gas",
-    "evolution": "Munna, Musharna",
+    "evolution line": "Munna, Musharna",
     "img": "518"
   },
   "Pidove": {
+    "name": "Pidove",
     "id": 519,
     "hp": 50,
     "attack": 55,
@@ -10460,10 +11114,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Big Pecks, Super Luck, Rivalry",
     "passive": "Sniper",
-    "evolution": "Pidove, Tranquill, Unfezant",
+    "evolution line": "Pidove, Tranquill, Unfezant",
     "img": "519"
   },
   "Tranquill": {
+    "name": "Tranquill",
     "id": 520,
     "hp": 62,
     "attack": 77,
@@ -10476,10 +11131,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Big Pecks, Super Luck, Rivalry",
     "passive": "Sniper",
-    "evolution": "Pidove, Tranquill, Unfezant",
+    "evolution line": "Pidove, Tranquill, Unfezant",
     "img": "520"
   },
   "Unfezant": {
+    "name": "Unfezant",
     "id": 521,
     "hp": 80,
     "attack": 115,
@@ -10492,10 +11148,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Big Pecks, Super Luck, Rivalry",
     "passive": "Sniper",
-    "evolution": "Pidove, Tranquill, Unfezant",
+    "evolution line": "Pidove, Tranquill, Unfezant",
     "img": "521"
   },
   "Blitzle": {
+    "name": "Blitzle",
     "id": 522,
     "hp": 45,
     "attack": 60,
@@ -10508,10 +11165,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Lightning Rod, Motor Drive, Sap Sipper",
     "passive": "Electric Surge",
-    "evolution": "Blitzle, Zebstrika",
+    "evolution line": "Blitzle, Zebstrika",
     "img": "522"
   },
   "Zebstrika": {
+    "name": "Zebstrika",
     "id": 523,
     "hp": 75,
     "attack": 100,
@@ -10524,10 +11182,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Lightning Rod, Motor Drive, Sap Sipper",
     "passive": "Electric Surge",
-    "evolution": "Blitzle, Zebstrika",
+    "evolution line": "Blitzle, Zebstrika",
     "img": "523"
   },
   "Roggenrola": {
+    "name": "Roggenrola",
     "id": 524,
     "hp": 55,
     "attack": 75,
@@ -10540,10 +11199,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sturdy, Weak Armor, Sand Force",
     "passive": "Solid Rock",
-    "evolution": "Roggenrola, Boldore, Gigalith",
+    "evolution line": "Roggenrola, Boldore, Gigalith",
     "img": "524"
   },
   "Boldore": {
+    "name": "Boldore",
     "id": 525,
     "hp": 70,
     "attack": 105,
@@ -10556,10 +11216,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sturdy, Weak Armor, Sand Force",
     "passive": "Solid Rock",
-    "evolution": "Roggenrola, Boldore, Gigalith",
+    "evolution line": "Roggenrola, Boldore, Gigalith",
     "img": "525"
   },
   "Gigalith": {
+    "name": "Gigalith",
     "id": 526,
     "hp": 85,
     "attack": 135,
@@ -10572,10 +11233,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sturdy, Sand Stream, Sand Force",
     "passive": "Solid Rock",
-    "evolution": "Roggenrola, Boldore, Gigalith",
+    "evolution line": "Roggenrola, Boldore, Gigalith",
     "img": "526"
   },
   "Woobat": {
+    "name": "Woobat",
     "id": 527,
     "hp": 65,
     "attack": 45,
@@ -10588,10 +11250,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Unaware, Klutz, Simple",
     "passive": "Opportunist",
-    "evolution": "Woobat, Swoobat",
+    "evolution line": "Woobat, Swoobat",
     "img": "527"
   },
   "Swoobat": {
+    "name": "Swoobat",
     "id": 528,
     "hp": 67,
     "attack": 57,
@@ -10604,10 +11267,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Unaware, Klutz, Simple",
     "passive": "Opportunist",
-    "evolution": "Woobat, Swoobat",
+    "evolution line": "Woobat, Swoobat",
     "img": "528"
   },
   "Drilbur": {
+    "name": "Drilbur",
     "id": 529,
     "hp": 60,
     "attack": 85,
@@ -10620,10 +11284,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sand Rush, Sand Force, Mold Breaker",
     "passive": "Sturdy",
-    "evolution": "Drilbur, Excadrill",
+    "evolution line": "Drilbur, Excadrill",
     "img": "529"
   },
   "Excadrill": {
+    "name": "Excadrill",
     "id": 530,
     "hp": 110,
     "attack": 135,
@@ -10636,10 +11301,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Sand Rush, Sand Force, Mold Breaker",
     "passive": "Sturdy",
-    "evolution": "Drilbur, Excadrill",
+    "evolution line": "Drilbur, Excadrill",
     "img": "530"
   },
   "Audino": {
+    "name": "Audino",
     "id": 531,
     "hp": 103,
     "attack": 60,
@@ -10652,10 +11318,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Healer, Regenerator, Klutz",
     "passive": "Friend Guard",
-    "evolution": "Audino, Mega Audino",
+    "evolution line": "Audino, Mega Audino",
     "img": "531"
   },
   "Mega Audino": {
+    "name": "Mega Audino",
     "id": 531,
     "hp": 103,
     "attack": 60,
@@ -10668,10 +11335,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Regenerator",
     "passive": "Fairy Aura",
-    "evolution": "Audino, Mega Audino",
+    "evolution line": "Audino, Mega Audino",
     "img": "531-mega"
   },
   "Timburr": {
+    "name": "Timburr",
     "id": 532,
     "hp": 75,
     "attack": 80,
@@ -10684,10 +11352,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Guts, Sheer Force, Iron Fist",
     "passive": "Rocky Payload",
-    "evolution": "Timburr, Gurdurr, Conkeldurr",
+    "evolution line": "Timburr, Gurdurr, Conkeldurr",
     "img": "532"
   },
   "Gurdurr": {
+    "name": "Gurdurr",
     "id": 533,
     "hp": 85,
     "attack": 105,
@@ -10700,10 +11369,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Guts, Sheer Force, Iron Fist",
     "passive": "Rocky Payload",
-    "evolution": "Timburr, Gurdurr, Conkeldurr",
+    "evolution line": "Timburr, Gurdurr, Conkeldurr",
     "img": "533"
   },
   "Conkeldurr": {
+    "name": "Conkeldurr",
     "id": 534,
     "hp": 105,
     "attack": 140,
@@ -10716,10 +11386,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Guts, Sheer Force, Iron Fist",
     "passive": "Rocky Payload",
-    "evolution": "Timburr, Gurdurr, Conkeldurr",
+    "evolution line": "Timburr, Gurdurr, Conkeldurr",
     "img": "534"
   },
   "Tympole": {
+    "name": "Tympole",
     "id": 535,
     "hp": 50,
     "attack": 50,
@@ -10732,10 +11403,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Swift Swim, Hydration, Water Absorb",
     "passive": "Poison Heal",
-    "evolution": "Tympole, Palpitoad, Seismitoad",
+    "evolution line": "Tympole, Palpitoad, Seismitoad",
     "img": "535"
   },
   "Palpitoad": {
+    "name": "Palpitoad",
     "id": 536,
     "hp": 75,
     "attack": 65,
@@ -10748,10 +11420,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Swift Swim, Hydration, Water Absorb",
     "passive": "Poison Heal",
-    "evolution": "Tympole, Palpitoad, Seismitoad",
+    "evolution line": "Tympole, Palpitoad, Seismitoad",
     "img": "536"
   },
   "Seismitoad": {
+    "name": "Seismitoad",
     "id": 537,
     "hp": 105,
     "attack": 95,
@@ -10764,10 +11437,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Swift Swim, Poison Touch, Water Absorb",
     "passive": "Poison Heal",
-    "evolution": "Tympole, Palpitoad, Seismitoad",
+    "evolution line": "Tympole, Palpitoad, Seismitoad",
     "img": "537"
   },
   "Throh": {
+    "name": "Throh",
     "id": 538,
     "hp": 120,
     "attack": 100,
@@ -10780,10 +11454,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Guts, Inner Focus, Mold Breaker",
     "passive": "Stamina",
-    "evolution": "Throh",
+    "evolution line": "Throh",
     "img": "538"
   },
   "Sawk": {
+    "name": "Sawk",
     "id": 539,
     "hp": 75,
     "attack": 125,
@@ -10796,10 +11471,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sturdy, Inner Focus, Mold Breaker",
     "passive": "Scrappy",
-    "evolution": "Sawk",
+    "evolution line": "Sawk",
     "img": "539"
   },
   "Sewaddle": {
+    "name": "Sewaddle",
     "id": 540,
     "hp": 45,
     "attack": 53,
@@ -10812,10 +11488,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Swarm, Chlorophyll, Overcoat",
     "passive": "Shield Dust",
-    "evolution": "Sewaddle, Swadloon, Leavanny",
+    "evolution line": "Sewaddle, Swadloon, Leavanny",
     "img": "540"
   },
   "Swadloon": {
+    "name": "Swadloon",
     "id": 541,
     "hp": 55,
     "attack": 63,
@@ -10828,10 +11505,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Leaf Guard, Chlorophyll, Overcoat",
     "passive": "Shield Dust",
-    "evolution": "Sewaddle, Swadloon, Leavanny",
+    "evolution line": "Sewaddle, Swadloon, Leavanny",
     "img": "541"
   },
   "Leavanny": {
+    "name": "Leavanny",
     "id": 542,
     "hp": 75,
     "attack": 103,
@@ -10844,10 +11522,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Swarm, Chlorophyll, Overcoat",
     "passive": "Sharpness",
-    "evolution": "Sewaddle, Swadloon, Leavanny",
+    "evolution line": "Sewaddle, Swadloon, Leavanny",
     "img": "542"
   },
   "Venipede": {
+    "name": "Venipede",
     "id": 543,
     "hp": 30,
     "attack": 45,
@@ -10860,10 +11539,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Poison Point, Swarm, Speed Boost",
     "passive": "Stamina",
-    "evolution": "Venipede, Whirlipede, Scolipede",
+    "evolution line": "Venipede, Whirlipede, Scolipede",
     "img": "543"
   },
   "Whirlipede": {
+    "name": "Whirlipede",
     "id": 544,
     "hp": 40,
     "attack": 55,
@@ -10876,10 +11556,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Poison Point, Swarm, Speed Boost",
     "passive": "Stamina",
-    "evolution": "Venipede, Whirlipede, Scolipede",
+    "evolution line": "Venipede, Whirlipede, Scolipede",
     "img": "544"
   },
   "Scolipede": {
+    "name": "Scolipede",
     "id": 545,
     "hp": 60,
     "attack": 100,
@@ -10892,10 +11573,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Poison Point, Swarm, Speed Boost",
     "passive": "Stamina",
-    "evolution": "Venipede, Whirlipede, Scolipede",
+    "evolution line": "Venipede, Whirlipede, Scolipede",
     "img": "545"
   },
   "Cottonee": {
+    "name": "Cottonee",
     "id": 546,
     "hp": 40,
     "attack": 27,
@@ -10908,10 +11590,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Prankster, Infiltrator, Chlorophyll",
     "passive": "Fluffy",
-    "evolution": "Cottonee, Whimsicott",
+    "evolution line": "Cottonee, Whimsicott",
     "img": "546"
   },
   "Whimsicott": {
+    "name": "Whimsicott",
     "id": 547,
     "hp": 60,
     "attack": 67,
@@ -10924,10 +11607,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Prankster, Infiltrator, Chlorophyll",
     "passive": "Fluffy",
-    "evolution": "Cottonee, Whimsicott",
+    "evolution line": "Cottonee, Whimsicott",
     "img": "547"
   },
   "Petilil": {
+    "name": "Petilil",
     "id": 548,
     "hp": 45,
     "attack": 35,
@@ -10940,10 +11624,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Chlorophyll, Own Tempo, Leaf Guard",
     "passive": "Flower Veil",
-    "evolution": "Petilil, Lilligant, Hisui Lilligant",
+    "evolution line": "Petilil, Lilligant, Hisui Lilligant",
     "img": "548"
   },
   "Lilligant": {
+    "name": "Lilligant",
     "id": 549,
     "hp": 70,
     "attack": 60,
@@ -10956,10 +11641,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Chlorophyll, Own Tempo, Leaf Guard",
     "passive": "Grassy Surge",
-    "evolution": "Petilil, Lilligant, Hisui Lilligant",
+    "evolution line": "Petilil, Lilligant, Hisui Lilligant",
     "img": "549"
   },
   "Red-Striped Basculin": {
+    "name": "Red-Striped Basculin",
     "id": 550,
     "hp": 70,
     "attack": 92,
@@ -10972,10 +11658,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Reckless, Adaptability, Mold Breaker",
     "passive": "Rock Head",
-    "evolution": "Red-Striped Basculin, Blue-Striped Basculin, White-Striped Basculin, Male Basculegion, Female Basculegion",
+    "evolution line": "Red-Striped Basculin, Blue-Striped Basculin, White-Striped Basculin, Male Basculegion, Female Basculegion",
     "img": "550-red-striped"
   },
   "Blue-Striped Basculin": {
+    "name": "Blue-Striped Basculin",
     "id": 550,
     "hp": 70,
     "attack": 92,
@@ -10988,10 +11675,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rock Head, Adaptability, Mold Breaker",
     "passive": "Reckless",
-    "evolution": "Red-Striped Basculin, Blue-Striped Basculin, White-Striped Basculin, Male Basculegion, Female Basculegion",
+    "evolution line": "Red-Striped Basculin, Blue-Striped Basculin, White-Striped Basculin, Male Basculegion, Female Basculegion",
     "img": "550-blue-striped"
   },
   "White-Striped Basculin": {
+    "name": "White-Striped Basculin",
     "id": 550,
     "hp": 70,
     "attack": 92,
@@ -11004,10 +11692,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rattled, Adaptability, Mold Breaker",
     "passive": "Supreme Overlord",
-    "evolution": "Red-Striped Basculin, Blue-Striped Basculin, White-Striped Basculin, Male Basculegion, Female Basculegion",
+    "evolution line": "Red-Striped Basculin, Blue-Striped Basculin, White-Striped Basculin, Male Basculegion, Female Basculegion",
     "img": "550-white-striped"
   },
   "Sandile": {
+    "name": "Sandile",
     "id": 551,
     "hp": 50,
     "attack": 72,
@@ -11020,10 +11709,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Intimidate, Moxie, Anger Point",
     "passive": "Tough Claws",
-    "evolution": "Sandile, Krokorok, Krookodile",
+    "evolution line": "Sandile, Krokorok, Krookodile",
     "img": "551"
   },
   "Krokorok": {
+    "name": "Krokorok",
     "id": 552,
     "hp": 60,
     "attack": 82,
@@ -11036,10 +11726,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Intimidate, Moxie, Anger Point",
     "passive": "Tough Claws",
-    "evolution": "Sandile, Krokorok, Krookodile",
+    "evolution line": "Sandile, Krokorok, Krookodile",
     "img": "552"
   },
   "Krookodile": {
+    "name": "Krookodile",
     "id": 553,
     "hp": 95,
     "attack": 117,
@@ -11052,10 +11743,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Intimidate, Moxie, Anger Point",
     "passive": "Tough Claws",
-    "evolution": "Sandile, Krokorok, Krookodile",
+    "evolution line": "Sandile, Krokorok, Krookodile",
     "img": "553"
   },
   "Darumaka": {
+    "name": "Darumaka",
     "id": 554,
     "hp": 70,
     "attack": 90,
@@ -11068,10 +11760,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Hustle, Inner Focus",
     "passive": "Gorilla Tactics",
-    "evolution": "Darumaka, Darmanitan, Zen Darmanitan",
+    "evolution line": "Darumaka, Darmanitan, Zen Darmanitan",
     "img": "554"
   },
   "Darmanitan": {
+    "name": "Darmanitan",
     "id": 555,
     "hp": 105,
     "attack": 140,
@@ -11084,10 +11777,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sheer Force, Zen Mode",
     "passive": "Gorilla Tactics",
-    "evolution": "Darumaka, Darmanitan, Zen Darmanitan",
+    "evolution line": "Darumaka, Darmanitan, Zen Darmanitan",
     "img": "555"
   },
   "Zen Darmanitan": {
+    "name": "Zen Darmanitan",
     "id": 555,
     "hp": 105,
     "attack": 30,
@@ -11100,10 +11794,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Sheer Force, Zen Mode",
     "passive": "Psychic Surge",
-    "evolution": "Darumaka, Darmanitan, Zen Darmanitan",
+    "evolution line": "Darumaka, Darmanitan, Zen Darmanitan",
     "img": "555-zen"
   },
   "Maractus": {
+    "name": "Maractus",
     "id": 556,
     "hp": 75,
     "attack": 86,
@@ -11116,10 +11811,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Water Absorb, Chlorophyll, Storm Drain",
     "passive": "Well Baked Body",
-    "evolution": "Maractus",
+    "evolution line": "Maractus",
     "img": "556"
   },
   "Dwebble": {
+    "name": "Dwebble",
     "id": 557,
     "hp": 50,
     "attack": 65,
@@ -11132,10 +11828,11 @@ const POKEMON_DATA = {
     "type2": "Rock",
     "abilities": "Sturdy, Shell Armor, Weak Armor",
     "passive": "Rocky Payload",
-    "evolution": "Dwebble, Crustle",
+    "evolution line": "Dwebble, Crustle",
     "img": "557"
   },
   "Crustle": {
+    "name": "Crustle",
     "id": 558,
     "hp": 70,
     "attack": 105,
@@ -11148,10 +11845,11 @@ const POKEMON_DATA = {
     "type2": "Rock",
     "abilities": "Sturdy, Shell Armor, Weak Armor",
     "passive": "Rocky Payload",
-    "evolution": "Dwebble, Crustle",
+    "evolution line": "Dwebble, Crustle",
     "img": "558"
   },
   "Scraggy": {
+    "name": "Scraggy",
     "id": 559,
     "hp": 50,
     "attack": 75,
@@ -11164,10 +11862,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Shed Skin, Moxie, Intimidate",
     "passive": "Unburden",
-    "evolution": "Scraggy, Scrafty",
+    "evolution line": "Scraggy, Scrafty",
     "img": "559"
   },
   "Scrafty": {
+    "name": "Scrafty",
     "id": 560,
     "hp": 65,
     "attack": 90,
@@ -11180,10 +11879,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Shed Skin, Moxie, Intimidate",
     "passive": "Unburden",
-    "evolution": "Scraggy, Scrafty",
+    "evolution line": "Scraggy, Scrafty",
     "img": "560"
   },
   "Sigilyph": {
+    "name": "Sigilyph",
     "id": 561,
     "hp": 72,
     "attack": 58,
@@ -11196,10 +11896,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Wonder Skin, Magic Guard, Tinted Lens",
     "passive": "Flare Boost",
-    "evolution": "Sigilyph",
+    "evolution line": "Sigilyph",
     "img": "561"
   },
   "Yamask": {
+    "name": "Yamask",
     "id": 562,
     "hp": 38,
     "attack": 30,
@@ -11212,10 +11913,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Mummy",
     "passive": "Purifying Salt",
-    "evolution": "Yamask, Cofagrigus",
+    "evolution line": "Yamask, Cofagrigus",
     "img": "562"
   },
   "Cofagrigus": {
+    "name": "Cofagrigus",
     "id": 563,
     "hp": 58,
     "attack": 50,
@@ -11228,10 +11930,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Mummy",
     "passive": "Purifying Salt",
-    "evolution": "Yamask, Cofagrigus",
+    "evolution line": "Yamask, Cofagrigus",
     "img": "563"
   },
   "Tirtouga": {
+    "name": "Tirtouga",
     "id": 564,
     "hp": 54,
     "attack": 78,
@@ -11244,10 +11947,11 @@ const POKEMON_DATA = {
     "type2": "Rock",
     "abilities": "Solid Rock, Sturdy, Swift Swim",
     "passive": "Water Absorb",
-    "evolution": "Tirtouga, Carracosta",
+    "evolution line": "Tirtouga, Carracosta",
     "img": "564"
   },
   "Carracosta": {
+    "name": "Carracosta",
     "id": 565,
     "hp": 74,
     "attack": 108,
@@ -11260,10 +11964,11 @@ const POKEMON_DATA = {
     "type2": "Rock",
     "abilities": "Solid Rock, Sturdy, Swift Swim",
     "passive": "Water Absorb",
-    "evolution": "Tirtouga, Carracosta",
+    "evolution line": "Tirtouga, Carracosta",
     "img": "565"
   },
   "Archen": {
+    "name": "Archen",
     "id": 566,
     "hp": 55,
     "attack": 112,
@@ -11276,10 +11981,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Defeatist, Wimp Out",
     "passive": "Multiscale",
-    "evolution": "Archen, Archeops",
+    "evolution line": "Archen, Archeops",
     "img": "566"
   },
   "Archeops": {
+    "name": "Archeops",
     "id": 567,
     "hp": 75,
     "attack": 140,
@@ -11292,10 +11998,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Defeatist, Emergency Exit",
     "passive": "Multiscale",
-    "evolution": "Archen, Archeops",
+    "evolution line": "Archen, Archeops",
     "img": "567"
   },
   "Trubbish": {
+    "name": "Trubbish",
     "id": 568,
     "hp": 50,
     "attack": 50,
@@ -11308,10 +12015,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Stench, Sticky Hold, Aftermath",
     "passive": "Neutralizing Gas",
-    "evolution": "Trubbish, Garbodor, Gigantamax Garbodor",
+    "evolution line": "Trubbish, Garbodor, Gigantamax Garbodor",
     "img": "568"
   },
   "Garbodor": {
+    "name": "Garbodor",
     "id": 569,
     "hp": 80,
     "attack": 95,
@@ -11324,10 +12032,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Stench, Weak Armor, Aftermath",
     "passive": "Neutralizing Gas",
-    "evolution": "Trubbish, Garbodor, Gigantamax Garbodor",
+    "evolution line": "Trubbish, Garbodor, Gigantamax Garbodor",
     "img": "569"
   },
   "Gigantamax Garbodor": {
+    "name": "Gigantamax Garbodor",
     "id": 569,
     "hp": 115,
     "attack": 121,
@@ -11340,10 +12049,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Toxic Debris",
     "passive": "Neutralizing Gas",
-    "evolution": "Trubbish, Garbodor, Gigantamax Garbodor",
+    "evolution line": "Trubbish, Garbodor, Gigantamax Garbodor",
     "img": "569-gigantamax"
   },
   "Zorua": {
+    "name": "Zorua",
     "id": 570,
     "hp": 40,
     "attack": 65,
@@ -11356,10 +12066,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Illusion",
     "passive": "Adaptability",
-    "evolution": "Zorua, Zoroark",
+    "evolution line": "Zorua, Zoroark",
     "img": "570"
   },
   "Zoroark": {
+    "name": "Zoroark",
     "id": 571,
     "hp": 60,
     "attack": 105,
@@ -11372,10 +12083,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Illusion",
     "passive": "Adaptability",
-    "evolution": "Zorua, Zoroark",
+    "evolution line": "Zorua, Zoroark",
     "img": "571"
   },
   "Minccino": {
+    "name": "Minccino",
     "id": 572,
     "hp": 55,
     "attack": 50,
@@ -11388,10 +12100,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Cute Charm, Technician, Skill Link",
     "passive": "Fur Coat",
-    "evolution": "Minccino, Cinccino",
+    "evolution line": "Minccino, Cinccino",
     "img": "572"
   },
   "Cinccino": {
+    "name": "Cinccino",
     "id": 573,
     "hp": 75,
     "attack": 95,
@@ -11404,10 +12117,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Cute Charm, Technician, Skill Link",
     "passive": "Fur Coat",
-    "evolution": "Minccino, Cinccino",
+    "evolution line": "Minccino, Cinccino",
     "img": "573"
   },
   "Gothita": {
+    "name": "Gothita",
     "id": 574,
     "hp": 45,
     "attack": 30,
@@ -11420,10 +12134,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Frisk, Competitive, Shadow Tag",
     "passive": "Unnerve",
-    "evolution": "Gothita, Gothorita, Gothitelle",
+    "evolution line": "Gothita, Gothorita, Gothitelle",
     "img": "574"
   },
   "Gothorita": {
+    "name": "Gothorita",
     "id": 575,
     "hp": 60,
     "attack": 45,
@@ -11436,10 +12151,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Frisk, Competitive, Shadow Tag",
     "passive": "Unnerve",
-    "evolution": "Gothita, Gothorita, Gothitelle",
+    "evolution line": "Gothita, Gothorita, Gothitelle",
     "img": "575"
   },
   "Gothitelle": {
+    "name": "Gothitelle",
     "id": 576,
     "hp": 70,
     "attack": 55,
@@ -11452,10 +12168,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Frisk, Competitive, Shadow Tag",
     "passive": "Unnerve",
-    "evolution": "Gothita, Gothorita, Gothitelle",
+    "evolution line": "Gothita, Gothorita, Gothitelle",
     "img": "576"
   },
   "Solosis": {
+    "name": "Solosis",
     "id": 577,
     "hp": 45,
     "attack": 30,
@@ -11468,10 +12185,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Overcoat, Magic Guard, Regenerator",
     "passive": "Psychic Surge",
-    "evolution": "Solosis, Duosion, Reuniclus",
+    "evolution line": "Solosis, Duosion, Reuniclus",
     "img": "577"
   },
   "Duosion": {
+    "name": "Duosion",
     "id": 578,
     "hp": 65,
     "attack": 40,
@@ -11484,10 +12202,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Overcoat, Magic Guard, Regenerator",
     "passive": "Psychic Surge",
-    "evolution": "Solosis, Duosion, Reuniclus",
+    "evolution line": "Solosis, Duosion, Reuniclus",
     "img": "578"
   },
   "Reuniclus": {
+    "name": "Reuniclus",
     "id": 579,
     "hp": 110,
     "attack": 65,
@@ -11500,10 +12219,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Overcoat, Magic Guard, Regenerator",
     "passive": "Psychic Surge",
-    "evolution": "Solosis, Duosion, Reuniclus",
+    "evolution line": "Solosis, Duosion, Reuniclus",
     "img": "579"
   },
   "Ducklett": {
+    "name": "Ducklett",
     "id": 580,
     "hp": 62,
     "attack": 44,
@@ -11516,10 +12236,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Keen Eye, Big Pecks, Hydration",
     "passive": "Drizzle",
-    "evolution": "Ducklett, Swanna",
+    "evolution line": "Ducklett, Swanna",
     "img": "580"
   },
   "Swanna": {
+    "name": "Swanna",
     "id": 581,
     "hp": 75,
     "attack": 87,
@@ -11532,10 +12253,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Keen Eye, Big Pecks, Hydration",
     "passive": "Drizzle",
-    "evolution": "Ducklett, Swanna",
+    "evolution line": "Ducklett, Swanna",
     "img": "581"
   },
   "Vanillite": {
+    "name": "Vanillite",
     "id": 582,
     "hp": 36,
     "attack": 50,
@@ -11548,10 +12270,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Ice Body, Snow Cloak, Weak Armor",
     "passive": "Refrigerate",
-    "evolution": "Vanillite, Vanillish, Vanilluxe",
+    "evolution line": "Vanillite, Vanillish, Vanilluxe",
     "img": "582"
   },
   "Vanillish": {
+    "name": "Vanillish",
     "id": 583,
     "hp": 51,
     "attack": 65,
@@ -11564,10 +12287,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Ice Body, Snow Cloak, Weak Armor",
     "passive": "Refrigerate",
-    "evolution": "Vanillite, Vanillish, Vanilluxe",
+    "evolution line": "Vanillite, Vanillish, Vanilluxe",
     "img": "583"
   },
   "Vanilluxe": {
+    "name": "Vanilluxe",
     "id": 584,
     "hp": 71,
     "attack": 95,
@@ -11580,10 +12304,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Ice Body, Snow Warning, Weak Armor",
     "passive": "Slush Rush",
-    "evolution": "Vanillite, Vanillish, Vanilluxe",
+    "evolution line": "Vanillite, Vanillish, Vanilluxe",
     "img": "584"
   },
   "Spring Deerling": {
+    "name": "Spring Deerling",
     "id": 585,
     "hp": 60,
     "attack": 60,
@@ -11596,10 +12321,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Chlorophyll, Sap Sipper, Serene Grace",
     "passive": "Flower Veil",
-    "evolution": "Spring Deerling, Summer Deerling, Autumn Deerling, Winter Deerling, Spring Sawsbuck, Summer Sawsbuck, Autumn Sawsbuck, Winter Sawsbuck",
+    "evolution line": "Spring Deerling, Summer Deerling, Autumn Deerling, Winter Deerling, Spring Sawsbuck, Summer Sawsbuck, Autumn Sawsbuck, Winter Sawsbuck",
     "img": "585-spring"
   },
   "Summer Deerling": {
+    "name": "Summer Deerling",
     "id": 585,
     "hp": 60,
     "attack": 60,
@@ -11612,10 +12338,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Chlorophyll, Sap Sipper, Serene Grace",
     "passive": "Cud Chew",
-    "evolution": "Spring Deerling, Summer Deerling, Autumn Deerling, Winter Deerling, Spring Sawsbuck, Summer Sawsbuck, Autumn Sawsbuck, Winter Sawsbuck",
+    "evolution line": "Spring Deerling, Summer Deerling, Autumn Deerling, Winter Deerling, Spring Sawsbuck, Summer Sawsbuck, Autumn Sawsbuck, Winter Sawsbuck",
     "img": "585-summer"
   },
   "Autumn Deerling": {
+    "name": "Autumn Deerling",
     "id": 585,
     "hp": 60,
     "attack": 60,
@@ -11628,10 +12355,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Chlorophyll, Sap Sipper, Serene Grace",
     "passive": "Harvest",
-    "evolution": "Spring Deerling, Summer Deerling, Autumn Deerling, Winter Deerling, Spring Sawsbuck, Summer Sawsbuck, Autumn Sawsbuck, Winter Sawsbuck",
+    "evolution line": "Spring Deerling, Summer Deerling, Autumn Deerling, Winter Deerling, Spring Sawsbuck, Summer Sawsbuck, Autumn Sawsbuck, Winter Sawsbuck",
     "img": "585-autumn"
   },
   "Winter Deerling": {
+    "name": "Winter Deerling",
     "id": 585,
     "hp": 60,
     "attack": 60,
@@ -11644,10 +12372,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Chlorophyll, Sap Sipper, Serene Grace",
     "passive": "Fur Coat",
-    "evolution": "Spring Deerling, Summer Deerling, Autumn Deerling, Winter Deerling, Spring Sawsbuck, Summer Sawsbuck, Autumn Sawsbuck, Winter Sawsbuck",
+    "evolution line": "Spring Deerling, Summer Deerling, Autumn Deerling, Winter Deerling, Spring Sawsbuck, Summer Sawsbuck, Autumn Sawsbuck, Winter Sawsbuck",
     "img": "585-winter"
   },
   "Spring Sawsbuck": {
+    "name": "Spring Sawsbuck",
     "id": 586,
     "hp": 80,
     "attack": 100,
@@ -11660,10 +12389,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Chlorophyll, Sap Sipper, Serene Grace",
     "passive": "Flower Veil",
-    "evolution": "Spring Deerling, Summer Deerling, Autumn Deerling, Winter Deerling, Spring Sawsbuck, Summer Sawsbuck, Autumn Sawsbuck, Winter Sawsbuck",
+    "evolution line": "Spring Deerling, Summer Deerling, Autumn Deerling, Winter Deerling, Spring Sawsbuck, Summer Sawsbuck, Autumn Sawsbuck, Winter Sawsbuck",
     "img": "586-spring"
   },
   "Summer Sawsbuck": {
+    "name": "Summer Sawsbuck",
     "id": 586,
     "hp": 80,
     "attack": 100,
@@ -11676,10 +12406,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Chlorophyll, Sap Sipper, Serene Grace",
     "passive": "Cud Chew",
-    "evolution": "Spring Deerling, Summer Deerling, Autumn Deerling, Winter Deerling, Spring Sawsbuck, Summer Sawsbuck, Autumn Sawsbuck, Winter Sawsbuck",
+    "evolution line": "Spring Deerling, Summer Deerling, Autumn Deerling, Winter Deerling, Spring Sawsbuck, Summer Sawsbuck, Autumn Sawsbuck, Winter Sawsbuck",
     "img": "586-summer"
   },
   "Autumn Sawsbuck": {
+    "name": "Autumn Sawsbuck",
     "id": 586,
     "hp": 80,
     "attack": 100,
@@ -11692,10 +12423,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Chlorophyll, Sap Sipper, Serene Grace",
     "passive": "Harvest",
-    "evolution": "Spring Deerling, Summer Deerling, Autumn Deerling, Winter Deerling, Spring Sawsbuck, Summer Sawsbuck, Autumn Sawsbuck, Winter Sawsbuck",
+    "evolution line": "Spring Deerling, Summer Deerling, Autumn Deerling, Winter Deerling, Spring Sawsbuck, Summer Sawsbuck, Autumn Sawsbuck, Winter Sawsbuck",
     "img": "586-autumn"
   },
   "Winter Sawsbuck": {
+    "name": "Winter Sawsbuck",
     "id": 586,
     "hp": 80,
     "attack": 100,
@@ -11708,10 +12440,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Chlorophyll, Sap Sipper, Serene Grace",
     "passive": "Fur Coat",
-    "evolution": "Spring Deerling, Summer Deerling, Autumn Deerling, Winter Deerling, Spring Sawsbuck, Summer Sawsbuck, Autumn Sawsbuck, Winter Sawsbuck",
+    "evolution line": "Spring Deerling, Summer Deerling, Autumn Deerling, Winter Deerling, Spring Sawsbuck, Summer Sawsbuck, Autumn Sawsbuck, Winter Sawsbuck",
     "img": "586-winter"
   },
   "Emolga": {
+    "name": "Emolga",
     "id": 587,
     "hp": 55,
     "attack": 75,
@@ -11724,10 +12457,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Static, Motor Drive",
     "passive": "Serene Grace",
-    "evolution": "Emolga",
+    "evolution line": "Emolga",
     "img": "587"
   },
   "Karrablast": {
+    "name": "Karrablast",
     "id": 588,
     "hp": 50,
     "attack": 75,
@@ -11740,10 +12474,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Swarm, Shed Skin, No Guard",
     "passive": "Quick Draw",
-    "evolution": "Karrablast, Escavalier",
+    "evolution line": "Karrablast, Escavalier",
     "img": "588"
   },
   "Escavalier": {
+    "name": "Escavalier",
     "id": 589,
     "hp": 70,
     "attack": 135,
@@ -11756,10 +12491,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Swarm, Shell Armor, Overcoat",
     "passive": "Quick Draw",
-    "evolution": "Karrablast, Escavalier",
+    "evolution line": "Karrablast, Escavalier",
     "img": "589"
   },
   "Foongus": {
+    "name": "Foongus",
     "id": 590,
     "hp": 69,
     "attack": 55,
@@ -11772,10 +12508,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Effect Spore, Regenerator",
     "passive": "Mycelium Might",
-    "evolution": "Foongus, Amoonguss",
+    "evolution line": "Foongus, Amoonguss",
     "img": "590"
   },
   "Amoonguss": {
+    "name": "Amoonguss",
     "id": 591,
     "hp": 114,
     "attack": 85,
@@ -11788,10 +12525,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Effect Spore, Regenerator",
     "passive": "Thick Fat",
-    "evolution": "Foongus, Amoonguss",
+    "evolution line": "Foongus, Amoonguss",
     "img": "591"
   },
   "Frillish": {
+    "name": "Frillish",
     "id": 592,
     "hp": 55,
     "attack": 40,
@@ -11804,10 +12542,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Water Absorb, Cursed Body, Damp",
     "passive": "Poison Heal",
-    "evolution": "Frillish, Jellicent",
+    "evolution line": "Frillish, Jellicent",
     "img": "592"
   },
   "Jellicent": {
+    "name": "Jellicent",
     "id": 593,
     "hp": 100,
     "attack": 60,
@@ -11820,10 +12559,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Water Absorb, Cursed Body, Damp",
     "passive": "Poison Heal",
-    "evolution": "Frillish, Jellicent",
+    "evolution line": "Frillish, Jellicent",
     "img": "593"
   },
   "Alomomola": {
+    "name": "Alomomola",
     "id": 594,
     "hp": 165,
     "attack": 75,
@@ -11836,10 +12576,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Healer, Hydration, Regenerator",
     "passive": "Multiscale",
-    "evolution": "Alomomola",
+    "evolution line": "Alomomola",
     "img": "594"
   },
   "Joltik": {
+    "name": "Joltik",
     "id": 595,
     "hp": 50,
     "attack": 47,
@@ -11852,10 +12593,11 @@ const POKEMON_DATA = {
     "type2": "Electric",
     "abilities": "Compound Eyes, Unnerve, Swarm",
     "passive": "Transistor",
-    "evolution": "Joltik, Galvantula",
+    "evolution line": "Joltik, Galvantula",
     "img": "595"
   },
   "Galvantula": {
+    "name": "Galvantula",
     "id": 596,
     "hp": 70,
     "attack": 77,
@@ -11868,10 +12610,11 @@ const POKEMON_DATA = {
     "type2": "Electric",
     "abilities": "Compound Eyes, Unnerve, Swarm",
     "passive": "Transistor",
-    "evolution": "Joltik, Galvantula",
+    "evolution line": "Joltik, Galvantula",
     "img": "596"
   },
   "Ferroseed": {
+    "name": "Ferroseed",
     "id": 597,
     "hp": 44,
     "attack": 50,
@@ -11884,10 +12627,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Iron Barbs, Anticipation",
     "passive": "Rough Skin",
-    "evolution": "Ferroseed, Ferrothorn",
+    "evolution line": "Ferroseed, Ferrothorn",
     "img": "597"
   },
   "Ferrothorn": {
+    "name": "Ferrothorn",
     "id": 598,
     "hp": 74,
     "attack": 94,
@@ -11900,10 +12644,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Iron Barbs, Anticipation",
     "passive": "Rough Skin",
-    "evolution": "Ferroseed, Ferrothorn",
+    "evolution line": "Ferroseed, Ferrothorn",
     "img": "598"
   },
   "Klink": {
+    "name": "Klink",
     "id": 599,
     "hp": 40,
     "attack": 55,
@@ -11916,10 +12661,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Plus, Minus, Clear Body",
     "passive": "Steely Spirit",
-    "evolution": "Klink, Klang, Klinklang",
+    "evolution line": "Klink, Klang, Klinklang",
     "img": "599"
   },
   "Klang": {
+    "name": "Klang",
     "id": 600,
     "hp": 60,
     "attack": 80,
@@ -11932,10 +12678,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Plus, Minus, Clear Body",
     "passive": "Steely Spirit",
-    "evolution": "Klink, Klang, Klinklang",
+    "evolution line": "Klink, Klang, Klinklang",
     "img": "600"
   },
   "Klinklang": {
+    "name": "Klinklang",
     "id": 601,
     "hp": 60,
     "attack": 100,
@@ -11948,10 +12695,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Plus, Minus, Clear Body",
     "passive": "Steely Spirit",
-    "evolution": "Klink, Klang, Klinklang",
+    "evolution line": "Klink, Klang, Klinklang",
     "img": "601"
   },
   "Tynamo": {
+    "name": "Tynamo",
     "id": 602,
     "hp": 35,
     "attack": 55,
@@ -11964,10 +12712,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Poison Heal",
-    "evolution": "Tynamo, Eelektrik, Eelektross",
+    "evolution line": "Tynamo, Eelektrik, Eelektross",
     "img": "602"
   },
   "Eelektrik": {
+    "name": "Eelektrik",
     "id": 603,
     "hp": 65,
     "attack": 85,
@@ -11980,10 +12729,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Poison Heal",
-    "evolution": "Tynamo, Eelektrik, Eelektross",
+    "evolution line": "Tynamo, Eelektrik, Eelektross",
     "img": "603"
   },
   "Eelektross": {
+    "name": "Eelektross",
     "id": 604,
     "hp": 85,
     "attack": 115,
@@ -11996,10 +12746,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Poison Heal",
-    "evolution": "Tynamo, Eelektrik, Eelektross",
+    "evolution line": "Tynamo, Eelektrik, Eelektross",
     "img": "604"
   },
   "Elgyem": {
+    "name": "Elgyem",
     "id": 605,
     "hp": 55,
     "attack": 55,
@@ -12012,10 +12763,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Telepathy, Synchronize, Analytic",
     "passive": "Beads Of Ruin",
-    "evolution": "Elgyem, Beheeyem",
+    "evolution line": "Elgyem, Beheeyem",
     "img": "605"
   },
   "Beheeyem": {
+    "name": "Beheeyem",
     "id": 606,
     "hp": 75,
     "attack": 75,
@@ -12028,10 +12780,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Telepathy, Synchronize, Analytic",
     "passive": "Beads Of Ruin",
-    "evolution": "Elgyem, Beheeyem",
+    "evolution line": "Elgyem, Beheeyem",
     "img": "606"
   },
   "Litwick": {
+    "name": "Litwick",
     "id": 607,
     "hp": 50,
     "attack": 30,
@@ -12044,10 +12797,11 @@ const POKEMON_DATA = {
     "type2": "Fire",
     "abilities": "Flash Fire, Flame Body, Infiltrator",
     "passive": "Shadow Tag",
-    "evolution": "Litwick, Lampent, Chandelure",
+    "evolution line": "Litwick, Lampent, Chandelure",
     "img": "607"
   },
   "Lampent": {
+    "name": "Lampent",
     "id": 608,
     "hp": 60,
     "attack": 40,
@@ -12060,10 +12814,11 @@ const POKEMON_DATA = {
     "type2": "Fire",
     "abilities": "Flash Fire, Flame Body, Infiltrator",
     "passive": "Shadow Tag",
-    "evolution": "Litwick, Lampent, Chandelure",
+    "evolution line": "Litwick, Lampent, Chandelure",
     "img": "608"
   },
   "Chandelure": {
+    "name": "Chandelure",
     "id": 609,
     "hp": 60,
     "attack": 55,
@@ -12076,10 +12831,11 @@ const POKEMON_DATA = {
     "type2": "Fire",
     "abilities": "Flash Fire, Flame Body, Infiltrator",
     "passive": "Shadow Tag",
-    "evolution": "Litwick, Lampent, Chandelure",
+    "evolution line": "Litwick, Lampent, Chandelure",
     "img": "609"
   },
   "Axew": {
+    "name": "Axew",
     "id": 610,
     "hp": 46,
     "attack": 87,
@@ -12092,10 +12848,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rivalry, Mold Breaker, Unnerve",
     "passive": "Own Tempo",
-    "evolution": "Axew, Fraxure, Haxorus",
+    "evolution line": "Axew, Fraxure, Haxorus",
     "img": "610"
   },
   "Fraxure": {
+    "name": "Fraxure",
     "id": 611,
     "hp": 66,
     "attack": 117,
@@ -12108,10 +12865,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rivalry, Mold Breaker, Unnerve",
     "passive": "Own Tempo",
-    "evolution": "Axew, Fraxure, Haxorus",
+    "evolution line": "Axew, Fraxure, Haxorus",
     "img": "611"
   },
   "Haxorus": {
+    "name": "Haxorus",
     "id": 612,
     "hp": 76,
     "attack": 147,
@@ -12124,10 +12882,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rivalry, Mold Breaker, Unnerve",
     "passive": "Own Tempo",
-    "evolution": "Axew, Fraxure, Haxorus",
+    "evolution line": "Axew, Fraxure, Haxorus",
     "img": "612"
   },
   "Cubchoo": {
+    "name": "Cubchoo",
     "id": 613,
     "hp": 55,
     "attack": 70,
@@ -12140,10 +12899,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Snow Cloak, Slush Rush, Rattled",
     "passive": "Fur Coat",
-    "evolution": "Cubchoo, Beartic",
+    "evolution line": "Cubchoo, Beartic",
     "img": "613"
   },
   "Beartic": {
+    "name": "Beartic",
     "id": 614,
     "hp": 95,
     "attack": 130,
@@ -12156,10 +12916,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Snow Cloak, Slush Rush, Swift Swim",
     "passive": "Fur Coat",
-    "evolution": "Cubchoo, Beartic",
+    "evolution line": "Cubchoo, Beartic",
     "img": "614"
   },
   "Cryogonal": {
+    "name": "Cryogonal",
     "id": 615,
     "hp": 80,
     "attack": 50,
@@ -12172,10 +12933,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Snow Warning",
-    "evolution": "Cryogonal",
+    "evolution line": "Cryogonal",
     "img": "615"
   },
   "Shelmet": {
+    "name": "Shelmet",
     "id": 616,
     "hp": 50,
     "attack": 40,
@@ -12188,10 +12950,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Hydration, Shell Armor, Overcoat",
     "passive": "Stamina",
-    "evolution": "Shelmet, Accelgor",
+    "evolution line": "Shelmet, Accelgor",
     "img": "616"
   },
   "Accelgor": {
+    "name": "Accelgor",
     "id": 617,
     "hp": 80,
     "attack": 70,
@@ -12204,10 +12967,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Hydration, Sticky Hold, Unburden",
     "passive": "Protean",
-    "evolution": "Shelmet, Accelgor",
+    "evolution line": "Shelmet, Accelgor",
     "img": "617"
   },
   "Stunfisk": {
+    "name": "Stunfisk",
     "id": 618,
     "hp": 109,
     "attack": 66,
@@ -12220,10 +12984,11 @@ const POKEMON_DATA = {
     "type2": "Electric",
     "abilities": "Static, Limber, Sand Veil",
     "passive": "Storm Drain",
-    "evolution": "Stunfisk",
+    "evolution line": "Stunfisk",
     "img": "618"
   },
   "Mienfoo": {
+    "name": "Mienfoo",
     "id": 619,
     "hp": 45,
     "attack": 85,
@@ -12236,10 +13001,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Inner Focus, Regenerator, Reckless",
     "passive": "No Guard",
-    "evolution": "Mienfoo, Mienshao",
+    "evolution line": "Mienfoo, Mienshao",
     "img": "619"
   },
   "Mienshao": {
+    "name": "Mienshao",
     "id": 620,
     "hp": 65,
     "attack": 125,
@@ -12252,10 +13018,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Inner Focus, Regenerator, Reckless",
     "passive": "No Guard",
-    "evolution": "Mienfoo, Mienshao",
+    "evolution line": "Mienfoo, Mienshao",
     "img": "620"
   },
   "Druddigon": {
+    "name": "Druddigon",
     "id": 621,
     "hp": 77,
     "attack": 120,
@@ -12268,10 +13035,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rough Skin, Sheer Force, Mold Breaker",
     "passive": "Intimidate",
-    "evolution": "Druddigon",
+    "evolution line": "Druddigon",
     "img": "621"
   },
   "Golett": {
+    "name": "Golett",
     "id": 622,
     "hp": 59,
     "attack": 74,
@@ -12284,10 +13052,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Iron Fist, Klutz, No Guard",
     "passive": "Shadow Shield",
-    "evolution": "Golett, Golurk",
+    "evolution line": "Golett, Golurk",
     "img": "622"
   },
   "Golurk": {
+    "name": "Golurk",
     "id": 623,
     "hp": 89,
     "attack": 124,
@@ -12300,10 +13069,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Iron Fist, Klutz, No Guard",
     "passive": "Shadow Shield",
-    "evolution": "Golett, Golurk",
+    "evolution line": "Golett, Golurk",
     "img": "623"
   },
   "Pawniard": {
+    "name": "Pawniard",
     "id": 624,
     "hp": 45,
     "attack": 85,
@@ -12316,10 +13086,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Defiant, Inner Focus, Pressure",
     "passive": "Sword Of Ruin",
-    "evolution": "Pawniard, Bisharp, Kingambit",
+    "evolution line": "Pawniard, Bisharp, Kingambit",
     "img": "624"
   },
   "Bisharp": {
+    "name": "Bisharp",
     "id": 625,
     "hp": 65,
     "attack": 125,
@@ -12332,10 +13103,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Defiant, Inner Focus, Pressure",
     "passive": "Sword Of Ruin",
-    "evolution": "Pawniard, Bisharp, Kingambit",
+    "evolution line": "Pawniard, Bisharp, Kingambit",
     "img": "625"
   },
   "Bouffalant": {
+    "name": "Bouffalant",
     "id": 626,
     "hp": 95,
     "attack": 110,
@@ -12348,10 +13120,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Reckless, Sap Sipper, Soundproof",
     "passive": "Rock Head",
-    "evolution": "Bouffalant",
+    "evolution line": "Bouffalant",
     "img": "626"
   },
   "Rufflet": {
+    "name": "Rufflet",
     "id": 627,
     "hp": 70,
     "attack": 83,
@@ -12364,10 +13137,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Keen Eye, Sheer Force, Hustle",
     "passive": "Speed Boost",
-    "evolution": "Rufflet, Braviary, Hisui Braviary",
+    "evolution line": "Rufflet, Braviary, Hisui Braviary",
     "img": "627"
   },
   "Braviary": {
+    "name": "Braviary",
     "id": 628,
     "hp": 100,
     "attack": 123,
@@ -12380,10 +13154,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Keen Eye, Sheer Force, Defiant",
     "passive": "Speed Boost",
-    "evolution": "Rufflet, Braviary, Hisui Braviary",
+    "evolution line": "Rufflet, Braviary, Hisui Braviary",
     "img": "628"
   },
   "Vullaby": {
+    "name": "Vullaby",
     "id": 629,
     "hp": 70,
     "attack": 55,
@@ -12396,10 +13171,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Big Pecks, Overcoat, Weak Armor",
     "passive": "Thick Fat",
-    "evolution": "Vullaby, Mandibuzz",
+    "evolution line": "Vullaby, Mandibuzz",
     "img": "629"
   },
   "Mandibuzz": {
+    "name": "Mandibuzz",
     "id": 630,
     "hp": 110,
     "attack": 65,
@@ -12412,10 +13188,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Big Pecks, Overcoat, Weak Armor",
     "passive": "Thick Fat",
-    "evolution": "Vullaby, Mandibuzz",
+    "evolution line": "Vullaby, Mandibuzz",
     "img": "630"
   },
   "Heatmor": {
+    "name": "Heatmor",
     "id": 631,
     "hp": 85,
     "attack": 97,
@@ -12428,10 +13205,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Gluttony, Flash Fire, White Smoke",
     "passive": "Contrary",
-    "evolution": "Heatmor",
+    "evolution line": "Heatmor",
     "img": "631"
   },
   "Durant": {
+    "name": "Durant",
     "id": 632,
     "hp": 58,
     "attack": 109,
@@ -12444,10 +13222,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Swarm, Hustle, Truant",
     "passive": "Compound Eyes",
-    "evolution": "Durant",
+    "evolution line": "Durant",
     "img": "632"
   },
   "Deino": {
+    "name": "Deino",
     "id": 633,
     "hp": 52,
     "attack": 65,
@@ -12460,10 +13239,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Hustle",
     "passive": "No Guard",
-    "evolution": "Deino, Zweilous, Hydreigon",
+    "evolution line": "Deino, Zweilous, Hydreigon",
     "img": "633"
   },
   "Zweilous": {
+    "name": "Zweilous",
     "id": 634,
     "hp": 72,
     "attack": 85,
@@ -12476,10 +13256,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Hustle",
     "passive": "No Guard",
-    "evolution": "Deino, Zweilous, Hydreigon",
+    "evolution line": "Deino, Zweilous, Hydreigon",
     "img": "634"
   },
   "Hydreigon": {
+    "name": "Hydreigon",
     "id": 635,
     "hp": 92,
     "attack": 105,
@@ -12492,10 +13273,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Levitate",
     "passive": "Parental Bond",
-    "evolution": "Deino, Zweilous, Hydreigon",
+    "evolution line": "Deino, Zweilous, Hydreigon",
     "img": "635"
   },
   "Larvesta": {
+    "name": "Larvesta",
     "id": 636,
     "hp": 55,
     "attack": 85,
@@ -12508,10 +13290,11 @@ const POKEMON_DATA = {
     "type2": "Fire",
     "abilities": "Flame Body, Swarm",
     "passive": "Flash Fire",
-    "evolution": "Larvesta, Volcarona",
+    "evolution line": "Larvesta, Volcarona",
     "img": "636"
   },
   "Volcarona": {
+    "name": "Volcarona",
     "id": 637,
     "hp": 85,
     "attack": 60,
@@ -12524,10 +13307,11 @@ const POKEMON_DATA = {
     "type2": "Fire",
     "abilities": "Flame Body, Swarm",
     "passive": "Flash Fire",
-    "evolution": "Larvesta, Volcarona",
+    "evolution line": "Larvesta, Volcarona",
     "img": "637"
   },
   "Cobalion": {
+    "name": "Cobalion",
     "id": 638,
     "hp": 91,
     "attack": 90,
@@ -12540,10 +13324,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Justified",
     "passive": "Intrepid Sword",
-    "evolution": "Cobalion",
+    "evolution line": "Cobalion",
     "img": "638"
   },
   "Terrakion": {
+    "name": "Terrakion",
     "id": 639,
     "hp": 91,
     "attack": 129,
@@ -12556,10 +13341,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Justified",
     "passive": "Rocky Payload",
-    "evolution": "Terrakion",
+    "evolution line": "Terrakion",
     "img": "639"
   },
   "Virizion": {
+    "name": "Virizion",
     "id": 640,
     "hp": 91,
     "attack": 90,
@@ -12572,10 +13358,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Justified",
     "passive": "Sharpness",
-    "evolution": "Virizion",
+    "evolution line": "Virizion",
     "img": "640"
   },
   "Incarnate Tornadus": {
+    "name": "Incarnate Tornadus",
     "id": 641,
     "hp": 79,
     "attack": 115,
@@ -12588,10 +13375,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Prankster, Defiant",
     "passive": "Drizzle",
-    "evolution": "Incarnate Tornadus, Therian Tornadus",
+    "evolution line": "Incarnate Tornadus, Therian Tornadus",
     "img": "641-incarnate"
   },
   "Therian Tornadus": {
+    "name": "Therian Tornadus",
     "id": 641,
     "hp": 79,
     "attack": 100,
@@ -12604,10 +13392,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Regenerator",
     "passive": "Drizzle",
-    "evolution": "Incarnate Tornadus, Therian Tornadus",
+    "evolution line": "Incarnate Tornadus, Therian Tornadus",
     "img": "641-therian"
   },
   "Incarnate Thundurus": {
+    "name": "Incarnate Thundurus",
     "id": 642,
     "hp": 79,
     "attack": 115,
@@ -12620,10 +13409,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Prankster, Defiant",
     "passive": "Drizzle",
-    "evolution": "Incarnate Thundurus, Therian Thundurus",
+    "evolution line": "Incarnate Thundurus, Therian Thundurus",
     "img": "642-incarnate"
   },
   "Therian Thundurus": {
+    "name": "Therian Thundurus",
     "id": 642,
     "hp": 79,
     "attack": 105,
@@ -12636,10 +13426,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Volt Absorb",
     "passive": "Drizzle",
-    "evolution": "Incarnate Thundurus, Therian Thundurus",
+    "evolution line": "Incarnate Thundurus, Therian Thundurus",
     "img": "642-therian"
   },
   "Reshiram": {
+    "name": "Reshiram",
     "id": 643,
     "hp": 100,
     "attack": 120,
@@ -12652,10 +13443,11 @@ const POKEMON_DATA = {
     "type2": "Fire",
     "abilities": "Turboblaze",
     "passive": "Orichalcum Pulse",
-    "evolution": "Reshiram",
+    "evolution line": "Reshiram",
     "img": "643"
   },
   "Zekrom": {
+    "name": "Zekrom",
     "id": 644,
     "hp": 100,
     "attack": 150,
@@ -12668,10 +13460,11 @@ const POKEMON_DATA = {
     "type2": "Electric",
     "abilities": "Teravolt",
     "passive": "Hadron Engine",
-    "evolution": "Zekrom",
+    "evolution line": "Zekrom",
     "img": "644"
   },
   "Incarnate Landorus": {
+    "name": "Incarnate Landorus",
     "id": 645,
     "hp": 89,
     "attack": 125,
@@ -12684,10 +13477,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Sand Force, Sheer Force",
     "passive": "Storm Drain",
-    "evolution": "Incarnate Landorus, Therian Landorus",
+    "evolution line": "Incarnate Landorus, Therian Landorus",
     "img": "645-incarnate"
   },
   "Therian Landorus": {
+    "name": "Therian Landorus",
     "id": 645,
     "hp": 89,
     "attack": 145,
@@ -12700,10 +13494,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Intimidate",
     "passive": "Storm Drain",
-    "evolution": "Incarnate Landorus, Therian Landorus",
+    "evolution line": "Incarnate Landorus, Therian Landorus",
     "img": "645-therian"
   },
   "Kyurem": {
+    "name": "Kyurem",
     "id": 646,
     "hp": 125,
     "attack": 130,
@@ -12716,10 +13511,11 @@ const POKEMON_DATA = {
     "type2": "Ice",
     "abilities": "Pressure",
     "passive": "Snow Warning",
-    "evolution": "Kyurem, Black Kyurem, White Kyurem",
+    "evolution line": "Kyurem, Black Kyurem, White Kyurem",
     "img": "646"
   },
   "Black Kyurem": {
+    "name": "Black Kyurem",
     "id": 646,
     "hp": 125,
     "attack": 170,
@@ -12732,10 +13528,11 @@ const POKEMON_DATA = {
     "type2": "Ice",
     "abilities": "Teravolt",
     "passive": "Hadron Engine",
-    "evolution": "Kyurem, Black Kyurem, White Kyurem",
+    "evolution line": "Kyurem, Black Kyurem, White Kyurem",
     "img": "646-black"
   },
   "White Kyurem": {
+    "name": "White Kyurem",
     "id": 646,
     "hp": 125,
     "attack": 120,
@@ -12748,10 +13545,11 @@ const POKEMON_DATA = {
     "type2": "Ice",
     "abilities": "Turboblaze",
     "passive": "Orichalcum Pulse",
-    "evolution": "Kyurem, Black Kyurem, White Kyurem",
+    "evolution line": "Kyurem, Black Kyurem, White Kyurem",
     "img": "646-white"
   },
   "Ordinary Keldeo": {
+    "name": "Ordinary Keldeo",
     "id": 647,
     "hp": 91,
     "attack": 72,
@@ -12764,10 +13562,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Justified",
     "passive": "Grim Neigh",
-    "evolution": "Ordinary Keldeo, Resolute Keldeo",
+    "evolution line": "Ordinary Keldeo, Resolute Keldeo",
     "img": "647-ordinary"
   },
   "Resolute Keldeo": {
+    "name": "Resolute Keldeo",
     "id": 647,
     "hp": 91,
     "attack": 72,
@@ -12780,10 +13579,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Justified",
     "passive": "Grim Neigh",
-    "evolution": "Ordinary Keldeo, Resolute Keldeo",
+    "evolution line": "Ordinary Keldeo, Resolute Keldeo",
     "img": "647-resolute"
   },
   "Aria Meloetta": {
+    "name": "Aria Meloetta",
     "id": 648,
     "hp": 100,
     "attack": 77,
@@ -12796,10 +13596,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Serene Grace",
     "passive": "Punk Rock",
-    "evolution": "Aria Meloetta, Pirouette Meloetta",
+    "evolution line": "Aria Meloetta, Pirouette Meloetta",
     "img": "648-aria"
   },
   "Pirouette Meloetta": {
+    "name": "Pirouette Meloetta",
     "id": 648,
     "hp": 100,
     "attack": 128,
@@ -12812,10 +13613,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Serene Grace",
     "passive": "Scrappy",
-    "evolution": "Aria Meloetta, Pirouette Meloetta",
+    "evolution line": "Aria Meloetta, Pirouette Meloetta",
     "img": "648-pirouette"
   },
   "Genesect": {
+    "name": "Genesect",
     "id": 649,
     "hp": 71,
     "attack": 120,
@@ -12828,10 +13630,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Download",
     "passive": "Protean",
-    "evolution": "Genesect, Shock Genesect, Burn Genesect, Chill Genesect, Douse Genesect",
+    "evolution line": "Genesect, Shock Genesect, Burn Genesect, Chill Genesect, Douse Genesect",
     "img": "649"
   },
   "Shock Genesect": {
+    "name": "Shock Genesect",
     "id": 649,
     "hp": 71,
     "attack": 120,
@@ -12844,10 +13647,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Download",
     "passive": "Protean",
-    "evolution": "Genesect, Shock Genesect, Burn Genesect, Chill Genesect, Douse Genesect",
+    "evolution line": "Genesect, Shock Genesect, Burn Genesect, Chill Genesect, Douse Genesect",
     "img": "649-shock"
   },
   "Burn Genesect": {
+    "name": "Burn Genesect",
     "id": 649,
     "hp": 71,
     "attack": 120,
@@ -12860,10 +13664,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Download",
     "passive": "Protean",
-    "evolution": "Genesect, Shock Genesect, Burn Genesect, Chill Genesect, Douse Genesect",
+    "evolution line": "Genesect, Shock Genesect, Burn Genesect, Chill Genesect, Douse Genesect",
     "img": "649-burn"
   },
   "Chill Genesect": {
+    "name": "Chill Genesect",
     "id": 649,
     "hp": 71,
     "attack": 120,
@@ -12876,10 +13681,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Download",
     "passive": "Protean",
-    "evolution": "Genesect, Shock Genesect, Burn Genesect, Chill Genesect, Douse Genesect",
+    "evolution line": "Genesect, Shock Genesect, Burn Genesect, Chill Genesect, Douse Genesect",
     "img": "649-chill"
   },
   "Douse Genesect": {
+    "name": "Douse Genesect",
     "id": 649,
     "hp": 71,
     "attack": 120,
@@ -12892,10 +13698,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Download",
     "passive": "Protean",
-    "evolution": "Genesect, Shock Genesect, Burn Genesect, Chill Genesect, Douse Genesect",
+    "evolution line": "Genesect, Shock Genesect, Burn Genesect, Chill Genesect, Douse Genesect",
     "img": "649-douse"
   },
   "Chespin": {
+    "name": "Chespin",
     "id": 650,
     "hp": 56,
     "attack": 61,
@@ -12908,10 +13715,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Overgrow, Bulletproof",
     "passive": "Rough Skin",
-    "evolution": "Chespin, Quilladin, Chesnaught",
+    "evolution line": "Chespin, Quilladin, Chesnaught",
     "img": "650"
   },
   "Quilladin": {
+    "name": "Quilladin",
     "id": 651,
     "hp": 61,
     "attack": 78,
@@ -12924,10 +13732,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Overgrow, Bulletproof",
     "passive": "Dauntless Shield",
-    "evolution": "Chespin, Quilladin, Chesnaught",
+    "evolution line": "Chespin, Quilladin, Chesnaught",
     "img": "651"
   },
   "Chesnaught": {
+    "name": "Chesnaught",
     "id": 652,
     "hp": 88,
     "attack": 107,
@@ -12940,10 +13749,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Overgrow, Bulletproof",
     "passive": "Dauntless Shield",
-    "evolution": "Chespin, Quilladin, Chesnaught",
+    "evolution line": "Chespin, Quilladin, Chesnaught",
     "img": "652"
   },
   "Fennekin": {
+    "name": "Fennekin",
     "id": 653,
     "hp": 40,
     "attack": 45,
@@ -12956,10 +13766,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Blaze, Magician",
     "passive": "Fluffy",
-    "evolution": "Fennekin, Braixen, Delphox",
+    "evolution line": "Fennekin, Braixen, Delphox",
     "img": "653"
   },
   "Braixen": {
+    "name": "Braixen",
     "id": 654,
     "hp": 59,
     "attack": 59,
@@ -12972,10 +13783,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Blaze, Magician",
     "passive": "Psychic Surge",
-    "evolution": "Fennekin, Braixen, Delphox",
+    "evolution line": "Fennekin, Braixen, Delphox",
     "img": "654"
   },
   "Delphox": {
+    "name": "Delphox",
     "id": 655,
     "hp": 75,
     "attack": 69,
@@ -12988,10 +13800,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Blaze, Magician",
     "passive": "Psychic Surge",
-    "evolution": "Fennekin, Braixen, Delphox",
+    "evolution line": "Fennekin, Braixen, Delphox",
     "img": "655"
   },
   "Froakie": {
+    "name": "Froakie",
     "id": 656,
     "hp": 41,
     "attack": 56,
@@ -13004,10 +13817,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Torrent, Protean",
     "passive": "Stakeout",
-    "evolution": "Froakie, Battle Bond Froakie, Frogadier, Battle Bond Frogadier, Greninja, Battle Bond Greninja, Ash Greninja",
+    "evolution line": "Froakie, Battle Bond Froakie, Frogadier, Battle Bond Frogadier, Greninja, Battle Bond Greninja, Ash Greninja",
     "img": "656"
   },
   "Battle Bond Froakie": {
+    "name": "Battle Bond Froakie",
     "id": 656,
     "hp": 41,
     "attack": 56,
@@ -13020,10 +13834,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Torrent",
     "passive": "Stakeout",
-    "evolution": "Froakie, Battle Bond Froakie, Frogadier, Battle Bond Frogadier, Greninja, Battle Bond Greninja, Ash Greninja",
+    "evolution line": "Froakie, Battle Bond Froakie, Frogadier, Battle Bond Frogadier, Greninja, Battle Bond Greninja, Ash Greninja",
     "img": "656"
   },
   "Frogadier": {
+    "name": "Frogadier",
     "id": 657,
     "hp": 54,
     "attack": 63,
@@ -13036,10 +13851,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Torrent, Protean",
     "passive": "Stakeout",
-    "evolution": "Froakie, Battle Bond Froakie, Frogadier, Battle Bond Frogadier, Greninja, Battle Bond Greninja, Ash Greninja",
+    "evolution line": "Froakie, Battle Bond Froakie, Frogadier, Battle Bond Frogadier, Greninja, Battle Bond Greninja, Ash Greninja",
     "img": "657"
   },
   "Battle Bond Frogadier": {
+    "name": "Battle Bond Frogadier",
     "id": 657,
     "hp": 54,
     "attack": 63,
@@ -13052,10 +13868,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Torrent",
     "passive": "Stakeout",
-    "evolution": "Froakie, Battle Bond Froakie, Frogadier, Battle Bond Frogadier, Greninja, Battle Bond Greninja, Ash Greninja",
+    "evolution line": "Froakie, Battle Bond Froakie, Frogadier, Battle Bond Frogadier, Greninja, Battle Bond Greninja, Ash Greninja",
     "img": "657"
   },
   "Greninja": {
+    "name": "Greninja",
     "id": 658,
     "hp": 72,
     "attack": 95,
@@ -13068,10 +13885,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Torrent, Protean",
     "passive": "Stakeout",
-    "evolution": "Froakie, Battle Bond Froakie, Frogadier, Battle Bond Frogadier, Greninja, Battle Bond Greninja, Ash Greninja",
+    "evolution line": "Froakie, Battle Bond Froakie, Frogadier, Battle Bond Frogadier, Greninja, Battle Bond Greninja, Ash Greninja",
     "img": "658"
   },
   "Battle Bond Greninja": {
+    "name": "Battle Bond Greninja",
     "id": 658,
     "hp": 72,
     "attack": 95,
@@ -13084,10 +13902,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Battle Bond",
     "passive": "Stakeout",
-    "evolution": "Froakie, Battle Bond Froakie, Frogadier, Battle Bond Frogadier, Greninja, Battle Bond Greninja, Ash Greninja",
+    "evolution line": "Froakie, Battle Bond Froakie, Frogadier, Battle Bond Frogadier, Greninja, Battle Bond Greninja, Ash Greninja",
     "img": "658"
   },
   "Ash Greninja": {
+    "name": "Ash Greninja",
     "id": 658,
     "hp": 72,
     "attack": 145,
@@ -13100,10 +13919,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Battle Bond",
     "passive": "Super Luck",
-    "evolution": "Froakie, Battle Bond Froakie, Frogadier, Battle Bond Frogadier, Greninja, Battle Bond Greninja, Ash Greninja",
+    "evolution line": "Froakie, Battle Bond Froakie, Frogadier, Battle Bond Frogadier, Greninja, Battle Bond Greninja, Ash Greninja",
     "img": "658-ash"
   },
   "Bunnelby": {
+    "name": "Bunnelby",
     "id": 659,
     "hp": 38,
     "attack": 36,
@@ -13116,10 +13936,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Pickup, Cheek Pouch, Huge Power",
     "passive": "Inner Focus",
-    "evolution": "Bunnelby, Diggersby",
+    "evolution line": "Bunnelby, Diggersby",
     "img": "659"
   },
   "Diggersby": {
+    "name": "Diggersby",
     "id": 660,
     "hp": 85,
     "attack": 56,
@@ -13132,10 +13953,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Pickup, Cheek Pouch, Huge Power",
     "passive": "Thick Fat",
-    "evolution": "Bunnelby, Diggersby",
+    "evolution line": "Bunnelby, Diggersby",
     "img": "660"
   },
   "Fletchling": {
+    "name": "Fletchling",
     "id": 661,
     "hp": 45,
     "attack": 50,
@@ -13148,10 +13970,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Big Pecks, Gale Wings",
     "passive": "Flame Body",
-    "evolution": "Fletchling, Fletchinder, Talonflame",
+    "evolution line": "Fletchling, Fletchinder, Talonflame",
     "img": "661"
   },
   "Fletchinder": {
+    "name": "Fletchinder",
     "id": 662,
     "hp": 62,
     "attack": 73,
@@ -13164,10 +13987,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Flame Body, Gale Wings",
     "passive": "Magic Guard",
-    "evolution": "Fletchling, Fletchinder, Talonflame",
+    "evolution line": "Fletchling, Fletchinder, Talonflame",
     "img": "662"
   },
   "Talonflame": {
+    "name": "Talonflame",
     "id": 663,
     "hp": 78,
     "attack": 81,
@@ -13180,10 +14004,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Flame Body, Gale Wings",
     "passive": "Magic Guard",
-    "evolution": "Fletchling, Fletchinder, Talonflame",
+    "evolution line": "Fletchling, Fletchinder, Talonflame",
     "img": "663"
   },
   "Meadow Scatterbug": {
+    "name": "Meadow Scatterbug",
     "id": 664,
     "hp": 38,
     "attack": 35,
@@ -13196,10 +14021,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Run Away",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "664"
   },
   "Icy Snow Scatterbug": {
+    "name": "Icy Snow Scatterbug",
     "id": 664,
     "hp": 38,
     "attack": 35,
@@ -13212,10 +14038,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Run Away",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "664"
   },
   "Polar Scatterbug": {
+    "name": "Polar Scatterbug",
     "id": 664,
     "hp": 38,
     "attack": 35,
@@ -13228,10 +14055,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Run Away",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "664"
   },
   "Tundra Scatterbug": {
+    "name": "Tundra Scatterbug",
     "id": 664,
     "hp": 38,
     "attack": 35,
@@ -13244,10 +14072,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Run Away",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "664"
   },
   "Continental Scatterbug": {
+    "name": "Continental Scatterbug",
     "id": 664,
     "hp": 38,
     "attack": 35,
@@ -13260,10 +14089,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Run Away",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "664"
   },
   "Garden Scatterbug": {
+    "name": "Garden Scatterbug",
     "id": 664,
     "hp": 38,
     "attack": 35,
@@ -13276,10 +14106,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Run Away",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "664"
   },
   "Elegant Scatterbug": {
+    "name": "Elegant Scatterbug",
     "id": 664,
     "hp": 38,
     "attack": 35,
@@ -13292,10 +14123,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Run Away",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "664"
   },
   "Modern Scatterbug": {
+    "name": "Modern Scatterbug",
     "id": 664,
     "hp": 38,
     "attack": 35,
@@ -13308,10 +14140,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Run Away",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "664"
   },
   "Marine Scatterbug": {
+    "name": "Marine Scatterbug",
     "id": 664,
     "hp": 38,
     "attack": 35,
@@ -13324,10 +14157,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Run Away",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "664"
   },
   "Archipelago Scatterbug": {
+    "name": "Archipelago Scatterbug",
     "id": 664,
     "hp": 38,
     "attack": 35,
@@ -13340,10 +14174,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Run Away",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "664"
   },
   "High Plains Scatterbug": {
+    "name": "High Plains Scatterbug",
     "id": 664,
     "hp": 38,
     "attack": 35,
@@ -13356,10 +14191,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Run Away",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "664"
   },
   "Sandstorm Scatterbug": {
+    "name": "Sandstorm Scatterbug",
     "id": 664,
     "hp": 38,
     "attack": 35,
@@ -13372,10 +14208,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Run Away",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "664"
   },
   "River Scatterbug": {
+    "name": "River Scatterbug",
     "id": 664,
     "hp": 38,
     "attack": 35,
@@ -13388,10 +14225,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Run Away",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "664"
   },
   "Monsoon Scatterbug": {
+    "name": "Monsoon Scatterbug",
     "id": 664,
     "hp": 38,
     "attack": 35,
@@ -13404,10 +14242,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Run Away",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "664"
   },
   "Savanna Scatterbug": {
+    "name": "Savanna Scatterbug",
     "id": 664,
     "hp": 38,
     "attack": 35,
@@ -13420,10 +14259,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Run Away",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "664"
   },
   "Sun Scatterbug": {
+    "name": "Sun Scatterbug",
     "id": 664,
     "hp": 38,
     "attack": 35,
@@ -13436,10 +14276,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Run Away",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "664"
   },
   "Ocean Scatterbug": {
+    "name": "Ocean Scatterbug",
     "id": 664,
     "hp": 38,
     "attack": 35,
@@ -13452,10 +14293,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Run Away",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "664"
   },
   "Jungle Scatterbug": {
+    "name": "Jungle Scatterbug",
     "id": 664,
     "hp": 38,
     "attack": 35,
@@ -13468,10 +14310,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Run Away",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "664"
   },
   "Fancy Scatterbug": {
+    "name": "Fancy Scatterbug",
     "id": 664,
     "hp": 38,
     "attack": 35,
@@ -13484,10 +14327,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Run Away",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "664"
   },
   "Poke Ball Scatterbug": {
+    "name": "Poke Ball Scatterbug",
     "id": 664,
     "hp": 38,
     "attack": 35,
@@ -13500,10 +14344,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Run Away",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "664"
   },
   "Meadow Spewpa": {
+    "name": "Meadow Spewpa",
     "id": 665,
     "hp": 45,
     "attack": 22,
@@ -13516,10 +14361,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shed Skin, Friend Guard",
     "passive": "Compound Eyes",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "665"
   },
   "Icy Snow Spewpa": {
+    "name": "Icy Snow Spewpa",
     "id": 665,
     "hp": 45,
     "attack": 22,
@@ -13532,10 +14378,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shed Skin, Friend Guard",
     "passive": "Compound Eyes",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "665"
   },
   "Polar Spewpa": {
+    "name": "Polar Spewpa",
     "id": 665,
     "hp": 45,
     "attack": 22,
@@ -13548,10 +14395,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shed Skin, Friend Guard",
     "passive": "Compound Eyes",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "665"
   },
   "Tundra Spewpa": {
+    "name": "Tundra Spewpa",
     "id": 665,
     "hp": 45,
     "attack": 22,
@@ -13564,10 +14412,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shed Skin, Friend Guard",
     "passive": "Compound Eyes",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "665"
   },
   "Continental Spewpa": {
+    "name": "Continental Spewpa",
     "id": 665,
     "hp": 45,
     "attack": 22,
@@ -13580,10 +14429,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shed Skin, Friend Guard",
     "passive": "Compound Eyes",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "665"
   },
   "Garden Spewpa": {
+    "name": "Garden Spewpa",
     "id": 665,
     "hp": 45,
     "attack": 22,
@@ -13596,10 +14446,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shed Skin, Friend Guard",
     "passive": "Compound Eyes",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "665"
   },
   "Elegant Spewpa": {
+    "name": "Elegant Spewpa",
     "id": 665,
     "hp": 45,
     "attack": 22,
@@ -13612,10 +14463,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shed Skin, Friend Guard",
     "passive": "Compound Eyes",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "665"
   },
   "Modern Spewpa": {
+    "name": "Modern Spewpa",
     "id": 665,
     "hp": 45,
     "attack": 22,
@@ -13628,10 +14480,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shed Skin, Friend Guard",
     "passive": "Compound Eyes",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "665"
   },
   "Marine Spewpa": {
+    "name": "Marine Spewpa",
     "id": 665,
     "hp": 45,
     "attack": 22,
@@ -13644,10 +14497,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shed Skin, Friend Guard",
     "passive": "Compound Eyes",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "665"
   },
   "Archipelago Spewpa": {
+    "name": "Archipelago Spewpa",
     "id": 665,
     "hp": 45,
     "attack": 22,
@@ -13660,10 +14514,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shed Skin, Friend Guard",
     "passive": "Compound Eyes",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "665"
   },
   "High Plains Spewpa": {
+    "name": "High Plains Spewpa",
     "id": 665,
     "hp": 45,
     "attack": 22,
@@ -13676,10 +14531,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shed Skin, Friend Guard",
     "passive": "Compound Eyes",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "665"
   },
   "Sandstorm Spewpa": {
+    "name": "Sandstorm Spewpa",
     "id": 665,
     "hp": 45,
     "attack": 22,
@@ -13692,10 +14548,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shed Skin, Friend Guard",
     "passive": "Compound Eyes",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "665"
   },
   "River Spewpa": {
+    "name": "River Spewpa",
     "id": 665,
     "hp": 45,
     "attack": 22,
@@ -13708,10 +14565,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shed Skin, Friend Guard",
     "passive": "Compound Eyes",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "665"
   },
   "Monsoon Spewpa": {
+    "name": "Monsoon Spewpa",
     "id": 665,
     "hp": 45,
     "attack": 22,
@@ -13724,10 +14582,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shed Skin, Friend Guard",
     "passive": "Compound Eyes",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "665"
   },
   "Savanna Spewpa": {
+    "name": "Savanna Spewpa",
     "id": 665,
     "hp": 45,
     "attack": 22,
@@ -13740,10 +14599,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shed Skin, Friend Guard",
     "passive": "Compound Eyes",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "665"
   },
   "Sun Spewpa": {
+    "name": "Sun Spewpa",
     "id": 665,
     "hp": 45,
     "attack": 22,
@@ -13756,10 +14616,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shed Skin, Friend Guard",
     "passive": "Compound Eyes",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "665"
   },
   "Ocean Spewpa": {
+    "name": "Ocean Spewpa",
     "id": 665,
     "hp": 45,
     "attack": 22,
@@ -13772,10 +14633,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shed Skin, Friend Guard",
     "passive": "Compound Eyes",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "665"
   },
   "Jungle Spewpa": {
+    "name": "Jungle Spewpa",
     "id": 665,
     "hp": 45,
     "attack": 22,
@@ -13788,10 +14650,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shed Skin, Friend Guard",
     "passive": "Compound Eyes",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "665"
   },
   "Fancy Spewpa": {
+    "name": "Fancy Spewpa",
     "id": 665,
     "hp": 45,
     "attack": 22,
@@ -13804,10 +14667,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shed Skin, Friend Guard",
     "passive": "Compound Eyes",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "665"
   },
   "Poke Ball Spewpa": {
+    "name": "Poke Ball Spewpa",
     "id": 665,
     "hp": 45,
     "attack": 22,
@@ -13820,10 +14684,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shed Skin, Friend Guard",
     "passive": "Compound Eyes",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "665"
   },
   "Meadow Vivillon": {
+    "name": "Meadow Vivillon",
     "id": 666,
     "hp": 80,
     "attack": 52,
@@ -13836,10 +14701,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Prankster",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "666-meadow"
   },
   "Icy Snow Vivillon": {
+    "name": "Icy Snow Vivillon",
     "id": 666,
     "hp": 80,
     "attack": 52,
@@ -13852,10 +14718,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Prankster",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "666-icy-snow"
   },
   "Polar Vivillon": {
+    "name": "Polar Vivillon",
     "id": 666,
     "hp": 80,
     "attack": 52,
@@ -13868,10 +14735,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Prankster",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "666-polar"
   },
   "Tundra Vivillon": {
+    "name": "Tundra Vivillon",
     "id": 666,
     "hp": 80,
     "attack": 52,
@@ -13884,10 +14752,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Prankster",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "666-tundra"
   },
   "Continental Vivillon": {
+    "name": "Continental Vivillon",
     "id": 666,
     "hp": 80,
     "attack": 52,
@@ -13900,10 +14769,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Prankster",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "666-continental"
   },
   "Garden Vivillon": {
+    "name": "Garden Vivillon",
     "id": 666,
     "hp": 80,
     "attack": 52,
@@ -13916,10 +14786,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Prankster",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "666-garden"
   },
   "Elegant Vivillon": {
+    "name": "Elegant Vivillon",
     "id": 666,
     "hp": 80,
     "attack": 52,
@@ -13932,10 +14803,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Prankster",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "666-elegant"
   },
   "Modern Vivillon": {
+    "name": "Modern Vivillon",
     "id": 666,
     "hp": 80,
     "attack": 52,
@@ -13948,10 +14820,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Prankster",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "666-modern"
   },
   "Marine Vivillon": {
+    "name": "Marine Vivillon",
     "id": 666,
     "hp": 80,
     "attack": 52,
@@ -13964,10 +14837,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Prankster",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "666-marine"
   },
   "Archipelago Vivillon": {
+    "name": "Archipelago Vivillon",
     "id": 666,
     "hp": 80,
     "attack": 52,
@@ -13980,10 +14854,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Prankster",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "666-archipelago"
   },
   "High Plains Vivillon": {
+    "name": "High Plains Vivillon",
     "id": 666,
     "hp": 80,
     "attack": 52,
@@ -13996,10 +14871,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Prankster",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "666-high-plains"
   },
   "Sandstorm Vivillon": {
+    "name": "Sandstorm Vivillon",
     "id": 666,
     "hp": 80,
     "attack": 52,
@@ -14012,10 +14888,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Prankster",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "666-sandstorm"
   },
   "River Vivillon": {
+    "name": "River Vivillon",
     "id": 666,
     "hp": 80,
     "attack": 52,
@@ -14028,10 +14905,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Prankster",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "666-river"
   },
   "Monsoon Vivillon": {
+    "name": "Monsoon Vivillon",
     "id": 666,
     "hp": 80,
     "attack": 52,
@@ -14044,10 +14922,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Prankster",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "666-monsoon"
   },
   "Savanna Vivillon": {
+    "name": "Savanna Vivillon",
     "id": 666,
     "hp": 80,
     "attack": 52,
@@ -14060,10 +14939,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Prankster",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "666-savanna"
   },
   "Sun Vivillon": {
+    "name": "Sun Vivillon",
     "id": 666,
     "hp": 80,
     "attack": 52,
@@ -14076,10 +14956,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Prankster",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "666-sun"
   },
   "Ocean Vivillon": {
+    "name": "Ocean Vivillon",
     "id": 666,
     "hp": 80,
     "attack": 52,
@@ -14092,10 +14973,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Prankster",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "666-ocean"
   },
   "Jungle Vivillon": {
+    "name": "Jungle Vivillon",
     "id": 666,
     "hp": 80,
     "attack": 52,
@@ -14108,10 +14990,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Prankster",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "666-jungle"
   },
   "Fancy Vivillon": {
+    "name": "Fancy Vivillon",
     "id": 666,
     "hp": 80,
     "attack": 52,
@@ -14124,10 +15007,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Prankster",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "666-fancy"
   },
   "Poke Ball Vivillon": {
+    "name": "Poke Ball Vivillon",
     "id": 666,
     "hp": 80,
     "attack": 52,
@@ -14140,10 +15024,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Shield Dust, Compound Eyes, Friend Guard",
     "passive": "Prankster",
-    "evolution": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
+    "evolution line": "Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",
     "img": "666-poke-ball"
   },
   "Litleo": {
+    "name": "Litleo",
     "id": 667,
     "hp": 62,
     "attack": 50,
@@ -14156,10 +15041,11 @@ const POKEMON_DATA = {
     "type2": "Normal",
     "abilities": "Rivalry, Unnerve, Moxie",
     "passive": "Drought",
-    "evolution": "Litleo, Pyroar",
+    "evolution line": "Litleo, Pyroar",
     "img": "667"
   },
   "Pyroar": {
+    "name": "Pyroar",
     "id": 668,
     "hp": 86,
     "attack": 68,
@@ -14172,10 +15058,11 @@ const POKEMON_DATA = {
     "type2": "Normal",
     "abilities": "Rivalry, Unnerve, Moxie",
     "passive": "Drought",
-    "evolution": "Litleo, Pyroar",
+    "evolution line": "Litleo, Pyroar",
     "img": "668"
   },
   "Red Flabebe": {
+    "name": "Red Flabebe",
     "id": 669,
     "hp": 44,
     "attack": 38,
@@ -14188,10 +15075,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Flower Veil, Symbiosis",
     "passive": "Grassy Surge",
-    "evolution": "Red Flabebe, Yellow Flabebe, Orange Flabebe, Blue Flabebe, White Flabebe, Red Floette, Yellow Floette, Orange Floette, Blue Floette, White Floette, Red Florges, Yellow Florges, Orange Florges, Blue Florges, White Florges",
+    "evolution line": "Red Flabebe, Yellow Flabebe, Orange Flabebe, Blue Flabebe, White Flabebe, Red Floette, Yellow Floette, Orange Floette, Blue Floette, White Floette, Red Florges, Yellow Florges, Orange Florges, Blue Florges, White Florges",
     "img": "669-red"
   },
   "Yellow Flabebe": {
+    "name": "Yellow Flabebe",
     "id": 669,
     "hp": 44,
     "attack": 38,
@@ -14204,10 +15092,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Flower Veil, Symbiosis",
     "passive": "Grassy Surge",
-    "evolution": "Red Flabebe, Yellow Flabebe, Orange Flabebe, Blue Flabebe, White Flabebe, Red Floette, Yellow Floette, Orange Floette, Blue Floette, White Floette, Red Florges, Yellow Florges, Orange Florges, Blue Florges, White Florges",
+    "evolution line": "Red Flabebe, Yellow Flabebe, Orange Flabebe, Blue Flabebe, White Flabebe, Red Floette, Yellow Floette, Orange Floette, Blue Floette, White Floette, Red Florges, Yellow Florges, Orange Florges, Blue Florges, White Florges",
     "img": "669-yellow"
   },
   "Orange Flabebe": {
+    "name": "Orange Flabebe",
     "id": 669,
     "hp": 44,
     "attack": 38,
@@ -14220,10 +15109,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Flower Veil, Symbiosis",
     "passive": "Grassy Surge",
-    "evolution": "Red Flabebe, Yellow Flabebe, Orange Flabebe, Blue Flabebe, White Flabebe, Red Floette, Yellow Floette, Orange Floette, Blue Floette, White Floette, Red Florges, Yellow Florges, Orange Florges, Blue Florges, White Florges",
+    "evolution line": "Red Flabebe, Yellow Flabebe, Orange Flabebe, Blue Flabebe, White Flabebe, Red Floette, Yellow Floette, Orange Floette, Blue Floette, White Floette, Red Florges, Yellow Florges, Orange Florges, Blue Florges, White Florges",
     "img": "669-orange"
   },
   "Blue Flabebe": {
+    "name": "Blue Flabebe",
     "id": 669,
     "hp": 44,
     "attack": 38,
@@ -14236,10 +15126,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Flower Veil, Symbiosis",
     "passive": "Grassy Surge",
-    "evolution": "Red Flabebe, Yellow Flabebe, Orange Flabebe, Blue Flabebe, White Flabebe, Red Floette, Yellow Floette, Orange Floette, Blue Floette, White Floette, Red Florges, Yellow Florges, Orange Florges, Blue Florges, White Florges",
+    "evolution line": "Red Flabebe, Yellow Flabebe, Orange Flabebe, Blue Flabebe, White Flabebe, Red Floette, Yellow Floette, Orange Floette, Blue Floette, White Floette, Red Florges, Yellow Florges, Orange Florges, Blue Florges, White Florges",
     "img": "669-blue"
   },
   "White Flabebe": {
+    "name": "White Flabebe",
     "id": 669,
     "hp": 44,
     "attack": 38,
@@ -14252,10 +15143,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Flower Veil, Symbiosis",
     "passive": "Grassy Surge",
-    "evolution": "Red Flabebe, Yellow Flabebe, Orange Flabebe, Blue Flabebe, White Flabebe, Red Floette, Yellow Floette, Orange Floette, Blue Floette, White Floette, Red Florges, Yellow Florges, Orange Florges, Blue Florges, White Florges",
+    "evolution line": "Red Flabebe, Yellow Flabebe, Orange Flabebe, Blue Flabebe, White Flabebe, Red Floette, Yellow Floette, Orange Floette, Blue Floette, White Floette, Red Florges, Yellow Florges, Orange Florges, Blue Florges, White Florges",
     "img": "669-white"
   },
   "Red Floette": {
+    "name": "Red Floette",
     "id": 670,
     "hp": 54,
     "attack": 45,
@@ -14268,10 +15160,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Flower Veil, Symbiosis",
     "passive": "Grassy Surge",
-    "evolution": "Red Flabebe, Yellow Flabebe, Orange Flabebe, Blue Flabebe, White Flabebe, Red Floette, Yellow Floette, Orange Floette, Blue Floette, White Floette, Red Florges, Yellow Florges, Orange Florges, Blue Florges, White Florges",
+    "evolution line": "Red Flabebe, Yellow Flabebe, Orange Flabebe, Blue Flabebe, White Flabebe, Red Floette, Yellow Floette, Orange Floette, Blue Floette, White Floette, Red Florges, Yellow Florges, Orange Florges, Blue Florges, White Florges",
     "img": "670-red"
   },
   "Yellow Floette": {
+    "name": "Yellow Floette",
     "id": 670,
     "hp": 54,
     "attack": 45,
@@ -14284,10 +15177,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Flower Veil, Symbiosis",
     "passive": "Grassy Surge",
-    "evolution": "Red Flabebe, Yellow Flabebe, Orange Flabebe, Blue Flabebe, White Flabebe, Red Floette, Yellow Floette, Orange Floette, Blue Floette, White Floette, Red Florges, Yellow Florges, Orange Florges, Blue Florges, White Florges",
+    "evolution line": "Red Flabebe, Yellow Flabebe, Orange Flabebe, Blue Flabebe, White Flabebe, Red Floette, Yellow Floette, Orange Floette, Blue Floette, White Floette, Red Florges, Yellow Florges, Orange Florges, Blue Florges, White Florges",
     "img": "670-yellow"
   },
   "Orange Floette": {
+    "name": "Orange Floette",
     "id": 670,
     "hp": 54,
     "attack": 45,
@@ -14300,10 +15194,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Flower Veil, Symbiosis",
     "passive": "Grassy Surge",
-    "evolution": "Red Flabebe, Yellow Flabebe, Orange Flabebe, Blue Flabebe, White Flabebe, Red Floette, Yellow Floette, Orange Floette, Blue Floette, White Floette, Red Florges, Yellow Florges, Orange Florges, Blue Florges, White Florges",
+    "evolution line": "Red Flabebe, Yellow Flabebe, Orange Flabebe, Blue Flabebe, White Flabebe, Red Floette, Yellow Floette, Orange Floette, Blue Floette, White Floette, Red Florges, Yellow Florges, Orange Florges, Blue Florges, White Florges",
     "img": "670-orange"
   },
   "Blue Floette": {
+    "name": "Blue Floette",
     "id": 670,
     "hp": 54,
     "attack": 45,
@@ -14316,10 +15211,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Flower Veil, Symbiosis",
     "passive": "Grassy Surge",
-    "evolution": "Red Flabebe, Yellow Flabebe, Orange Flabebe, Blue Flabebe, White Flabebe, Red Floette, Yellow Floette, Orange Floette, Blue Floette, White Floette, Red Florges, Yellow Florges, Orange Florges, Blue Florges, White Florges",
+    "evolution line": "Red Flabebe, Yellow Flabebe, Orange Flabebe, Blue Flabebe, White Flabebe, Red Floette, Yellow Floette, Orange Floette, Blue Floette, White Floette, Red Florges, Yellow Florges, Orange Florges, Blue Florges, White Florges",
     "img": "670-blue"
   },
   "White Floette": {
+    "name": "White Floette",
     "id": 670,
     "hp": 54,
     "attack": 45,
@@ -14332,10 +15228,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Flower Veil, Symbiosis",
     "passive": "Grassy Surge",
-    "evolution": "Red Flabebe, Yellow Flabebe, Orange Flabebe, Blue Flabebe, White Flabebe, Red Floette, Yellow Floette, Orange Floette, Blue Floette, White Floette, Red Florges, Yellow Florges, Orange Florges, Blue Florges, White Florges",
+    "evolution line": "Red Flabebe, Yellow Flabebe, Orange Flabebe, Blue Flabebe, White Flabebe, Red Floette, Yellow Floette, Orange Floette, Blue Floette, White Floette, Red Florges, Yellow Florges, Orange Florges, Blue Florges, White Florges",
     "img": "670-white"
   },
   "Red Florges": {
+    "name": "Red Florges",
     "id": 671,
     "hp": 78,
     "attack": 65,
@@ -14348,10 +15245,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Flower Veil, Symbiosis",
     "passive": "Grassy Surge",
-    "evolution": "Red Flabebe, Yellow Flabebe, Orange Flabebe, Blue Flabebe, White Flabebe, Red Floette, Yellow Floette, Orange Floette, Blue Floette, White Floette, Red Florges, Yellow Florges, Orange Florges, Blue Florges, White Florges",
+    "evolution line": "Red Flabebe, Yellow Flabebe, Orange Flabebe, Blue Flabebe, White Flabebe, Red Floette, Yellow Floette, Orange Floette, Blue Floette, White Floette, Red Florges, Yellow Florges, Orange Florges, Blue Florges, White Florges",
     "img": "671-red"
   },
   "Yellow Florges": {
+    "name": "Yellow Florges",
     "id": 671,
     "hp": 78,
     "attack": 65,
@@ -14364,10 +15262,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Flower Veil, Symbiosis",
     "passive": "Grassy Surge",
-    "evolution": "Red Flabebe, Yellow Flabebe, Orange Flabebe, Blue Flabebe, White Flabebe, Red Floette, Yellow Floette, Orange Floette, Blue Floette, White Floette, Red Florges, Yellow Florges, Orange Florges, Blue Florges, White Florges",
+    "evolution line": "Red Flabebe, Yellow Flabebe, Orange Flabebe, Blue Flabebe, White Flabebe, Red Floette, Yellow Floette, Orange Floette, Blue Floette, White Floette, Red Florges, Yellow Florges, Orange Florges, Blue Florges, White Florges",
     "img": "671-yellow"
   },
   "Orange Florges": {
+    "name": "Orange Florges",
     "id": 671,
     "hp": 78,
     "attack": 65,
@@ -14380,10 +15279,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Flower Veil, Symbiosis",
     "passive": "Grassy Surge",
-    "evolution": "Red Flabebe, Yellow Flabebe, Orange Flabebe, Blue Flabebe, White Flabebe, Red Floette, Yellow Floette, Orange Floette, Blue Floette, White Floette, Red Florges, Yellow Florges, Orange Florges, Blue Florges, White Florges",
+    "evolution line": "Red Flabebe, Yellow Flabebe, Orange Flabebe, Blue Flabebe, White Flabebe, Red Floette, Yellow Floette, Orange Floette, Blue Floette, White Floette, Red Florges, Yellow Florges, Orange Florges, Blue Florges, White Florges",
     "img": "671-orange"
   },
   "Blue Florges": {
+    "name": "Blue Florges",
     "id": 671,
     "hp": 78,
     "attack": 65,
@@ -14396,10 +15296,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Flower Veil, Symbiosis",
     "passive": "Grassy Surge",
-    "evolution": "Red Flabebe, Yellow Flabebe, Orange Flabebe, Blue Flabebe, White Flabebe, Red Floette, Yellow Floette, Orange Floette, Blue Floette, White Floette, Red Florges, Yellow Florges, Orange Florges, Blue Florges, White Florges",
+    "evolution line": "Red Flabebe, Yellow Flabebe, Orange Flabebe, Blue Flabebe, White Flabebe, Red Floette, Yellow Floette, Orange Floette, Blue Floette, White Floette, Red Florges, Yellow Florges, Orange Florges, Blue Florges, White Florges",
     "img": "671-blue"
   },
   "White Florges": {
+    "name": "White Florges",
     "id": 671,
     "hp": 78,
     "attack": 65,
@@ -14412,10 +15313,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Flower Veil, Symbiosis",
     "passive": "Grassy Surge",
-    "evolution": "Red Flabebe, Yellow Flabebe, Orange Flabebe, Blue Flabebe, White Flabebe, Red Floette, Yellow Floette, Orange Floette, Blue Floette, White Floette, Red Florges, Yellow Florges, Orange Florges, Blue Florges, White Florges",
+    "evolution line": "Red Flabebe, Yellow Flabebe, Orange Flabebe, Blue Flabebe, White Flabebe, Red Floette, Yellow Floette, Orange Floette, Blue Floette, White Floette, Red Florges, Yellow Florges, Orange Florges, Blue Florges, White Florges",
     "img": "671-white"
   },
   "Skiddo": {
+    "name": "Skiddo",
     "id": 672,
     "hp": 66,
     "attack": 65,
@@ -14428,10 +15330,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sap Sipper, Grass Pelt",
     "passive": "Seed Sower",
-    "evolution": "Skiddo, Gogoat",
+    "evolution line": "Skiddo, Gogoat",
     "img": "672"
   },
   "Gogoat": {
+    "name": "Gogoat",
     "id": 673,
     "hp": 123,
     "attack": 100,
@@ -14444,10 +15347,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sap Sipper, Grass Pelt",
     "passive": "Seed Sower",
-    "evolution": "Skiddo, Gogoat",
+    "evolution line": "Skiddo, Gogoat",
     "img": "673"
   },
   "Pancham": {
+    "name": "Pancham",
     "id": 674,
     "hp": 67,
     "attack": 82,
@@ -14460,10 +15364,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Iron Fist, Mold Breaker, Scrappy",
     "passive": "Technician",
-    "evolution": "Pancham, Pangoro",
+    "evolution line": "Pancham, Pangoro",
     "img": "674"
   },
   "Pangoro": {
+    "name": "Pangoro",
     "id": 675,
     "hp": 95,
     "attack": 124,
@@ -14476,10 +15381,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Iron Fist, Mold Breaker, Scrappy",
     "passive": "Fur Coat",
-    "evolution": "Pancham, Pangoro",
+    "evolution line": "Pancham, Pangoro",
     "img": "675"
   },
   "Furfrou": {
+    "name": "Furfrou",
     "id": 676,
     "hp": 75,
     "attack": 80,
@@ -14492,10 +15398,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Fur Coat",
     "passive": "Fluffy",
-    "evolution": "Furfrou, Heart Furfrou, Star Furfrou, Diamond Furfrou, Debutante Furfrou, Matron Furfrou, Dandy Furfrou, La Reine Furfrou, Kabuki Furfrou, Pharaoh Furfrou",
+    "evolution line": "Furfrou, Heart Furfrou, Star Furfrou, Diamond Furfrou, Debutante Furfrou, Matron Furfrou, Dandy Furfrou, La Reine Furfrou, Kabuki Furfrou, Pharaoh Furfrou",
     "img": "676"
   },
   "Heart Furfrou": {
+    "name": "Heart Furfrou",
     "id": 676,
     "hp": 75,
     "attack": 80,
@@ -14508,10 +15415,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Fur Coat",
     "passive": "Fluffy",
-    "evolution": "Furfrou, Heart Furfrou, Star Furfrou, Diamond Furfrou, Debutante Furfrou, Matron Furfrou, Dandy Furfrou, La Reine Furfrou, Kabuki Furfrou, Pharaoh Furfrou",
+    "evolution line": "Furfrou, Heart Furfrou, Star Furfrou, Diamond Furfrou, Debutante Furfrou, Matron Furfrou, Dandy Furfrou, La Reine Furfrou, Kabuki Furfrou, Pharaoh Furfrou",
     "img": "676-heart"
   },
   "Star Furfrou": {
+    "name": "Star Furfrou",
     "id": 676,
     "hp": 75,
     "attack": 80,
@@ -14524,10 +15432,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Fur Coat",
     "passive": "Fluffy",
-    "evolution": "Furfrou, Heart Furfrou, Star Furfrou, Diamond Furfrou, Debutante Furfrou, Matron Furfrou, Dandy Furfrou, La Reine Furfrou, Kabuki Furfrou, Pharaoh Furfrou",
+    "evolution line": "Furfrou, Heart Furfrou, Star Furfrou, Diamond Furfrou, Debutante Furfrou, Matron Furfrou, Dandy Furfrou, La Reine Furfrou, Kabuki Furfrou, Pharaoh Furfrou",
     "img": "676-star"
   },
   "Diamond Furfrou": {
+    "name": "Diamond Furfrou",
     "id": 676,
     "hp": 75,
     "attack": 80,
@@ -14540,10 +15449,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Fur Coat",
     "passive": "Fluffy",
-    "evolution": "Furfrou, Heart Furfrou, Star Furfrou, Diamond Furfrou, Debutante Furfrou, Matron Furfrou, Dandy Furfrou, La Reine Furfrou, Kabuki Furfrou, Pharaoh Furfrou",
+    "evolution line": "Furfrou, Heart Furfrou, Star Furfrou, Diamond Furfrou, Debutante Furfrou, Matron Furfrou, Dandy Furfrou, La Reine Furfrou, Kabuki Furfrou, Pharaoh Furfrou",
     "img": "676-diamond"
   },
   "Debutante Furfrou": {
+    "name": "Debutante Furfrou",
     "id": 676,
     "hp": 75,
     "attack": 80,
@@ -14556,10 +15466,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Fur Coat",
     "passive": "Fluffy",
-    "evolution": "Furfrou, Heart Furfrou, Star Furfrou, Diamond Furfrou, Debutante Furfrou, Matron Furfrou, Dandy Furfrou, La Reine Furfrou, Kabuki Furfrou, Pharaoh Furfrou",
+    "evolution line": "Furfrou, Heart Furfrou, Star Furfrou, Diamond Furfrou, Debutante Furfrou, Matron Furfrou, Dandy Furfrou, La Reine Furfrou, Kabuki Furfrou, Pharaoh Furfrou",
     "img": "676-debutante"
   },
   "Matron Furfrou": {
+    "name": "Matron Furfrou",
     "id": 676,
     "hp": 75,
     "attack": 80,
@@ -14572,10 +15483,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Fur Coat",
     "passive": "Fluffy",
-    "evolution": "Furfrou, Heart Furfrou, Star Furfrou, Diamond Furfrou, Debutante Furfrou, Matron Furfrou, Dandy Furfrou, La Reine Furfrou, Kabuki Furfrou, Pharaoh Furfrou",
+    "evolution line": "Furfrou, Heart Furfrou, Star Furfrou, Diamond Furfrou, Debutante Furfrou, Matron Furfrou, Dandy Furfrou, La Reine Furfrou, Kabuki Furfrou, Pharaoh Furfrou",
     "img": "676-matron"
   },
   "Dandy Furfrou": {
+    "name": "Dandy Furfrou",
     "id": 676,
     "hp": 75,
     "attack": 80,
@@ -14588,10 +15500,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Fur Coat",
     "passive": "Fluffy",
-    "evolution": "Furfrou, Heart Furfrou, Star Furfrou, Diamond Furfrou, Debutante Furfrou, Matron Furfrou, Dandy Furfrou, La Reine Furfrou, Kabuki Furfrou, Pharaoh Furfrou",
+    "evolution line": "Furfrou, Heart Furfrou, Star Furfrou, Diamond Furfrou, Debutante Furfrou, Matron Furfrou, Dandy Furfrou, La Reine Furfrou, Kabuki Furfrou, Pharaoh Furfrou",
     "img": "676-dandy"
   },
   "La Reine Furfrou": {
+    "name": "La Reine Furfrou",
     "id": 676,
     "hp": 75,
     "attack": 80,
@@ -14604,10 +15517,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Fur Coat",
     "passive": "Fluffy",
-    "evolution": "Furfrou, Heart Furfrou, Star Furfrou, Diamond Furfrou, Debutante Furfrou, Matron Furfrou, Dandy Furfrou, La Reine Furfrou, Kabuki Furfrou, Pharaoh Furfrou",
+    "evolution line": "Furfrou, Heart Furfrou, Star Furfrou, Diamond Furfrou, Debutante Furfrou, Matron Furfrou, Dandy Furfrou, La Reine Furfrou, Kabuki Furfrou, Pharaoh Furfrou",
     "img": "676-la-reine"
   },
   "Kabuki Furfrou": {
+    "name": "Kabuki Furfrou",
     "id": 676,
     "hp": 75,
     "attack": 80,
@@ -14620,10 +15534,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Fur Coat",
     "passive": "Fluffy",
-    "evolution": "Furfrou, Heart Furfrou, Star Furfrou, Diamond Furfrou, Debutante Furfrou, Matron Furfrou, Dandy Furfrou, La Reine Furfrou, Kabuki Furfrou, Pharaoh Furfrou",
+    "evolution line": "Furfrou, Heart Furfrou, Star Furfrou, Diamond Furfrou, Debutante Furfrou, Matron Furfrou, Dandy Furfrou, La Reine Furfrou, Kabuki Furfrou, Pharaoh Furfrou",
     "img": "676-kabuki"
   },
   "Pharaoh Furfrou": {
+    "name": "Pharaoh Furfrou",
     "id": 676,
     "hp": 75,
     "attack": 80,
@@ -14636,10 +15551,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Fur Coat",
     "passive": "Fluffy",
-    "evolution": "Furfrou, Heart Furfrou, Star Furfrou, Diamond Furfrou, Debutante Furfrou, Matron Furfrou, Dandy Furfrou, La Reine Furfrou, Kabuki Furfrou, Pharaoh Furfrou",
+    "evolution line": "Furfrou, Heart Furfrou, Star Furfrou, Diamond Furfrou, Debutante Furfrou, Matron Furfrou, Dandy Furfrou, La Reine Furfrou, Kabuki Furfrou, Pharaoh Furfrou",
     "img": "676-pharaoh"
   },
   "Espurr": {
+    "name": "Espurr",
     "id": 677,
     "hp": 62,
     "attack": 48,
@@ -14652,10 +15568,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Keen Eye, Infiltrator, Own Tempo",
     "passive": "Prankster",
-    "evolution": "Espurr, Male Meowstic, Female Meowstic",
+    "evolution line": "Espurr, Male Meowstic, Female Meowstic",
     "img": "677"
   },
   "Male Meowstic": {
+    "name": "Male Meowstic",
     "id": 678,
     "hp": 74,
     "attack": 48,
@@ -14668,10 +15585,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Keen Eye, Infiltrator, Prankster",
     "passive": "Fur Coat",
-    "evolution": "Espurr, Male Meowstic, Female Meowstic",
+    "evolution line": "Espurr, Male Meowstic, Female Meowstic",
     "img": "678"
   },
   "Female Meowstic": {
+    "name": "Female Meowstic",
     "id": 678,
     "hp": 74,
     "attack": 48,
@@ -14684,10 +15602,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Keen Eye, Infiltrator, Competitive",
     "passive": "Neuroforce",
-    "evolution": "Espurr, Male Meowstic, Female Meowstic",
+    "evolution line": "Espurr, Male Meowstic, Female Meowstic",
     "img": "678-female"
   },
   "Honedge": {
+    "name": "Honedge",
     "id": 679,
     "hp": 45,
     "attack": 80,
@@ -14700,10 +15619,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "No Guard",
     "passive": "Sharpness",
-    "evolution": "Honedge, Doublade, Shield Aegislash, Blade Aegislash",
+    "evolution line": "Honedge, Doublade, Shield Aegislash, Blade Aegislash",
     "img": "679"
   },
   "Doublade": {
+    "name": "Doublade",
     "id": 680,
     "hp": 59,
     "attack": 110,
@@ -14716,10 +15636,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "No Guard",
     "passive": "Sharpness",
-    "evolution": "Honedge, Doublade, Shield Aegislash, Blade Aegislash",
+    "evolution line": "Honedge, Doublade, Shield Aegislash, Blade Aegislash",
     "img": "680"
   },
   "Shield Aegislash": {
+    "name": "Shield Aegislash",
     "id": 681,
     "hp": 60,
     "attack": 50,
@@ -14732,10 +15653,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Stance Change",
     "passive": "Sharpness",
-    "evolution": "Honedge, Doublade, Shield Aegislash, Blade Aegislash",
+    "evolution line": "Honedge, Doublade, Shield Aegislash, Blade Aegislash",
     "img": "681"
   },
   "Blade Aegislash": {
+    "name": "Blade Aegislash",
     "id": 681,
     "hp": 60,
     "attack": 140,
@@ -14748,10 +15670,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Stance Change",
     "passive": "Sharpness",
-    "evolution": "Honedge, Doublade, Shield Aegislash, Blade Aegislash",
+    "evolution line": "Honedge, Doublade, Shield Aegislash, Blade Aegislash",
     "img": "681-blade"
   },
   "Spritzee": {
+    "name": "Spritzee",
     "id": 682,
     "hp": 78,
     "attack": 52,
@@ -14764,10 +15687,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Healer, Aroma Veil",
     "passive": "Fur Coat",
-    "evolution": "Spritzee, Aromatisse",
+    "evolution line": "Spritzee, Aromatisse",
     "img": "682"
   },
   "Aromatisse": {
+    "name": "Aromatisse",
     "id": 683,
     "hp": 101,
     "attack": 72,
@@ -14780,10 +15704,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Healer, Aroma Veil",
     "passive": "Fur Coat",
-    "evolution": "Spritzee, Aromatisse",
+    "evolution line": "Spritzee, Aromatisse",
     "img": "683"
   },
   "Swirlix": {
+    "name": "Swirlix",
     "id": 684,
     "hp": 62,
     "attack": 48,
@@ -14796,10 +15721,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sweet Veil, Unburden",
     "passive": "Ripen",
-    "evolution": "Swirlix, Slurpuff",
+    "evolution line": "Swirlix, Slurpuff",
     "img": "684"
   },
   "Slurpuff": {
+    "name": "Slurpuff",
     "id": 685,
     "hp": 82,
     "attack": 80,
@@ -14812,10 +15738,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sweet Veil, Unburden",
     "passive": "Ripen",
-    "evolution": "Swirlix, Slurpuff",
+    "evolution line": "Swirlix, Slurpuff",
     "img": "685"
   },
   "Inkay": {
+    "name": "Inkay",
     "id": 686,
     "hp": 53,
     "attack": 54,
@@ -14828,10 +15755,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Contrary, Suction Cups, Infiltrator",
     "passive": "Shadow Shield",
-    "evolution": "Inkay, Malamar",
+    "evolution line": "Inkay, Malamar",
     "img": "686"
   },
   "Malamar": {
+    "name": "Malamar",
     "id": 687,
     "hp": 86,
     "attack": 92,
@@ -14844,10 +15772,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Contrary, Suction Cups, Infiltrator",
     "passive": "Shadow Shield",
-    "evolution": "Inkay, Malamar",
+    "evolution line": "Inkay, Malamar",
     "img": "687"
   },
   "Binacle": {
+    "name": "Binacle",
     "id": 688,
     "hp": 42,
     "attack": 52,
@@ -14860,10 +15789,11 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Tough Claws, Sniper, Pickpocket",
     "passive": "Sap Sipper",
-    "evolution": "Binacle, Barbaracle",
+    "evolution line": "Binacle, Barbaracle",
     "img": "688"
   },
   "Barbaracle": {
+    "name": "Barbaracle",
     "id": 689,
     "hp": 72,
     "attack": 105,
@@ -14876,10 +15806,11 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Tough Claws, Sniper, Pickpocket",
     "passive": "Sap Sipper",
-    "evolution": "Binacle, Barbaracle",
+    "evolution line": "Binacle, Barbaracle",
     "img": "689"
   },
   "Skrelp": {
+    "name": "Skrelp",
     "id": 690,
     "hp": 50,
     "attack": 60,
@@ -14892,10 +15823,11 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Poison Point, Poison Touch, Adaptability",
     "passive": "Water Bubble",
-    "evolution": "Skrelp, Dragalge",
+    "evolution line": "Skrelp, Dragalge",
     "img": "690"
   },
   "Dragalge": {
+    "name": "Dragalge",
     "id": 691,
     "hp": 65,
     "attack": 75,
@@ -14908,10 +15840,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Poison Point, Poison Touch, Adaptability",
     "passive": "Regenerator",
-    "evolution": "Skrelp, Dragalge",
+    "evolution line": "Skrelp, Dragalge",
     "img": "691"
   },
   "Clauncher": {
+    "name": "Clauncher",
     "id": 692,
     "hp": 50,
     "attack": 53,
@@ -14924,10 +15857,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Mega Launcher",
     "passive": "Protean",
-    "evolution": "Clauncher, Clawitzer",
+    "evolution line": "Clauncher, Clawitzer",
     "img": "692"
   },
   "Clawitzer": {
+    "name": "Clawitzer",
     "id": 693,
     "hp": 71,
     "attack": 73,
@@ -14940,10 +15874,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Mega Launcher",
     "passive": "Protean",
-    "evolution": "Clauncher, Clawitzer",
+    "evolution line": "Clauncher, Clawitzer",
     "img": "693"
   },
   "Helioptile": {
+    "name": "Helioptile",
     "id": 694,
     "hp": 44,
     "attack": 38,
@@ -14956,10 +15891,11 @@ const POKEMON_DATA = {
     "type2": "Normal",
     "abilities": "Dry Skin, Sand Veil, Solar Power",
     "passive": "Protean",
-    "evolution": "Helioptile, Heliolisk",
+    "evolution line": "Helioptile, Heliolisk",
     "img": "694"
   },
   "Heliolisk": {
+    "name": "Heliolisk",
     "id": 695,
     "hp": 62,
     "attack": 55,
@@ -14972,10 +15908,11 @@ const POKEMON_DATA = {
     "type2": "Normal",
     "abilities": "Dry Skin, Sand Veil, Solar Power",
     "passive": "Protean",
-    "evolution": "Helioptile, Heliolisk",
+    "evolution line": "Helioptile, Heliolisk",
     "img": "695"
   },
   "Tyrunt": {
+    "name": "Tyrunt",
     "id": 696,
     "hp": 58,
     "attack": 89,
@@ -14988,10 +15925,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Strong Jaw, Sturdy",
     "passive": "Sheer Force",
-    "evolution": "Tyrunt, Tyrantrum",
+    "evolution line": "Tyrunt, Tyrantrum",
     "img": "696"
   },
   "Tyrantrum": {
+    "name": "Tyrantrum",
     "id": 697,
     "hp": 82,
     "attack": 121,
@@ -15004,10 +15942,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Strong Jaw, Rock Head",
     "passive": "Sheer Force",
-    "evolution": "Tyrunt, Tyrantrum",
+    "evolution line": "Tyrunt, Tyrantrum",
     "img": "697"
   },
   "Amaura": {
+    "name": "Amaura",
     "id": 698,
     "hp": 77,
     "attack": 59,
@@ -15020,10 +15959,11 @@ const POKEMON_DATA = {
     "type2": "Ice",
     "abilities": "Refrigerate, Snow Warning",
     "passive": "Ice Scales",
-    "evolution": "Amaura, Aurorus",
+    "evolution line": "Amaura, Aurorus",
     "img": "698"
   },
   "Aurorus": {
+    "name": "Aurorus",
     "id": 699,
     "hp": 123,
     "attack": 77,
@@ -15036,10 +15976,11 @@ const POKEMON_DATA = {
     "type2": "Ice",
     "abilities": "Refrigerate, Snow Warning",
     "passive": "Ice Scales",
-    "evolution": "Amaura, Aurorus",
+    "evolution line": "Amaura, Aurorus",
     "img": "699"
   },
   "Sylveon": {
+    "name": "Sylveon",
     "id": 700,
     "hp": 95,
     "attack": 65,
@@ -15052,10 +15993,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Cute Charm, Pixilate",
     "passive": "Competitive",
-    "evolution": "Eevee, Partner Eevee, Gigantamax Eevee, Vaporeon, Jolteon, Flareon, Espeon, Umbreon, Leafeon, Glaceon, Sylveon",
+    "evolution line": "Eevee, Partner Eevee, Gigantamax Eevee, Vaporeon, Jolteon, Flareon, Espeon, Umbreon, Leafeon, Glaceon, Sylveon",
     "img": "700"
   },
   "Hawlucha": {
+    "name": "Hawlucha",
     "id": 701,
     "hp": 78,
     "attack": 92,
@@ -15068,10 +16010,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Limber, Unburden, Mold Breaker",
     "passive": "Moxie",
-    "evolution": "Hawlucha",
+    "evolution line": "Hawlucha",
     "img": "701"
   },
   "Dedenne": {
+    "name": "Dedenne",
     "id": 702,
     "hp": 67,
     "attack": 58,
@@ -15084,10 +16027,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Cheek Pouch, Pickup, Plus",
     "passive": "Pixilate",
-    "evolution": "Dedenne",
+    "evolution line": "Dedenne",
     "img": "702"
   },
   "Carbink": {
+    "name": "Carbink",
     "id": 703,
     "hp": 50,
     "attack": 50,
@@ -15100,10 +16044,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Clear Body, Sturdy",
     "passive": "Solid Rock",
-    "evolution": "Carbink",
+    "evolution line": "Carbink",
     "img": "703"
   },
   "Goomy": {
+    "name": "Goomy",
     "id": 704,
     "hp": 45,
     "attack": 50,
@@ -15116,10 +16061,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sap Sipper, Hydration, Gooey",
     "passive": "Regenerator",
-    "evolution": "Goomy, Sliggoo, Goodra, Hisui Sliggoo, Hisui Goodra",
+    "evolution line": "Goomy, Sliggoo, Goodra, Hisui Sliggoo, Hisui Goodra",
     "img": "704"
   },
   "Sliggoo": {
+    "name": "Sliggoo",
     "id": 705,
     "hp": 68,
     "attack": 75,
@@ -15132,10 +16078,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sap Sipper, Hydration, Gooey",
     "passive": "Poison Heal",
-    "evolution": "Goomy, Sliggoo, Goodra, Hisui Sliggoo, Hisui Goodra",
+    "evolution line": "Goomy, Sliggoo, Goodra, Hisui Sliggoo, Hisui Goodra",
     "img": "705"
   },
   "Goodra": {
+    "name": "Goodra",
     "id": 706,
     "hp": 90,
     "attack": 100,
@@ -15148,10 +16095,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sap Sipper, Hydration, Gooey",
     "passive": "Poison Heal",
-    "evolution": "Goomy, Sliggoo, Goodra, Hisui Sliggoo, Hisui Goodra",
+    "evolution line": "Goomy, Sliggoo, Goodra, Hisui Sliggoo, Hisui Goodra",
     "img": "706"
   },
   "Klefki": {
+    "name": "Klefki",
     "id": 707,
     "hp": 57,
     "attack": 80,
@@ -15164,10 +16112,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Prankster, Magician",
     "passive": "Levitate",
-    "evolution": "Klefki",
+    "evolution line": "Klefki",
     "img": "707"
   },
   "Phantump": {
+    "name": "Phantump",
     "id": 708,
     "hp": 43,
     "attack": 70,
@@ -15180,10 +16129,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Natural Cure, Frisk, Harvest",
     "passive": "Shadow Tag",
-    "evolution": "Phantump, Trevenant",
+    "evolution line": "Phantump, Trevenant",
     "img": "708"
   },
   "Trevenant": {
+    "name": "Trevenant",
     "id": 709,
     "hp": 85,
     "attack": 110,
@@ -15196,10 +16146,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Natural Cure, Frisk, Harvest",
     "passive": "Shadow Tag",
-    "evolution": "Phantump, Trevenant",
+    "evolution line": "Phantump, Trevenant",
     "img": "709"
   },
   "Pumpkaboo": {
+    "name": "Pumpkaboo",
     "id": 710,
     "hp": 49,
     "attack": 66,
@@ -15212,10 +16163,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Pickup, Frisk, Insomnia",
     "passive": "Illuminate",
-    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",
+    "evolution line": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",
     "img": "710"
   },
   "Small Pumpkaboo": {
+    "name": "Small Pumpkaboo",
     "id": 710,
     "hp": 44,
     "attack": 66,
@@ -15228,10 +16180,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Pickup, Frisk, Insomnia",
     "passive": "Adaptability",
-    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",
+    "evolution line": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",
     "img": "710"
   },
   "Large Pumpkaboo": {
+    "name": "Large Pumpkaboo",
     "id": 710,
     "hp": 54,
     "attack": 66,
@@ -15244,10 +16197,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Pickup, Frisk, Insomnia",
     "passive": "Well Baked Body",
-    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",
+    "evolution line": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",
     "img": "710"
   },
   "Super Pumpkaboo": {
+    "name": "Super Pumpkaboo",
     "id": 710,
     "hp": 59,
     "attack": 66,
@@ -15260,10 +16214,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Pickup, Frisk, Insomnia",
     "passive": "Seed Sower",
-    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",
+    "evolution line": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",
     "img": "710"
   },
   "Gourgeist": {
+    "name": "Gourgeist",
     "id": 711,
     "hp": 65,
     "attack": 90,
@@ -15276,10 +16231,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Pickup, Frisk, Insomnia",
     "passive": "Illuminate",
-    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",
+    "evolution line": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",
     "img": "711"
   },
   "Small Gourgeist": {
+    "name": "Small Gourgeist",
     "id": 711,
     "hp": 55,
     "attack": 85,
@@ -15292,10 +16248,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Pickup, Frisk, Insomnia",
     "passive": "Adaptability",
-    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",
+    "evolution line": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",
     "img": "711"
   },
   "Large Gourgeist": {
+    "name": "Large Gourgeist",
     "id": 711,
     "hp": 75,
     "attack": 95,
@@ -15308,10 +16265,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Pickup, Frisk, Insomnia",
     "passive": "Well Baked Body",
-    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",
+    "evolution line": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",
     "img": "711"
   },
   "Super Gourgeist": {
+    "name": "Super Gourgeist",
     "id": 711,
     "hp": 85,
     "attack": 100,
@@ -15324,10 +16282,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Pickup, Frisk, Insomnia",
     "passive": "Seed Sower",
-    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",
+    "evolution line": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",
     "img": "711"
   },
   "Bergmite": {
+    "name": "Bergmite",
     "id": 712,
     "hp": 55,
     "attack": 69,
@@ -15340,10 +16299,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Own Tempo, Ice Body, Sturdy",
     "passive": "Ice Scales",
-    "evolution": "Bergmite, Avalugg, Hisui Avalugg",
+    "evolution line": "Bergmite, Avalugg, Hisui Avalugg",
     "img": "712"
   },
   "Avalugg": {
+    "name": "Avalugg",
     "id": 713,
     "hp": 95,
     "attack": 117,
@@ -15356,10 +16316,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Own Tempo, Ice Body, Sturdy",
     "passive": "Ice Scales",
-    "evolution": "Bergmite, Avalugg, Hisui Avalugg",
+    "evolution line": "Bergmite, Avalugg, Hisui Avalugg",
     "img": "713"
   },
   "Noibat": {
+    "name": "Noibat",
     "id": 714,
     "hp": 40,
     "attack": 30,
@@ -15372,10 +16333,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Frisk, Infiltrator, Telepathy",
     "passive": "Cheek Pouch",
-    "evolution": "Noibat, Noivern",
+    "evolution line": "Noibat, Noivern",
     "img": "714"
   },
   "Noivern": {
+    "name": "Noivern",
     "id": 715,
     "hp": 85,
     "attack": 70,
@@ -15388,10 +16350,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Frisk, Infiltrator, Telepathy",
     "passive": "Punk Rock",
-    "evolution": "Noibat, Noivern",
+    "evolution line": "Noibat, Noivern",
     "img": "715"
   },
   "Neutral Xerneas": {
+    "name": "Neutral Xerneas",
     "id": 716,
     "hp": 126,
     "attack": 131,
@@ -15404,10 +16367,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Fairy Aura",
     "passive": "Harvest",
-    "evolution": "Neutral Xerneas, Active Xerneas",
+    "evolution line": "Neutral Xerneas, Active Xerneas",
     "img": "716-neutral"
   },
   "Active Xerneas": {
+    "name": "Active Xerneas",
     "id": 716,
     "hp": 126,
     "attack": 131,
@@ -15420,10 +16384,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Fairy Aura",
     "passive": "Harvest",
-    "evolution": "Neutral Xerneas, Active Xerneas",
+    "evolution line": "Neutral Xerneas, Active Xerneas",
     "img": "716-active"
   },
   "Yveltal": {
+    "name": "Yveltal",
     "id": 717,
     "hp": 126,
     "attack": 131,
@@ -15436,10 +16401,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Dark Aura",
     "passive": "Soul Heart",
-    "evolution": "Yveltal",
+    "evolution line": "Yveltal",
     "img": "717"
   },
   "50% Zygarde": {
+    "name": "50% Zygarde",
     "id": 718,
     "hp": 108,
     "attack": 100,
@@ -15452,10 +16418,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Aura Break",
     "passive": "Teraform Zero",
-    "evolution": "50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde",
+    "evolution line": "50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde",
     "img": "718"
   },
   "10% Zygarde": {
+    "name": "10% Zygarde",
     "id": 718,
     "hp": 54,
     "attack": 100,
@@ -15468,10 +16435,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Aura Break",
     "passive": "Teraform Zero",
-    "evolution": "50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde",
+    "evolution line": "50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde",
     "img": "718-10"
   },
   "Power Construct 50% Zygarde": {
+    "name": "Power Construct 50% Zygarde",
     "id": 718,
     "hp": 108,
     "attack": 100,
@@ -15484,10 +16452,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Power Construct",
     "passive": "Teraform Zero",
-    "evolution": "50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde",
+    "evolution line": "50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde",
     "img": "718"
   },
   "Power Construct 10% Zygarde": {
+    "name": "Power Construct 10% Zygarde",
     "id": 718,
     "hp": 54,
     "attack": 100,
@@ -15500,10 +16469,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Power Construct",
     "passive": "Teraform Zero",
-    "evolution": "50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde",
+    "evolution line": "50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde",
     "img": "718-10"
   },
   "Complete Zygarde": {
+    "name": "Complete Zygarde",
     "id": 718,
     "hp": 216,
     "attack": 100,
@@ -15516,10 +16486,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Power Construct",
     "passive": "Teraform Zero",
-    "evolution": "50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde",
+    "evolution line": "50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde",
     "img": "718-complete"
   },
   "Diancie": {
+    "name": "Diancie",
     "id": 719,
     "hp": 50,
     "attack": 100,
@@ -15532,10 +16503,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Clear Body",
     "passive": "Solid Rock",
-    "evolution": "Diancie, Mega Diancie",
+    "evolution line": "Diancie, Mega Diancie",
     "img": "719"
   },
   "Mega Diancie": {
+    "name": "Mega Diancie",
     "id": 719,
     "hp": 50,
     "attack": 160,
@@ -15548,10 +16520,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Magic Bounce",
     "passive": "Prism Armor",
-    "evolution": "Diancie, Mega Diancie",
+    "evolution line": "Diancie, Mega Diancie",
     "img": "719-mega"
   },
   "Hoopa": {
+    "name": "Hoopa",
     "id": 720,
     "hp": 80,
     "attack": 110,
@@ -15564,10 +16537,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Magician",
     "passive": "Opportunist",
-    "evolution": "Hoopa, Unbound Hoopa",
+    "evolution line": "Hoopa, Unbound Hoopa",
     "img": "720"
   },
   "Unbound Hoopa": {
+    "name": "Unbound Hoopa",
     "id": 720,
     "hp": 80,
     "attack": 160,
@@ -15580,10 +16554,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Magician",
     "passive": "Opportunist",
-    "evolution": "Hoopa, Unbound Hoopa",
+    "evolution line": "Hoopa, Unbound Hoopa",
     "img": "720-unbound"
   },
   "Volcanion": {
+    "name": "Volcanion",
     "id": 721,
     "hp": 80,
     "attack": 110,
@@ -15596,10 +16571,11 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Water Absorb",
     "passive": "Neutralizing Gas",
-    "evolution": "Volcanion",
+    "evolution line": "Volcanion",
     "img": "721"
   },
   "Rowlet": {
+    "name": "Rowlet",
     "id": 722,
     "hp": 68,
     "attack": 55,
@@ -15612,10 +16588,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Overgrow, Long Reach",
     "passive": "Wind Rider",
-    "evolution": "Rowlet, Dartrix, Decidueye, Hisui Decidueye",
+    "evolution line": "Rowlet, Dartrix, Decidueye, Hisui Decidueye",
     "img": "722"
   },
   "Dartrix": {
+    "name": "Dartrix",
     "id": 723,
     "hp": 78,
     "attack": 75,
@@ -15628,10 +16605,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Overgrow, Long Reach",
     "passive": "Wind Rider",
-    "evolution": "Rowlet, Dartrix, Decidueye, Hisui Decidueye",
+    "evolution line": "Rowlet, Dartrix, Decidueye, Hisui Decidueye",
     "img": "723"
   },
   "Decidueye": {
+    "name": "Decidueye",
     "id": 724,
     "hp": 78,
     "attack": 107,
@@ -15644,10 +16622,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Overgrow, Long Reach",
     "passive": "Sniper",
-    "evolution": "Rowlet, Dartrix, Decidueye, Hisui Decidueye",
+    "evolution line": "Rowlet, Dartrix, Decidueye, Hisui Decidueye",
     "img": "724"
   },
   "Litten": {
+    "name": "Litten",
     "id": 725,
     "hp": 45,
     "attack": 65,
@@ -15660,10 +16639,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Blaze, Intimidate",
     "passive": "Tough Claws",
-    "evolution": "Litten, Torracat, Incineroar",
+    "evolution line": "Litten, Torracat, Incineroar",
     "img": "725"
   },
   "Torracat": {
+    "name": "Torracat",
     "id": 726,
     "hp": 65,
     "attack": 85,
@@ -15676,10 +16656,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Blaze, Intimidate",
     "passive": "Tough Claws",
-    "evolution": "Litten, Torracat, Incineroar",
+    "evolution line": "Litten, Torracat, Incineroar",
     "img": "726"
   },
   "Incineroar": {
+    "name": "Incineroar",
     "id": 727,
     "hp": 95,
     "attack": 115,
@@ -15692,10 +16673,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Blaze, Intimidate",
     "passive": "Tough Claws",
-    "evolution": "Litten, Torracat, Incineroar",
+    "evolution line": "Litten, Torracat, Incineroar",
     "img": "727"
   },
   "Popplio": {
+    "name": "Popplio",
     "id": 728,
     "hp": 50,
     "attack": 54,
@@ -15708,10 +16690,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Torrent, Liquid Voice",
     "passive": "Punk Rock",
-    "evolution": "Popplio, Brionne, Primarina",
+    "evolution line": "Popplio, Brionne, Primarina",
     "img": "728"
   },
   "Brionne": {
+    "name": "Brionne",
     "id": 729,
     "hp": 60,
     "attack": 69,
@@ -15724,10 +16707,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Torrent, Liquid Voice",
     "passive": "Punk Rock",
-    "evolution": "Popplio, Brionne, Primarina",
+    "evolution line": "Popplio, Brionne, Primarina",
     "img": "729"
   },
   "Primarina": {
+    "name": "Primarina",
     "id": 730,
     "hp": 80,
     "attack": 74,
@@ -15740,10 +16724,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Torrent, Liquid Voice",
     "passive": "Punk Rock",
-    "evolution": "Popplio, Brionne, Primarina",
+    "evolution line": "Popplio, Brionne, Primarina",
     "img": "730"
   },
   "Pikipek": {
+    "name": "Pikipek",
     "id": 731,
     "hp": 35,
     "attack": 75,
@@ -15756,10 +16741,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Keen Eye, Skill Link, Pickup",
     "passive": "Technician",
-    "evolution": "Pikipek, Trumbeak, Toucannon",
+    "evolution line": "Pikipek, Trumbeak, Toucannon",
     "img": "731"
   },
   "Trumbeak": {
+    "name": "Trumbeak",
     "id": 732,
     "hp": 55,
     "attack": 85,
@@ -15772,10 +16758,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Keen Eye, Skill Link, Pickup",
     "passive": "Technician",
-    "evolution": "Pikipek, Trumbeak, Toucannon",
+    "evolution line": "Pikipek, Trumbeak, Toucannon",
     "img": "732"
   },
   "Toucannon": {
+    "name": "Toucannon",
     "id": 733,
     "hp": 80,
     "attack": 120,
@@ -15788,10 +16775,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Keen Eye, Skill Link, Sheer Force",
     "passive": "Technician",
-    "evolution": "Pikipek, Trumbeak, Toucannon",
+    "evolution line": "Pikipek, Trumbeak, Toucannon",
     "img": "733"
   },
   "Yungoos": {
+    "name": "Yungoos",
     "id": 734,
     "hp": 48,
     "attack": 70,
@@ -15804,10 +16792,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Stakeout, Strong Jaw, Adaptability",
     "passive": "Tough Claws",
-    "evolution": "Yungoos, Gumshoos",
+    "evolution line": "Yungoos, Gumshoos",
     "img": "734"
   },
   "Gumshoos": {
+    "name": "Gumshoos",
     "id": 735,
     "hp": 88,
     "attack": 110,
@@ -15820,10 +16809,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Stakeout, Strong Jaw, Adaptability",
     "passive": "Tough Claws",
-    "evolution": "Yungoos, Gumshoos",
+    "evolution line": "Yungoos, Gumshoos",
     "img": "735"
   },
   "Grubbin": {
+    "name": "Grubbin",
     "id": 736,
     "hp": 47,
     "attack": 62,
@@ -15836,10 +16826,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Swarm",
     "passive": "Shield Dust",
-    "evolution": "Grubbin, Charjabug, Vikavolt",
+    "evolution line": "Grubbin, Charjabug, Vikavolt",
     "img": "736"
   },
   "Charjabug": {
+    "name": "Charjabug",
     "id": 737,
     "hp": 57,
     "attack": 82,
@@ -15852,10 +16843,11 @@ const POKEMON_DATA = {
     "type2": "Electric",
     "abilities": "Battery",
     "passive": "Power Spot",
-    "evolution": "Grubbin, Charjabug, Vikavolt",
+    "evolution line": "Grubbin, Charjabug, Vikavolt",
     "img": "737"
   },
   "Vikavolt": {
+    "name": "Vikavolt",
     "id": 738,
     "hp": 77,
     "attack": 70,
@@ -15868,10 +16860,11 @@ const POKEMON_DATA = {
     "type2": "Electric",
     "abilities": "Levitate",
     "passive": "Speed Boost",
-    "evolution": "Grubbin, Charjabug, Vikavolt",
+    "evolution line": "Grubbin, Charjabug, Vikavolt",
     "img": "738"
   },
   "Crabrawler": {
+    "name": "Crabrawler",
     "id": 739,
     "hp": 47,
     "attack": 82,
@@ -15884,10 +16877,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Hyper Cutter, Iron Fist, Anger Point",
     "passive": "Water Bubble",
-    "evolution": "Crabrawler, Crabominable",
+    "evolution line": "Crabrawler, Crabominable",
     "img": "739"
   },
   "Crabominable": {
+    "name": "Crabominable",
     "id": 740,
     "hp": 97,
     "attack": 132,
@@ -15900,10 +16894,11 @@ const POKEMON_DATA = {
     "type2": "Ice",
     "abilities": "Hyper Cutter, Iron Fist, Anger Point",
     "passive": "Water Bubble",
-    "evolution": "Crabrawler, Crabominable",
+    "evolution line": "Crabrawler, Crabominable",
     "img": "740"
   },
   "Baile Oricorio": {
+    "name": "Baile Oricorio",
     "id": 741,
     "hp": 75,
     "attack": 70,
@@ -15916,10 +16911,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Dancer",
     "passive": "Adaptability",
-    "evolution": "Baile Oricorio, Pom-Pom Oricorio, Pau Oricorio, Sensu Oricorio",
+    "evolution line": "Baile Oricorio, Pom-Pom Oricorio, Pau Oricorio, Sensu Oricorio",
     "img": "741"
   },
   "Pom-Pom Oricorio": {
+    "name": "Pom-Pom Oricorio",
     "id": 741,
     "hp": 75,
     "attack": 70,
@@ -15932,10 +16928,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Dancer",
     "passive": "Adaptability",
-    "evolution": "Baile Oricorio, Pom-Pom Oricorio, Pau Oricorio, Sensu Oricorio",
+    "evolution line": "Baile Oricorio, Pom-Pom Oricorio, Pau Oricorio, Sensu Oricorio",
     "img": "741-pompom"
   },
   "Pau Oricorio": {
+    "name": "Pau Oricorio",
     "id": 741,
     "hp": 75,
     "attack": 70,
@@ -15948,10 +16945,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Dancer",
     "passive": "Adaptability",
-    "evolution": "Baile Oricorio, Pom-Pom Oricorio, Pau Oricorio, Sensu Oricorio",
+    "evolution line": "Baile Oricorio, Pom-Pom Oricorio, Pau Oricorio, Sensu Oricorio",
     "img": "741-pau"
   },
   "Sensu Oricorio": {
+    "name": "Sensu Oricorio",
     "id": 741,
     "hp": 75,
     "attack": 70,
@@ -15964,10 +16962,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Dancer",
     "passive": "Adaptability",
-    "evolution": "Baile Oricorio, Pom-Pom Oricorio, Pau Oricorio, Sensu Oricorio",
+    "evolution line": "Baile Oricorio, Pom-Pom Oricorio, Pau Oricorio, Sensu Oricorio",
     "img": "741-sensu"
   },
   "Cutiefly": {
+    "name": "Cutiefly",
     "id": 742,
     "hp": 40,
     "attack": 45,
@@ -15980,10 +16979,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Honey Gather, Shield Dust, Sweet Veil",
     "passive": "Pickup",
-    "evolution": "Cutiefly, Ribombee",
+    "evolution line": "Cutiefly, Ribombee",
     "img": "742"
   },
   "Ribombee": {
+    "name": "Ribombee",
     "id": 743,
     "hp": 60,
     "attack": 55,
@@ -15996,10 +16996,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Honey Gather, Shield Dust, Sweet Veil",
     "passive": "Pickup",
-    "evolution": "Cutiefly, Ribombee",
+    "evolution line": "Cutiefly, Ribombee",
     "img": "743"
   },
   "Rockruff": {
+    "name": "Rockruff",
     "id": 744,
     "hp": 45,
     "attack": 65,
@@ -16012,10 +17013,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Keen Eye, Vital Spirit, Steadfast",
     "passive": "Pickup",
-    "evolution": "Rockruff, Own Tempo Rockruff, Midday Lycanroc, Midnight Lycanroc, Dusk Lycanroc",
+    "evolution line": "Rockruff, Own Tempo Rockruff, Midday Lycanroc, Midnight Lycanroc, Dusk Lycanroc",
     "img": "744"
   },
   "Own Tempo Rockruff": {
+    "name": "Own Tempo Rockruff",
     "id": 744,
     "hp": 45,
     "attack": 65,
@@ -16028,10 +17030,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Own Tempo",
     "passive": "Pickup",
-    "evolution": "Rockruff, Own Tempo Rockruff, Midday Lycanroc, Midnight Lycanroc, Dusk Lycanroc",
+    "evolution line": "Rockruff, Own Tempo Rockruff, Midday Lycanroc, Midnight Lycanroc, Dusk Lycanroc",
     "img": "744"
   },
   "Midday Lycanroc": {
+    "name": "Midday Lycanroc",
     "id": 745,
     "hp": 75,
     "attack": 115,
@@ -16044,10 +17047,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Keen Eye, Sand Rush, Steadfast",
     "passive": "Sturdy",
-    "evolution": "Rockruff, Own Tempo Rockruff, Midday Lycanroc, Midnight Lycanroc, Dusk Lycanroc",
+    "evolution line": "Rockruff, Own Tempo Rockruff, Midday Lycanroc, Midnight Lycanroc, Dusk Lycanroc",
     "img": "745"
   },
   "Midnight Lycanroc": {
+    "name": "Midnight Lycanroc",
     "id": 745,
     "hp": 85,
     "attack": 115,
@@ -16060,10 +17064,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Keen Eye, Vital Spirit, No Guard",
     "passive": "Intimidate",
-    "evolution": "Rockruff, Own Tempo Rockruff, Midday Lycanroc, Midnight Lycanroc, Dusk Lycanroc",
+    "evolution line": "Rockruff, Own Tempo Rockruff, Midday Lycanroc, Midnight Lycanroc, Dusk Lycanroc",
     "img": "745-midnight"
   },
   "Dusk Lycanroc": {
+    "name": "Dusk Lycanroc",
     "id": 745,
     "hp": 75,
     "attack": 117,
@@ -16076,10 +17081,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Tough Claws",
     "passive": "Stakeout",
-    "evolution": "Rockruff, Own Tempo Rockruff, Midday Lycanroc, Midnight Lycanroc, Dusk Lycanroc",
+    "evolution line": "Rockruff, Own Tempo Rockruff, Midday Lycanroc, Midnight Lycanroc, Dusk Lycanroc",
     "img": "745-dusk"
   },
   "Wishiwashi": {
+    "name": "Wishiwashi",
     "id": 746,
     "hp": 45,
     "attack": 20,
@@ -16092,10 +17098,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Schooling",
     "passive": "Regenerator",
-    "evolution": "Wishiwashi, School Wishiwashi",
+    "evolution line": "Wishiwashi, School Wishiwashi",
     "img": "746"
   },
   "School Wishiwashi": {
+    "name": "School Wishiwashi",
     "id": 746,
     "hp": 45,
     "attack": 140,
@@ -16108,10 +17115,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Schooling",
     "passive": "Regenerator",
-    "evolution": "Wishiwashi, School Wishiwashi",
+    "evolution line": "Wishiwashi, School Wishiwashi",
     "img": "746-school"
   },
   "Mareanie": {
+    "name": "Mareanie",
     "id": 747,
     "hp": 50,
     "attack": 53,
@@ -16124,10 +17132,11 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Merciless, Limber, Regenerator",
     "passive": "Toxic Debris",
-    "evolution": "Mareanie, Toxapex",
+    "evolution line": "Mareanie, Toxapex",
     "img": "747"
   },
   "Toxapex": {
+    "name": "Toxapex",
     "id": 748,
     "hp": 50,
     "attack": 63,
@@ -16140,10 +17149,11 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Merciless, Limber, Regenerator",
     "passive": "Toxic Debris",
-    "evolution": "Mareanie, Toxapex",
+    "evolution line": "Mareanie, Toxapex",
     "img": "748"
   },
   "Mudbray": {
+    "name": "Mudbray",
     "id": 749,
     "hp": 70,
     "attack": 100,
@@ -16156,10 +17166,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Own Tempo, Stamina, Inner Focus",
     "passive": "Sap Sipper",
-    "evolution": "Mudbray, Mudsdale",
+    "evolution line": "Mudbray, Mudsdale",
     "img": "749"
   },
   "Mudsdale": {
+    "name": "Mudsdale",
     "id": 750,
     "hp": 100,
     "attack": 125,
@@ -16172,10 +17183,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Own Tempo, Stamina, Inner Focus",
     "passive": "Sap Sipper",
-    "evolution": "Mudbray, Mudsdale",
+    "evolution line": "Mudbray, Mudsdale",
     "img": "750"
   },
   "Dewpider": {
+    "name": "Dewpider",
     "id": 751,
     "hp": 38,
     "attack": 40,
@@ -16188,10 +17200,11 @@ const POKEMON_DATA = {
     "type2": "Bug",
     "abilities": "Water Bubble, Water Absorb",
     "passive": "Tinted Lens",
-    "evolution": "Dewpider, Araquanid",
+    "evolution line": "Dewpider, Araquanid",
     "img": "751"
   },
   "Araquanid": {
+    "name": "Araquanid",
     "id": 752,
     "hp": 68,
     "attack": 70,
@@ -16204,10 +17217,11 @@ const POKEMON_DATA = {
     "type2": "Bug",
     "abilities": "Water Bubble, Water Absorb",
     "passive": "Tinted Lens",
-    "evolution": "Dewpider, Araquanid",
+    "evolution line": "Dewpider, Araquanid",
     "img": "752"
   },
   "Fomantis": {
+    "name": "Fomantis",
     "id": 753,
     "hp": 40,
     "attack": 55,
@@ -16220,10 +17234,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Leaf Guard, Contrary",
     "passive": "Sharpness",
-    "evolution": "Fomantis, Lurantis",
+    "evolution line": "Fomantis, Lurantis",
     "img": "753"
   },
   "Lurantis": {
+    "name": "Lurantis",
     "id": 754,
     "hp": 70,
     "attack": 105,
@@ -16236,10 +17251,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Leaf Guard, Contrary",
     "passive": "Sharpness",
-    "evolution": "Fomantis, Lurantis",
+    "evolution line": "Fomantis, Lurantis",
     "img": "754"
   },
   "Morelull": {
+    "name": "Morelull",
     "id": 755,
     "hp": 40,
     "attack": 35,
@@ -16252,10 +17268,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Illuminate, Effect Spore, Rain Dish",
     "passive": "Triage",
-    "evolution": "Morelull, Shiinotic",
+    "evolution line": "Morelull, Shiinotic",
     "img": "755"
   },
   "Shiinotic": {
+    "name": "Shiinotic",
     "id": 756,
     "hp": 60,
     "attack": 45,
@@ -16268,10 +17285,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Illuminate, Effect Spore, Rain Dish",
     "passive": "Triage",
-    "evolution": "Morelull, Shiinotic",
+    "evolution line": "Morelull, Shiinotic",
     "img": "756"
   },
   "Salandit": {
+    "name": "Salandit",
     "id": 757,
     "hp": 48,
     "attack": 44,
@@ -16284,10 +17302,11 @@ const POKEMON_DATA = {
     "type2": "Fire",
     "abilities": "Corrosion, Oblivious",
     "passive": "Pickup",
-    "evolution": "Salandit, Salazzle",
+    "evolution line": "Salandit, Salazzle",
     "img": "757"
   },
   "Salazzle": {
+    "name": "Salazzle",
     "id": 758,
     "hp": 68,
     "attack": 64,
@@ -16300,10 +17319,11 @@ const POKEMON_DATA = {
     "type2": "Fire",
     "abilities": "Corrosion, Oblivious",
     "passive": "Dragons Maw",
-    "evolution": "Salandit, Salazzle",
+    "evolution line": "Salandit, Salazzle",
     "img": "758"
   },
   "Stufful": {
+    "name": "Stufful",
     "id": 759,
     "hp": 70,
     "attack": 75,
@@ -16316,10 +17336,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Fluffy, Klutz, Cute Charm",
     "passive": "Scrappy",
-    "evolution": "Stufful, Bewear",
+    "evolution line": "Stufful, Bewear",
     "img": "759"
   },
   "Bewear": {
+    "name": "Bewear",
     "id": 760,
     "hp": 120,
     "attack": 125,
@@ -16332,10 +17353,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Fluffy, Klutz, Unnerve",
     "passive": "Scrappy",
-    "evolution": "Stufful, Bewear",
+    "evolution line": "Stufful, Bewear",
     "img": "760"
   },
   "Bounsweet": {
+    "name": "Bounsweet",
     "id": 761,
     "hp": 42,
     "attack": 30,
@@ -16348,10 +17370,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Leaf Guard, Oblivious, Sweet Veil",
     "passive": "Simple",
-    "evolution": "Bounsweet, Steenee, Tsareena",
+    "evolution line": "Bounsweet, Steenee, Tsareena",
     "img": "761"
   },
   "Steenee": {
+    "name": "Steenee",
     "id": 762,
     "hp": 52,
     "attack": 40,
@@ -16364,10 +17387,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Leaf Guard, Oblivious, Sweet Veil",
     "passive": "Simple",
-    "evolution": "Bounsweet, Steenee, Tsareena",
+    "evolution line": "Bounsweet, Steenee, Tsareena",
     "img": "762"
   },
   "Tsareena": {
+    "name": "Tsareena",
     "id": 763,
     "hp": 72,
     "attack": 120,
@@ -16380,10 +17404,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Leaf Guard, Queenly Majesty, Sweet Veil",
     "passive": "Moxie",
-    "evolution": "Bounsweet, Steenee, Tsareena",
+    "evolution line": "Bounsweet, Steenee, Tsareena",
     "img": "763"
   },
   "Comfey": {
+    "name": "Comfey",
     "id": 764,
     "hp": 51,
     "attack": 52,
@@ -16396,10 +17421,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Flower Veil, Triage, Natural Cure",
     "passive": "Friend Guard",
-    "evolution": "Comfey",
+    "evolution line": "Comfey",
     "img": "764"
   },
   "Oranguru": {
+    "name": "Oranguru",
     "id": 765,
     "hp": 90,
     "attack": 60,
@@ -16412,10 +17438,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Inner Focus, Telepathy, Symbiosis",
     "passive": "Power Spot",
-    "evolution": "Oranguru",
+    "evolution line": "Oranguru",
     "img": "765"
   },
   "Passimian": {
+    "name": "Passimian",
     "id": 766,
     "hp": 100,
     "attack": 120,
@@ -16428,10 +17455,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Receiver, Defiant",
     "passive": "Libero",
-    "evolution": "Passimian",
+    "evolution line": "Passimian",
     "img": "766"
   },
   "Wimpod": {
+    "name": "Wimpod",
     "id": 767,
     "hp": 25,
     "attack": 35,
@@ -16444,10 +17472,11 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Wimp Out, Run Away",
     "passive": "Regenerator",
-    "evolution": "Wimpod, Golisopod",
+    "evolution line": "Wimpod, Golisopod",
     "img": "767"
   },
   "Golisopod": {
+    "name": "Golisopod",
     "id": 768,
     "hp": 75,
     "attack": 125,
@@ -16460,10 +17489,11 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Emergency Exit, Anticipation",
     "passive": "Regenerator",
-    "evolution": "Wimpod, Golisopod",
+    "evolution line": "Wimpod, Golisopod",
     "img": "768"
   },
   "Sandygast": {
+    "name": "Sandygast",
     "id": 769,
     "hp": 55,
     "attack": 55,
@@ -16476,10 +17506,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Water Compaction, Sand Veil",
     "passive": "Sand Spit",
-    "evolution": "Sandygast, Palossand",
+    "evolution line": "Sandygast, Palossand",
     "img": "769"
   },
   "Palossand": {
+    "name": "Palossand",
     "id": 770,
     "hp": 85,
     "attack": 75,
@@ -16492,10 +17523,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Water Compaction, Sand Veil",
     "passive": "Sand Spit",
-    "evolution": "Sandygast, Palossand",
+    "evolution line": "Sandygast, Palossand",
     "img": "770"
   },
   "Pyukumuku": {
+    "name": "Pyukumuku",
     "id": 771,
     "hp": 55,
     "attack": 60,
@@ -16508,10 +17540,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Innards Out, Unaware",
     "passive": "Purifying Salt",
-    "evolution": "Pyukumuku",
+    "evolution line": "Pyukumuku",
     "img": "771"
   },
   "Type: Null": {
+    "name": "Type: Null",
     "id": 772,
     "hp": 95,
     "attack": 95,
@@ -16524,10 +17557,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Battle Armor",
     "passive": "Clear Body",
-    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution line": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "772"
   },
   "Normal Silvally": {
+    "name": "Normal Silvally",
     "id": 773,
     "hp": 95,
     "attack": 95,
@@ -16540,10 +17574,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution line": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773"
   },
   "Fighting Silvally": {
+    "name": "Fighting Silvally",
     "id": 773,
     "hp": 95,
     "attack": 95,
@@ -16556,10 +17591,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution line": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-fighting"
   },
   "Flying Silvally": {
+    "name": "Flying Silvally",
     "id": 773,
     "hp": 95,
     "attack": 95,
@@ -16572,10 +17608,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution line": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-flying"
   },
   "Poison Silvally": {
+    "name": "Poison Silvally",
     "id": 773,
     "hp": 95,
     "attack": 95,
@@ -16588,10 +17625,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution line": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-poison"
   },
   "Ground Silvally": {
+    "name": "Ground Silvally",
     "id": 773,
     "hp": 95,
     "attack": 95,
@@ -16604,10 +17642,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution line": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-ground"
   },
   "Rock Silvally": {
+    "name": "Rock Silvally",
     "id": 773,
     "hp": 95,
     "attack": 95,
@@ -16620,10 +17659,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution line": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-rock"
   },
   "Bug Silvally": {
+    "name": "Bug Silvally",
     "id": 773,
     "hp": 95,
     "attack": 95,
@@ -16636,10 +17676,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution line": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-bug"
   },
   "Ghost Silvally": {
+    "name": "Ghost Silvally",
     "id": 773,
     "hp": 95,
     "attack": 95,
@@ -16652,10 +17693,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution line": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-ghost"
   },
   "Steel Silvally": {
+    "name": "Steel Silvally",
     "id": 773,
     "hp": 95,
     "attack": 95,
@@ -16668,10 +17710,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution line": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-steel"
   },
   "Fire Silvally": {
+    "name": "Fire Silvally",
     "id": 773,
     "hp": 95,
     "attack": 95,
@@ -16684,10 +17727,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution line": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-fire"
   },
   "Water Silvally": {
+    "name": "Water Silvally",
     "id": 773,
     "hp": 95,
     "attack": 95,
@@ -16700,10 +17744,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution line": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-water"
   },
   "Grass Silvally": {
+    "name": "Grass Silvally",
     "id": 773,
     "hp": 95,
     "attack": 95,
@@ -16716,10 +17761,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution line": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-grass"
   },
   "Electric Silvally": {
+    "name": "Electric Silvally",
     "id": 773,
     "hp": 95,
     "attack": 95,
@@ -16732,10 +17778,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution line": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-electric"
   },
   "Psychic Silvally": {
+    "name": "Psychic Silvally",
     "id": 773,
     "hp": 95,
     "attack": 95,
@@ -16748,10 +17795,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution line": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-psychic"
   },
   "Ice Silvally": {
+    "name": "Ice Silvally",
     "id": 773,
     "hp": 95,
     "attack": 95,
@@ -16764,10 +17812,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution line": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-ice"
   },
   "Dragon Silvally": {
+    "name": "Dragon Silvally",
     "id": 773,
     "hp": 95,
     "attack": 95,
@@ -16780,10 +17829,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution line": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-dragon"
   },
   "Dark Silvally": {
+    "name": "Dark Silvally",
     "id": 773,
     "hp": 95,
     "attack": 95,
@@ -16796,10 +17846,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution line": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-dark"
   },
   "Fairy Silvally": {
+    "name": "Fairy Silvally",
     "id": 773,
     "hp": 95,
     "attack": 95,
@@ -16812,10 +17863,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution line": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-fairy"
   },
   "Red Meteor Minior": {
+    "name": "Red Meteor Minior",
     "id": 774,
     "hp": 60,
     "attack": 60,
@@ -16828,10 +17880,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Shields Down",
     "passive": "Sturdy",
-    "evolution": "Red Meteor Minior, Orange Meteor Minior, Yellow Meteor Minior, Green Meteor Minior, Blue Meteor Minior, Indigo Meteor Minior, Violet Meteor Minior, Red Minior, Orange Minior, Yellow Minior, Green Minior, Blue Minior, Indigo Minior, Violet Minior",
+    "evolution line": "Red Meteor Minior, Orange Meteor Minior, Yellow Meteor Minior, Green Meteor Minior, Blue Meteor Minior, Indigo Meteor Minior, Violet Meteor Minior, Red Minior, Orange Minior, Yellow Minior, Green Minior, Blue Minior, Indigo Minior, Violet Minior",
     "img": "774-red-meteor"
   },
   "Orange Meteor Minior": {
+    "name": "Orange Meteor Minior",
     "id": 774,
     "hp": 60,
     "attack": 60,
@@ -16844,10 +17897,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Shields Down",
     "passive": "Sturdy",
-    "evolution": "Red Meteor Minior, Orange Meteor Minior, Yellow Meteor Minior, Green Meteor Minior, Blue Meteor Minior, Indigo Meteor Minior, Violet Meteor Minior, Red Minior, Orange Minior, Yellow Minior, Green Minior, Blue Minior, Indigo Minior, Violet Minior",
+    "evolution line": "Red Meteor Minior, Orange Meteor Minior, Yellow Meteor Minior, Green Meteor Minior, Blue Meteor Minior, Indigo Meteor Minior, Violet Meteor Minior, Red Minior, Orange Minior, Yellow Minior, Green Minior, Blue Minior, Indigo Minior, Violet Minior",
     "img": "774-orange-meteor"
   },
   "Yellow Meteor Minior": {
+    "name": "Yellow Meteor Minior",
     "id": 774,
     "hp": 60,
     "attack": 60,
@@ -16860,10 +17914,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Shields Down",
     "passive": "Sturdy",
-    "evolution": "Red Meteor Minior, Orange Meteor Minior, Yellow Meteor Minior, Green Meteor Minior, Blue Meteor Minior, Indigo Meteor Minior, Violet Meteor Minior, Red Minior, Orange Minior, Yellow Minior, Green Minior, Blue Minior, Indigo Minior, Violet Minior",
+    "evolution line": "Red Meteor Minior, Orange Meteor Minior, Yellow Meteor Minior, Green Meteor Minior, Blue Meteor Minior, Indigo Meteor Minior, Violet Meteor Minior, Red Minior, Orange Minior, Yellow Minior, Green Minior, Blue Minior, Indigo Minior, Violet Minior",
     "img": "774-yellow-meteor"
   },
   "Green Meteor Minior": {
+    "name": "Green Meteor Minior",
     "id": 774,
     "hp": 60,
     "attack": 60,
@@ -16876,10 +17931,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Shields Down",
     "passive": "Sturdy",
-    "evolution": "Red Meteor Minior, Orange Meteor Minior, Yellow Meteor Minior, Green Meteor Minior, Blue Meteor Minior, Indigo Meteor Minior, Violet Meteor Minior, Red Minior, Orange Minior, Yellow Minior, Green Minior, Blue Minior, Indigo Minior, Violet Minior",
+    "evolution line": "Red Meteor Minior, Orange Meteor Minior, Yellow Meteor Minior, Green Meteor Minior, Blue Meteor Minior, Indigo Meteor Minior, Violet Meteor Minior, Red Minior, Orange Minior, Yellow Minior, Green Minior, Blue Minior, Indigo Minior, Violet Minior",
     "img": "774-green-meteor"
   },
   "Blue Meteor Minior": {
+    "name": "Blue Meteor Minior",
     "id": 774,
     "hp": 60,
     "attack": 60,
@@ -16892,10 +17948,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Shields Down",
     "passive": "Sturdy",
-    "evolution": "Red Meteor Minior, Orange Meteor Minior, Yellow Meteor Minior, Green Meteor Minior, Blue Meteor Minior, Indigo Meteor Minior, Violet Meteor Minior, Red Minior, Orange Minior, Yellow Minior, Green Minior, Blue Minior, Indigo Minior, Violet Minior",
+    "evolution line": "Red Meteor Minior, Orange Meteor Minior, Yellow Meteor Minior, Green Meteor Minior, Blue Meteor Minior, Indigo Meteor Minior, Violet Meteor Minior, Red Minior, Orange Minior, Yellow Minior, Green Minior, Blue Minior, Indigo Minior, Violet Minior",
     "img": "774-blue-meteor"
   },
   "Indigo Meteor Minior": {
+    "name": "Indigo Meteor Minior",
     "id": 774,
     "hp": 60,
     "attack": 60,
@@ -16908,10 +17965,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Shields Down",
     "passive": "Sturdy",
-    "evolution": "Red Meteor Minior, Orange Meteor Minior, Yellow Meteor Minior, Green Meteor Minior, Blue Meteor Minior, Indigo Meteor Minior, Violet Meteor Minior, Red Minior, Orange Minior, Yellow Minior, Green Minior, Blue Minior, Indigo Minior, Violet Minior",
+    "evolution line": "Red Meteor Minior, Orange Meteor Minior, Yellow Meteor Minior, Green Meteor Minior, Blue Meteor Minior, Indigo Meteor Minior, Violet Meteor Minior, Red Minior, Orange Minior, Yellow Minior, Green Minior, Blue Minior, Indigo Minior, Violet Minior",
     "img": "774-indigo-meteor"
   },
   "Violet Meteor Minior": {
+    "name": "Violet Meteor Minior",
     "id": 774,
     "hp": 60,
     "attack": 60,
@@ -16924,10 +17982,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Shields Down",
     "passive": "Sturdy",
-    "evolution": "Red Meteor Minior, Orange Meteor Minior, Yellow Meteor Minior, Green Meteor Minior, Blue Meteor Minior, Indigo Meteor Minior, Violet Meteor Minior, Red Minior, Orange Minior, Yellow Minior, Green Minior, Blue Minior, Indigo Minior, Violet Minior",
+    "evolution line": "Red Meteor Minior, Orange Meteor Minior, Yellow Meteor Minior, Green Meteor Minior, Blue Meteor Minior, Indigo Meteor Minior, Violet Meteor Minior, Red Minior, Orange Minior, Yellow Minior, Green Minior, Blue Minior, Indigo Minior, Violet Minior",
     "img": "774-violet-meteor"
   },
   "Red Minior": {
+    "name": "Red Minior",
     "id": 774,
     "hp": 60,
     "attack": 100,
@@ -16940,10 +17999,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Shields Down",
     "passive": "Aerilate",
-    "evolution": "Red Meteor Minior, Orange Meteor Minior, Yellow Meteor Minior, Green Meteor Minior, Blue Meteor Minior, Indigo Meteor Minior, Violet Meteor Minior, Red Minior, Orange Minior, Yellow Minior, Green Minior, Blue Minior, Indigo Minior, Violet Minior",
+    "evolution line": "Red Meteor Minior, Orange Meteor Minior, Yellow Meteor Minior, Green Meteor Minior, Blue Meteor Minior, Indigo Meteor Minior, Violet Meteor Minior, Red Minior, Orange Minior, Yellow Minior, Green Minior, Blue Minior, Indigo Minior, Violet Minior",
     "img": "774-red"
   },
   "Orange Minior": {
+    "name": "Orange Minior",
     "id": 774,
     "hp": 60,
     "attack": 100,
@@ -16956,10 +18016,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Shields Down",
     "passive": "Aerilate",
-    "evolution": "Red Meteor Minior, Orange Meteor Minior, Yellow Meteor Minior, Green Meteor Minior, Blue Meteor Minior, Indigo Meteor Minior, Violet Meteor Minior, Red Minior, Orange Minior, Yellow Minior, Green Minior, Blue Minior, Indigo Minior, Violet Minior",
+    "evolution line": "Red Meteor Minior, Orange Meteor Minior, Yellow Meteor Minior, Green Meteor Minior, Blue Meteor Minior, Indigo Meteor Minior, Violet Meteor Minior, Red Minior, Orange Minior, Yellow Minior, Green Minior, Blue Minior, Indigo Minior, Violet Minior",
     "img": "774-orange"
   },
   "Yellow Minior": {
+    "name": "Yellow Minior",
     "id": 774,
     "hp": 60,
     "attack": 100,
@@ -16972,10 +18033,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Shields Down",
     "passive": "Aerilate",
-    "evolution": "Red Meteor Minior, Orange Meteor Minior, Yellow Meteor Minior, Green Meteor Minior, Blue Meteor Minior, Indigo Meteor Minior, Violet Meteor Minior, Red Minior, Orange Minior, Yellow Minior, Green Minior, Blue Minior, Indigo Minior, Violet Minior",
+    "evolution line": "Red Meteor Minior, Orange Meteor Minior, Yellow Meteor Minior, Green Meteor Minior, Blue Meteor Minior, Indigo Meteor Minior, Violet Meteor Minior, Red Minior, Orange Minior, Yellow Minior, Green Minior, Blue Minior, Indigo Minior, Violet Minior",
     "img": "774-yellow"
   },
   "Green Minior": {
+    "name": "Green Minior",
     "id": 774,
     "hp": 60,
     "attack": 100,
@@ -16988,10 +18050,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Shields Down",
     "passive": "Aerilate",
-    "evolution": "Red Meteor Minior, Orange Meteor Minior, Yellow Meteor Minior, Green Meteor Minior, Blue Meteor Minior, Indigo Meteor Minior, Violet Meteor Minior, Red Minior, Orange Minior, Yellow Minior, Green Minior, Blue Minior, Indigo Minior, Violet Minior",
+    "evolution line": "Red Meteor Minior, Orange Meteor Minior, Yellow Meteor Minior, Green Meteor Minior, Blue Meteor Minior, Indigo Meteor Minior, Violet Meteor Minior, Red Minior, Orange Minior, Yellow Minior, Green Minior, Blue Minior, Indigo Minior, Violet Minior",
     "img": "774-green"
   },
   "Blue Minior": {
+    "name": "Blue Minior",
     "id": 774,
     "hp": 60,
     "attack": 100,
@@ -17004,10 +18067,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Shields Down",
     "passive": "Aerilate",
-    "evolution": "Red Meteor Minior, Orange Meteor Minior, Yellow Meteor Minior, Green Meteor Minior, Blue Meteor Minior, Indigo Meteor Minior, Violet Meteor Minior, Red Minior, Orange Minior, Yellow Minior, Green Minior, Blue Minior, Indigo Minior, Violet Minior",
+    "evolution line": "Red Meteor Minior, Orange Meteor Minior, Yellow Meteor Minior, Green Meteor Minior, Blue Meteor Minior, Indigo Meteor Minior, Violet Meteor Minior, Red Minior, Orange Minior, Yellow Minior, Green Minior, Blue Minior, Indigo Minior, Violet Minior",
     "img": "774-blue"
   },
   "Indigo Minior": {
+    "name": "Indigo Minior",
     "id": 774,
     "hp": 60,
     "attack": 100,
@@ -17020,10 +18084,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Shields Down",
     "passive": "Aerilate",
-    "evolution": "Red Meteor Minior, Orange Meteor Minior, Yellow Meteor Minior, Green Meteor Minior, Blue Meteor Minior, Indigo Meteor Minior, Violet Meteor Minior, Red Minior, Orange Minior, Yellow Minior, Green Minior, Blue Minior, Indigo Minior, Violet Minior",
+    "evolution line": "Red Meteor Minior, Orange Meteor Minior, Yellow Meteor Minior, Green Meteor Minior, Blue Meteor Minior, Indigo Meteor Minior, Violet Meteor Minior, Red Minior, Orange Minior, Yellow Minior, Green Minior, Blue Minior, Indigo Minior, Violet Minior",
     "img": "774-indigo"
   },
   "Violet Minior": {
+    "name": "Violet Minior",
     "id": 774,
     "hp": 60,
     "attack": 100,
@@ -17036,10 +18101,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Shields Down",
     "passive": "Aerilate",
-    "evolution": "Red Meteor Minior, Orange Meteor Minior, Yellow Meteor Minior, Green Meteor Minior, Blue Meteor Minior, Indigo Meteor Minior, Violet Meteor Minior, Red Minior, Orange Minior, Yellow Minior, Green Minior, Blue Minior, Indigo Minior, Violet Minior",
+    "evolution line": "Red Meteor Minior, Orange Meteor Minior, Yellow Meteor Minior, Green Meteor Minior, Blue Meteor Minior, Indigo Meteor Minior, Violet Meteor Minior, Red Minior, Orange Minior, Yellow Minior, Green Minior, Blue Minior, Indigo Minior, Violet Minior",
     "img": "774-violet"
   },
   "Komala": {
+    "name": "Komala",
     "id": 775,
     "hp": 65,
     "attack": 115,
@@ -17052,10 +18118,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Comatose",
     "passive": "Guts",
-    "evolution": "Komala",
+    "evolution line": "Komala",
     "img": "775"
   },
   "Turtonator": {
+    "name": "Turtonator",
     "id": 776,
     "hp": 60,
     "attack": 78,
@@ -17068,10 +18135,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Shell Armor",
     "passive": "Dauntless Shield",
-    "evolution": "Turtonator",
+    "evolution line": "Turtonator",
     "img": "776"
   },
   "Togedemaru": {
+    "name": "Togedemaru",
     "id": 777,
     "hp": 65,
     "attack": 98,
@@ -17084,10 +18152,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Iron Barbs, Lightning Rod, Sturdy",
     "passive": "Cheek Pouch",
-    "evolution": "Togedemaru",
+    "evolution line": "Togedemaru",
     "img": "777"
   },
   "Disguised Mimikyu": {
+    "name": "Disguised Mimikyu",
     "id": 778,
     "hp": 55,
     "attack": 90,
@@ -17100,10 +18169,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Disguise",
     "passive": "Tough Claws",
-    "evolution": "Disguised Mimikyu, Busted Mimikyu",
+    "evolution line": "Disguised Mimikyu, Busted Mimikyu",
     "img": "778-disguised"
   },
   "Busted Mimikyu": {
+    "name": "Busted Mimikyu",
     "id": 778,
     "hp": 55,
     "attack": 90,
@@ -17116,10 +18186,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Disguise",
     "passive": "Tough Claws",
-    "evolution": "Disguised Mimikyu, Busted Mimikyu",
+    "evolution line": "Disguised Mimikyu, Busted Mimikyu",
     "img": "778-busted"
   },
   "Bruxish": {
+    "name": "Bruxish",
     "id": 779,
     "hp": 68,
     "attack": 105,
@@ -17132,10 +18203,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Dazzling, Strong Jaw, Wonder Skin",
     "passive": "Multiscale",
-    "evolution": "Bruxish",
+    "evolution line": "Bruxish",
     "img": "779"
   },
   "Drampa": {
+    "name": "Drampa",
     "id": 780,
     "hp": 78,
     "attack": 60,
@@ -17148,10 +18220,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Berserk, Sap Sipper, Cloud Nine",
     "passive": "Thick Fat",
-    "evolution": "Drampa",
+    "evolution line": "Drampa",
     "img": "780"
   },
   "Dhelmise": {
+    "name": "Dhelmise",
     "id": 781,
     "hp": 70,
     "attack": 131,
@@ -17164,10 +18237,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Steelworker",
     "passive": "Water Bubble",
-    "evolution": "Dhelmise",
+    "evolution line": "Dhelmise",
     "img": "781"
   },
   "Jangmo-o": {
+    "name": "Jangmo-o",
     "id": 782,
     "hp": 45,
     "attack": 55,
@@ -17180,10 +18254,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Bulletproof, Soundproof, Overcoat",
     "passive": "Dauntless Shield",
-    "evolution": "Jangmo-o, Hakamo-o, Kommo-o",
+    "evolution line": "Jangmo-o, Hakamo-o, Kommo-o",
     "img": "782"
   },
   "Hakamo-o": {
+    "name": "Hakamo-o",
     "id": 783,
     "hp": 55,
     "attack": 75,
@@ -17196,10 +18271,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Bulletproof, Soundproof, Overcoat",
     "passive": "Dauntless Shield",
-    "evolution": "Jangmo-o, Hakamo-o, Kommo-o",
+    "evolution line": "Jangmo-o, Hakamo-o, Kommo-o",
     "img": "783"
   },
   "Kommo-o": {
+    "name": "Kommo-o",
     "id": 784,
     "hp": 75,
     "attack": 110,
@@ -17212,10 +18288,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Bulletproof, Soundproof, Overcoat",
     "passive": "Dauntless Shield",
-    "evolution": "Jangmo-o, Hakamo-o, Kommo-o",
+    "evolution line": "Jangmo-o, Hakamo-o, Kommo-o",
     "img": "784"
   },
   "Tapu Koko": {
+    "name": "Tapu Koko",
     "id": 785,
     "hp": 70,
     "attack": 115,
@@ -17228,10 +18305,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Electric Surge, Telepathy",
     "passive": "Dauntless Shield",
-    "evolution": "Tapu Koko",
+    "evolution line": "Tapu Koko",
     "img": "785"
   },
   "Tapu Lele": {
+    "name": "Tapu Lele",
     "id": 786,
     "hp": 70,
     "attack": 85,
@@ -17244,10 +18322,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Psychic Surge, Telepathy",
     "passive": "Berserk",
-    "evolution": "Tapu Lele",
+    "evolution line": "Tapu Lele",
     "img": "786"
   },
   "Tapu Bulu": {
+    "name": "Tapu Bulu",
     "id": 787,
     "hp": 70,
     "attack": 130,
@@ -17260,10 +18339,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Grassy Surge, Telepathy",
     "passive": "Flower Veil",
-    "evolution": "Tapu Bulu",
+    "evolution line": "Tapu Bulu",
     "img": "787"
   },
   "Tapu Fini": {
+    "name": "Tapu Fini",
     "id": 788,
     "hp": 70,
     "attack": 75,
@@ -17276,10 +18356,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Misty Surge, Telepathy",
     "passive": "Fairy Aura",
-    "evolution": "Tapu Fini",
+    "evolution line": "Tapu Fini",
     "img": "788"
   },
   "Cosmog": {
+    "name": "Cosmog",
     "id": 789,
     "hp": 43,
     "attack": 29,
@@ -17292,10 +18373,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Unaware",
     "passive": "Power Spot",
-    "evolution": "Cosmog, Cosmoem, Solgaleo, Lunala",
+    "evolution line": "Cosmog, Cosmoem, Solgaleo, Lunala",
     "img": "789"
   },
   "Cosmoem": {
+    "name": "Cosmoem",
     "id": 790,
     "hp": 43,
     "attack": 29,
@@ -17308,10 +18390,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sturdy",
     "passive": "Power Spot",
-    "evolution": "Cosmog, Cosmoem, Solgaleo, Lunala",
+    "evolution line": "Cosmog, Cosmoem, Solgaleo, Lunala",
     "img": "790"
   },
   "Solgaleo": {
+    "name": "Solgaleo",
     "id": 791,
     "hp": 137,
     "attack": 137,
@@ -17324,10 +18407,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Full Metal Body",
     "passive": "Beast Boost",
-    "evolution": "Cosmog, Cosmoem, Solgaleo, Lunala",
+    "evolution line": "Cosmog, Cosmoem, Solgaleo, Lunala",
     "img": "791"
   },
   "Lunala": {
+    "name": "Lunala",
     "id": 792,
     "hp": 137,
     "attack": 113,
@@ -17340,10 +18424,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Shadow Shield",
     "passive": "Beast Boost",
-    "evolution": "Cosmog, Cosmoem, Solgaleo, Lunala",
+    "evolution line": "Cosmog, Cosmoem, Solgaleo, Lunala",
     "img": "792"
   },
   "Nihilego": {
+    "name": "Nihilego",
     "id": 793,
     "hp": 109,
     "attack": 53,
@@ -17356,10 +18441,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Beast Boost",
     "passive": "Levitate",
-    "evolution": "Nihilego",
+    "evolution line": "Nihilego",
     "img": "793"
   },
   "Buzzwole": {
+    "name": "Buzzwole",
     "id": 794,
     "hp": 107,
     "attack": 139,
@@ -17372,10 +18458,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Beast Boost",
     "passive": "Moxie",
-    "evolution": "Buzzwole",
+    "evolution line": "Buzzwole",
     "img": "794"
   },
   "Pheromosa": {
+    "name": "Pheromosa",
     "id": 795,
     "hp": 71,
     "attack": 137,
@@ -17388,10 +18475,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Beast Boost",
     "passive": "Tinted Lens",
-    "evolution": "Pheromosa",
+    "evolution line": "Pheromosa",
     "img": "795"
   },
   "Xurkitree": {
+    "name": "Xurkitree",
     "id": 796,
     "hp": 83,
     "attack": 89,
@@ -17404,10 +18492,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Beast Boost",
     "passive": "Transistor",
-    "evolution": "Xurkitree",
+    "evolution line": "Xurkitree",
     "img": "796"
   },
   "Celesteela": {
+    "name": "Celesteela",
     "id": 797,
     "hp": 97,
     "attack": 101,
@@ -17420,10 +18509,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Beast Boost",
     "passive": "Heatproof",
-    "evolution": "Celesteela",
+    "evolution line": "Celesteela",
     "img": "797"
   },
   "Kartana": {
+    "name": "Kartana",
     "id": 798,
     "hp": 59,
     "attack": 181,
@@ -17436,10 +18526,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Beast Boost",
     "passive": "Technician",
-    "evolution": "Kartana",
+    "evolution line": "Kartana",
     "img": "798"
   },
   "Guzzlord": {
+    "name": "Guzzlord",
     "id": 799,
     "hp": 223,
     "attack": 101,
@@ -17452,10 +18543,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Beast Boost",
     "passive": "Poison Heal",
-    "evolution": "Guzzlord",
+    "evolution line": "Guzzlord",
     "img": "799"
   },
   "Necrozma": {
+    "name": "Necrozma",
     "id": 800,
     "hp": 97,
     "attack": 107,
@@ -17468,10 +18560,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Prism Armor",
     "passive": "Beast Boost",
-    "evolution": "Necrozma, Dusk Mane Necrozma, Dawn Wings Necrozma, Ultra Necrozma",
+    "evolution line": "Necrozma, Dusk Mane Necrozma, Dawn Wings Necrozma, Ultra Necrozma",
     "img": "800"
   },
   "Dusk Mane Necrozma": {
+    "name": "Dusk Mane Necrozma",
     "id": 800,
     "hp": 97,
     "attack": 157,
@@ -17484,10 +18577,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Prism Armor",
     "passive": "Full Metal Body",
-    "evolution": "Necrozma, Dusk Mane Necrozma, Dawn Wings Necrozma, Ultra Necrozma",
+    "evolution line": "Necrozma, Dusk Mane Necrozma, Dawn Wings Necrozma, Ultra Necrozma",
     "img": "800-dusk-mane"
   },
   "Dawn Wings Necrozma": {
+    "name": "Dawn Wings Necrozma",
     "id": 800,
     "hp": 97,
     "attack": 113,
@@ -17500,10 +18594,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Prism Armor",
     "passive": "Shadow Shield",
-    "evolution": "Necrozma, Dusk Mane Necrozma, Dawn Wings Necrozma, Ultra Necrozma",
+    "evolution line": "Necrozma, Dusk Mane Necrozma, Dawn Wings Necrozma, Ultra Necrozma",
     "img": "800-dawn-wings"
   },
   "Ultra Necrozma": {
+    "name": "Ultra Necrozma",
     "id": 800,
     "hp": 97,
     "attack": 167,
@@ -17516,10 +18611,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Neuroforce",
     "passive": "Unnerve",
-    "evolution": "Necrozma, Dusk Mane Necrozma, Dawn Wings Necrozma, Ultra Necrozma",
+    "evolution line": "Necrozma, Dusk Mane Necrozma, Dawn Wings Necrozma, Ultra Necrozma",
     "img": "800-ultra"
   },
   "Magearna": {
+    "name": "Magearna",
     "id": 801,
     "hp": 80,
     "attack": 95,
@@ -17532,10 +18628,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Soul Heart",
     "passive": "Mirror Armor",
-    "evolution": "Magearna, Original Magearna",
+    "evolution line": "Magearna, Original Magearna",
     "img": "801"
   },
   "Original Magearna": {
+    "name": "Original Magearna",
     "id": 801,
     "hp": 80,
     "attack": 95,
@@ -17548,10 +18645,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Soul Heart",
     "passive": "Mirror Armor",
-    "evolution": "Magearna, Original Magearna",
+    "evolution line": "Magearna, Original Magearna",
     "img": "801-original"
   },
   "Marshadow": {
+    "name": "Marshadow",
     "id": 802,
     "hp": 90,
     "attack": 125,
@@ -17564,10 +18662,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Technician",
     "passive": "Iron Fist",
-    "evolution": "Marshadow",
+    "evolution line": "Marshadow",
     "img": "802"
   },
   "Poipole": {
+    "name": "Poipole",
     "id": 803,
     "hp": 67,
     "attack": 73,
@@ -17580,10 +18679,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Beast Boost",
     "passive": "Levitate",
-    "evolution": "Poipole, Naganadel",
+    "evolution line": "Poipole, Naganadel",
     "img": "803"
   },
   "Naganadel": {
+    "name": "Naganadel",
     "id": 804,
     "hp": 73,
     "attack": 73,
@@ -17596,10 +18696,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Beast Boost",
     "passive": "Levitate",
-    "evolution": "Poipole, Naganadel",
+    "evolution line": "Poipole, Naganadel",
     "img": "804"
   },
   "Stakataka": {
+    "name": "Stakataka",
     "id": 805,
     "hp": 61,
     "attack": 131,
@@ -17612,10 +18713,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Beast Boost",
     "passive": "Solid Rock",
-    "evolution": "Stakataka",
+    "evolution line": "Stakataka",
     "img": "805"
   },
   "Blacephalon": {
+    "name": "Blacephalon",
     "id": 806,
     "hp": 53,
     "attack": 127,
@@ -17628,10 +18730,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Beast Boost",
     "passive": "Magic Guard",
-    "evolution": "Blacephalon",
+    "evolution line": "Blacephalon",
     "img": "806"
   },
   "Zeraora": {
+    "name": "Zeraora",
     "id": 807,
     "hp": 88,
     "attack": 112,
@@ -17644,10 +18747,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Volt Absorb",
     "passive": "Tough Claws",
-    "evolution": "Zeraora",
+    "evolution line": "Zeraora",
     "img": "807"
   },
   "Meltan": {
+    "name": "Meltan",
     "id": 808,
     "hp": 46,
     "attack": 65,
@@ -17660,10 +18764,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Magnet Pull",
     "passive": "Heatproof",
-    "evolution": "Meltan, Melmetal, Gigantamax Melmetal",
+    "evolution line": "Meltan, Melmetal, Gigantamax Melmetal",
     "img": "808"
   },
   "Melmetal": {
+    "name": "Melmetal",
     "id": 809,
     "hp": 135,
     "attack": 143,
@@ -17676,10 +18781,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Iron Fist",
     "passive": "Heatproof",
-    "evolution": "Meltan, Melmetal, Gigantamax Melmetal",
+    "evolution line": "Meltan, Melmetal, Gigantamax Melmetal",
     "img": "809"
   },
   "Gigantamax Melmetal": {
+    "name": "Gigantamax Melmetal",
     "id": 809,
     "hp": 161,
     "attack": 169,
@@ -17692,10 +18798,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Iron Fist",
     "passive": "Full Metal Body",
-    "evolution": "Meltan, Melmetal, Gigantamax Melmetal",
+    "evolution line": "Meltan, Melmetal, Gigantamax Melmetal",
     "img": "809-gigantamax"
   },
   "Grookey": {
+    "name": "Grookey",
     "id": 810,
     "hp": 50,
     "attack": 65,
@@ -17708,10 +18815,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Overgrow, Grassy Surge",
     "passive": "Pickpocket",
-    "evolution": "Grookey, Thwackey, Rillaboom, Gigantamax Rillaboom",
+    "evolution line": "Grookey, Thwackey, Rillaboom, Gigantamax Rillaboom",
     "img": "810"
   },
   "Thwackey": {
+    "name": "Thwackey",
     "id": 811,
     "hp": 70,
     "attack": 85,
@@ -17724,10 +18832,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Overgrow, Grassy Surge",
     "passive": "Pickpocket",
-    "evolution": "Grookey, Thwackey, Rillaboom, Gigantamax Rillaboom",
+    "evolution line": "Grookey, Thwackey, Rillaboom, Gigantamax Rillaboom",
     "img": "811"
   },
   "Rillaboom": {
+    "name": "Rillaboom",
     "id": 812,
     "hp": 100,
     "attack": 125,
@@ -17740,10 +18849,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Overgrow, Grassy Surge",
     "passive": "Grass Pelt",
-    "evolution": "Grookey, Thwackey, Rillaboom, Gigantamax Rillaboom",
+    "evolution line": "Grookey, Thwackey, Rillaboom, Gigantamax Rillaboom",
     "img": "812"
   },
   "Gigantamax Rillaboom": {
+    "name": "Gigantamax Rillaboom",
     "id": 812,
     "hp": 125,
     "attack": 140,
@@ -17756,10 +18866,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Grassy Surge",
     "passive": "Grass Pelt",
-    "evolution": "Grookey, Thwackey, Rillaboom, Gigantamax Rillaboom",
+    "evolution line": "Grookey, Thwackey, Rillaboom, Gigantamax Rillaboom",
     "img": "812-gigantamax"
   },
   "Scorbunny": {
+    "name": "Scorbunny",
     "id": 813,
     "hp": 50,
     "attack": 71,
@@ -17772,10 +18883,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Blaze, Libero",
     "passive": "Opportunist",
-    "evolution": "Scorbunny, Raboot, Cinderace, Gigantamax Cinderace",
+    "evolution line": "Scorbunny, Raboot, Cinderace, Gigantamax Cinderace",
     "img": "813"
   },
   "Raboot": {
+    "name": "Raboot",
     "id": 814,
     "hp": 65,
     "attack": 86,
@@ -17788,10 +18900,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Blaze, Libero",
     "passive": "Opportunist",
-    "evolution": "Scorbunny, Raboot, Cinderace, Gigantamax Cinderace",
+    "evolution line": "Scorbunny, Raboot, Cinderace, Gigantamax Cinderace",
     "img": "814"
   },
   "Cinderace": {
+    "name": "Cinderace",
     "id": 815,
     "hp": 80,
     "attack": 116,
@@ -17804,10 +18917,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Blaze, Libero",
     "passive": "Opportunist",
-    "evolution": "Scorbunny, Raboot, Cinderace, Gigantamax Cinderace",
+    "evolution line": "Scorbunny, Raboot, Cinderace, Gigantamax Cinderace",
     "img": "815"
   },
   "Gigantamax Cinderace": {
+    "name": "Gigantamax Cinderace",
     "id": 815,
     "hp": 100,
     "attack": 141,
@@ -17820,10 +18934,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Libero",
     "passive": "Opportunist",
-    "evolution": "Scorbunny, Raboot, Cinderace, Gigantamax Cinderace",
+    "evolution line": "Scorbunny, Raboot, Cinderace, Gigantamax Cinderace",
     "img": "815-gigantamax"
   },
   "Sobble": {
+    "name": "Sobble",
     "id": 816,
     "hp": 50,
     "attack": 40,
@@ -17836,10 +18951,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Torrent, Sniper",
     "passive": "Super Luck",
-    "evolution": "Sobble, Drizzile, Inteleon, Gigantamax Inteleon",
+    "evolution line": "Sobble, Drizzile, Inteleon, Gigantamax Inteleon",
     "img": "816"
   },
   "Drizzile": {
+    "name": "Drizzile",
     "id": 817,
     "hp": 65,
     "attack": 60,
@@ -17852,10 +18968,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Torrent, Sniper",
     "passive": "Super Luck",
-    "evolution": "Sobble, Drizzile, Inteleon, Gigantamax Inteleon",
+    "evolution line": "Sobble, Drizzile, Inteleon, Gigantamax Inteleon",
     "img": "817"
   },
   "Inteleon": {
+    "name": "Inteleon",
     "id": 818,
     "hp": 70,
     "attack": 85,
@@ -17868,10 +18985,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Torrent, Sniper",
     "passive": "Super Luck",
-    "evolution": "Sobble, Drizzile, Inteleon, Gigantamax Inteleon",
+    "evolution line": "Sobble, Drizzile, Inteleon, Gigantamax Inteleon",
     "img": "818"
   },
   "Gigantamax Inteleon": {
+    "name": "Gigantamax Inteleon",
     "id": 818,
     "hp": 95,
     "attack": 117,
@@ -17884,10 +19002,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sniper",
     "passive": "Super Luck",
-    "evolution": "Sobble, Drizzile, Inteleon, Gigantamax Inteleon",
+    "evolution line": "Sobble, Drizzile, Inteleon, Gigantamax Inteleon",
     "img": "818-gigantamax"
   },
   "Skwovet": {
+    "name": "Skwovet",
     "id": 819,
     "hp": 70,
     "attack": 55,
@@ -17900,10 +19019,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Cheek Pouch, Gluttony",
     "passive": "Harvest",
-    "evolution": "Skwovet, Greedent",
+    "evolution line": "Skwovet, Greedent",
     "img": "819"
   },
   "Greedent": {
+    "name": "Greedent",
     "id": 820,
     "hp": 120,
     "attack": 95,
@@ -17916,10 +19036,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Cheek Pouch, Gluttony",
     "passive": "Harvest",
-    "evolution": "Skwovet, Greedent",
+    "evolution line": "Skwovet, Greedent",
     "img": "820"
   },
   "Rookidee": {
+    "name": "Rookidee",
     "id": 821,
     "hp": 38,
     "attack": 47,
@@ -17932,10 +19053,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Keen Eye, Unnerve, Big Pecks",
     "passive": "Gale Wings",
-    "evolution": "Rookidee, Corvisquire, Corviknight, Gigantamax Corviknight",
+    "evolution line": "Rookidee, Corvisquire, Corviknight, Gigantamax Corviknight",
     "img": "821"
   },
   "Corvisquire": {
+    "name": "Corvisquire",
     "id": 822,
     "hp": 68,
     "attack": 67,
@@ -17948,10 +19070,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Keen Eye, Unnerve, Big Pecks",
     "passive": "Gale Wings",
-    "evolution": "Rookidee, Corvisquire, Corviknight, Gigantamax Corviknight",
+    "evolution line": "Rookidee, Corvisquire, Corviknight, Gigantamax Corviknight",
     "img": "822"
   },
   "Corviknight": {
+    "name": "Corviknight",
     "id": 823,
     "hp": 98,
     "attack": 87,
@@ -17964,10 +19087,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Pressure, Unnerve, Mirror Armor",
     "passive": "Iron Barbs",
-    "evolution": "Rookidee, Corvisquire, Corviknight, Gigantamax Corviknight",
+    "evolution line": "Rookidee, Corvisquire, Corviknight, Gigantamax Corviknight",
     "img": "823"
   },
   "Gigantamax Corviknight": {
+    "name": "Gigantamax Corviknight",
     "id": 823,
     "hp": 118,
     "attack": 112,
@@ -17980,10 +19104,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Mirror Armor",
     "passive": "Iron Barbs",
-    "evolution": "Rookidee, Corvisquire, Corviknight, Gigantamax Corviknight",
+    "evolution line": "Rookidee, Corvisquire, Corviknight, Gigantamax Corviknight",
     "img": "823-gigantamax"
   },
   "Blipbug": {
+    "name": "Blipbug",
     "id": 824,
     "hp": 25,
     "attack": 20,
@@ -17996,10 +19121,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Swarm, Compound Eyes, Telepathy",
     "passive": "Run Away",
-    "evolution": "Blipbug, Dottler, Orbeetle, Gigantamax Orbeetle",
+    "evolution line": "Blipbug, Dottler, Orbeetle, Gigantamax Orbeetle",
     "img": "824"
   },
   "Dottler": {
+    "name": "Dottler",
     "id": 825,
     "hp": 50,
     "attack": 35,
@@ -18012,10 +19138,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Swarm, Compound Eyes, Telepathy",
     "passive": "Psychic Surge",
-    "evolution": "Blipbug, Dottler, Orbeetle, Gigantamax Orbeetle",
+    "evolution line": "Blipbug, Dottler, Orbeetle, Gigantamax Orbeetle",
     "img": "825"
   },
   "Orbeetle": {
+    "name": "Orbeetle",
     "id": 826,
     "hp": 60,
     "attack": 45,
@@ -18028,10 +19155,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Swarm, Frisk, Telepathy",
     "passive": "Psychic Surge",
-    "evolution": "Blipbug, Dottler, Orbeetle, Gigantamax Orbeetle",
+    "evolution line": "Blipbug, Dottler, Orbeetle, Gigantamax Orbeetle",
     "img": "826"
   },
   "Gigantamax Orbeetle": {
+    "name": "Gigantamax Orbeetle",
     "id": 826,
     "hp": 75,
     "attack": 50,
@@ -18044,10 +19172,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Trace",
     "passive": "Psychic Surge",
-    "evolution": "Blipbug, Dottler, Orbeetle, Gigantamax Orbeetle",
+    "evolution line": "Blipbug, Dottler, Orbeetle, Gigantamax Orbeetle",
     "img": "826-gigantamax"
   },
   "Nickit": {
+    "name": "Nickit",
     "id": 827,
     "hp": 40,
     "attack": 28,
@@ -18060,10 +19189,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Run Away, Unburden, Stakeout",
     "passive": "Magician",
-    "evolution": "Nickit, Thievul",
+    "evolution line": "Nickit, Thievul",
     "img": "827"
   },
   "Thievul": {
+    "name": "Thievul",
     "id": 828,
     "hp": 70,
     "attack": 58,
@@ -18076,10 +19206,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Run Away, Unburden, Stakeout",
     "passive": "Magician",
-    "evolution": "Nickit, Thievul",
+    "evolution line": "Nickit, Thievul",
     "img": "828"
   },
   "Gossifleur": {
+    "name": "Gossifleur",
     "id": 829,
     "hp": 40,
     "attack": 40,
@@ -18092,10 +19223,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Cotton Down, Regenerator, Effect Spore",
     "passive": "Seed Sower",
-    "evolution": "Gossifleur, Eldegoss",
+    "evolution line": "Gossifleur, Eldegoss",
     "img": "829"
   },
   "Eldegoss": {
+    "name": "Eldegoss",
     "id": 830,
     "hp": 60,
     "attack": 50,
@@ -18108,10 +19240,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Cotton Down, Regenerator, Effect Spore",
     "passive": "Seed Sower",
-    "evolution": "Gossifleur, Eldegoss",
+    "evolution line": "Gossifleur, Eldegoss",
     "img": "830"
   },
   "Wooloo": {
+    "name": "Wooloo",
     "id": 831,
     "hp": 42,
     "attack": 40,
@@ -18124,10 +19257,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Fluffy, Run Away, Bulletproof",
     "passive": "Scrappy",
-    "evolution": "Wooloo, Dubwool",
+    "evolution line": "Wooloo, Dubwool",
     "img": "831"
   },
   "Dubwool": {
+    "name": "Dubwool",
     "id": 832,
     "hp": 72,
     "attack": 80,
@@ -18140,10 +19274,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Fluffy, Steadfast, Bulletproof",
     "passive": "Scrappy",
-    "evolution": "Wooloo, Dubwool",
+    "evolution line": "Wooloo, Dubwool",
     "img": "832"
   },
   "Chewtle": {
+    "name": "Chewtle",
     "id": 833,
     "hp": 50,
     "attack": 64,
@@ -18156,10 +19291,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Strong Jaw, Shell Armor, Swift Swim",
     "passive": "Solid Rock",
-    "evolution": "Chewtle, Drednaw, Gigantamax Drednaw",
+    "evolution line": "Chewtle, Drednaw, Gigantamax Drednaw",
     "img": "833"
   },
   "Drednaw": {
+    "name": "Drednaw",
     "id": 834,
     "hp": 90,
     "attack": 115,
@@ -18172,10 +19308,11 @@ const POKEMON_DATA = {
     "type2": "Rock",
     "abilities": "Strong Jaw, Shell Armor, Swift Swim",
     "passive": "Solid Rock",
-    "evolution": "Chewtle, Drednaw, Gigantamax Drednaw",
+    "evolution line": "Chewtle, Drednaw, Gigantamax Drednaw",
     "img": "834"
   },
   "Gigantamax Drednaw": {
+    "name": "Gigantamax Drednaw",
     "id": 834,
     "hp": 115,
     "attack": 137,
@@ -18188,10 +19325,11 @@ const POKEMON_DATA = {
     "type2": "Rock",
     "abilities": "Strong Jaw",
     "passive": "Solid Rock",
-    "evolution": "Chewtle, Drednaw, Gigantamax Drednaw",
+    "evolution line": "Chewtle, Drednaw, Gigantamax Drednaw",
     "img": "834-gigantamax"
   },
   "Yamper": {
+    "name": "Yamper",
     "id": 835,
     "hp": 59,
     "attack": 45,
@@ -18204,10 +19342,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Ball Fetch, Rattled",
     "passive": "Pickup",
-    "evolution": "Yamper, Boltund",
+    "evolution line": "Yamper, Boltund",
     "img": "835"
   },
   "Boltund": {
+    "name": "Boltund",
     "id": 836,
     "hp": 69,
     "attack": 90,
@@ -18220,10 +19359,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Strong Jaw, Competitive",
     "passive": "Sheer Force",
-    "evolution": "Yamper, Boltund",
+    "evolution line": "Yamper, Boltund",
     "img": "836"
   },
   "Rolycoly": {
+    "name": "Rolycoly",
     "id": 837,
     "hp": 30,
     "attack": 40,
@@ -18236,10 +19376,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Steam Engine, Heatproof, Flash Fire",
     "passive": "Solid Rock",
-    "evolution": "Rolycoly, Carkol, Coalossal, Gigantamax Coalossal",
+    "evolution line": "Rolycoly, Carkol, Coalossal, Gigantamax Coalossal",
     "img": "837"
   },
   "Carkol": {
+    "name": "Carkol",
     "id": 838,
     "hp": 80,
     "attack": 60,
@@ -18252,10 +19393,11 @@ const POKEMON_DATA = {
     "type2": "Fire",
     "abilities": "Steam Engine, Flame Body, Flash Fire",
     "passive": "Solid Rock",
-    "evolution": "Rolycoly, Carkol, Coalossal, Gigantamax Coalossal",
+    "evolution line": "Rolycoly, Carkol, Coalossal, Gigantamax Coalossal",
     "img": "838"
   },
   "Coalossal": {
+    "name": "Coalossal",
     "id": 839,
     "hp": 110,
     "attack": 80,
@@ -18268,10 +19410,11 @@ const POKEMON_DATA = {
     "type2": "Fire",
     "abilities": "Steam Engine, Flame Body, Flash Fire",
     "passive": "Solid Rock",
-    "evolution": "Rolycoly, Carkol, Coalossal, Gigantamax Coalossal",
+    "evolution line": "Rolycoly, Carkol, Coalossal, Gigantamax Coalossal",
     "img": "839"
   },
   "Gigantamax Coalossal": {
+    "name": "Gigantamax Coalossal",
     "id": 839,
     "hp": 140,
     "attack": 100,
@@ -18284,10 +19427,11 @@ const POKEMON_DATA = {
     "type2": "Fire",
     "abilities": "Steam Engine",
     "passive": "Solid Rock",
-    "evolution": "Rolycoly, Carkol, Coalossal, Gigantamax Coalossal",
+    "evolution line": "Rolycoly, Carkol, Coalossal, Gigantamax Coalossal",
     "img": "839-gigantamax"
   },
   "Applin": {
+    "name": "Applin",
     "id": 840,
     "hp": 40,
     "attack": 40,
@@ -18300,10 +19444,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Ripen, Gluttony, Bulletproof",
     "passive": "Sturdy",
-    "evolution": "Applin, Flapple, Gigantamax Flapple, Appletun, Gigantamax Appletun, Dipplin, Hydrapple",
+    "evolution line": "Applin, Flapple, Gigantamax Flapple, Appletun, Gigantamax Appletun, Dipplin, Hydrapple",
     "img": "840"
   },
   "Flapple": {
+    "name": "Flapple",
     "id": 841,
     "hp": 70,
     "attack": 110,
@@ -18316,10 +19461,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Ripen, Gluttony, Hustle",
     "passive": "No Guard",
-    "evolution": "Applin, Flapple, Gigantamax Flapple, Appletun, Gigantamax Appletun, Dipplin, Hydrapple",
+    "evolution line": "Applin, Flapple, Gigantamax Flapple, Appletun, Gigantamax Appletun, Dipplin, Hydrapple",
     "img": "841"
   },
   "Gigantamax Flapple": {
+    "name": "Gigantamax Flapple",
     "id": 841,
     "hp": 100,
     "attack": 125,
@@ -18332,10 +19478,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Hustle",
     "passive": "No Guard",
-    "evolution": "Applin, Flapple, Gigantamax Flapple, Appletun, Gigantamax Appletun, Dipplin, Hydrapple",
+    "evolution line": "Applin, Flapple, Gigantamax Flapple, Appletun, Gigantamax Appletun, Dipplin, Hydrapple",
     "img": "841-gigantamax"
   },
   "Appletun": {
+    "name": "Appletun",
     "id": 842,
     "hp": 110,
     "attack": 85,
@@ -18348,10 +19495,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Ripen, Gluttony, Thick Fat",
     "passive": "Well Baked Body",
-    "evolution": "Applin, Flapple, Gigantamax Flapple, Appletun, Gigantamax Appletun, Dipplin, Hydrapple",
+    "evolution line": "Applin, Flapple, Gigantamax Flapple, Appletun, Gigantamax Appletun, Dipplin, Hydrapple",
     "img": "842"
   },
   "Gigantamax Appletun": {
+    "name": "Gigantamax Appletun",
     "id": 842,
     "hp": 150,
     "attack": 100,
@@ -18364,10 +19512,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Thick Fat",
     "passive": "Well Baked Body",
-    "evolution": "Applin, Flapple, Gigantamax Flapple, Appletun, Gigantamax Appletun, Dipplin, Hydrapple",
+    "evolution line": "Applin, Flapple, Gigantamax Flapple, Appletun, Gigantamax Appletun, Dipplin, Hydrapple",
     "img": "842-gigantamax"
   },
   "Silicobra": {
+    "name": "Silicobra",
     "id": 843,
     "hp": 52,
     "attack": 57,
@@ -18380,10 +19529,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sand Spit, Shed Skin, Sand Veil",
     "passive": "Sand Rush",
-    "evolution": "Silicobra, Sandaconda, Gigantamax Sandaconda",
+    "evolution line": "Silicobra, Sandaconda, Gigantamax Sandaconda",
     "img": "843"
   },
   "Sandaconda": {
+    "name": "Sandaconda",
     "id": 844,
     "hp": 72,
     "attack": 107,
@@ -18396,10 +19546,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sand Spit, Shed Skin, Sand Veil",
     "passive": "Sand Rush",
-    "evolution": "Silicobra, Sandaconda, Gigantamax Sandaconda",
+    "evolution line": "Silicobra, Sandaconda, Gigantamax Sandaconda",
     "img": "844"
   },
   "Gigantamax Sandaconda": {
+    "name": "Gigantamax Sandaconda",
     "id": 844,
     "hp": 102,
     "attack": 137,
@@ -18412,10 +19563,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sand Spit",
     "passive": "Sand Rush",
-    "evolution": "Silicobra, Sandaconda, Gigantamax Sandaconda",
+    "evolution line": "Silicobra, Sandaconda, Gigantamax Sandaconda",
     "img": "844-gigantamax"
   },
   "Cramorant": {
+    "name": "Cramorant",
     "id": 845,
     "hp": 70,
     "attack": 85,
@@ -18428,10 +19580,11 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Gulp Missile",
     "passive": "Lightning Rod",
-    "evolution": "Cramorant, Gulping Cramorant, Gorging Cramorant",
+    "evolution line": "Cramorant, Gulping Cramorant, Gorging Cramorant",
     "img": "845"
   },
   "Gulping Cramorant": {
+    "name": "Gulping Cramorant",
     "id": 845,
     "hp": 70,
     "attack": 85,
@@ -18444,10 +19597,11 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Gulp Missile",
     "passive": "Lightning Rod",
-    "evolution": "Cramorant, Gulping Cramorant, Gorging Cramorant",
+    "evolution line": "Cramorant, Gulping Cramorant, Gorging Cramorant",
     "img": "845-gulping"
   },
   "Gorging Cramorant": {
+    "name": "Gorging Cramorant",
     "id": 845,
     "hp": 70,
     "attack": 85,
@@ -18460,10 +19614,11 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Gulp Missile",
     "passive": "Lightning Rod",
-    "evolution": "Cramorant, Gulping Cramorant, Gorging Cramorant",
+    "evolution line": "Cramorant, Gulping Cramorant, Gorging Cramorant",
     "img": "845-gorging"
   },
   "Arrokuda": {
+    "name": "Arrokuda",
     "id": 846,
     "hp": 41,
     "attack": 63,
@@ -18476,10 +19631,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Swift Swim, Propeller Tail",
     "passive": "Speed Boost",
-    "evolution": "Arrokuda, Barraskewda",
+    "evolution line": "Arrokuda, Barraskewda",
     "img": "846"
   },
   "Barraskewda": {
+    "name": "Barraskewda",
     "id": 847,
     "hp": 61,
     "attack": 123,
@@ -18492,10 +19648,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Swift Swim, Propeller Tail",
     "passive": "Intimidate",
-    "evolution": "Arrokuda, Barraskewda",
+    "evolution line": "Arrokuda, Barraskewda",
     "img": "847"
   },
   "Toxel": {
+    "name": "Toxel",
     "id": 848,
     "hp": 40,
     "attack": 38,
@@ -18508,10 +19665,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Rattled, Static, Klutz",
     "passive": "Electric Surge",
-    "evolution": "Toxel, Amped Toxtricity, Low-Key Toxtricity, Gigantamax Toxtricity",
+    "evolution line": "Toxel, Amped Toxtricity, Low-Key Toxtricity, Gigantamax Toxtricity",
     "img": "848"
   },
   "Amped Toxtricity": {
+    "name": "Amped Toxtricity",
     "id": 849,
     "hp": 75,
     "attack": 98,
@@ -18524,10 +19682,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Punk Rock, Plus, Technician",
     "passive": "Electric Surge",
-    "evolution": "Toxel, Amped Toxtricity, Low-Key Toxtricity, Gigantamax Toxtricity",
+    "evolution line": "Toxel, Amped Toxtricity, Low-Key Toxtricity, Gigantamax Toxtricity",
     "img": "849"
   },
   "Low-Key Toxtricity": {
+    "name": "Low-Key Toxtricity",
     "id": 849,
     "hp": 75,
     "attack": 98,
@@ -18540,10 +19699,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Punk Rock, Minus, Technician",
     "passive": "Electric Surge",
-    "evolution": "Toxel, Amped Toxtricity, Low-Key Toxtricity, Gigantamax Toxtricity",
+    "evolution line": "Toxel, Amped Toxtricity, Low-Key Toxtricity, Gigantamax Toxtricity",
     "img": "849-lowkey"
   },
   "Gigantamax Toxtricity": {
+    "name": "Gigantamax Toxtricity",
     "id": 849,
     "hp": 114,
     "attack": 105,
@@ -18556,10 +19716,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Punk Rock",
     "passive": "Electric Surge",
-    "evolution": "Toxel, Amped Toxtricity, Low-Key Toxtricity, Gigantamax Toxtricity",
+    "evolution line": "Toxel, Amped Toxtricity, Low-Key Toxtricity, Gigantamax Toxtricity",
     "img": "849-gigantamax"
   },
   "Sizzlipede": {
+    "name": "Sizzlipede",
     "id": 850,
     "hp": 50,
     "attack": 65,
@@ -18572,10 +19733,11 @@ const POKEMON_DATA = {
     "type2": "Bug",
     "abilities": "Flash Fire, White Smoke, Flame Body",
     "passive": "Hustle",
-    "evolution": "Sizzlipede, Centiskorch, Gigantamax Centiskorch",
+    "evolution line": "Sizzlipede, Centiskorch, Gigantamax Centiskorch",
     "img": "850"
   },
   "Centiskorch": {
+    "name": "Centiskorch",
     "id": 851,
     "hp": 100,
     "attack": 115,
@@ -18588,10 +19750,11 @@ const POKEMON_DATA = {
     "type2": "Bug",
     "abilities": "Flash Fire, White Smoke, Flame Body",
     "passive": "Hustle",
-    "evolution": "Sizzlipede, Centiskorch, Gigantamax Centiskorch",
+    "evolution line": "Sizzlipede, Centiskorch, Gigantamax Centiskorch",
     "img": "851"
   },
   "Gigantamax Centiskorch": {
+    "name": "Gigantamax Centiskorch",
     "id": 851,
     "hp": 130,
     "attack": 125,
@@ -18604,10 +19767,11 @@ const POKEMON_DATA = {
     "type2": "Bug",
     "abilities": "Flash Fire",
     "passive": "Hustle",
-    "evolution": "Sizzlipede, Centiskorch, Gigantamax Centiskorch",
+    "evolution line": "Sizzlipede, Centiskorch, Gigantamax Centiskorch",
     "img": "851-gigantamax"
   },
   "Clobbopus": {
+    "name": "Clobbopus",
     "id": 852,
     "hp": 50,
     "attack": 68,
@@ -18620,10 +19784,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Limber, Technician",
     "passive": "Water Bubble",
-    "evolution": "Clobbopus, Grapploct",
+    "evolution line": "Clobbopus, Grapploct",
     "img": "852"
   },
   "Grapploct": {
+    "name": "Grapploct",
     "id": 853,
     "hp": 80,
     "attack": 118,
@@ -18636,10 +19801,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Limber, Technician",
     "passive": "Water Bubble",
-    "evolution": "Clobbopus, Grapploct",
+    "evolution line": "Clobbopus, Grapploct",
     "img": "853"
   },
   "Phony Sinistea": {
+    "name": "Phony Sinistea",
     "id": 854,
     "hp": 40,
     "attack": 45,
@@ -18652,10 +19818,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Weak Armor, Cursed Body",
     "passive": "Shadow Shield",
-    "evolution": "Phony Sinistea, Antique Sinistea, Phony Polteageist, Antique Polteageist",
+    "evolution line": "Phony Sinistea, Antique Sinistea, Phony Polteageist, Antique Polteageist",
     "img": "854"
   },
   "Antique Sinistea": {
+    "name": "Antique Sinistea",
     "id": 854,
     "hp": 40,
     "attack": 45,
@@ -18668,10 +19835,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Weak Armor, Cursed Body",
     "passive": "Shadow Shield",
-    "evolution": "Phony Sinistea, Antique Sinistea, Phony Polteageist, Antique Polteageist",
+    "evolution line": "Phony Sinistea, Antique Sinistea, Phony Polteageist, Antique Polteageist",
     "img": "854"
   },
   "Phony Polteageist": {
+    "name": "Phony Polteageist",
     "id": 855,
     "hp": 60,
     "attack": 65,
@@ -18684,10 +19852,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Weak Armor, Cursed Body",
     "passive": "Shadow Shield",
-    "evolution": "Phony Sinistea, Antique Sinistea, Phony Polteageist, Antique Polteageist",
+    "evolution line": "Phony Sinistea, Antique Sinistea, Phony Polteageist, Antique Polteageist",
     "img": "855"
   },
   "Antique Polteageist": {
+    "name": "Antique Polteageist",
     "id": 855,
     "hp": 60,
     "attack": 65,
@@ -18700,10 +19869,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Weak Armor, Cursed Body",
     "passive": "Shadow Shield",
-    "evolution": "Phony Sinistea, Antique Sinistea, Phony Polteageist, Antique Polteageist",
+    "evolution line": "Phony Sinistea, Antique Sinistea, Phony Polteageist, Antique Polteageist",
     "img": "855"
   },
   "Hatenna": {
+    "name": "Hatenna",
     "id": 856,
     "hp": 42,
     "attack": 30,
@@ -18716,10 +19886,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Healer, Anticipation, Magic Bounce",
     "passive": "Fairy Aura",
-    "evolution": "Hatenna, Hattrem, Hatterene, Gigantamax Hatterene",
+    "evolution line": "Hatenna, Hattrem, Hatterene, Gigantamax Hatterene",
     "img": "856"
   },
   "Hattrem": {
+    "name": "Hattrem",
     "id": 857,
     "hp": 57,
     "attack": 40,
@@ -18732,10 +19903,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Healer, Anticipation, Magic Bounce",
     "passive": "Fairy Aura",
-    "evolution": "Hatenna, Hattrem, Hatterene, Gigantamax Hatterene",
+    "evolution line": "Hatenna, Hattrem, Hatterene, Gigantamax Hatterene",
     "img": "857"
   },
   "Hatterene": {
+    "name": "Hatterene",
     "id": 858,
     "hp": 57,
     "attack": 90,
@@ -18748,10 +19920,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Healer, Anticipation, Magic Bounce",
     "passive": "Fairy Aura",
-    "evolution": "Hatenna, Hattrem, Hatterene, Gigantamax Hatterene",
+    "evolution line": "Hatenna, Hattrem, Hatterene, Gigantamax Hatterene",
     "img": "858"
   },
   "Gigantamax Hatterene": {
+    "name": "Gigantamax Hatterene",
     "id": 858,
     "hp": 87,
     "attack": 100,
@@ -18764,10 +19937,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Magic Bounce",
     "passive": "Fairy Aura",
-    "evolution": "Hatenna, Hattrem, Hatterene, Gigantamax Hatterene",
+    "evolution line": "Hatenna, Hattrem, Hatterene, Gigantamax Hatterene",
     "img": "858-gigantamax"
   },
   "Impidimp": {
+    "name": "Impidimp",
     "id": 859,
     "hp": 45,
     "attack": 45,
@@ -18780,10 +19954,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Prankster, Frisk, Pickpocket",
     "passive": "Intimidate",
-    "evolution": "Impidimp, Morgrem, Grimmsnarl, Gigantamax Grimmsnarl",
+    "evolution line": "Impidimp, Morgrem, Grimmsnarl, Gigantamax Grimmsnarl",
     "img": "859"
   },
   "Morgrem": {
+    "name": "Morgrem",
     "id": 860,
     "hp": 65,
     "attack": 60,
@@ -18796,10 +19971,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Prankster, Frisk, Pickpocket",
     "passive": "Intimidate",
-    "evolution": "Impidimp, Morgrem, Grimmsnarl, Gigantamax Grimmsnarl",
+    "evolution line": "Impidimp, Morgrem, Grimmsnarl, Gigantamax Grimmsnarl",
     "img": "860"
   },
   "Grimmsnarl": {
+    "name": "Grimmsnarl",
     "id": 861,
     "hp": 95,
     "attack": 120,
@@ -18812,10 +19988,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Prankster, Frisk, Pickpocket",
     "passive": "Intimidate",
-    "evolution": "Impidimp, Morgrem, Grimmsnarl, Gigantamax Grimmsnarl",
+    "evolution line": "Impidimp, Morgrem, Grimmsnarl, Gigantamax Grimmsnarl",
     "img": "861"
   },
   "Gigantamax Grimmsnarl": {
+    "name": "Gigantamax Grimmsnarl",
     "id": 861,
     "hp": 130,
     "attack": 138,
@@ -18828,10 +20005,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Prankster",
     "passive": "Intimidate",
-    "evolution": "Impidimp, Morgrem, Grimmsnarl, Gigantamax Grimmsnarl",
+    "evolution line": "Impidimp, Morgrem, Grimmsnarl, Gigantamax Grimmsnarl",
     "img": "861-gigantamax"
   },
   "Obstagoon": {
+    "name": "Obstagoon",
     "id": 862,
     "hp": 93,
     "attack": 90,
@@ -18844,10 +20022,11 @@ const POKEMON_DATA = {
     "type2": "Normal",
     "abilities": "Reckless, Guts, Defiant",
     "passive": "Poison Heal",
-    "evolution": "Obstagoon, Galar Zigzagoon, Galar Linoone",
+    "evolution line": "Obstagoon, Galar Zigzagoon, Galar Linoone",
     "img": "862"
   },
   "Perrserker": {
+    "name": "Perrserker",
     "id": 863,
     "hp": 70,
     "attack": 110,
@@ -18860,10 +20039,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Battle Armor, Tough Claws, Steely Spirit",
     "passive": "Unburden",
-    "evolution": "Perrserker, Galar Meowth",
+    "evolution line": "Perrserker, Galar Meowth",
     "img": "863"
   },
   "Cursola": {
+    "name": "Cursola",
     "id": 864,
     "hp": 60,
     "attack": 95,
@@ -18876,10 +20056,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Weak Armor, Perish Body",
     "passive": "Shadow Shield",
-    "evolution": "Cursola, Galar Corsola",
+    "evolution line": "Cursola, Galar Corsola",
     "img": "864"
   },
   "Sirfetch’d": {
+    "name": "Sirfetch’d",
     "id": 865,
     "hp": 62,
     "attack": 135,
@@ -18892,10 +20073,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Steadfast, Scrappy",
     "passive": "Intrepid Sword",
-    "evolution": "Sirfetch’d, Galar Farfetch’d",
+    "evolution line": "Sirfetch’d, Galar Farfetch’d",
     "img": "865"
   },
   "Mr. Rime": {
+    "name": "Mr. Rime",
     "id": 866,
     "hp": 80,
     "attack": 85,
@@ -18908,10 +20090,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Tangled Feet, Screen Cleaner, Ice Body",
     "passive": "Prankster",
-    "evolution": "Mr. Mime, Mime Jr., Mr. Rime, Galar Mr. Mime",
+    "evolution line": "Mr. Mime, Mime Jr., Mr. Rime, Galar Mr. Mime",
     "img": "866"
   },
   "Runerigus": {
+    "name": "Runerigus",
     "id": 867,
     "hp": 58,
     "attack": 95,
@@ -18924,10 +20107,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Wandering Spirit",
     "passive": "Tablets Of Ruin",
-    "evolution": "Runerigus, Galar Yamask",
+    "evolution line": "Runerigus, Galar Yamask",
     "img": "867"
   },
   "Milcery": {
+    "name": "Milcery",
     "id": 868,
     "hp": 45,
     "attack": 40,
@@ -18940,10 +20124,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sweet Veil, Aroma Veil",
     "passive": "Regenerator",
-    "evolution": "Milcery, Vanilla Cream Alcremie, Ruby Cream Alcremie, Matcha Cream Alcremie, Mint Cream Alcremie, Lemon Cream Alcremie, Salted Cream Alcremie, Ruby Swirl Alcremie, Caramel Swirl Alcremie, Rainbow Swirl Alcremie, Gigantamax Alcremie",
+    "evolution line": "Milcery, Vanilla Cream Alcremie, Ruby Cream Alcremie, Matcha Cream Alcremie, Mint Cream Alcremie, Lemon Cream Alcremie, Salted Cream Alcremie, Ruby Swirl Alcremie, Caramel Swirl Alcremie, Rainbow Swirl Alcremie, Gigantamax Alcremie",
     "img": "868"
   },
   "Vanilla Cream Alcremie": {
+    "name": "Vanilla Cream Alcremie",
     "id": 869,
     "hp": 65,
     "attack": 60,
@@ -18956,10 +20141,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sweet Veil, Aroma Veil",
     "passive": "Regenerator",
-    "evolution": "Milcery, Vanilla Cream Alcremie, Ruby Cream Alcremie, Matcha Cream Alcremie, Mint Cream Alcremie, Lemon Cream Alcremie, Salted Cream Alcremie, Ruby Swirl Alcremie, Caramel Swirl Alcremie, Rainbow Swirl Alcremie, Gigantamax Alcremie",
+    "evolution line": "Milcery, Vanilla Cream Alcremie, Ruby Cream Alcremie, Matcha Cream Alcremie, Mint Cream Alcremie, Lemon Cream Alcremie, Salted Cream Alcremie, Ruby Swirl Alcremie, Caramel Swirl Alcremie, Rainbow Swirl Alcremie, Gigantamax Alcremie",
     "img": "869"
   },
   "Ruby Cream Alcremie": {
+    "name": "Ruby Cream Alcremie",
     "id": 869,
     "hp": 65,
     "attack": 60,
@@ -18972,10 +20158,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sweet Veil, Aroma Veil",
     "passive": "Regenerator",
-    "evolution": "Milcery, Vanilla Cream Alcremie, Ruby Cream Alcremie, Matcha Cream Alcremie, Mint Cream Alcremie, Lemon Cream Alcremie, Salted Cream Alcremie, Ruby Swirl Alcremie, Caramel Swirl Alcremie, Rainbow Swirl Alcremie, Gigantamax Alcremie",
+    "evolution line": "Milcery, Vanilla Cream Alcremie, Ruby Cream Alcremie, Matcha Cream Alcremie, Mint Cream Alcremie, Lemon Cream Alcremie, Salted Cream Alcremie, Ruby Swirl Alcremie, Caramel Swirl Alcremie, Rainbow Swirl Alcremie, Gigantamax Alcremie",
     "img": "869-ruby-cream"
   },
   "Matcha Cream Alcremie": {
+    "name": "Matcha Cream Alcremie",
     "id": 869,
     "hp": 65,
     "attack": 60,
@@ -18988,10 +20175,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sweet Veil, Aroma Veil",
     "passive": "Regenerator",
-    "evolution": "Milcery, Vanilla Cream Alcremie, Ruby Cream Alcremie, Matcha Cream Alcremie, Mint Cream Alcremie, Lemon Cream Alcremie, Salted Cream Alcremie, Ruby Swirl Alcremie, Caramel Swirl Alcremie, Rainbow Swirl Alcremie, Gigantamax Alcremie",
+    "evolution line": "Milcery, Vanilla Cream Alcremie, Ruby Cream Alcremie, Matcha Cream Alcremie, Mint Cream Alcremie, Lemon Cream Alcremie, Salted Cream Alcremie, Ruby Swirl Alcremie, Caramel Swirl Alcremie, Rainbow Swirl Alcremie, Gigantamax Alcremie",
     "img": "869-matcha-cream"
   },
   "Mint Cream Alcremie": {
+    "name": "Mint Cream Alcremie",
     "id": 869,
     "hp": 65,
     "attack": 60,
@@ -19004,10 +20192,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sweet Veil, Aroma Veil",
     "passive": "Regenerator",
-    "evolution": "Milcery, Vanilla Cream Alcremie, Ruby Cream Alcremie, Matcha Cream Alcremie, Mint Cream Alcremie, Lemon Cream Alcremie, Salted Cream Alcremie, Ruby Swirl Alcremie, Caramel Swirl Alcremie, Rainbow Swirl Alcremie, Gigantamax Alcremie",
+    "evolution line": "Milcery, Vanilla Cream Alcremie, Ruby Cream Alcremie, Matcha Cream Alcremie, Mint Cream Alcremie, Lemon Cream Alcremie, Salted Cream Alcremie, Ruby Swirl Alcremie, Caramel Swirl Alcremie, Rainbow Swirl Alcremie, Gigantamax Alcremie",
     "img": "869-mint-cream"
   },
   "Lemon Cream Alcremie": {
+    "name": "Lemon Cream Alcremie",
     "id": 869,
     "hp": 65,
     "attack": 60,
@@ -19020,10 +20209,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sweet Veil, Aroma Veil",
     "passive": "Regenerator",
-    "evolution": "Milcery, Vanilla Cream Alcremie, Ruby Cream Alcremie, Matcha Cream Alcremie, Mint Cream Alcremie, Lemon Cream Alcremie, Salted Cream Alcremie, Ruby Swirl Alcremie, Caramel Swirl Alcremie, Rainbow Swirl Alcremie, Gigantamax Alcremie",
+    "evolution line": "Milcery, Vanilla Cream Alcremie, Ruby Cream Alcremie, Matcha Cream Alcremie, Mint Cream Alcremie, Lemon Cream Alcremie, Salted Cream Alcremie, Ruby Swirl Alcremie, Caramel Swirl Alcremie, Rainbow Swirl Alcremie, Gigantamax Alcremie",
     "img": "869-lemon-cream"
   },
   "Salted Cream Alcremie": {
+    "name": "Salted Cream Alcremie",
     "id": 869,
     "hp": 65,
     "attack": 60,
@@ -19036,10 +20226,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sweet Veil, Aroma Veil",
     "passive": "Regenerator",
-    "evolution": "Milcery, Vanilla Cream Alcremie, Ruby Cream Alcremie, Matcha Cream Alcremie, Mint Cream Alcremie, Lemon Cream Alcremie, Salted Cream Alcremie, Ruby Swirl Alcremie, Caramel Swirl Alcremie, Rainbow Swirl Alcremie, Gigantamax Alcremie",
+    "evolution line": "Milcery, Vanilla Cream Alcremie, Ruby Cream Alcremie, Matcha Cream Alcremie, Mint Cream Alcremie, Lemon Cream Alcremie, Salted Cream Alcremie, Ruby Swirl Alcremie, Caramel Swirl Alcremie, Rainbow Swirl Alcremie, Gigantamax Alcremie",
     "img": "869-salted-cream"
   },
   "Ruby Swirl Alcremie": {
+    "name": "Ruby Swirl Alcremie",
     "id": 869,
     "hp": 65,
     "attack": 60,
@@ -19052,10 +20243,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sweet Veil, Aroma Veil",
     "passive": "Regenerator",
-    "evolution": "Milcery, Vanilla Cream Alcremie, Ruby Cream Alcremie, Matcha Cream Alcremie, Mint Cream Alcremie, Lemon Cream Alcremie, Salted Cream Alcremie, Ruby Swirl Alcremie, Caramel Swirl Alcremie, Rainbow Swirl Alcremie, Gigantamax Alcremie",
+    "evolution line": "Milcery, Vanilla Cream Alcremie, Ruby Cream Alcremie, Matcha Cream Alcremie, Mint Cream Alcremie, Lemon Cream Alcremie, Salted Cream Alcremie, Ruby Swirl Alcremie, Caramel Swirl Alcremie, Rainbow Swirl Alcremie, Gigantamax Alcremie",
     "img": "869-ruby-swirl"
   },
   "Caramel Swirl Alcremie": {
+    "name": "Caramel Swirl Alcremie",
     "id": 869,
     "hp": 65,
     "attack": 60,
@@ -19068,10 +20260,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sweet Veil, Aroma Veil",
     "passive": "Regenerator",
-    "evolution": "Milcery, Vanilla Cream Alcremie, Ruby Cream Alcremie, Matcha Cream Alcremie, Mint Cream Alcremie, Lemon Cream Alcremie, Salted Cream Alcremie, Ruby Swirl Alcremie, Caramel Swirl Alcremie, Rainbow Swirl Alcremie, Gigantamax Alcremie",
+    "evolution line": "Milcery, Vanilla Cream Alcremie, Ruby Cream Alcremie, Matcha Cream Alcremie, Mint Cream Alcremie, Lemon Cream Alcremie, Salted Cream Alcremie, Ruby Swirl Alcremie, Caramel Swirl Alcremie, Rainbow Swirl Alcremie, Gigantamax Alcremie",
     "img": "869-caramel-swirl"
   },
   "Rainbow Swirl Alcremie": {
+    "name": "Rainbow Swirl Alcremie",
     "id": 869,
     "hp": 65,
     "attack": 60,
@@ -19084,10 +20277,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sweet Veil, Aroma Veil",
     "passive": "Regenerator",
-    "evolution": "Milcery, Vanilla Cream Alcremie, Ruby Cream Alcremie, Matcha Cream Alcremie, Mint Cream Alcremie, Lemon Cream Alcremie, Salted Cream Alcremie, Ruby Swirl Alcremie, Caramel Swirl Alcremie, Rainbow Swirl Alcremie, Gigantamax Alcremie",
+    "evolution line": "Milcery, Vanilla Cream Alcremie, Ruby Cream Alcremie, Matcha Cream Alcremie, Mint Cream Alcremie, Lemon Cream Alcremie, Salted Cream Alcremie, Ruby Swirl Alcremie, Caramel Swirl Alcremie, Rainbow Swirl Alcremie, Gigantamax Alcremie",
     "img": "869-rainbow-swirl"
   },
   "Gigantamax Alcremie": {
+    "name": "Gigantamax Alcremie",
     "id": 869,
     "hp": 105,
     "attack": 70,
@@ -19100,10 +20294,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Misty Surge",
     "passive": "Regenerator",
-    "evolution": "Milcery, Vanilla Cream Alcremie, Ruby Cream Alcremie, Matcha Cream Alcremie, Mint Cream Alcremie, Lemon Cream Alcremie, Salted Cream Alcremie, Ruby Swirl Alcremie, Caramel Swirl Alcremie, Rainbow Swirl Alcremie, Gigantamax Alcremie",
+    "evolution line": "Milcery, Vanilla Cream Alcremie, Ruby Cream Alcremie, Matcha Cream Alcremie, Mint Cream Alcremie, Lemon Cream Alcremie, Salted Cream Alcremie, Ruby Swirl Alcremie, Caramel Swirl Alcremie, Rainbow Swirl Alcremie, Gigantamax Alcremie",
     "img": "869-gigantamax"
   },
   "Falinks": {
+    "name": "Falinks",
     "id": 870,
     "hp": 65,
     "attack": 100,
@@ -19116,10 +20311,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Battle Armor, Defiant",
     "passive": "Dauntless Shield",
-    "evolution": "Falinks",
+    "evolution line": "Falinks",
     "img": "870"
   },
   "Pincurchin": {
+    "name": "Pincurchin",
     "id": 871,
     "hp": 48,
     "attack": 101,
@@ -19132,10 +20328,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Lightning Rod, Electric Surge",
     "passive": "Electromorphosis",
-    "evolution": "Pincurchin",
+    "evolution line": "Pincurchin",
     "img": "871"
   },
   "Snom": {
+    "name": "Snom",
     "id": 872,
     "hp": 30,
     "attack": 25,
@@ -19148,10 +20345,11 @@ const POKEMON_DATA = {
     "type2": "Bug",
     "abilities": "Shield Dust, Ice Scales",
     "passive": "Snow Warning",
-    "evolution": "Snom, Frosmoth",
+    "evolution line": "Snom, Frosmoth",
     "img": "872"
   },
   "Frosmoth": {
+    "name": "Frosmoth",
     "id": 873,
     "hp": 70,
     "attack": 65,
@@ -19164,10 +20362,11 @@ const POKEMON_DATA = {
     "type2": "Bug",
     "abilities": "Shield Dust, Ice Scales",
     "passive": "Snow Warning",
-    "evolution": "Snom, Frosmoth",
+    "evolution line": "Snom, Frosmoth",
     "img": "873"
   },
   "Stonjourner": {
+    "name": "Stonjourner",
     "id": 874,
     "hp": 100,
     "attack": 125,
@@ -19180,10 +20379,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Power Spot",
     "passive": "Sturdy",
-    "evolution": "Stonjourner",
+    "evolution line": "Stonjourner",
     "img": "874"
   },
   "Eiscue": {
+    "name": "Eiscue",
     "id": 875,
     "hp": 75,
     "attack": 80,
@@ -19196,10 +20396,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Ice Face",
     "passive": "Ice Scales",
-    "evolution": "Eiscue, No Ice Eiscue",
+    "evolution line": "Eiscue, No Ice Eiscue",
     "img": "875"
   },
   "No Ice Eiscue": {
+    "name": "No Ice Eiscue",
     "id": 875,
     "hp": 75,
     "attack": 80,
@@ -19212,10 +20413,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Ice Face",
     "passive": "Ice Scales",
-    "evolution": "Eiscue, No Ice Eiscue",
+    "evolution line": "Eiscue, No Ice Eiscue",
     "img": "875-no-ice"
   },
   "Male Indeedee": {
+    "name": "Male Indeedee",
     "id": 876,
     "hp": 60,
     "attack": 65,
@@ -19228,10 +20430,11 @@ const POKEMON_DATA = {
     "type2": "Normal",
     "abilities": "Inner Focus, Synchronize, Psychic Surge",
     "passive": "Hospitality",
-    "evolution": "Male Indeedee, Female Indeedee",
+    "evolution line": "Male Indeedee, Female Indeedee",
     "img": "876"
   },
   "Female Indeedee": {
+    "name": "Female Indeedee",
     "id": 876,
     "hp": 70,
     "attack": 55,
@@ -19244,10 +20447,11 @@ const POKEMON_DATA = {
     "type2": "Normal",
     "abilities": "Own Tempo, Synchronize, Psychic Surge",
     "passive": "Friend Guard",
-    "evolution": "Male Indeedee, Female Indeedee",
+    "evolution line": "Male Indeedee, Female Indeedee",
     "img": "876-female"
   },
   "Full Belly Morpeko": {
+    "name": "Full Belly Morpeko",
     "id": 877,
     "hp": 58,
     "attack": 95,
@@ -19260,10 +20464,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Hunger Switch",
     "passive": "Moody",
-    "evolution": "Full Belly Morpeko, Hangry Morpeko",
+    "evolution line": "Full Belly Morpeko, Hangry Morpeko",
     "img": "877"
   },
   "Hangry Morpeko": {
+    "name": "Hangry Morpeko",
     "id": 877,
     "hp": 58,
     "attack": 95,
@@ -19276,10 +20481,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Hunger Switch",
     "passive": "Moody",
-    "evolution": "Full Belly Morpeko, Hangry Morpeko",
+    "evolution line": "Full Belly Morpeko, Hangry Morpeko",
     "img": "877-hangry"
   },
   "Cufant": {
+    "name": "Cufant",
     "id": 878,
     "hp": 72,
     "attack": 80,
@@ -19292,10 +20498,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sheer Force, Heavy Metal",
     "passive": "Earth Eater",
-    "evolution": "Cufant, Copperajah, Gigantamax Copperajah",
+    "evolution line": "Cufant, Copperajah, Gigantamax Copperajah",
     "img": "878"
   },
   "Copperajah": {
+    "name": "Copperajah",
     "id": 879,
     "hp": 122,
     "attack": 130,
@@ -19308,10 +20515,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sheer Force, Heavy Metal",
     "passive": "Earth Eater",
-    "evolution": "Cufant, Copperajah, Gigantamax Copperajah",
+    "evolution line": "Cufant, Copperajah, Gigantamax Copperajah",
     "img": "879"
   },
   "Gigantamax Copperajah": {
+    "name": "Gigantamax Copperajah",
     "id": 879,
     "hp": 177,
     "attack": 155,
@@ -19324,10 +20532,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Mold Breaker",
     "passive": "Earth Eater",
-    "evolution": "Cufant, Copperajah, Gigantamax Copperajah",
+    "evolution line": "Cufant, Copperajah, Gigantamax Copperajah",
     "img": "879-gigantamax"
   },
   "Dracozolt": {
+    "name": "Dracozolt",
     "id": 880,
     "hp": 90,
     "attack": 100,
@@ -19340,10 +20549,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Volt Absorb, Hustle, Sand Rush",
     "passive": "No Guard",
-    "evolution": "Dracozolt",
+    "evolution line": "Dracozolt",
     "img": "880"
   },
   "Arctozolt": {
+    "name": "Arctozolt",
     "id": 881,
     "hp": 90,
     "attack": 100,
@@ -19356,10 +20566,11 @@ const POKEMON_DATA = {
     "type2": "Ice",
     "abilities": "Volt Absorb, Static, Slush Rush",
     "passive": "Water Absorb",
-    "evolution": "Arctozolt",
+    "evolution line": "Arctozolt",
     "img": "881"
   },
   "Dracovish": {
+    "name": "Dracovish",
     "id": 882,
     "hp": 90,
     "attack": 90,
@@ -19372,10 +20583,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Water Absorb, Strong Jaw, Sand Rush",
     "passive": "Mold Breaker",
-    "evolution": "Dracovish",
+    "evolution line": "Dracovish",
     "img": "882"
   },
   "Arctovish": {
+    "name": "Arctovish",
     "id": 883,
     "hp": 90,
     "attack": 90,
@@ -19388,10 +20600,11 @@ const POKEMON_DATA = {
     "type2": "Ice",
     "abilities": "Water Absorb, Ice Body, Slush Rush",
     "passive": "Strong Jaw",
-    "evolution": "Arctovish",
+    "evolution line": "Arctovish",
     "img": "883"
   },
   "Duraludon": {
+    "name": "Duraludon",
     "id": 884,
     "hp": 70,
     "attack": 95,
@@ -19404,10 +20617,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Light Metal, Heavy Metal, Stalwart",
     "passive": "Filter",
-    "evolution": "Duraludon, Gigantamax Duraludon, Archaludon",
+    "evolution line": "Duraludon, Gigantamax Duraludon, Archaludon",
     "img": "884"
   },
   "Gigantamax Duraludon": {
+    "name": "Gigantamax Duraludon",
     "id": 884,
     "hp": 100,
     "attack": 120,
@@ -19420,10 +20634,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Analytic",
     "passive": "Filter",
-    "evolution": "Duraludon, Gigantamax Duraludon, Archaludon",
+    "evolution line": "Duraludon, Gigantamax Duraludon, Archaludon",
     "img": "884-gigantamax"
   },
   "Dreepy": {
+    "name": "Dreepy",
     "id": 885,
     "hp": 28,
     "attack": 60,
@@ -19436,10 +20651,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Clear Body, Infiltrator, Cursed Body",
     "passive": "Technician",
-    "evolution": "Dreepy, Drakloak, Dragapult",
+    "evolution line": "Dreepy, Drakloak, Dragapult",
     "img": "885"
   },
   "Drakloak": {
+    "name": "Drakloak",
     "id": 886,
     "hp": 68,
     "attack": 80,
@@ -19452,10 +20668,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Clear Body, Infiltrator, Cursed Body",
     "passive": "Parental Bond",
-    "evolution": "Dreepy, Drakloak, Dragapult",
+    "evolution line": "Dreepy, Drakloak, Dragapult",
     "img": "886"
   },
   "Dragapult": {
+    "name": "Dragapult",
     "id": 887,
     "hp": 88,
     "attack": 120,
@@ -19468,10 +20685,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Clear Body, Infiltrator, Cursed Body",
     "passive": "Parental Bond",
-    "evolution": "Dreepy, Drakloak, Dragapult",
+    "evolution line": "Dreepy, Drakloak, Dragapult",
     "img": "887"
   },
   "Zacian": {
+    "name": "Zacian",
     "id": 888,
     "hp": 92,
     "attack": 120,
@@ -19484,10 +20702,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Intrepid Sword",
     "passive": "Unnerve",
-    "evolution": "Zacian, Crowned Zacian",
+    "evolution line": "Zacian, Crowned Zacian",
     "img": "888"
   },
   "Crowned Zacian": {
+    "name": "Crowned Zacian",
     "id": 888,
     "hp": 92,
     "attack": 150,
@@ -19500,10 +20719,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Intrepid Sword",
     "passive": "Unnerve",
-    "evolution": "Zacian, Crowned Zacian",
+    "evolution line": "Zacian, Crowned Zacian",
     "img": "888-crowned"
   },
   "Zamazenta": {
+    "name": "Zamazenta",
     "id": 889,
     "hp": 92,
     "attack": 120,
@@ -19516,10 +20736,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Dauntless Shield",
     "passive": "Unnerve",
-    "evolution": "Zamazenta, Crowned Zamazenta",
+    "evolution line": "Zamazenta, Crowned Zamazenta",
     "img": "889"
   },
   "Crowned Zamazenta": {
+    "name": "Crowned Zamazenta",
     "id": 889,
     "hp": 92,
     "attack": 120,
@@ -19532,10 +20753,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Dauntless Shield",
     "passive": "Unnerve",
-    "evolution": "Zamazenta, Crowned Zamazenta",
+    "evolution line": "Zamazenta, Crowned Zamazenta",
     "img": "889-crowned"
   },
   "Eternatus": {
+    "name": "Eternatus",
     "id": 890,
     "hp": 140,
     "attack": 85,
@@ -19548,10 +20770,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Pressure",
     "passive": "Neutralizing Gas",
-    "evolution": "Eternatus, Eternamax Eternatus",
+    "evolution line": "Eternatus, Eternamax Eternatus",
     "img": "890"
   },
   "Eternamax Eternatus": {
+    "name": "Eternamax Eternatus",
     "id": 890,
     "hp": 255,
     "attack": 115,
@@ -19564,10 +20787,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Pressure",
     "passive": "Neutralizing Gas",
-    "evolution": "Eternatus, Eternamax Eternatus",
+    "evolution line": "Eternatus, Eternamax Eternatus",
     "img": "890-eternamax"
   },
   "Kubfu": {
+    "name": "Kubfu",
     "id": 891,
     "hp": 60,
     "attack": 90,
@@ -19580,10 +20804,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Inner Focus",
     "passive": "Iron Fist",
-    "evolution": "Kubfu, Single Strike Urshifu, Rapid Strike Urshifu, Gigantamax Single Strike Urshifu, Gigantamax Rapid Strike Urshifu",
+    "evolution line": "Kubfu, Single Strike Urshifu, Rapid Strike Urshifu, Gigantamax Single Strike Urshifu, Gigantamax Rapid Strike Urshifu",
     "img": "891"
   },
   "Single Strike Urshifu": {
+    "name": "Single Strike Urshifu",
     "id": 892,
     "hp": 100,
     "attack": 130,
@@ -19596,10 +20821,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Unseen Fist",
     "passive": "Iron Fist",
-    "evolution": "Kubfu, Single Strike Urshifu, Rapid Strike Urshifu, Gigantamax Single Strike Urshifu, Gigantamax Rapid Strike Urshifu",
+    "evolution line": "Kubfu, Single Strike Urshifu, Rapid Strike Urshifu, Gigantamax Single Strike Urshifu, Gigantamax Rapid Strike Urshifu",
     "img": "892"
   },
   "Rapid Strike Urshifu": {
+    "name": "Rapid Strike Urshifu",
     "id": 892,
     "hp": 100,
     "attack": 130,
@@ -19612,10 +20838,11 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Unseen Fist",
     "passive": "Iron Fist",
-    "evolution": "Kubfu, Single Strike Urshifu, Rapid Strike Urshifu, Gigantamax Single Strike Urshifu, Gigantamax Rapid Strike Urshifu",
+    "evolution line": "Kubfu, Single Strike Urshifu, Rapid Strike Urshifu, Gigantamax Single Strike Urshifu, Gigantamax Rapid Strike Urshifu",
     "img": "892-rapid-strike"
   },
   "Gigantamax Single Strike Urshifu": {
+    "name": "Gigantamax Single Strike Urshifu",
     "id": 892,
     "hp": 120,
     "attack": 150,
@@ -19628,10 +20855,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Unseen Fist",
     "passive": "Iron Fist",
-    "evolution": "Kubfu, Single Strike Urshifu, Rapid Strike Urshifu, Gigantamax Single Strike Urshifu, Gigantamax Rapid Strike Urshifu",
+    "evolution line": "Kubfu, Single Strike Urshifu, Rapid Strike Urshifu, Gigantamax Single Strike Urshifu, Gigantamax Rapid Strike Urshifu",
     "img": "892-gigantamax-single"
   },
   "Gigantamax Rapid Strike Urshifu": {
+    "name": "Gigantamax Rapid Strike Urshifu",
     "id": 892,
     "hp": 120,
     "attack": 150,
@@ -19644,10 +20872,11 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Unseen Fist",
     "passive": "Iron Fist",
-    "evolution": "Kubfu, Single Strike Urshifu, Rapid Strike Urshifu, Gigantamax Single Strike Urshifu, Gigantamax Rapid Strike Urshifu",
+    "evolution line": "Kubfu, Single Strike Urshifu, Rapid Strike Urshifu, Gigantamax Single Strike Urshifu, Gigantamax Rapid Strike Urshifu",
     "img": "892-gigantamax-rapid"
   },
   "Zarude": {
+    "name": "Zarude",
     "id": 893,
     "hp": 105,
     "attack": 120,
@@ -19660,10 +20889,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Leaf Guard",
     "passive": "Tough Claws",
-    "evolution": "Zarude, Dada Zarude",
+    "evolution line": "Zarude, Dada Zarude",
     "img": "893"
   },
   "Dada Zarude": {
+    "name": "Dada Zarude",
     "id": 893,
     "hp": 105,
     "attack": 120,
@@ -19676,10 +20906,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Leaf Guard",
     "passive": "Tough Claws",
-    "evolution": "Zarude, Dada Zarude",
+    "evolution line": "Zarude, Dada Zarude",
     "img": "893-dada"
   },
   "Regieleki": {
+    "name": "Regieleki",
     "id": 894,
     "hp": 80,
     "attack": 100,
@@ -19692,10 +20923,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Transistor",
     "passive": "Electric Surge",
-    "evolution": "Regieleki",
+    "evolution line": "Regieleki",
     "img": "894"
   },
   "Regidrago": {
+    "name": "Regidrago",
     "id": 895,
     "hp": 200,
     "attack": 100,
@@ -19708,10 +20940,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Dragons Maw",
     "passive": "Multiscale",
-    "evolution": "Regidrago",
+    "evolution line": "Regidrago",
     "img": "895"
   },
   "Glastrier": {
+    "name": "Glastrier",
     "id": 896,
     "hp": 100,
     "attack": 145,
@@ -19724,10 +20957,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Chilling Neigh",
     "passive": "Filter",
-    "evolution": "Glastrier",
+    "evolution line": "Glastrier",
     "img": "896"
   },
   "Spectrier": {
+    "name": "Spectrier",
     "id": 897,
     "hp": 100,
     "attack": 65,
@@ -19740,10 +20974,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Grim Neigh",
     "passive": "Dazzling",
-    "evolution": "Spectrier",
+    "evolution line": "Spectrier",
     "img": "897"
   },
   "Calyrex": {
+    "name": "Calyrex",
     "id": 898,
     "hp": 100,
     "attack": 80,
@@ -19756,10 +20991,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Unnerve",
     "passive": "Harvest",
-    "evolution": "Calyrex, Ice Calyrex, Shadow Calyrex",
+    "evolution line": "Calyrex, Ice Calyrex, Shadow Calyrex",
     "img": "898"
   },
   "Ice Calyrex": {
+    "name": "Ice Calyrex",
     "id": 898,
     "hp": 100,
     "attack": 165,
@@ -19772,10 +21008,11 @@ const POKEMON_DATA = {
     "type2": "Ice",
     "abilities": "As One Glastrier",
     "passive": "Filter",
-    "evolution": "Calyrex, Ice Calyrex, Shadow Calyrex",
+    "evolution line": "Calyrex, Ice Calyrex, Shadow Calyrex",
     "img": "898-ice"
   },
   "Shadow Calyrex": {
+    "name": "Shadow Calyrex",
     "id": 898,
     "hp": 100,
     "attack": 85,
@@ -19788,10 +21025,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "As One Spectrier",
     "passive": "Dazzling",
-    "evolution": "Calyrex, Ice Calyrex, Shadow Calyrex",
+    "evolution line": "Calyrex, Ice Calyrex, Shadow Calyrex",
     "img": "898-shadow"
   },
   "Wyrdeer": {
+    "name": "Wyrdeer",
     "id": 899,
     "hp": 103,
     "attack": 105,
@@ -19804,10 +21042,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Intimidate, Frisk, Sap Sipper",
     "passive": "Speed Boost",
-    "evolution": "Stantler, Wyrdeer",
+    "evolution line": "Stantler, Wyrdeer",
     "img": "899"
   },
   "Kleavor": {
+    "name": "Kleavor",
     "id": 900,
     "hp": 70,
     "attack": 135,
@@ -19820,10 +21059,11 @@ const POKEMON_DATA = {
     "type2": "Rock",
     "abilities": "Swarm, Sheer Force, Sharpness",
     "passive": "Weak Armor",
-    "evolution": "Scyther, Scizor, Mega Scizor, Kleavor",
+    "evolution line": "Scyther, Scizor, Mega Scizor, Kleavor",
     "img": "900"
   },
   "Ursaluna": {
+    "name": "Ursaluna",
     "id": 901,
     "hp": 130,
     "attack": 140,
@@ -19836,10 +21076,11 @@ const POKEMON_DATA = {
     "type2": "Normal",
     "abilities": "Guts, Bulletproof, Unnerve",
     "passive": "Thick Fat",
-    "evolution": "Teddiursa, Ursaring, Ursaluna",
+    "evolution line": "Teddiursa, Ursaring, Ursaluna",
     "img": "901"
   },
   "Male Basculegion": {
+    "name": "Male Basculegion",
     "id": 902,
     "hp": 120,
     "attack": 112,
@@ -19852,10 +21093,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Swift Swim, Adaptability, Mold Breaker",
     "passive": "Supreme Overlord",
-    "evolution": "Red-Striped Basculin, Blue-Striped Basculin, White-Striped Basculin, Male Basculegion, Female Basculegion",
+    "evolution line": "Red-Striped Basculin, Blue-Striped Basculin, White-Striped Basculin, Male Basculegion, Female Basculegion",
     "img": "902"
   },
   "Female Basculegion": {
+    "name": "Female Basculegion",
     "id": 902,
     "hp": 120,
     "attack": 92,
@@ -19868,10 +21110,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Swift Swim, Adaptability, Mold Breaker",
     "passive": "Supreme Overlord",
-    "evolution": "Red-Striped Basculin, Blue-Striped Basculin, White-Striped Basculin, Male Basculegion, Female Basculegion",
+    "evolution line": "Red-Striped Basculin, Blue-Striped Basculin, White-Striped Basculin, Male Basculegion, Female Basculegion",
     "img": "902-female"
   },
   "Sneasler": {
+    "name": "Sneasler",
     "id": 903,
     "hp": 80,
     "attack": 130,
@@ -19884,10 +21127,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Pressure, Unburden, Poison Touch",
     "passive": "Scrappy",
-    "evolution": "Sneasler, Hisui Sneasel",
+    "evolution line": "Sneasler, Hisui Sneasel",
     "img": "903"
   },
   "Overqwil": {
+    "name": "Overqwil",
     "id": 904,
     "hp": 85,
     "attack": 115,
@@ -19900,10 +21144,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Poison Point, Swift Swim, Intimidate",
     "passive": "Merciless",
-    "evolution": "Overqwil, Hisui Qwilfish",
+    "evolution line": "Overqwil, Hisui Qwilfish",
     "img": "904"
   },
   "Incarnate Enamorus": {
+    "name": "Incarnate Enamorus",
     "id": 905,
     "hp": 74,
     "attack": 115,
@@ -19916,10 +21161,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Cute Charm, Contrary",
     "passive": "Fairy Aura",
-    "evolution": "Incarnate Enamorus, Therian Enamorus",
+    "evolution line": "Incarnate Enamorus, Therian Enamorus",
     "img": "905-incarnate"
   },
   "Therian Enamorus": {
+    "name": "Therian Enamorus",
     "id": 905,
     "hp": 74,
     "attack": 115,
@@ -19932,10 +21178,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Overcoat",
     "passive": "Fairy Aura",
-    "evolution": "Incarnate Enamorus, Therian Enamorus",
+    "evolution line": "Incarnate Enamorus, Therian Enamorus",
     "img": "905-therian"
   },
   "Sprigatito": {
+    "name": "Sprigatito",
     "id": 906,
     "hp": 40,
     "attack": 61,
@@ -19948,10 +21195,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Overgrow, Protean",
     "passive": "Pickup",
-    "evolution": "Sprigatito, Floragato, Meowscarada",
+    "evolution line": "Sprigatito, Floragato, Meowscarada",
     "img": "906"
   },
   "Floragato": {
+    "name": "Floragato",
     "id": 907,
     "hp": 61,
     "attack": 80,
@@ -19964,10 +21212,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Overgrow, Protean",
     "passive": "Magician",
-    "evolution": "Sprigatito, Floragato, Meowscarada",
+    "evolution line": "Sprigatito, Floragato, Meowscarada",
     "img": "907"
   },
   "Meowscarada": {
+    "name": "Meowscarada",
     "id": 908,
     "hp": 76,
     "attack": 110,
@@ -19980,10 +21229,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Overgrow, Protean",
     "passive": "Magician",
-    "evolution": "Sprigatito, Floragato, Meowscarada",
+    "evolution line": "Sprigatito, Floragato, Meowscarada",
     "img": "908"
   },
   "Fuecoco": {
+    "name": "Fuecoco",
     "id": 909,
     "hp": 67,
     "attack": 45,
@@ -19996,10 +21246,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Blaze, Unaware",
     "passive": "Gluttony",
-    "evolution": "Fuecoco, Crocalor, Skeledirge",
+    "evolution line": "Fuecoco, Crocalor, Skeledirge",
     "img": "909"
   },
   "Crocalor": {
+    "name": "Crocalor",
     "id": 910,
     "hp": 81,
     "attack": 55,
@@ -20012,10 +21263,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Blaze, Unaware",
     "passive": "Punk Rock",
-    "evolution": "Fuecoco, Crocalor, Skeledirge",
+    "evolution line": "Fuecoco, Crocalor, Skeledirge",
     "img": "910"
   },
   "Skeledirge": {
+    "name": "Skeledirge",
     "id": 911,
     "hp": 104,
     "attack": 75,
@@ -20028,10 +21280,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Blaze, Unaware",
     "passive": "Punk Rock",
-    "evolution": "Fuecoco, Crocalor, Skeledirge",
+    "evolution line": "Fuecoco, Crocalor, Skeledirge",
     "img": "911"
   },
   "Quaxly": {
+    "name": "Quaxly",
     "id": 912,
     "hp": 55,
     "attack": 65,
@@ -20044,10 +21297,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Torrent, Moxie",
     "passive": "Opportunist",
-    "evolution": "Quaxly, Quaxwell, Quaquaval",
+    "evolution line": "Quaxly, Quaxwell, Quaquaval",
     "img": "912"
   },
   "Quaxwell": {
+    "name": "Quaxwell",
     "id": 913,
     "hp": 70,
     "attack": 85,
@@ -20060,10 +21314,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Torrent, Moxie",
     "passive": "Opportunist",
-    "evolution": "Quaxly, Quaxwell, Quaquaval",
+    "evolution line": "Quaxly, Quaxwell, Quaquaval",
     "img": "913"
   },
   "Quaquaval": {
+    "name": "Quaquaval",
     "id": 914,
     "hp": 85,
     "attack": 120,
@@ -20076,10 +21331,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Torrent, Moxie",
     "passive": "Opportunist",
-    "evolution": "Quaxly, Quaxwell, Quaquaval",
+    "evolution line": "Quaxly, Quaxwell, Quaquaval",
     "img": "914"
   },
   "Lechonk": {
+    "name": "Lechonk",
     "id": 915,
     "hp": 54,
     "attack": 45,
@@ -20092,10 +21348,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Aroma Veil, Gluttony, Thick Fat",
     "passive": "Simple",
-    "evolution": "Lechonk, Male Oinkologne, Female Oinkologne",
+    "evolution line": "Lechonk, Male Oinkologne, Female Oinkologne",
     "img": "915"
   },
   "Male Oinkologne": {
+    "name": "Male Oinkologne",
     "id": 916,
     "hp": 110,
     "attack": 100,
@@ -20108,10 +21365,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Lingering Aroma, Gluttony, Thick Fat",
     "passive": "Simple",
-    "evolution": "Lechonk, Male Oinkologne, Female Oinkologne",
+    "evolution line": "Lechonk, Male Oinkologne, Female Oinkologne",
     "img": "916"
   },
   "Female Oinkologne": {
+    "name": "Female Oinkologne",
     "id": 916,
     "hp": 115,
     "attack": 90,
@@ -20124,10 +21382,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Aroma Veil, Gluttony, Thick Fat",
     "passive": "Simple",
-    "evolution": "Lechonk, Male Oinkologne, Female Oinkologne",
+    "evolution line": "Lechonk, Male Oinkologne, Female Oinkologne",
     "img": "916-female"
   },
   "Tarountula": {
+    "name": "Tarountula",
     "id": 917,
     "hp": 35,
     "attack": 41,
@@ -20140,10 +21399,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Insomnia, Stakeout",
     "passive": "Honey Gather",
-    "evolution": "Tarountula, Spidops",
+    "evolution line": "Tarountula, Spidops",
     "img": "917"
   },
   "Spidops": {
+    "name": "Spidops",
     "id": 918,
     "hp": 60,
     "attack": 79,
@@ -20156,10 +21416,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Insomnia, Stakeout",
     "passive": "Honey Gather",
-    "evolution": "Tarountula, Spidops",
+    "evolution line": "Tarountula, Spidops",
     "img": "918"
   },
   "Nymble": {
+    "name": "Nymble",
     "id": 919,
     "hp": 33,
     "attack": 46,
@@ -20172,10 +21433,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Swarm, Tinted Lens",
     "passive": "Technician",
-    "evolution": "Nymble, Lokix",
+    "evolution line": "Nymble, Lokix",
     "img": "919"
   },
   "Lokix": {
+    "name": "Lokix",
     "id": 920,
     "hp": 71,
     "attack": 102,
@@ -20188,10 +21450,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Swarm, Tinted Lens",
     "passive": "Guts",
-    "evolution": "Nymble, Lokix",
+    "evolution line": "Nymble, Lokix",
     "img": "920"
   },
   "Pawmi": {
+    "name": "Pawmi",
     "id": 921,
     "hp": 45,
     "attack": 50,
@@ -20204,10 +21467,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Natural Cure, Iron Fist",
     "passive": "Transistor",
-    "evolution": "Pawmi, Pawmo, Pawmot",
+    "evolution line": "Pawmi, Pawmo, Pawmot",
     "img": "921"
   },
   "Pawmo": {
+    "name": "Pawmo",
     "id": 922,
     "hp": 60,
     "attack": 75,
@@ -20220,10 +21484,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Volt Absorb, Natural Cure, Iron Fist",
     "passive": "Transistor",
-    "evolution": "Pawmi, Pawmo, Pawmot",
+    "evolution line": "Pawmi, Pawmo, Pawmot",
     "img": "922"
   },
   "Pawmot": {
+    "name": "Pawmot",
     "id": 923,
     "hp": 70,
     "attack": 115,
@@ -20236,10 +21501,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Volt Absorb, Natural Cure, Iron Fist",
     "passive": "Transistor",
-    "evolution": "Pawmi, Pawmo, Pawmot",
+    "evolution line": "Pawmi, Pawmo, Pawmot",
     "img": "923"
   },
   "Tandemaus": {
+    "name": "Tandemaus",
     "id": 924,
     "hp": 50,
     "attack": 50,
@@ -20252,10 +21518,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Run Away, Pickup, Own Tempo",
     "passive": "Friend Guard",
-    "evolution": "Tandemaus, Four Maushold, Three Maushold",
+    "evolution line": "Tandemaus, Four Maushold, Three Maushold",
     "img": "924"
   },
   "Four Maushold": {
+    "name": "Four Maushold",
     "id": 925,
     "hp": 74,
     "attack": 75,
@@ -20268,10 +21535,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Friend Guard, Cheek Pouch, Technician",
     "passive": "Scrappy",
-    "evolution": "Tandemaus, Four Maushold, Three Maushold",
+    "evolution line": "Tandemaus, Four Maushold, Three Maushold",
     "img": "925-four"
   },
   "Three Maushold": {
+    "name": "Three Maushold",
     "id": 925,
     "hp": 74,
     "attack": 75,
@@ -20284,10 +21552,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Friend Guard, Cheek Pouch, Technician",
     "passive": "Scrappy",
-    "evolution": "Tandemaus, Four Maushold, Three Maushold",
+    "evolution line": "Tandemaus, Four Maushold, Three Maushold",
     "img": "925-three"
   },
   "Fidough": {
+    "name": "Fidough",
     "id": 926,
     "hp": 37,
     "attack": 55,
@@ -20300,10 +21569,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Own Tempo, Klutz",
     "passive": "Water Absorb",
-    "evolution": "Fidough, Dachsbun",
+    "evolution line": "Fidough, Dachsbun",
     "img": "926"
   },
   "Dachsbun": {
+    "name": "Dachsbun",
     "id": 927,
     "hp": 57,
     "attack": 80,
@@ -20316,10 +21586,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Well Baked Body, Aroma Veil",
     "passive": "Water Absorb",
-    "evolution": "Fidough, Dachsbun",
+    "evolution line": "Fidough, Dachsbun",
     "img": "927"
   },
   "Smoliv": {
+    "name": "Smoliv",
     "id": 928,
     "hp": 41,
     "attack": 35,
@@ -20332,10 +21603,11 @@ const POKEMON_DATA = {
     "type2": "Normal",
     "abilities": "Early Bird, Harvest",
     "passive": "Ripen",
-    "evolution": "Smoliv, Dolliv, Arboliva",
+    "evolution line": "Smoliv, Dolliv, Arboliva",
     "img": "928"
   },
   "Dolliv": {
+    "name": "Dolliv",
     "id": 929,
     "hp": 52,
     "attack": 53,
@@ -20348,10 +21620,11 @@ const POKEMON_DATA = {
     "type2": "Normal",
     "abilities": "Early Bird, Harvest",
     "passive": "Ripen",
-    "evolution": "Smoliv, Dolliv, Arboliva",
+    "evolution line": "Smoliv, Dolliv, Arboliva",
     "img": "929"
   },
   "Arboliva": {
+    "name": "Arboliva",
     "id": 930,
     "hp": 78,
     "attack": 69,
@@ -20364,10 +21637,11 @@ const POKEMON_DATA = {
     "type2": "Normal",
     "abilities": "Seed Sower, Harvest",
     "passive": "Ripen",
-    "evolution": "Smoliv, Dolliv, Arboliva",
+    "evolution line": "Smoliv, Dolliv, Arboliva",
     "img": "930"
   },
   "Green Plumage Squawkabilly": {
+    "name": "Green Plumage Squawkabilly",
     "id": 931,
     "hp": 82,
     "attack": 96,
@@ -20380,10 +21654,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Intimidate, Hustle, Guts",
     "passive": "Moxie",
-    "evolution": "Green Plumage Squawkabilly, Blue Plumage Squawkabilly, Yellow Plumage Squawkabilly, White Plumage Squawkabilly",
+    "evolution line": "Green Plumage Squawkabilly, Blue Plumage Squawkabilly, Yellow Plumage Squawkabilly, White Plumage Squawkabilly",
     "img": "931-green-plumage"
   },
   "Blue Plumage Squawkabilly": {
+    "name": "Blue Plumage Squawkabilly",
     "id": 931,
     "hp": 82,
     "attack": 96,
@@ -20396,10 +21671,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Intimidate, Hustle, Guts",
     "passive": "Moxie",
-    "evolution": "Green Plumage Squawkabilly, Blue Plumage Squawkabilly, Yellow Plumage Squawkabilly, White Plumage Squawkabilly",
+    "evolution line": "Green Plumage Squawkabilly, Blue Plumage Squawkabilly, Yellow Plumage Squawkabilly, White Plumage Squawkabilly",
     "img": "931-blue-plumage"
   },
   "Yellow Plumage Squawkabilly": {
+    "name": "Yellow Plumage Squawkabilly",
     "id": 931,
     "hp": 82,
     "attack": 96,
@@ -20412,10 +21688,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Intimidate, Hustle, Sheer Force",
     "passive": "Moxie",
-    "evolution": "Green Plumage Squawkabilly, Blue Plumage Squawkabilly, Yellow Plumage Squawkabilly, White Plumage Squawkabilly",
+    "evolution line": "Green Plumage Squawkabilly, Blue Plumage Squawkabilly, Yellow Plumage Squawkabilly, White Plumage Squawkabilly",
     "img": "931-yellow-plumage"
   },
   "White Plumage Squawkabilly": {
+    "name": "White Plumage Squawkabilly",
     "id": 931,
     "hp": 82,
     "attack": 96,
@@ -20428,10 +21705,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Intimidate, Hustle, Sheer Force",
     "passive": "Moxie",
-    "evolution": "Green Plumage Squawkabilly, Blue Plumage Squawkabilly, Yellow Plumage Squawkabilly, White Plumage Squawkabilly",
+    "evolution line": "Green Plumage Squawkabilly, Blue Plumage Squawkabilly, Yellow Plumage Squawkabilly, White Plumage Squawkabilly",
     "img": "931-white-plumage"
   },
   "Nacli": {
+    "name": "Nacli",
     "id": 932,
     "hp": 55,
     "attack": 55,
@@ -20444,10 +21722,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Purifying Salt, Sturdy, Clear Body",
     "passive": "Solid Rock",
-    "evolution": "Nacli, Naclstack, Garganacl",
+    "evolution line": "Nacli, Naclstack, Garganacl",
     "img": "932"
   },
   "Naclstack": {
+    "name": "Naclstack",
     "id": 933,
     "hp": 60,
     "attack": 60,
@@ -20460,10 +21739,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Purifying Salt, Sturdy, Clear Body",
     "passive": "Solid Rock",
-    "evolution": "Nacli, Naclstack, Garganacl",
+    "evolution line": "Nacli, Naclstack, Garganacl",
     "img": "933"
   },
   "Garganacl": {
+    "name": "Garganacl",
     "id": 934,
     "hp": 100,
     "attack": 100,
@@ -20476,10 +21756,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Purifying Salt, Sturdy, Clear Body",
     "passive": "Solid Rock",
-    "evolution": "Nacli, Naclstack, Garganacl",
+    "evolution line": "Nacli, Naclstack, Garganacl",
     "img": "934"
   },
   "Charcadet": {
+    "name": "Charcadet",
     "id": 935,
     "hp": 40,
     "attack": 50,
@@ -20492,10 +21773,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Flash Fire, Flame Body",
     "passive": "Battle Armor",
-    "evolution": "Charcadet, Armarouge, Ceruledge",
+    "evolution line": "Charcadet, Armarouge, Ceruledge",
     "img": "935"
   },
   "Armarouge": {
+    "name": "Armarouge",
     "id": 936,
     "hp": 85,
     "attack": 60,
@@ -20508,10 +21790,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Flash Fire, Weak Armor",
     "passive": "Prism Armor",
-    "evolution": "Charcadet, Armarouge, Ceruledge",
+    "evolution line": "Charcadet, Armarouge, Ceruledge",
     "img": "936"
   },
   "Ceruledge": {
+    "name": "Ceruledge",
     "id": 937,
     "hp": 75,
     "attack": 125,
@@ -20524,10 +21807,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Flash Fire, Weak Armor",
     "passive": "Prism Armor",
-    "evolution": "Charcadet, Armarouge, Ceruledge",
+    "evolution line": "Charcadet, Armarouge, Ceruledge",
     "img": "937"
   },
   "Tadbulb": {
+    "name": "Tadbulb",
     "id": 938,
     "hp": 61,
     "attack": 31,
@@ -20540,10 +21824,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Own Tempo, Static, Damp",
     "passive": "Levitate",
-    "evolution": "Tadbulb, Bellibolt",
+    "evolution line": "Tadbulb, Bellibolt",
     "img": "938"
   },
   "Bellibolt": {
+    "name": "Bellibolt",
     "id": 939,
     "hp": 109,
     "attack": 64,
@@ -20556,10 +21841,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Electromorphosis, Static, Damp",
     "passive": "Stamina",
-    "evolution": "Tadbulb, Bellibolt",
+    "evolution line": "Tadbulb, Bellibolt",
     "img": "939"
   },
   "Wattrel": {
+    "name": "Wattrel",
     "id": 940,
     "hp": 40,
     "attack": 40,
@@ -20572,10 +21858,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Wind Power, Volt Absorb, Competitive",
     "passive": "Sheer Force",
-    "evolution": "Wattrel, Kilowattrel",
+    "evolution line": "Wattrel, Kilowattrel",
     "img": "940"
   },
   "Kilowattrel": {
+    "name": "Kilowattrel",
     "id": 941,
     "hp": 70,
     "attack": 70,
@@ -20588,10 +21875,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Wind Power, Volt Absorb, Competitive",
     "passive": "Sheer Force",
-    "evolution": "Wattrel, Kilowattrel",
+    "evolution line": "Wattrel, Kilowattrel",
     "img": "941"
   },
   "Maschiff": {
+    "name": "Maschiff",
     "id": 942,
     "hp": 60,
     "attack": 78,
@@ -20604,10 +21892,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Intimidate, Run Away, Stakeout",
     "passive": "Strong Jaw",
-    "evolution": "Maschiff, Mabosstiff",
+    "evolution line": "Maschiff, Mabosstiff",
     "img": "942"
   },
   "Mabosstiff": {
+    "name": "Mabosstiff",
     "id": 943,
     "hp": 80,
     "attack": 120,
@@ -20620,10 +21909,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Intimidate, Guard Dog, Stakeout",
     "passive": "Strong Jaw",
-    "evolution": "Maschiff, Mabosstiff",
+    "evolution line": "Maschiff, Mabosstiff",
     "img": "943"
   },
   "Shroodle": {
+    "name": "Shroodle",
     "id": 944,
     "hp": 40,
     "attack": 65,
@@ -20636,10 +21926,11 @@ const POKEMON_DATA = {
     "type2": "Normal",
     "abilities": "Unburden, Pickpocket, Prankster",
     "passive": "Corrosion",
-    "evolution": "Shroodle, Grafaiai",
+    "evolution line": "Shroodle, Grafaiai",
     "img": "944"
   },
   "Grafaiai": {
+    "name": "Grafaiai",
     "id": 945,
     "hp": 63,
     "attack": 95,
@@ -20652,10 +21943,11 @@ const POKEMON_DATA = {
     "type2": "Normal",
     "abilities": "Unburden, Poison Touch, Prankster",
     "passive": "Corrosion",
-    "evolution": "Shroodle, Grafaiai",
+    "evolution line": "Shroodle, Grafaiai",
     "img": "945"
   },
   "Bramblin": {
+    "name": "Bramblin",
     "id": 946,
     "hp": 40,
     "attack": 65,
@@ -20668,10 +21960,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Wind Rider, Infiltrator",
     "passive": "Wandering Spirit",
-    "evolution": "Bramblin, Brambleghast",
+    "evolution line": "Bramblin, Brambleghast",
     "img": "946"
   },
   "Brambleghast": {
+    "name": "Brambleghast",
     "id": 947,
     "hp": 55,
     "attack": 115,
@@ -20684,10 +21977,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Wind Rider, Infiltrator",
     "passive": "Shadow Shield",
-    "evolution": "Bramblin, Brambleghast",
+    "evolution line": "Bramblin, Brambleghast",
     "img": "947"
   },
   "Toedscool": {
+    "name": "Toedscool",
     "id": 948,
     "hp": 40,
     "attack": 40,
@@ -20700,10 +21994,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Mycelium Might",
     "passive": "Run Away",
-    "evolution": "Toedscool, Toedscruel",
+    "evolution line": "Toedscool, Toedscruel",
     "img": "948"
   },
   "Toedscruel": {
+    "name": "Toedscruel",
     "id": 949,
     "hp": 80,
     "attack": 70,
@@ -20716,10 +22011,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Mycelium Might",
     "passive": "Prankster",
-    "evolution": "Toedscool, Toedscruel",
+    "evolution line": "Toedscool, Toedscruel",
     "img": "949"
   },
   "Klawf": {
+    "name": "Klawf",
     "id": 950,
     "hp": 70,
     "attack": 100,
@@ -20732,10 +22028,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Anger Shell, Shell Armor, Regenerator",
     "passive": "Water Absorb",
-    "evolution": "Klawf",
+    "evolution line": "Klawf",
     "img": "950"
   },
   "Capsakid": {
+    "name": "Capsakid",
     "id": 951,
     "hp": 50,
     "attack": 62,
@@ -20748,10 +22045,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Chlorophyll, Insomnia, Klutz",
     "passive": "Flower Gift",
-    "evolution": "Capsakid, Scovillain",
+    "evolution line": "Capsakid, Scovillain",
     "img": "951"
   },
   "Scovillain": {
+    "name": "Scovillain",
     "id": 952,
     "hp": 65,
     "attack": 108,
@@ -20764,10 +22062,11 @@ const POKEMON_DATA = {
     "type2": "Fire",
     "abilities": "Chlorophyll, Insomnia, Moody",
     "passive": "Parental Bond",
-    "evolution": "Capsakid, Scovillain",
+    "evolution line": "Capsakid, Scovillain",
     "img": "952"
   },
   "Rellor": {
+    "name": "Rellor",
     "id": 953,
     "hp": 41,
     "attack": 50,
@@ -20780,10 +22079,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Compound Eyes, Shed Skin",
     "passive": "Prankster",
-    "evolution": "Rellor, Rabsca",
+    "evolution line": "Rellor, Rabsca",
     "img": "953"
   },
   "Rabsca": {
+    "name": "Rabsca",
     "id": 954,
     "hp": 75,
     "attack": 50,
@@ -20796,10 +22096,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Synchronize, Telepathy",
     "passive": "Prankster",
-    "evolution": "Rellor, Rabsca",
+    "evolution line": "Rellor, Rabsca",
     "img": "954"
   },
   "Flittle": {
+    "name": "Flittle",
     "id": 955,
     "hp": 30,
     "attack": 35,
@@ -20812,10 +22113,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Anticipation, Frisk, Speed Boost",
     "passive": "Dazzling",
-    "evolution": "Flittle, Espathra",
+    "evolution line": "Flittle, Espathra",
     "img": "955"
   },
   "Espathra": {
+    "name": "Espathra",
     "id": 956,
     "hp": 95,
     "attack": 60,
@@ -20828,10 +22130,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Opportunist, Frisk, Speed Boost",
     "passive": "Dazzling",
-    "evolution": "Flittle, Espathra",
+    "evolution line": "Flittle, Espathra",
     "img": "956"
   },
   "Tinkatink": {
+    "name": "Tinkatink",
     "id": 957,
     "hp": 50,
     "attack": 45,
@@ -20844,10 +22147,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Mold Breaker, Own Tempo, Pickpocket",
     "passive": "Steelworker",
-    "evolution": "Tinkatink, Tinkatuff, Tinkaton",
+    "evolution line": "Tinkatink, Tinkatuff, Tinkaton",
     "img": "957"
   },
   "Tinkatuff": {
+    "name": "Tinkatuff",
     "id": 958,
     "hp": 65,
     "attack": 55,
@@ -20860,10 +22164,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Mold Breaker, Own Tempo, Pickpocket",
     "passive": "Steelworker",
-    "evolution": "Tinkatink, Tinkatuff, Tinkaton",
+    "evolution line": "Tinkatink, Tinkatuff, Tinkaton",
     "img": "958"
   },
   "Tinkaton": {
+    "name": "Tinkaton",
     "id": 959,
     "hp": 85,
     "attack": 75,
@@ -20876,10 +22181,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Mold Breaker, Own Tempo, Pickpocket",
     "passive": "Steelworker",
-    "evolution": "Tinkatink, Tinkatuff, Tinkaton",
+    "evolution line": "Tinkatink, Tinkatuff, Tinkaton",
     "img": "959"
   },
   "Wiglett": {
+    "name": "Wiglett",
     "id": 960,
     "hp": 10,
     "attack": 55,
@@ -20892,10 +22198,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Gooey, Rattled, Sand Veil",
     "passive": "Sturdy",
-    "evolution": "Wiglett, Wugtrio",
+    "evolution line": "Wiglett, Wugtrio",
     "img": "960"
   },
   "Wugtrio": {
+    "name": "Wugtrio",
     "id": 961,
     "hp": 35,
     "attack": 100,
@@ -20908,10 +22215,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Gooey, Rattled, Sand Veil",
     "passive": "Sturdy",
-    "evolution": "Wiglett, Wugtrio",
+    "evolution line": "Wiglett, Wugtrio",
     "img": "961"
   },
   "Bombirdier": {
+    "name": "Bombirdier",
     "id": 962,
     "hp": 70,
     "attack": 103,
@@ -20924,10 +22232,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Big Pecks, Keen Eye, Rocky Payload",
     "passive": "Unburden",
-    "evolution": "Bombirdier",
+    "evolution line": "Bombirdier",
     "img": "962"
   },
   "Finizen": {
+    "name": "Finizen",
     "id": 963,
     "hp": 70,
     "attack": 45,
@@ -20940,10 +22249,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Water Veil",
     "passive": "Friend Guard",
-    "evolution": "Finizen, Zero Palafin, Hero Palafin",
+    "evolution line": "Finizen, Zero Palafin, Hero Palafin",
     "img": "963"
   },
   "Zero Palafin": {
+    "name": "Zero Palafin",
     "id": 964,
     "hp": 100,
     "attack": 70,
@@ -20956,10 +22266,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Zero To Hero",
     "passive": "Emergency Exit",
-    "evolution": "Finizen, Zero Palafin, Hero Palafin",
+    "evolution line": "Finizen, Zero Palafin, Hero Palafin",
     "img": "964-zero"
   },
   "Hero Palafin": {
+    "name": "Hero Palafin",
     "id": 964,
     "hp": 100,
     "attack": 160,
@@ -20972,10 +22283,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Zero To Hero",
     "passive": "Iron Fist",
-    "evolution": "Finizen, Zero Palafin, Hero Palafin",
+    "evolution line": "Finizen, Zero Palafin, Hero Palafin",
     "img": "964-hero"
   },
   "Varoom": {
+    "name": "Varoom",
     "id": 965,
     "hp": 45,
     "attack": 70,
@@ -20988,10 +22300,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Overcoat, Slow Start",
     "passive": "Levitate",
-    "evolution": "Varoom, Revavroom, Segin Starmobile Revavroom, Schedar Starmobile Revavroom, Navi Starmobile Revavroom, Ruchbah Starmobile Revavroom, Caph Starmobile Revavroom",
+    "evolution line": "Varoom, Revavroom, Segin Starmobile Revavroom, Schedar Starmobile Revavroom, Navi Starmobile Revavroom, Ruchbah Starmobile Revavroom, Caph Starmobile Revavroom",
     "img": "965"
   },
   "Revavroom": {
+    "name": "Revavroom",
     "id": 966,
     "hp": 80,
     "attack": 119,
@@ -21004,10 +22317,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Overcoat, Filter",
     "passive": "Levitate",
-    "evolution": "Varoom, Revavroom, Segin Starmobile Revavroom, Schedar Starmobile Revavroom, Navi Starmobile Revavroom, Ruchbah Starmobile Revavroom, Caph Starmobile Revavroom",
+    "evolution line": "Varoom, Revavroom, Segin Starmobile Revavroom, Schedar Starmobile Revavroom, Navi Starmobile Revavroom, Ruchbah Starmobile Revavroom, Caph Starmobile Revavroom",
     "img": "966"
   },
   "Segin Starmobile Revavroom": {
+    "name": "Segin Starmobile Revavroom",
     "id": 966,
     "hp": 80,
     "attack": 129,
@@ -21020,10 +22334,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Overcoat",
     "passive": "Intimidate",
-    "evolution": "Varoom, Revavroom, Segin Starmobile Revavroom, Schedar Starmobile Revavroom, Navi Starmobile Revavroom, Ruchbah Starmobile Revavroom, Caph Starmobile Revavroom",
+    "evolution line": "Varoom, Revavroom, Segin Starmobile Revavroom, Schedar Starmobile Revavroom, Navi Starmobile Revavroom, Ruchbah Starmobile Revavroom, Caph Starmobile Revavroom",
     "img": "966-segin-starmobile"
   },
   "Schedar Starmobile Revavroom": {
+    "name": "Schedar Starmobile Revavroom",
     "id": 966,
     "hp": 80,
     "attack": 129,
@@ -21036,10 +22351,11 @@ const POKEMON_DATA = {
     "type2": "Fire",
     "abilities": "Overcoat",
     "passive": "Speed Boost",
-    "evolution": "Varoom, Revavroom, Segin Starmobile Revavroom, Schedar Starmobile Revavroom, Navi Starmobile Revavroom, Ruchbah Starmobile Revavroom, Caph Starmobile Revavroom",
+    "evolution line": "Varoom, Revavroom, Segin Starmobile Revavroom, Schedar Starmobile Revavroom, Navi Starmobile Revavroom, Ruchbah Starmobile Revavroom, Caph Starmobile Revavroom",
     "img": "966-schedar-starmobile"
   },
   "Navi Starmobile Revavroom": {
+    "name": "Navi Starmobile Revavroom",
     "id": 966,
     "hp": 80,
     "attack": 129,
@@ -21052,10 +22368,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Overcoat",
     "passive": "Toxic Debris",
-    "evolution": "Varoom, Revavroom, Segin Starmobile Revavroom, Schedar Starmobile Revavroom, Navi Starmobile Revavroom, Ruchbah Starmobile Revavroom, Caph Starmobile Revavroom",
+    "evolution line": "Varoom, Revavroom, Segin Starmobile Revavroom, Schedar Starmobile Revavroom, Navi Starmobile Revavroom, Ruchbah Starmobile Revavroom, Caph Starmobile Revavroom",
     "img": "966-navi-starmobile"
   },
   "Ruchbah Starmobile Revavroom": {
+    "name": "Ruchbah Starmobile Revavroom",
     "id": 966,
     "hp": 80,
     "attack": 129,
@@ -21068,10 +22385,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Overcoat",
     "passive": "Misty Surge",
-    "evolution": "Varoom, Revavroom, Segin Starmobile Revavroom, Schedar Starmobile Revavroom, Navi Starmobile Revavroom, Ruchbah Starmobile Revavroom, Caph Starmobile Revavroom",
+    "evolution line": "Varoom, Revavroom, Segin Starmobile Revavroom, Schedar Starmobile Revavroom, Navi Starmobile Revavroom, Ruchbah Starmobile Revavroom, Caph Starmobile Revavroom",
     "img": "966-ruchbah-starmobile"
   },
   "Caph Starmobile Revavroom": {
+    "name": "Caph Starmobile Revavroom",
     "id": 966,
     "hp": 80,
     "attack": 129,
@@ -21084,10 +22402,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Overcoat",
     "passive": "Stamina",
-    "evolution": "Varoom, Revavroom, Segin Starmobile Revavroom, Schedar Starmobile Revavroom, Navi Starmobile Revavroom, Ruchbah Starmobile Revavroom, Caph Starmobile Revavroom",
+    "evolution line": "Varoom, Revavroom, Segin Starmobile Revavroom, Schedar Starmobile Revavroom, Navi Starmobile Revavroom, Ruchbah Starmobile Revavroom, Caph Starmobile Revavroom",
     "img": "966-caph-starmobile"
   },
   "Cyclizar": {
+    "name": "Cyclizar",
     "id": 967,
     "hp": 70,
     "attack": 95,
@@ -21100,10 +22419,11 @@ const POKEMON_DATA = {
     "type2": "Normal",
     "abilities": "Shed Skin, Regenerator",
     "passive": "Protean",
-    "evolution": "Cyclizar",
+    "evolution line": "Cyclizar",
     "img": "967"
   },
   "Orthworm": {
+    "name": "Orthworm",
     "id": 968,
     "hp": 70,
     "attack": 85,
@@ -21116,10 +22436,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Earth Eater, Sand Veil",
     "passive": "Regenerator",
-    "evolution": "Orthworm",
+    "evolution line": "Orthworm",
     "img": "968"
   },
   "Glimmet": {
+    "name": "Glimmet",
     "id": 969,
     "hp": 48,
     "attack": 35,
@@ -21132,10 +22453,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Toxic Debris, Corrosion",
     "passive": "Sturdy",
-    "evolution": "Glimmet, Glimmora",
+    "evolution line": "Glimmet, Glimmora",
     "img": "969"
   },
   "Glimmora": {
+    "name": "Glimmora",
     "id": 970,
     "hp": 83,
     "attack": 55,
@@ -21148,10 +22470,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Toxic Debris, Corrosion",
     "passive": "Tera Shell",
-    "evolution": "Glimmet, Glimmora",
+    "evolution line": "Glimmet, Glimmora",
     "img": "970"
   },
   "Greavard": {
+    "name": "Greavard",
     "id": 971,
     "hp": 50,
     "attack": 61,
@@ -21164,10 +22487,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Pickup, Fluffy",
     "passive": "Unaware",
-    "evolution": "Greavard, Houndstone",
+    "evolution line": "Greavard, Houndstone",
     "img": "971"
   },
   "Houndstone": {
+    "name": "Houndstone",
     "id": 972,
     "hp": 72,
     "attack": 101,
@@ -21180,10 +22504,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sand Rush, Fluffy",
     "passive": "Unaware",
-    "evolution": "Greavard, Houndstone",
+    "evolution line": "Greavard, Houndstone",
     "img": "972"
   },
   "Flamigo": {
+    "name": "Flamigo",
     "id": 973,
     "hp": 82,
     "attack": 115,
@@ -21196,10 +22521,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Scrappy, Tangled Feet, Costar",
     "passive": "Moxie",
-    "evolution": "Flamigo",
+    "evolution line": "Flamigo",
     "img": "973"
   },
   "Cetoddle": {
+    "name": "Cetoddle",
     "id": 974,
     "hp": 108,
     "attack": 68,
@@ -21212,10 +22538,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Thick Fat, Snow Cloak, Sheer Force",
     "passive": "Refrigerate",
-    "evolution": "Cetoddle, Cetitan",
+    "evolution line": "Cetoddle, Cetitan",
     "img": "974"
   },
   "Cetitan": {
+    "name": "Cetitan",
     "id": 975,
     "hp": 170,
     "attack": 113,
@@ -21228,10 +22555,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Thick Fat, Slush Rush, Sheer Force",
     "passive": "Refrigerate",
-    "evolution": "Cetoddle, Cetitan",
+    "evolution line": "Cetoddle, Cetitan",
     "img": "975"
   },
   "Veluza": {
+    "name": "Veluza",
     "id": 976,
     "hp": 90,
     "attack": 102,
@@ -21244,10 +22572,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Mold Breaker, Sharpness",
     "passive": "Super Luck",
-    "evolution": "Veluza",
+    "evolution line": "Veluza",
     "img": "976"
   },
   "Dondozo": {
+    "name": "Dondozo",
     "id": 977,
     "hp": 150,
     "attack": 100,
@@ -21260,10 +22589,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Unaware, Oblivious, Water Veil",
     "passive": "Dragons Maw",
-    "evolution": "Dondozo",
+    "evolution line": "Dondozo",
     "img": "977"
   },
   "Curly Tatsugiri": {
+    "name": "Curly Tatsugiri",
     "id": 978,
     "hp": 68,
     "attack": 50,
@@ -21276,10 +22606,11 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Commander, Storm Drain",
     "passive": "Fluffy",
-    "evolution": "Curly Tatsugiri, Droopy Tatsugiri, Stretchy Tatsugiri",
+    "evolution line": "Curly Tatsugiri, Droopy Tatsugiri, Stretchy Tatsugiri",
     "img": "978-curly"
   },
   "Droopy Tatsugiri": {
+    "name": "Droopy Tatsugiri",
     "id": 978,
     "hp": 68,
     "attack": 50,
@@ -21292,10 +22623,11 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Commander, Storm Drain",
     "passive": "Fluffy",
-    "evolution": "Curly Tatsugiri, Droopy Tatsugiri, Stretchy Tatsugiri",
+    "evolution line": "Curly Tatsugiri, Droopy Tatsugiri, Stretchy Tatsugiri",
     "img": "978-droopy"
   },
   "Stretchy Tatsugiri": {
+    "name": "Stretchy Tatsugiri",
     "id": 978,
     "hp": 68,
     "attack": 50,
@@ -21308,10 +22640,11 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Commander, Storm Drain",
     "passive": "Fluffy",
-    "evolution": "Curly Tatsugiri, Droopy Tatsugiri, Stretchy Tatsugiri",
+    "evolution line": "Curly Tatsugiri, Droopy Tatsugiri, Stretchy Tatsugiri",
     "img": "978-stretchy"
   },
   "Annihilape": {
+    "name": "Annihilape",
     "id": 979,
     "hp": 110,
     "attack": 115,
@@ -21324,10 +22657,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Vital Spirit, Inner Focus, Defiant",
     "passive": "Iron Fist",
-    "evolution": "Mankey, Primeape, Annihilape",
+    "evolution line": "Mankey, Primeape, Annihilape",
     "img": "979"
   },
   "Clodsire": {
+    "name": "Clodsire",
     "id": 980,
     "hp": 130,
     "attack": 75,
@@ -21340,10 +22674,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Poison Point, Water Absorb, Unaware",
     "passive": "Thick Fat",
-    "evolution": "Clodsire, Paldea Wooper",
+    "evolution line": "Clodsire, Paldea Wooper",
     "img": "980"
   },
   "Farigiraf": {
+    "name": "Farigiraf",
     "id": 981,
     "hp": 120,
     "attack": 90,
@@ -21356,10 +22691,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Cud Chew, Armor Tail, Sap Sipper",
     "passive": "Parental Bond",
-    "evolution": "Girafarig, Farigiraf",
+    "evolution line": "Girafarig, Farigiraf",
     "img": "981"
   },
   "Two-Segment Dudunsparce": {
+    "name": "Two-Segment Dudunsparce",
     "id": 982,
     "hp": 125,
     "attack": 100,
@@ -21372,10 +22708,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Serene Grace, Run Away, Rattled",
     "passive": "Unaware",
-    "evolution": "Dunsparce, Two-Segment Dudunsparce, Three-Segment Dudunsparce",
+    "evolution line": "Dunsparce, Two-Segment Dudunsparce, Three-Segment Dudunsparce",
     "img": "982"
   },
   "Three-Segment Dudunsparce": {
+    "name": "Three-Segment Dudunsparce",
     "id": 982,
     "hp": 125,
     "attack": 100,
@@ -21388,10 +22725,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Serene Grace, Run Away, Rattled",
     "passive": "Unaware",
-    "evolution": "Dunsparce, Two-Segment Dudunsparce, Three-Segment Dudunsparce",
+    "evolution line": "Dunsparce, Two-Segment Dudunsparce, Three-Segment Dudunsparce",
     "img": "982-three-segment"
   },
   "Kingambit": {
+    "name": "Kingambit",
     "id": 983,
     "hp": 100,
     "attack": 135,
@@ -21404,10 +22742,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Defiant, Supreme Overlord, Pressure",
     "passive": "Sword Of Ruin",
-    "evolution": "Pawniard, Bisharp, Kingambit",
+    "evolution line": "Pawniard, Bisharp, Kingambit",
     "img": "983"
   },
   "Great Tusk": {
+    "name": "Great Tusk",
     "id": 984,
     "hp": 115,
     "attack": 131,
@@ -21420,10 +22759,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Protosynthesis",
     "passive": "Intimidate",
-    "evolution": "Great Tusk",
+    "evolution line": "Great Tusk",
     "img": "984"
   },
   "Scream Tail": {
+    "name": "Scream Tail",
     "id": 985,
     "hp": 115,
     "attack": 65,
@@ -21436,10 +22776,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Protosynthesis",
     "passive": "Unaware",
-    "evolution": "Scream Tail",
+    "evolution line": "Scream Tail",
     "img": "985"
   },
   "Brute Bonnet": {
+    "name": "Brute Bonnet",
     "id": 986,
     "hp": 111,
     "attack": 127,
@@ -21452,10 +22793,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Protosynthesis",
     "passive": "Chlorophyll",
-    "evolution": "Brute Bonnet",
+    "evolution line": "Brute Bonnet",
     "img": "986"
   },
   "Flutter Mane": {
+    "name": "Flutter Mane",
     "id": 987,
     "hp": 55,
     "attack": 55,
@@ -21468,10 +22810,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Protosynthesis",
     "passive": "Dazzling",
-    "evolution": "Flutter Mane",
+    "evolution line": "Flutter Mane",
     "img": "987"
   },
   "Slither Wing": {
+    "name": "Slither Wing",
     "id": 988,
     "hp": 85,
     "attack": 135,
@@ -21484,10 +22827,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Protosynthesis",
     "passive": "Scrappy",
-    "evolution": "Slither Wing",
+    "evolution line": "Slither Wing",
     "img": "988"
   },
   "Sandy Shocks": {
+    "name": "Sandy Shocks",
     "id": 989,
     "hp": 85,
     "attack": 81,
@@ -21500,10 +22844,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Protosynthesis",
     "passive": "Electric Surge",
-    "evolution": "Sandy Shocks",
+    "evolution line": "Sandy Shocks",
     "img": "989"
   },
   "Iron Treads": {
+    "name": "Iron Treads",
     "id": 990,
     "hp": 90,
     "attack": 112,
@@ -21516,10 +22861,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Quark Drive",
     "passive": "Dauntless Shield",
-    "evolution": "Iron Treads",
+    "evolution line": "Iron Treads",
     "img": "990"
   },
   "Iron Bundle": {
+    "name": "Iron Bundle",
     "id": 991,
     "hp": 56,
     "attack": 80,
@@ -21532,10 +22878,11 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Quark Drive",
     "passive": "Snow Warning",
-    "evolution": "Iron Bundle",
+    "evolution line": "Iron Bundle",
     "img": "991"
   },
   "Iron Hands": {
+    "name": "Iron Hands",
     "id": 992,
     "hp": 154,
     "attack": 140,
@@ -21548,10 +22895,11 @@ const POKEMON_DATA = {
     "type2": "Electric",
     "abilities": "Quark Drive",
     "passive": "Iron Fist",
-    "evolution": "Iron Hands",
+    "evolution line": "Iron Hands",
     "img": "992"
   },
   "Iron Jugulis": {
+    "name": "Iron Jugulis",
     "id": 993,
     "hp": 94,
     "attack": 80,
@@ -21564,10 +22912,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Quark Drive",
     "passive": "Lightning Rod",
-    "evolution": "Iron Jugulis",
+    "evolution line": "Iron Jugulis",
     "img": "993"
   },
   "Iron Moth": {
+    "name": "Iron Moth",
     "id": 994,
     "hp": 80,
     "attack": 70,
@@ -21580,10 +22929,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Quark Drive",
     "passive": "Levitate",
-    "evolution": "Iron Moth",
+    "evolution line": "Iron Moth",
     "img": "994"
   },
   "Iron Thorns": {
+    "name": "Iron Thorns",
     "id": 995,
     "hp": 100,
     "attack": 134,
@@ -21596,10 +22946,11 @@ const POKEMON_DATA = {
     "type2": "Electric",
     "abilities": "Quark Drive",
     "passive": "Sand Stream",
-    "evolution": "Iron Thorns",
+    "evolution line": "Iron Thorns",
     "img": "995"
   },
   "Frigibax": {
+    "name": "Frigibax",
     "id": 996,
     "hp": 65,
     "attack": 75,
@@ -21612,10 +22963,11 @@ const POKEMON_DATA = {
     "type2": "Ice",
     "abilities": "Thermal Exchange, Ice Body",
     "passive": "Intimidate",
-    "evolution": "Frigibax, Arctibax, Baxcalibur",
+    "evolution line": "Frigibax, Arctibax, Baxcalibur",
     "img": "996"
   },
   "Arctibax": {
+    "name": "Arctibax",
     "id": 997,
     "hp": 90,
     "attack": 95,
@@ -21628,10 +22980,11 @@ const POKEMON_DATA = {
     "type2": "Ice",
     "abilities": "Thermal Exchange, Ice Body",
     "passive": "Intimidate",
-    "evolution": "Frigibax, Arctibax, Baxcalibur",
+    "evolution line": "Frigibax, Arctibax, Baxcalibur",
     "img": "997"
   },
   "Baxcalibur": {
+    "name": "Baxcalibur",
     "id": 998,
     "hp": 115,
     "attack": 145,
@@ -21644,10 +22997,11 @@ const POKEMON_DATA = {
     "type2": "Ice",
     "abilities": "Thermal Exchange, Ice Body",
     "passive": "Intimidate",
-    "evolution": "Frigibax, Arctibax, Baxcalibur",
+    "evolution line": "Frigibax, Arctibax, Baxcalibur",
     "img": "998"
   },
   "Chest Gimmighoul": {
+    "name": "Chest Gimmighoul",
     "id": 999,
     "hp": 45,
     "attack": 30,
@@ -21660,10 +23014,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rattled",
     "passive": "Honey Gather",
-    "evolution": "Chest Gimmighoul, Roaming Gimmighoul, Gholdengo",
+    "evolution line": "Chest Gimmighoul, Roaming Gimmighoul, Gholdengo",
     "img": "999"
   },
   "Roaming Gimmighoul": {
+    "name": "Roaming Gimmighoul",
     "id": 999,
     "hp": 45,
     "attack": 30,
@@ -21676,10 +23031,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Run Away",
     "passive": "Honey Gather",
-    "evolution": "Chest Gimmighoul, Roaming Gimmighoul, Gholdengo",
+    "evolution line": "Chest Gimmighoul, Roaming Gimmighoul, Gholdengo",
     "img": "999-roaming"
   },
   "Gholdengo": {
+    "name": "Gholdengo",
     "id": 1000,
     "hp": 87,
     "attack": 60,
@@ -21692,10 +23048,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Good As Gold",
     "passive": "Honey Gather",
-    "evolution": "Chest Gimmighoul, Roaming Gimmighoul, Gholdengo",
+    "evolution line": "Chest Gimmighoul, Roaming Gimmighoul, Gholdengo",
     "img": "1000"
   },
   "Wo-Chien": {
+    "name": "Wo-Chien",
     "id": 1001,
     "hp": 85,
     "attack": 85,
@@ -21708,10 +23065,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Tablets Of Ruin",
     "passive": "Vessel Of Ruin",
-    "evolution": "Wo-Chien",
+    "evolution line": "Wo-Chien",
     "img": "1001"
   },
   "Chien-Pao": {
+    "name": "Chien-Pao",
     "id": 1002,
     "hp": 80,
     "attack": 120,
@@ -21724,10 +23082,11 @@ const POKEMON_DATA = {
     "type2": "Ice",
     "abilities": "Sword Of Ruin",
     "passive": "Intimidate",
-    "evolution": "Chien-Pao",
+    "evolution line": "Chien-Pao",
     "img": "1002"
   },
   "Ting-Lu": {
+    "name": "Ting-Lu",
     "id": 1003,
     "hp": 155,
     "attack": 110,
@@ -21740,10 +23099,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Vessel Of Ruin",
     "passive": "Stamina",
-    "evolution": "Ting-Lu",
+    "evolution line": "Ting-Lu",
     "img": "1003"
   },
   "Chi-Yu": {
+    "name": "Chi-Yu",
     "id": 1004,
     "hp": 55,
     "attack": 80,
@@ -21756,10 +23116,11 @@ const POKEMON_DATA = {
     "type2": "Fire",
     "abilities": "Beads Of Ruin",
     "passive": "Berserk",
-    "evolution": "Chi-Yu",
+    "evolution line": "Chi-Yu",
     "img": "1004"
   },
   "Roaring Moon": {
+    "name": "Roaring Moon",
     "id": 1005,
     "hp": 105,
     "attack": 139,
@@ -21772,10 +23133,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Protosynthesis",
     "passive": "Intimidate",
-    "evolution": "Roaring Moon",
+    "evolution line": "Roaring Moon",
     "img": "1005"
   },
   "Iron Valiant": {
+    "name": "Iron Valiant",
     "id": 1006,
     "hp": 74,
     "attack": 130,
@@ -21788,10 +23150,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Quark Drive",
     "passive": "Neuroforce",
-    "evolution": "Iron Valiant",
+    "evolution line": "Iron Valiant",
     "img": "1006"
   },
   "Koraidon": {
+    "name": "Koraidon",
     "id": 1007,
     "hp": 100,
     "attack": 135,
@@ -21804,10 +23167,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Orichalcum Pulse",
     "passive": "Thermal Exchange",
-    "evolution": "Koraidon",
+    "evolution line": "Koraidon",
     "img": "1007-apex-build"
   },
   "Miraidon": {
+    "name": "Miraidon",
     "id": 1008,
     "hp": 100,
     "attack": 85,
@@ -21820,10 +23184,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Hadron Engine",
     "passive": "Compound Eyes",
-    "evolution": "Miraidon",
+    "evolution line": "Miraidon",
     "img": "1008-ultimate-mode"
   },
   "Walking Wake": {
+    "name": "Walking Wake",
     "id": 1009,
     "hp": 99,
     "attack": 83,
@@ -21836,10 +23201,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Protosynthesis",
     "passive": "Beast Boost",
-    "evolution": "Walking Wake",
+    "evolution line": "Walking Wake",
     "img": "1009"
   },
   "Iron Leaves": {
+    "name": "Iron Leaves",
     "id": 1010,
     "hp": 90,
     "attack": 130,
@@ -21852,10 +23218,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Quark Drive",
     "passive": "Sharpness",
-    "evolution": "Iron Leaves",
+    "evolution line": "Iron Leaves",
     "img": "1010"
   },
   "Dipplin": {
+    "name": "Dipplin",
     "id": 1011,
     "hp": 80,
     "attack": 80,
@@ -21868,10 +23235,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Supersweet Syrup, Gluttony, Sticky Hold",
     "passive": "Parental Bond",
-    "evolution": "Applin, Flapple, Gigantamax Flapple, Appletun, Gigantamax Appletun, Dipplin, Hydrapple",
+    "evolution line": "Applin, Flapple, Gigantamax Flapple, Appletun, Gigantamax Appletun, Dipplin, Hydrapple",
     "img": "1011"
   },
   "Counterfeit Poltchageist": {
+    "name": "Counterfeit Poltchageist",
     "id": 1012,
     "hp": 40,
     "attack": 45,
@@ -21884,10 +23252,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Hospitality, Heatproof",
     "passive": "Triage",
-    "evolution": "Counterfeit Poltchageist, Artisan Poltchageist, Unremarkable Sinistcha, Masterpiece Sinistcha",
+    "evolution line": "Counterfeit Poltchageist, Artisan Poltchageist, Unremarkable Sinistcha, Masterpiece Sinistcha",
     "img": "1012-counterfeit"
   },
   "Artisan Poltchageist": {
+    "name": "Artisan Poltchageist",
     "id": 1012,
     "hp": 40,
     "attack": 45,
@@ -21900,10 +23269,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Hospitality, Heatproof",
     "passive": "Triage",
-    "evolution": "Counterfeit Poltchageist, Artisan Poltchageist, Unremarkable Sinistcha, Masterpiece Sinistcha",
+    "evolution line": "Counterfeit Poltchageist, Artisan Poltchageist, Unremarkable Sinistcha, Masterpiece Sinistcha",
     "img": "1012-counterfeit"
   },
   "Unremarkable Sinistcha": {
+    "name": "Unremarkable Sinistcha",
     "id": 1013,
     "hp": 71,
     "attack": 60,
@@ -21916,10 +23286,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Hospitality, Heatproof",
     "passive": "Triage",
-    "evolution": "Counterfeit Poltchageist, Artisan Poltchageist, Unremarkable Sinistcha, Masterpiece Sinistcha",
+    "evolution line": "Counterfeit Poltchageist, Artisan Poltchageist, Unremarkable Sinistcha, Masterpiece Sinistcha",
     "img": "1013-unremarkable"
   },
   "Masterpiece Sinistcha": {
+    "name": "Masterpiece Sinistcha",
     "id": 1013,
     "hp": 71,
     "attack": 60,
@@ -21932,10 +23303,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Hospitality, Heatproof",
     "passive": "Triage",
-    "evolution": "Counterfeit Poltchageist, Artisan Poltchageist, Unremarkable Sinistcha, Masterpiece Sinistcha",
+    "evolution line": "Counterfeit Poltchageist, Artisan Poltchageist, Unremarkable Sinistcha, Masterpiece Sinistcha",
     "img": "1013-unremarkable"
   },
   "Okidogi": {
+    "name": "Okidogi",
     "id": 1014,
     "hp": 88,
     "attack": 128,
@@ -21948,10 +23320,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Toxic Chain, Guard Dog",
     "passive": "Dark Aura",
-    "evolution": "Okidogi",
+    "evolution line": "Okidogi",
     "img": "1014"
   },
   "Munkidori": {
+    "name": "Munkidori",
     "id": 1015,
     "hp": 88,
     "attack": 75,
@@ -21964,10 +23337,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Toxic Chain, Frisk",
     "passive": "Magician",
-    "evolution": "Munkidori",
+    "evolution line": "Munkidori",
     "img": "1015"
   },
   "Fezandipiti": {
+    "name": "Fezandipiti",
     "id": 1016,
     "hp": 88,
     "attack": 91,
@@ -21980,10 +23354,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Toxic Chain, Technician",
     "passive": "Pixilate",
-    "evolution": "Fezandipiti",
+    "evolution line": "Fezandipiti",
     "img": "1016"
   },
   "Teal Mask Ogerpon": {
+    "name": "Teal Mask Ogerpon",
     "id": 1017,
     "hp": 80,
     "attack": 120,
@@ -21996,10 +23371,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Defiant",
     "passive": "Opportunist",
-    "evolution": "Teal Mask Ogerpon, Wellspring Mask Ogerpon, Hearthflame Mask Ogerpon, Cornerstone Mask Ogerpon, Teal Mask Tera Ogerpon, Wellspring Mask Tera Ogerpon, Hearthflame Mask Tera Ogerpon, Cornerstone Mask Tera Ogerpon",
+    "evolution line": "Teal Mask Ogerpon, Wellspring Mask Ogerpon, Hearthflame Mask Ogerpon, Cornerstone Mask Ogerpon, Teal Mask Tera Ogerpon, Wellspring Mask Tera Ogerpon, Hearthflame Mask Tera Ogerpon, Cornerstone Mask Tera Ogerpon",
     "img": "1017-teal-mask"
   },
   "Wellspring Mask Ogerpon": {
+    "name": "Wellspring Mask Ogerpon",
     "id": 1017,
     "hp": 80,
     "attack": 120,
@@ -22012,10 +23388,11 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Water Absorb",
     "passive": "Super Luck",
-    "evolution": "Teal Mask Ogerpon, Wellspring Mask Ogerpon, Hearthflame Mask Ogerpon, Cornerstone Mask Ogerpon, Teal Mask Tera Ogerpon, Wellspring Mask Tera Ogerpon, Hearthflame Mask Tera Ogerpon, Cornerstone Mask Tera Ogerpon",
+    "evolution line": "Teal Mask Ogerpon, Wellspring Mask Ogerpon, Hearthflame Mask Ogerpon, Cornerstone Mask Ogerpon, Teal Mask Tera Ogerpon, Wellspring Mask Tera Ogerpon, Hearthflame Mask Tera Ogerpon, Cornerstone Mask Tera Ogerpon",
     "img": "1017-wellspring-mask"
   },
   "Hearthflame Mask Ogerpon": {
+    "name": "Hearthflame Mask Ogerpon",
     "id": 1017,
     "hp": 80,
     "attack": 120,
@@ -22028,10 +23405,11 @@ const POKEMON_DATA = {
     "type2": "Fire",
     "abilities": "Mold Breaker",
     "passive": "Flash Fire",
-    "evolution": "Teal Mask Ogerpon, Wellspring Mask Ogerpon, Hearthflame Mask Ogerpon, Cornerstone Mask Ogerpon, Teal Mask Tera Ogerpon, Wellspring Mask Tera Ogerpon, Hearthflame Mask Tera Ogerpon, Cornerstone Mask Tera Ogerpon",
+    "evolution line": "Teal Mask Ogerpon, Wellspring Mask Ogerpon, Hearthflame Mask Ogerpon, Cornerstone Mask Ogerpon, Teal Mask Tera Ogerpon, Wellspring Mask Tera Ogerpon, Hearthflame Mask Tera Ogerpon, Cornerstone Mask Tera Ogerpon",
     "img": "1017-hearthflame-mask"
   },
   "Cornerstone Mask Ogerpon": {
+    "name": "Cornerstone Mask Ogerpon",
     "id": 1017,
     "hp": 80,
     "attack": 120,
@@ -22044,10 +23422,11 @@ const POKEMON_DATA = {
     "type2": "Rock",
     "abilities": "Sturdy",
     "passive": "Magic Guard",
-    "evolution": "Teal Mask Ogerpon, Wellspring Mask Ogerpon, Hearthflame Mask Ogerpon, Cornerstone Mask Ogerpon, Teal Mask Tera Ogerpon, Wellspring Mask Tera Ogerpon, Hearthflame Mask Tera Ogerpon, Cornerstone Mask Tera Ogerpon",
+    "evolution line": "Teal Mask Ogerpon, Wellspring Mask Ogerpon, Hearthflame Mask Ogerpon, Cornerstone Mask Ogerpon, Teal Mask Tera Ogerpon, Wellspring Mask Tera Ogerpon, Hearthflame Mask Tera Ogerpon, Cornerstone Mask Tera Ogerpon",
     "img": "1017-cornerstone-mask"
   },
   "Teal Mask Tera Ogerpon": {
+    "name": "Teal Mask Tera Ogerpon",
     "id": 1017,
     "hp": 80,
     "attack": 120,
@@ -22060,10 +23439,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Embody Aspect Teal",
     "passive": "Opportunist",
-    "evolution": "Teal Mask Ogerpon, Wellspring Mask Ogerpon, Hearthflame Mask Ogerpon, Cornerstone Mask Ogerpon, Teal Mask Tera Ogerpon, Wellspring Mask Tera Ogerpon, Hearthflame Mask Tera Ogerpon, Cornerstone Mask Tera Ogerpon",
+    "evolution line": "Teal Mask Ogerpon, Wellspring Mask Ogerpon, Hearthflame Mask Ogerpon, Cornerstone Mask Ogerpon, Teal Mask Tera Ogerpon, Wellspring Mask Tera Ogerpon, Hearthflame Mask Tera Ogerpon, Cornerstone Mask Tera Ogerpon",
     "img": "1017-teal-mask-tera"
   },
   "Wellspring Mask Tera Ogerpon": {
+    "name": "Wellspring Mask Tera Ogerpon",
     "id": 1017,
     "hp": 80,
     "attack": 120,
@@ -22076,10 +23456,11 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Embody Aspect Wellspring",
     "passive": "Super Luck",
-    "evolution": "Teal Mask Ogerpon, Wellspring Mask Ogerpon, Hearthflame Mask Ogerpon, Cornerstone Mask Ogerpon, Teal Mask Tera Ogerpon, Wellspring Mask Tera Ogerpon, Hearthflame Mask Tera Ogerpon, Cornerstone Mask Tera Ogerpon",
+    "evolution line": "Teal Mask Ogerpon, Wellspring Mask Ogerpon, Hearthflame Mask Ogerpon, Cornerstone Mask Ogerpon, Teal Mask Tera Ogerpon, Wellspring Mask Tera Ogerpon, Hearthflame Mask Tera Ogerpon, Cornerstone Mask Tera Ogerpon",
     "img": "1017-wellspring-mask-tera"
   },
   "Hearthflame Mask Tera Ogerpon": {
+    "name": "Hearthflame Mask Tera Ogerpon",
     "id": 1017,
     "hp": 80,
     "attack": 120,
@@ -22092,10 +23473,11 @@ const POKEMON_DATA = {
     "type2": "Fire",
     "abilities": "Embody Aspect Hearthflame",
     "passive": "Flash Fire",
-    "evolution": "Teal Mask Ogerpon, Wellspring Mask Ogerpon, Hearthflame Mask Ogerpon, Cornerstone Mask Ogerpon, Teal Mask Tera Ogerpon, Wellspring Mask Tera Ogerpon, Hearthflame Mask Tera Ogerpon, Cornerstone Mask Tera Ogerpon",
+    "evolution line": "Teal Mask Ogerpon, Wellspring Mask Ogerpon, Hearthflame Mask Ogerpon, Cornerstone Mask Ogerpon, Teal Mask Tera Ogerpon, Wellspring Mask Tera Ogerpon, Hearthflame Mask Tera Ogerpon, Cornerstone Mask Tera Ogerpon",
     "img": "1017-hearthflame-mask-tera"
   },
   "Cornerstone Mask Tera Ogerpon": {
+    "name": "Cornerstone Mask Tera Ogerpon",
     "id": 1017,
     "hp": 80,
     "attack": 120,
@@ -22108,10 +23490,11 @@ const POKEMON_DATA = {
     "type2": "Rock",
     "abilities": "Embody Aspect Cornerstone",
     "passive": "Magic Guard",
-    "evolution": "Teal Mask Ogerpon, Wellspring Mask Ogerpon, Hearthflame Mask Ogerpon, Cornerstone Mask Ogerpon, Teal Mask Tera Ogerpon, Wellspring Mask Tera Ogerpon, Hearthflame Mask Tera Ogerpon, Cornerstone Mask Tera Ogerpon",
+    "evolution line": "Teal Mask Ogerpon, Wellspring Mask Ogerpon, Hearthflame Mask Ogerpon, Cornerstone Mask Ogerpon, Teal Mask Tera Ogerpon, Wellspring Mask Tera Ogerpon, Hearthflame Mask Tera Ogerpon, Cornerstone Mask Tera Ogerpon",
     "img": "1017-cornerstone-mask-tera"
   },
   "Archaludon": {
+    "name": "Archaludon",
     "id": 1018,
     "hp": 90,
     "attack": 105,
@@ -22124,10 +23507,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Stamina, Sturdy, Stalwart",
     "passive": "Transistor",
-    "evolution": "Duraludon, Gigantamax Duraludon, Archaludon",
+    "evolution line": "Duraludon, Gigantamax Duraludon, Archaludon",
     "img": "1018"
   },
   "Hydrapple": {
+    "name": "Hydrapple",
     "id": 1019,
     "hp": 106,
     "attack": 80,
@@ -22140,10 +23524,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Supersweet Syrup, Regenerator, Sticky Hold",
     "passive": "Parental Bond",
-    "evolution": "Applin, Flapple, Gigantamax Flapple, Appletun, Gigantamax Appletun, Dipplin, Hydrapple",
+    "evolution line": "Applin, Flapple, Gigantamax Flapple, Appletun, Gigantamax Appletun, Dipplin, Hydrapple",
     "img": "1019"
   },
   "Gouging Fire": {
+    "name": "Gouging Fire",
     "id": 1020,
     "hp": 105,
     "attack": 115,
@@ -22156,10 +23541,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Protosynthesis",
     "passive": "Beast Boost",
-    "evolution": "Gouging Fire",
+    "evolution line": "Gouging Fire",
     "img": "1020"
   },
   "Raging Bolt": {
+    "name": "Raging Bolt",
     "id": 1021,
     "hp": 125,
     "attack": 73,
@@ -22172,10 +23558,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Protosynthesis",
     "passive": "Beast Boost",
-    "evolution": "Raging Bolt",
+    "evolution line": "Raging Bolt",
     "img": "1021"
   },
   "Iron Boulder": {
+    "name": "Iron Boulder",
     "id": 1022,
     "hp": 90,
     "attack": 120,
@@ -22188,10 +23575,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Quark Drive",
     "passive": "Sharpness",
-    "evolution": "Iron Boulder",
+    "evolution line": "Iron Boulder",
     "img": "1022"
   },
   "Iron Crown": {
+    "name": "Iron Crown",
     "id": 1023,
     "hp": 90,
     "attack": 72,
@@ -22204,10 +23592,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Quark Drive",
     "passive": "Sharpness",
-    "evolution": "Iron Crown",
+    "evolution line": "Iron Crown",
     "img": "1023"
   },
   "Terapagos": {
+    "name": "Terapagos",
     "id": 1024,
     "hp": 90,
     "attack": 65,
@@ -22220,10 +23609,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Tera Shift",
     "passive": "Shield Dust",
-    "evolution": "Terapagos, Terastal Terapagos, Stellar Terapagos",
+    "evolution line": "Terapagos, Terastal Terapagos, Stellar Terapagos",
     "img": "1024"
   },
   "Terastal Terapagos": {
+    "name": "Terastal Terapagos",
     "id": 1024,
     "hp": 95,
     "attack": 95,
@@ -22236,10 +23626,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Tera Shell",
     "passive": "Shield Dust",
-    "evolution": "Terapagos, Terastal Terapagos, Stellar Terapagos",
+    "evolution line": "Terapagos, Terastal Terapagos, Stellar Terapagos",
     "img": "1024-terastal"
   },
   "Stellar Terapagos": {
+    "name": "Stellar Terapagos",
     "id": 1024,
     "hp": 160,
     "attack": 105,
@@ -22252,10 +23643,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Teraform Zero",
     "passive": "Shield Dust",
-    "evolution": "Terapagos, Terastal Terapagos, Stellar Terapagos",
+    "evolution line": "Terapagos, Terastal Terapagos, Stellar Terapagos",
     "img": "1024-stellar"
   },
   "Pecharunt": {
+    "name": "Pecharunt",
     "id": 1025,
     "hp": 88,
     "attack": 88,
@@ -22268,10 +23660,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Poison Puppeteer",
     "passive": "Toxic Chain",
-    "evolution": "Pecharunt",
+    "evolution line": "Pecharunt",
     "img": "1025"
   },
   "Alola Rattata": {
+    "name": "Alola Rattata",
     "id": 2019,
     "hp": 30,
     "attack": 56,
@@ -22284,10 +23677,11 @@ const POKEMON_DATA = {
     "type2": "Normal",
     "abilities": "Gluttony, Hustle, Thick Fat",
     "passive": "Adaptability",
-    "evolution": "Alola Rattata, Alola Raticate",
+    "evolution line": "Alola Rattata, Alola Raticate",
     "img": "2019"
   },
   "Alola Raticate": {
+    "name": "Alola Raticate",
     "id": 2020,
     "hp": 75,
     "attack": 71,
@@ -22300,10 +23694,11 @@ const POKEMON_DATA = {
     "type2": "Normal",
     "abilities": "Gluttony, Hustle, Thick Fat",
     "passive": "Adaptability",
-    "evolution": "Alola Rattata, Alola Raticate",
+    "evolution line": "Alola Rattata, Alola Raticate",
     "img": "2020"
   },
   "Alola Raichu": {
+    "name": "Alola Raichu",
     "id": 2026,
     "hp": 60,
     "attack": 85,
@@ -22316,10 +23711,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Surge Surfer",
     "passive": "Electric Surge",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
+    "evolution line": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "2026"
   },
   "Alola Sandshrew": {
+    "name": "Alola Sandshrew",
     "id": 2027,
     "hp": 50,
     "attack": 75,
@@ -22332,10 +23728,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Snow Cloak, Slush Rush",
     "passive": "Ice Scales",
-    "evolution": "Alola Sandshrew, Alola Sandslash",
+    "evolution line": "Alola Sandshrew, Alola Sandslash",
     "img": "2027"
   },
   "Alola Sandslash": {
+    "name": "Alola Sandslash",
     "id": 2028,
     "hp": 75,
     "attack": 100,
@@ -22348,10 +23745,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Snow Cloak, Slush Rush",
     "passive": "Ice Scales",
-    "evolution": "Alola Sandshrew, Alola Sandslash",
+    "evolution line": "Alola Sandshrew, Alola Sandslash",
     "img": "2028"
   },
   "Alola Vulpix": {
+    "name": "Alola Vulpix",
     "id": 2037,
     "hp": 38,
     "attack": 41,
@@ -22364,10 +23762,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Snow Cloak, Snow Warning",
     "passive": "Ice Body",
-    "evolution": "Alola Vulpix, Alola Ninetales",
+    "evolution line": "Alola Vulpix, Alola Ninetales",
     "img": "2037"
   },
   "Alola Ninetales": {
+    "name": "Alola Ninetales",
     "id": 2038,
     "hp": 73,
     "attack": 67,
@@ -22380,10 +23779,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Snow Cloak, Snow Warning",
     "passive": "Ice Body",
-    "evolution": "Alola Vulpix, Alola Ninetales",
+    "evolution line": "Alola Vulpix, Alola Ninetales",
     "img": "2038"
   },
   "Alola Diglett": {
+    "name": "Alola Diglett",
     "id": 2050,
     "hp": 10,
     "attack": 55,
@@ -22396,10 +23796,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Sand Veil, Tangling Hair, Sand Force",
     "passive": "Sturdy",
-    "evolution": "Alola Diglett, Alola Dugtrio",
+    "evolution line": "Alola Diglett, Alola Dugtrio",
     "img": "2050"
   },
   "Alola Dugtrio": {
+    "name": "Alola Dugtrio",
     "id": 2051,
     "hp": 35,
     "attack": 100,
@@ -22412,10 +23813,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Sand Veil, Tangling Hair, Sand Force",
     "passive": "Sturdy",
-    "evolution": "Alola Diglett, Alola Dugtrio",
+    "evolution line": "Alola Diglett, Alola Dugtrio",
     "img": "2051"
   },
   "Alola Meowth": {
+    "name": "Alola Meowth",
     "id": 2052,
     "hp": 40,
     "attack": 35,
@@ -22428,10 +23830,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Pickup, Technician, Rattled",
     "passive": "Dazzling",
-    "evolution": "Alola Meowth, Alola Persian",
+    "evolution line": "Alola Meowth, Alola Persian",
     "img": "2052"
   },
   "Alola Persian": {
+    "name": "Alola Persian",
     "id": 2053,
     "hp": 65,
     "attack": 60,
@@ -22444,10 +23847,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Fur Coat, Technician, Rattled",
     "passive": "Dazzling",
-    "evolution": "Alola Meowth, Alola Persian",
+    "evolution line": "Alola Meowth, Alola Persian",
     "img": "2053"
   },
   "Alola Geodude": {
+    "name": "Alola Geodude",
     "id": 2074,
     "hp": 40,
     "attack": 80,
@@ -22460,10 +23864,11 @@ const POKEMON_DATA = {
     "type2": "Electric",
     "abilities": "Magnet Pull, Sturdy, Galvanize",
     "passive": "Dry Skin",
-    "evolution": "Alola Geodude, Alola Graveler, Alola Golem",
+    "evolution line": "Alola Geodude, Alola Graveler, Alola Golem",
     "img": "2074"
   },
   "Alola Graveler": {
+    "name": "Alola Graveler",
     "id": 2075,
     "hp": 55,
     "attack": 95,
@@ -22476,10 +23881,11 @@ const POKEMON_DATA = {
     "type2": "Electric",
     "abilities": "Magnet Pull, Sturdy, Galvanize",
     "passive": "Dry Skin",
-    "evolution": "Alola Geodude, Alola Graveler, Alola Golem",
+    "evolution line": "Alola Geodude, Alola Graveler, Alola Golem",
     "img": "2075"
   },
   "Alola Golem": {
+    "name": "Alola Golem",
     "id": 2076,
     "hp": 80,
     "attack": 120,
@@ -22492,10 +23898,11 @@ const POKEMON_DATA = {
     "type2": "Electric",
     "abilities": "Magnet Pull, Sturdy, Galvanize",
     "passive": "Dry Skin",
-    "evolution": "Alola Geodude, Alola Graveler, Alola Golem",
+    "evolution line": "Alola Geodude, Alola Graveler, Alola Golem",
     "img": "2076"
   },
   "Alola Grimer": {
+    "name": "Alola Grimer",
     "id": 2088,
     "hp": 80,
     "attack": 80,
@@ -22508,10 +23915,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Poison Touch, Gluttony, Power Of Alchemy",
     "passive": "Toxic Debris",
-    "evolution": "Alola Grimer, Alola Muk",
+    "evolution line": "Alola Grimer, Alola Muk",
     "img": "2088"
   },
   "Alola Muk": {
+    "name": "Alola Muk",
     "id": 2089,
     "hp": 105,
     "attack": 105,
@@ -22524,10 +23932,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Poison Touch, Gluttony, Power Of Alchemy",
     "passive": "Toxic Debris",
-    "evolution": "Alola Grimer, Alola Muk",
+    "evolution line": "Alola Grimer, Alola Muk",
     "img": "2089"
   },
   "Alola Exeggutor": {
+    "name": "Alola Exeggutor",
     "id": 2103,
     "hp": 95,
     "attack": 105,
@@ -22540,10 +23949,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Frisk, Harvest",
     "passive": "Unburden",
-    "evolution": "Exeggcute, Exeggutor, Alola Exeggutor",
+    "evolution line": "Exeggcute, Exeggutor, Alola Exeggutor",
     "img": "2103"
   },
   "Alola Marowak": {
+    "name": "Alola Marowak",
     "id": 2105,
     "hp": 60,
     "attack": 80,
@@ -22556,10 +23966,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Cursed Body, Lightning Rod, Rock Head",
     "passive": "Parental Bond",
-    "evolution": "Cubone, Marowak, Alola Marowak",
+    "evolution line": "Cubone, Marowak, Alola Marowak",
     "img": "2105"
   },
   "Eternal Floette": {
+    "name": "Eternal Floette",
     "id": 2670,
     "hp": 74,
     "attack": 65,
@@ -22572,10 +23983,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Flower Veil, Symbiosis",
     "passive": "Magic Guard",
-    "evolution": "Eternal Floette",
+    "evolution line": "Eternal Floette",
     "img": "2670"
   },
   "Galar Meowth": {
+    "name": "Galar Meowth",
     "id": 4052,
     "hp": 50,
     "attack": 65,
@@ -22588,10 +24000,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Pickup, Tough Claws, Unnerve",
     "passive": "Unburden",
-    "evolution": "Perrserker, Galar Meowth",
+    "evolution line": "Perrserker, Galar Meowth",
     "img": "4052"
   },
   "Galar Ponyta": {
+    "name": "Galar Ponyta",
     "id": 4077,
     "hp": 50,
     "attack": 85,
@@ -22604,10 +24017,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Run Away, Pastel Veil, Anticipation",
     "passive": "Chilling Neigh",
-    "evolution": "Galar Ponyta, Galar Rapidash",
+    "evolution line": "Galar Ponyta, Galar Rapidash",
     "img": "4077"
   },
   "Galar Rapidash": {
+    "name": "Galar Rapidash",
     "id": 4078,
     "hp": 65,
     "attack": 100,
@@ -22620,10 +24034,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Run Away, Pastel Veil, Anticipation",
     "passive": "Chilling Neigh",
-    "evolution": "Galar Ponyta, Galar Rapidash",
+    "evolution line": "Galar Ponyta, Galar Rapidash",
     "img": "4078"
   },
   "Galar Slowpoke": {
+    "name": "Galar Slowpoke",
     "id": 4079,
     "hp": 90,
     "attack": 65,
@@ -22636,10 +24051,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Gluttony, Own Tempo, Regenerator",
     "passive": "Oblivious",
-    "evolution": "Galar Slowpoke, Galar Slowbro, Galar Slowking",
+    "evolution line": "Galar Slowpoke, Galar Slowbro, Galar Slowking",
     "img": "4079"
   },
   "Galar Slowbro": {
+    "name": "Galar Slowbro",
     "id": 4080,
     "hp": 95,
     "attack": 100,
@@ -22652,10 +24068,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Quick Draw, Own Tempo, Regenerator",
     "passive": "Neuroforce",
-    "evolution": "Galar Slowpoke, Galar Slowbro, Galar Slowking",
+    "evolution line": "Galar Slowpoke, Galar Slowbro, Galar Slowking",
     "img": "4080"
   },
   "Galar Farfetch’d": {
+    "name": "Galar Farfetch’d",
     "id": 4083,
     "hp": 52,
     "attack": 95,
@@ -22668,10 +24085,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Steadfast, Scrappy",
     "passive": "Stakeout",
-    "evolution": "Sirfetch’d, Galar Farfetch’d",
+    "evolution line": "Sirfetch’d, Galar Farfetch’d",
     "img": "4083"
   },
   "Galar Weezing": {
+    "name": "Galar Weezing",
     "id": 4110,
     "hp": 65,
     "attack": 90,
@@ -22684,10 +24102,11 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Levitate, Neutralizing Gas, Misty Surge",
     "passive": "Parental Bond",
-    "evolution": "Koffing, Weezing, Galar Weezing",
+    "evolution line": "Koffing, Weezing, Galar Weezing",
     "img": "4110"
   },
   "Galar Mr. Mime": {
+    "name": "Galar Mr. Mime",
     "id": 4122,
     "hp": 50,
     "attack": 65,
@@ -22700,10 +24119,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Vital Spirit, Screen Cleaner, Ice Body",
     "passive": "Prankster",
-    "evolution": "Mr. Mime, Mime Jr., Mr. Rime, Galar Mr. Mime",
+    "evolution line": "Mr. Mime, Mime Jr., Mr. Rime, Galar Mr. Mime",
     "img": "4122"
   },
   "Galar Articuno": {
+    "name": "Galar Articuno",
     "id": 4144,
     "hp": 90,
     "attack": 85,
@@ -22716,10 +24136,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Competitive",
     "passive": "Serene Grace",
-    "evolution": "Galar Articuno",
+    "evolution line": "Galar Articuno",
     "img": "4144"
   },
   "Galar Zapdos": {
+    "name": "Galar Zapdos",
     "id": 4145,
     "hp": 90,
     "attack": 125,
@@ -22732,10 +24153,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Defiant",
     "passive": "Tough Claws",
-    "evolution": "Galar Zapdos",
+    "evolution line": "Galar Zapdos",
     "img": "4145"
   },
   "Galar Moltres": {
+    "name": "Galar Moltres",
     "id": 4146,
     "hp": 90,
     "attack": 85,
@@ -22748,10 +24170,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Berserk",
     "passive": "Dark Aura",
-    "evolution": "Galar Moltres",
+    "evolution line": "Galar Moltres",
     "img": "4146"
   },
   "Galar Slowking": {
+    "name": "Galar Slowking",
     "id": 4199,
     "hp": 95,
     "attack": 65,
@@ -22764,10 +24187,11 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Curious Medicine, Own Tempo, Regenerator",
     "passive": "Intimidate",
-    "evolution": "Galar Slowpoke, Galar Slowbro, Galar Slowking",
+    "evolution line": "Galar Slowpoke, Galar Slowbro, Galar Slowking",
     "img": "4199"
   },
   "Galar Corsola": {
+    "name": "Galar Corsola",
     "id": 4222,
     "hp": 60,
     "attack": 55,
@@ -22780,10 +24204,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Weak Armor, Cursed Body",
     "passive": "Shadow Shield",
-    "evolution": "Cursola, Galar Corsola",
+    "evolution line": "Cursola, Galar Corsola",
     "img": "4222"
   },
   "Galar Zigzagoon": {
+    "name": "Galar Zigzagoon",
     "id": 4263,
     "hp": 38,
     "attack": 30,
@@ -22796,10 +24221,11 @@ const POKEMON_DATA = {
     "type2": "Normal",
     "abilities": "Pickup, Gluttony, Quick Feet",
     "passive": "Poison Heal",
-    "evolution": "Obstagoon, Galar Zigzagoon, Galar Linoone",
+    "evolution line": "Obstagoon, Galar Zigzagoon, Galar Linoone",
     "img": "4263"
   },
   "Galar Linoone": {
+    "name": "Galar Linoone",
     "id": 4264,
     "hp": 78,
     "attack": 70,
@@ -22812,10 +24238,11 @@ const POKEMON_DATA = {
     "type2": "Normal",
     "abilities": "Pickup, Gluttony, Quick Feet",
     "passive": "Poison Heal",
-    "evolution": "Obstagoon, Galar Zigzagoon, Galar Linoone",
+    "evolution line": "Obstagoon, Galar Zigzagoon, Galar Linoone",
     "img": "4264"
   },
   "Galar Darumaka": {
+    "name": "Galar Darumaka",
     "id": 4554,
     "hp": 70,
     "attack": 90,
@@ -22828,10 +24255,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Hustle, Inner Focus",
     "passive": "Flash Fire",
-    "evolution": "Galar Darumaka, Galar Darmanitan, Zen Galar Darmanitan",
+    "evolution line": "Galar Darumaka, Galar Darmanitan, Zen Galar Darmanitan",
     "img": "4554"
   },
   "Galar Darmanitan": {
+    "name": "Galar Darmanitan",
     "id": 4555,
     "hp": 105,
     "attack": 140,
@@ -22844,10 +24272,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Gorilla Tactics, Zen Mode",
     "passive": "Flash Fire",
-    "evolution": "Galar Darumaka, Galar Darmanitan, Zen Galar Darmanitan",
+    "evolution line": "Galar Darumaka, Galar Darmanitan, Zen Galar Darmanitan",
     "img": "4555"
   },
   "Zen Galar Darmanitan": {
+    "name": "Zen Galar Darmanitan",
     "id": 4555,
     "hp": 105,
     "attack": 160,
@@ -22860,10 +24289,11 @@ const POKEMON_DATA = {
     "type2": "Fire",
     "abilities": "Gorilla Tactics, Zen Mode",
     "passive": "Flash Fire",
-    "evolution": "Galar Darumaka, Galar Darmanitan, Zen Galar Darmanitan",
+    "evolution line": "Galar Darumaka, Galar Darmanitan, Zen Galar Darmanitan",
     "img": "4555-zen"
   },
   "Galar Yamask": {
+    "name": "Galar Yamask",
     "id": 4562,
     "hp": 38,
     "attack": 55,
@@ -22876,10 +24306,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Wandering Spirit",
     "passive": "Tablets Of Ruin",
-    "evolution": "Runerigus, Galar Yamask",
+    "evolution line": "Runerigus, Galar Yamask",
     "img": "4562"
   },
   "Galar Stunfisk": {
+    "name": "Galar Stunfisk",
     "id": 4618,
     "hp": 109,
     "attack": 81,
@@ -22892,10 +24323,11 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Mimicry",
     "passive": "Arena Trap",
-    "evolution": "Galar Stunfisk",
+    "evolution line": "Galar Stunfisk",
     "img": "4618"
   },
   "Hisui Growlithe": {
+    "name": "Hisui Growlithe",
     "id": 6058,
     "hp": 60,
     "attack": 75,
@@ -22908,10 +24340,11 @@ const POKEMON_DATA = {
     "type2": "Rock",
     "abilities": "Intimidate, Flash Fire, Rock Head",
     "passive": "Reckless",
-    "evolution": "Hisui Growlithe, Hisui Arcanine",
+    "evolution line": "Hisui Growlithe, Hisui Arcanine",
     "img": "6058"
   },
   "Hisui Arcanine": {
+    "name": "Hisui Arcanine",
     "id": 6059,
     "hp": 95,
     "attack": 115,
@@ -22924,10 +24357,11 @@ const POKEMON_DATA = {
     "type2": "Rock",
     "abilities": "Intimidate, Flash Fire, Rock Head",
     "passive": "Reckless",
-    "evolution": "Hisui Growlithe, Hisui Arcanine",
+    "evolution line": "Hisui Growlithe, Hisui Arcanine",
     "img": "6059"
   },
   "Hisui Voltorb": {
+    "name": "Hisui Voltorb",
     "id": 6100,
     "hp": 40,
     "attack": 30,
@@ -22940,10 +24374,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Soundproof, Static, Aftermath",
     "passive": "Magic Guard",
-    "evolution": "Hisui Voltorb, Hisui Electrode",
+    "evolution line": "Hisui Voltorb, Hisui Electrode",
     "img": "6100"
   },
   "Hisui Electrode": {
+    "name": "Hisui Electrode",
     "id": 6101,
     "hp": 60,
     "attack": 50,
@@ -22956,10 +24391,11 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Soundproof, Static, Aftermath",
     "passive": "Magic Guard",
-    "evolution": "Hisui Voltorb, Hisui Electrode",
+    "evolution line": "Hisui Voltorb, Hisui Electrode",
     "img": "6101"
   },
   "Hisui Typhlosion": {
+    "name": "Hisui Typhlosion",
     "id": 6157,
     "hp": 73,
     "attack": 84,
@@ -22972,10 +24408,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Blaze, Frisk",
     "passive": "Drought",
-    "evolution": "Cyndaquil, Quilava, Typhlosion, Hisui Typhlosion",
+    "evolution line": "Cyndaquil, Quilava, Typhlosion, Hisui Typhlosion",
     "img": "6157"
   },
   "Hisui Qwilfish": {
+    "name": "Hisui Qwilfish",
     "id": 6211,
     "hp": 65,
     "attack": 95,
@@ -22988,10 +24425,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Poison Point, Swift Swim, Intimidate",
     "passive": "Merciless",
-    "evolution": "Overqwil, Hisui Qwilfish",
+    "evolution line": "Overqwil, Hisui Qwilfish",
     "img": "6211"
   },
   "Hisui Sneasel": {
+    "name": "Hisui Sneasel",
     "id": 6215,
     "hp": 55,
     "attack": 95,
@@ -23004,10 +24442,11 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Inner Focus, Keen Eye, Pickpocket",
     "passive": "Scrappy",
-    "evolution": "Sneasler, Hisui Sneasel",
+    "evolution line": "Sneasler, Hisui Sneasel",
     "img": "6215"
   },
   "Hisui Samurott": {
+    "name": "Hisui Samurott",
     "id": 6503,
     "hp": 90,
     "attack": 108,
@@ -23020,10 +24459,11 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Torrent, Sharpness",
     "passive": "Mold Breaker",
-    "evolution": "Oshawott, Dewott, Samurott, Hisui Samurott",
+    "evolution line": "Oshawott, Dewott, Samurott, Hisui Samurott",
     "img": "6503"
   },
   "Hisui Lilligant": {
+    "name": "Hisui Lilligant",
     "id": 6549,
     "hp": 70,
     "attack": 105,
@@ -23036,10 +24476,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Chlorophyll, Hustle, Leaf Guard",
     "passive": "Flower Veil",
-    "evolution": "Petilil, Lilligant, Hisui Lilligant",
+    "evolution line": "Petilil, Lilligant, Hisui Lilligant",
     "img": "6549"
   },
   "Hisui Zorua": {
+    "name": "Hisui Zorua",
     "id": 6570,
     "hp": 35,
     "attack": 60,
@@ -23052,10 +24493,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Illusion",
     "passive": "Shadow Shield",
-    "evolution": "Hisui Zorua, Hisui Zoroark",
+    "evolution line": "Hisui Zorua, Hisui Zoroark",
     "img": "6570"
   },
   "Hisui Zoroark": {
+    "name": "Hisui Zoroark",
     "id": 6571,
     "hp": 55,
     "attack": 100,
@@ -23068,10 +24510,11 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Illusion",
     "passive": "Shadow Shield",
-    "evolution": "Hisui Zorua, Hisui Zoroark",
+    "evolution line": "Hisui Zorua, Hisui Zoroark",
     "img": "6571"
   },
   "Hisui Braviary": {
+    "name": "Hisui Braviary",
     "id": 6628,
     "hp": 110,
     "attack": 83,
@@ -23084,10 +24527,11 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Keen Eye, Sheer Force, Tinted Lens",
     "passive": "Speed Boost",
-    "evolution": "Rufflet, Braviary, Hisui Braviary",
+    "evolution line": "Rufflet, Braviary, Hisui Braviary",
     "img": "6628"
   },
   "Hisui Sliggoo": {
+    "name": "Hisui Sliggoo",
     "id": 6705,
     "hp": 58,
     "attack": 75,
@@ -23100,10 +24544,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Sap Sipper, Shell Armor, Gooey",
     "passive": "Regenerator",
-    "evolution": "Goomy, Sliggoo, Goodra, Hisui Sliggoo, Hisui Goodra",
+    "evolution line": "Goomy, Sliggoo, Goodra, Hisui Sliggoo, Hisui Goodra",
     "img": "6705"
   },
   "Hisui Goodra": {
+    "name": "Hisui Goodra",
     "id": 6706,
     "hp": 80,
     "attack": 100,
@@ -23116,10 +24561,11 @@ const POKEMON_DATA = {
     "type2": "Dragon",
     "abilities": "Sap Sipper, Shell Armor, Gooey",
     "passive": "Regenerator",
-    "evolution": "Goomy, Sliggoo, Goodra, Hisui Sliggoo, Hisui Goodra",
+    "evolution line": "Goomy, Sliggoo, Goodra, Hisui Sliggoo, Hisui Goodra",
     "img": "6706"
   },
   "Hisui Avalugg": {
+    "name": "Hisui Avalugg",
     "id": 6713,
     "hp": 95,
     "attack": 127,
@@ -23132,10 +24578,11 @@ const POKEMON_DATA = {
     "type2": "Rock",
     "abilities": "Strong Jaw, Ice Body, Sturdy",
     "passive": "Ice Scales",
-    "evolution": "Bergmite, Avalugg, Hisui Avalugg",
+    "evolution line": "Bergmite, Avalugg, Hisui Avalugg",
     "img": "6713"
   },
   "Hisui Decidueye": {
+    "name": "Hisui Decidueye",
     "id": 6724,
     "hp": 88,
     "attack": 112,
@@ -23148,10 +24595,11 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Overgrow, Scrappy",
     "passive": "Sniper",
-    "evolution": "Rowlet, Dartrix, Decidueye, Hisui Decidueye",
+    "evolution line": "Rowlet, Dartrix, Decidueye, Hisui Decidueye",
     "img": "6724"
   },
   "Combat Paldea Tauros": {
+    "name": "Combat Paldea Tauros",
     "id": 8128,
     "hp": 75,
     "attack": 110,
@@ -23164,10 +24612,11 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Intimidate, Anger Point, Cud Chew",
     "passive": "Stamina",
-    "evolution": "Combat Paldea Tauros, Blaze Paldea Tauros, Aqua Paldea Tauros",
+    "evolution line": "Combat Paldea Tauros, Blaze Paldea Tauros, Aqua Paldea Tauros",
     "img": "8128"
   },
   "Blaze Paldea Tauros": {
+    "name": "Blaze Paldea Tauros",
     "id": 8128,
     "hp": 75,
     "attack": 110,
@@ -23180,10 +24629,11 @@ const POKEMON_DATA = {
     "type2": "Fire",
     "abilities": "Intimidate, Anger Point, Cud Chew",
     "passive": "Adaptability",
-    "evolution": "Combat Paldea Tauros, Blaze Paldea Tauros, Aqua Paldea Tauros",
+    "evolution line": "Combat Paldea Tauros, Blaze Paldea Tauros, Aqua Paldea Tauros",
     "img": "8128-blaze"
   },
   "Aqua Paldea Tauros": {
+    "name": "Aqua Paldea Tauros",
     "id": 8128,
     "hp": 75,
     "attack": 110,
@@ -23196,10 +24646,11 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Intimidate, Anger Point, Cud Chew",
     "passive": "Adaptability",
-    "evolution": "Combat Paldea Tauros, Blaze Paldea Tauros, Aqua Paldea Tauros",
+    "evolution line": "Combat Paldea Tauros, Blaze Paldea Tauros, Aqua Paldea Tauros",
     "img": "8128-aqua"
   },
   "Paldea Wooper": {
+    "name": "Paldea Wooper",
     "id": 8194,
     "hp": 55,
     "attack": 45,
@@ -23212,10 +24663,11 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Poison Point, Water Absorb, Unaware",
     "passive": "Poison Touch",
-    "evolution": "Clodsire, Paldea Wooper",
+    "evolution line": "Clodsire, Paldea Wooper",
     "img": "8194"
   },
   "Bloodmoon Ursaluna": {
+    "name": "Bloodmoon Ursaluna",
     "id": 8901,
     "hp": 113,
     "attack": 70,
@@ -23228,7 +24680,7 @@ const POKEMON_DATA = {
     "type2": "Normal",
     "abilities": "Minds Eye",
     "passive": "Berserk",
-    "evolution": "Bloodmoon Ursaluna",
+    "evolution line": "Bloodmoon Ursaluna",
     "img": "8901"
   }
 };
