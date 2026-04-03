@@ -25,6 +25,7 @@ jobs:
             src/field/pokemon.ts
             src/data/nature.ts
             src/modifier/modifier.ts
+            src/modifier/modifier-type.ts
             src/data/challenge.ts
           sparse-checkout-cone-mode: false
 
@@ -80,17 +81,17 @@ jobs:
           MODIFIER_TYPE_TS="pokerogue-main/src/modifier/modifier-type.ts"
           
           declare -A STAT_ITEMS=(
-            ["MachoBrace"]="MachoBrace\|Macho.*Brace\|MACHO_BRACE"
-            ["Eviolite"]="Eviolite\|EVOLITE"
-            ["LightBall"]="LightBall\|Light.*Ball\|LIGHT_BALL"
-            ["ThickClub"]="ThickClub\|Thick.*Club\|THICK_CLUB"
-            ["MetalPowder"]="MetalPowder\|Metal.*Powder\|METAL_POWDER"
-            ["QuickPowder"]="QuickPowder\|Quick.*Powder\|QUICK_POWDER"
-            ["DeepSeaScale"]="DeepSea.*Scale\|DEEP_SEA_SCALE"
-            ["DeepSeaTooth"]="DeepSea.*Tooth\|DEEP_SEA_TOOTH"
-            ["SoulDew"]="SoulDew\|Soul.*Dew\|SOUL_DEW"
-            ["ShuckleJuice"]="ShuckleJuice\|Shuckle.*Juice\|SHUCKLE_JUICE"
-            ["OldGateau"]="OldGateau\|Old.*Gateau\|OLD_GATEAU"
+            ["MachoBrace"]="MachoBrace|Macho.*Brace|MACHO_BRACE"
+            ["Eviolite"]="Eviolite|EVOLITE"
+            ["LightBall"]="LightBall|Light.*Ball|LIGHT_BALL"
+            ["ThickClub"]="ThickClub|Thick.*Club|THICK_CLUB"
+            ["MetalPowder"]="MetalPowder|Metal.*Powder|METAL_POWDER"
+            ["QuickPowder"]="QuickPowder|Quick.*Powder|QUICK_POWDER"
+            ["DeepSeaScale"]="DeepSea.*Scale|DEEP_SEA_SCALE"
+            ["DeepSeaTooth"]="DeepSea.*Tooth|DEEP_SEA_TOOTH"
+            ["SoulDew"]="SoulDew|Soul.*Dew|SOUL_DEW"
+            ["ShuckleJuice"]="ShuckleJuice|Shuckle.*Juice|SHUCKLE_JUICE"
+            ["OldGateau"]="OldGateau|Old.*Gateau|OLD_GATEAU"
           )
           
           declare -A STAT_ITEM_NAMES=(
@@ -107,10 +108,18 @@ jobs:
             ["OldGateau"]="Old Gateau"
           )
           
+          # Check both modifier.ts and modifier-type.ts for each item
           for item_key in "${!STAT_ITEMS[@]}"; do
             item_name="${STAT_ITEM_NAMES[$item_key]}"
             pattern="${STAT_ITEMS[$item_key]}"
-            if grep -iqE "$pattern" "$MODIFIER_TS" 2>/dev/null || grep -iqE "$pattern" "pokerogue-main/src/modifier/modifier-type.ts" 2>/dev/null; then
+            found=false
+            for f in "$MODIFIER_TS" "$MODIFIER_TYPE_TS"; do
+              if [ -f "$f" ] && grep -iqE "$pattern" "$f" 2>/dev/null; then
+                found=true
+                break
+              fi
+            done
+            if [ "$found" = true ]; then
               echo "✓ $item_name found"
             else
               echo "⚠ $item_name NOT found - may need to verify"
