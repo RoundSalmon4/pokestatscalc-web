@@ -546,44 +546,11 @@ function drawStatPentagon(stats) {
     const canvas = document.getElementById('statPentagon');
     if (!canvas) return;
     
-    // If no stats provided, calculate from current IV inputs (default 15)
-    // NOTE: Do NOT apply held items to pentagon - it should show base stat potential (IVs), not final stats
-    if (!stats && selectedPokemon) {
-        const pokemon = POKEMON_DATA[selectedPokemon];
-        const level = parseInt(document.getElementById('level').value) || 50;
-        const natureName = document.getElementById('nature').value;
-        const ivs = STAT_KEYS.map(key => parseInt(document.getElementById(`iv${key}`).value) || 15);
-        
-        // Get base stats with Flip Stat, Shuckle Juice, Old Gateau only (not held items)
-        let baseStats = [pokemon.hp, pokemon.attack, pokemon.defense, pokemon.spAttack, pokemon.spDefense, pokemon.speed];
-        if (document.getElementById('flipStat')?.checked) baseStats = applyFlipStat(baseStats);
-        if (document.getElementById('shuckleJuice')?.checked) baseStats = applyShuckleJuice(baseStats);
-        if (document.getElementById('oldGateau')?.checked) baseStats = applyOldGateau(baseStats);
-        
-        // Apply vitamins to base stats (part of base stat potential)
-        const vitamins = getVitamins();
-        baseStats = applyVitaminsToBaseStats(baseStats, vitamins);
-        
-        stats = {};
-        STAT_KEYS.forEach((key, i) => {
-            const base = baseStats[i];
-            let natureMult = getNatureMultiplier(natureName, key);
-            // Apply Soul Dew (nature modifier)
-            const soulDew = parseInt(document.getElementById('soulDew').value) || 0;
-            if (natureMult !== 1.0 && soulDew > 0) {
-                const sign = natureMult > 1 ? 1 : -1;
-                natureMult += sign * soulDew * 0.1;
-            }
-            let calculated;
-            if (key === 'hp') {
-                calculated = Math.floor(((2 * base + ivs[i]) * level / 100) + level + 10);
-            } else {
-                const baseCalc = Math.floor(((2 * base + ivs[i]) * level / 100) + 5);
-                calculated = natureMult > 1 ? Math.ceil(baseCalc * natureMult) : Math.floor(baseCalc * natureMult);
-            }
-            stats[key] = Math.max(1, calculated);
-        });
-    }
+    // Pentagon directly visualizes IV values (0-31) - simple spider web of IVs
+    const ivs = STAT_KEYS.map(key => {
+        const val = parseInt(document.getElementById(`iv${key}`).value);
+        return (isNaN(val) || val < 0) ? 0 : Math.min(31, val);
+    });
     
     const ctx = canvas.getContext('2d');
     const w = canvas.width;
@@ -593,31 +560,9 @@ function drawStatPentagon(stats) {
     const maxR = 65;
     const statNames = ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spd'];
     
-    // Calculate min/max for each stat individually (IV=1 to IV=31)
-    const statRanges = {};
-    if (selectedPokemon && POKEMON_DATA[selectedPokemon]) {
-        const pokemon = POKEMON_DATA[selectedPokemon];
-        const level = parseInt(document.getElementById('level').value) || 50;
-        
-        STAT_KEYS.forEach(key => {
-            const base = pokemon[key === 'spAtk' ? 'spAttack' : key === 'spDef' ? 'spDefense' : key === 'spd' ? 'speed' : key === 'atk' ? 'attack' : key === 'def' ? 'defense' : key];
-            if (key === 'hp') {
-                statRanges[key] = {
-                    min: Math.floor(((2 * base + 1) * level / 100) + level + 10),
-                    max: Math.floor(((2 * base + 31) * level / 100) + level + 10)
-                };
-            } else {
-                statRanges[key] = {
-                    min: Math.floor(((2 * base + 1) * level / 100) + 5),
-                    max: Math.floor(((2 * base + 31) * level / 100) + 5)
-                };
-            }
-        });
-    }
-    
     ctx.clearRect(0, 0, w, h);
     
-    // Draw background pentagon
+    // Draw background pentagon with 5 inner rings (representing 0, 6, 12, 18, 24, 31 IV)
     ctx.beginPath();
     for (let i = 0; i < 6; i++) {
         const angle = (Math.PI * 2 * i / 6) - Math.PI / 2;
@@ -633,8 +578,8 @@ function drawStatPentagon(stats) {
     ctx.lineWidth = 1;
     ctx.stroke();
     
-    // Draw inner pentagons
-    for (let r = maxR * 0.25; r < maxR; r += maxR * 0.25) {
+    // Draw inner rings for IV levels (every ~6 IVs)
+    for (let r = maxR * 0.2; r < maxR; r += maxR * 0.2) {
         ctx.beginPath();
         for (let i = 0; i < 6; i++) {
             const angle = (Math.PI * 2 * i / 6) - Math.PI / 2;
@@ -649,32 +594,13 @@ function drawStatPentagon(stats) {
         ctx.stroke();
     }
     
-    // If no stats, just draw labels
-    if (!stats) {
-        ctx.font = '9px Consolas, monospace';
-        ctx.fillStyle = '#4ecdc4';
-        ctx.textAlign = 'center';
-        for (let i = 0; i < 6; i++) {
-            const angle = (Math.PI * 2 * i / 6) - Math.PI / 2;
-            const labelR = maxR + 8;
-            const x = cx + Math.cos(angle) * labelR;
-            const y = cy + Math.sin(angle) * labelR;
-            ctx.fillText(statNames[i], x, y + 3);
-        }
-        return;
-    }
-    
-    // Draw stat values
+    // Draw IV values as points and connect them
     ctx.beginPath();
     for (let i = 0; i < 6; i++) {
         const angle = (Math.PI * 2 * i / 6) - Math.PI / 2;
-        const statKeys = ['hp', 'atk', 'def', 'spAtk', 'spDef', 'spd'];
-        const key = statKeys[i];
-        const value = stats[key];
-        // Normalize: IV=1 should be near center (small), IV=31 should be at edge
-        const range = statRanges[key] || { min: 1, max: 300 };
-        const ratio = (value - range.min) / (range.max - range.min);
-        const r = maxR * Math.max(0.05, Math.min(ratio, 1));
+        const iv = ivs[i];
+        // Map IV 0-31 to radius 0-maxR
+        const r = maxR * (iv / 31);
         const x = cx + Math.cos(angle) * r;
         const y = cy + Math.sin(angle) * r;
         if (i === 0) ctx.moveTo(x, y);
@@ -687,16 +613,17 @@ function drawStatPentagon(stats) {
     ctx.lineWidth = 2;
     ctx.stroke();
     
-    // Draw labels
+    // Draw IV value labels
     ctx.font = '9px Consolas, monospace';
     ctx.fillStyle = '#4ecdc4';
     ctx.textAlign = 'center';
     for (let i = 0; i < 6; i++) {
         const angle = (Math.PI * 2 * i / 6) - Math.PI / 2;
-        const labelR = maxR + 8;
+        const iv = ivs[i];
+        const labelR = maxR + 12;
         const x = cx + Math.cos(angle) * labelR;
         const y = cy + Math.sin(angle) * labelR;
-        ctx.fillText(statNames[i], x, y + 3);
+        ctx.fillText(`${statNames[i]}:${iv}`, x, y + 3);
     }
 }
 
