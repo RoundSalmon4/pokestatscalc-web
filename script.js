@@ -626,10 +626,14 @@ function onClear() {
     document.getElementById('level').value = 50;
     document.getElementById('soulDew').value = 0;
     document.getElementById('pokemonList').innerHTML = '';
-    document.getElementById('pokemonDetails').innerHTML = '';
+    document.getElementById('baseStatsDisplay').innerHTML = '';
+    document.getElementById('pokemonSprite').innerHTML = '';
     STAT_KEYS.forEach(key => {
         document.getElementById(key).value = 0;
-        document.getElementById(`iv${key}`).value = 15;
+        const ivEl = document.getElementById(`iv${key}`);
+        ivEl.value = 15;
+        ivEl.readOnly = false;
+        ivEl.classList.add('default-value');
     });
     ['vitHP', 'vitAtk', 'vitDef', 'vitSpAtk', 'vitSpDef', 'vitSpd'].forEach(id => {
         document.getElementById(id).value = 0;
