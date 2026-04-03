@@ -49,14 +49,14 @@ jobs:
           echo "=== Checking pokemon.ts stat calculations ==="
           
           # HP formula: floor(((2 * baseStat + IV) * level / 100) + level + 10)
-          if grep -q "floor.*2.*baseStat.*IV.*level.*100.*level.*10" "$POKEMON_TS"; then
+          if grep -qE "Math\.floor\(\(2\s*\*\s*baseStats\[.*\]\s*\+\s*this\.ivs\[.*\]\)\s*\*\s*this\.level\s*\*\s*0\.01\)" "$POKEMON_TS"; then
             echo "✓ HP stat formula found"
           else
             echo "⚠ HP stat formula may have changed"
           fi
           
           # Other stats: floor(((2 * baseStat + IV) * level / 100) + 5) * natureMultiplier
-          if grep -q "floor.*2.*baseStat.*IV.*level.*100.*5" "$POKEMON_TS"; then
+          if grep -qE "statHolder\.value\s*\+=\s*5" "$POKEMON_TS"; then
             echo "✓ Non-HP stat formula found"
           else
             echo "⚠ Non-HP stat formula may have changed"
@@ -73,11 +73,27 @@ jobs:
             fi
           fi
           
-          # Check modifier.ts for stat-affecting items
+          # Check modifier-type.ts and modifier.ts for stat-affecting items
           echo ""
-          echo "=== Checking modifier.ts for stat items ==="
+          echo "=== Checking for stat items ==="
+          
+          MODIFIER_TYPE_TS="pokerogue-main/src/modifier/modifier-type.ts"
           
           declare -A STAT_ITEMS=(
+            ["MachoBrace"]="MachoBrace\|Macho.*Brace\|MACHO_BRACE"
+            ["Eviolite"]="Eviolite\|EVOLITE"
+            ["LightBall"]="LightBall\|Light.*Ball\|LIGHT_BALL"
+            ["ThickClub"]="ThickClub\|Thick.*Club\|THICK_CLUB"
+            ["MetalPowder"]="MetalPowder\|Metal.*Powder\|METAL_POWDER"
+            ["QuickPowder"]="QuickPowder\|Quick.*Powder\|QUICK_POWDER"
+            ["DeepSeaScale"]="DeepSea.*Scale\|DEEP_SEA_SCALE"
+            ["DeepSeaTooth"]="DeepSea.*Tooth\|DEEP_SEA_TOOTH"
+            ["SoulDew"]="SoulDew\|Soul.*Dew\|SOUL_DEW"
+            ["ShuckleJuice"]="ShuckleJuice\|Shuckle.*Juice\|SHUCKLE_JUICE"
+            ["OldGateau"]="OldGateau\|Old.*Gateau\|OLD_GATEAU"
+          )
+          
+          declare -A STAT_ITEM_NAMES=(
             ["MachoBrace"]="Macho Brace"
             ["Eviolite"]="Eviolite"
             ["LightBall"]="Light Ball"
@@ -92,8 +108,9 @@ jobs:
           )
           
           for item_key in "${!STAT_ITEMS[@]}"; do
-            item_name="${STAT_ITEMS[$item_key]}"
-            if grep -iq "$item_key\|$item_name" "$MODIFIER_TS" 2>/dev/null; then
+            item_name="${STAT_ITEM_NAMES[$item_key]}"
+            pattern="${STAT_ITEMS[$item_key]}"
+            if grep -iqE "$pattern" "$MODIFIER_TS" 2>/dev/null || grep -iqE "$pattern" "pokerogue-main/src/modifier/modifier-type.ts" 2>/dev/null; then
               echo "✓ $item_name found"
             else
               echo "⚠ $item_name NOT found - may need to verify"
