@@ -14,13 +14,13 @@
             <label title="Use maximum IVs (31) for all stats">
                 <input type="checkbox" id="maxIv"> Max IVs
             </label>
-            <label title="Flip/rotate base stats: HP↔Speed, Atk↔SpAtk, Def↔SpDef">
+            <label title="Rotates/cycles all base stats (HP→Spd→SpD→Def→SpA→Atk→HP)">
                 <input type="checkbox" id="flipStat"> Flip Stat Challenge
             </label>
-            <label title="Shuckle Juice: +10% to total BST">
+            <label title="Adds +10 to total BST (HP +5, others +1 each)">
                 <input type="checkbox" id="shuckleJuice"> Shuckle Juice
             </label>
-            <label title="Old Gateau: +20 to lower stat of each pair">
+            <label title="Adds +10 to every base stat (HP, Atk, Def, SpA, SpD, Spd all +10)">
                 <input type="checkbox" id="oldGateau"> Old Gateau
             </label>
         </div>
@@ -36,18 +36,22 @@
                 <h3 id="pokemonTitle">Select Pokémon</h3>
                 
                 <input type="text" id="search" class="search-input" placeholder="Search Pokémon...">
-                <div class="pokemon-list" id="pokemonList"></div>
+                <div class="pokemon-list" id="pokemonList">
+                    <div style="padding:8px;color:#888;">Loading...</div>
+                </div>
                 
                 <div class="pokemon-details" id="pokemonDetails">
                     <div class="pokemon-info-row">
                         <div class="stat-column">
-                            <div class="stat-line-container" id="baseStatsDisplay"></div>
+                            <div class="stat-line-container" id="baseStatsDisplay">
+                                <div style="color:#888;padding:10px;">Select a Pokémon</div>
+                            </div>
                         </div>
                         <div class="sprite-column">
                             <div class="pokemon-sprite" id="pokemonSprite"></div>
                         </div>
                         <div class="pentagon-column">
-                            <canvas id="statPentagon" width="140" height="140"></canvas>
+                            <canvas id="statPentagon" width="160" height="160"></canvas>
                         </div>
                     </div>
                 </div>
@@ -96,17 +100,17 @@
                     <h4>Held Items</h4>
                     <div class="items-compact">
                         <div class="item-checks">
-                            <label><input type="checkbox" id="eviolite"> Eviolite</label>
-                            <label><input type="checkbox" id="lightBall"> Light Ball</label>
-                            <label><input type="checkbox" id="thickClub"> Thick Club</label>
-                            <label><input type="checkbox" id="metalPowder"> Metal Powder</label>
-                            <label><input type="checkbox" id="quickPowder"> Quick Powder</label>
-                            <label><input type="checkbox" id="deepSeaScale"> Deep Sea Scale</label>
-                            <label><input type="checkbox" id="deepSeaTooth"> Deep Sea Tooth</label>
+                            <label title="If Pokémon is not fully evolved: 1.5x Defense and Sp. Defense"><input type="checkbox" id="eviolite"> Eviolite</label>
+                            <label title="Pikachu/Raichu only: 2x Attack and Sp. Attack"><input type="checkbox" id="lightBall"> Light Ball</label>
+                            <label title="Cubone/Marowak only: 2x Attack"><input type="checkbox" id="thickClub"> Thick Club</label>
+                            <label title="Ditto only: 2x Defense"><input type="checkbox" id="metalPowder"> Metal Powder</label>
+                            <label title="Ditto only: 2x Speed"><input type="checkbox" id="quickPowder"> Quick Powder</label>
+                            <label title="Clamperl/Huntail only: 2x Sp. Defense"><input type="checkbox" id="deepSeaScale"> Deep Sea Scale</label>
+                            <label title="Clamperl/Gorebyss only: 2x Sp. Attack"><input type="checkbox" id="deepSeaTooth"> Deep Sea Tooth</label>
                         </div>
                         <div class="item-row-single">
-                            <div class="item-input"><label>Macho Brace</label><input type="number" id="machoBrace" value="0" min="0" max="50"></div>
-                            <div class="item-input"><label>Soul Dew</label><input type="number" id="soulDew" value="0" min="0" max="10"></div>
+                            <div class="item-input"><label title="+2 HP, +1 other per stack; +10% HP / +5% others at 50 stacks">Macho Brace</label><input type="number" id="machoBrace" value="0" min="0" max="50"></div>
+                            <div class="item-input"><label title="+10% nature boost per stack (e.g., +1 nature effect at 10 stacks)">Soul Dew</label><input type="number" id="soulDew" value="0" min="0" max="10"></div>
                         </div>
                     </div>
                 </div>

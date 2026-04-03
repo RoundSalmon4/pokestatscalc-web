@@ -58,8 +58,8 @@ const SPECIES_ITEMS = {
 
 function canUseEviolite(pokemonName) {
     const pokemon = POKEMON_DATA[pokemonName];
-    if (!pokemon || !pokemon.evolution) return true;
-    const evoLine = pokemon.evolution.split(',').map(e => e.trim());
+    if (!pokemon || !pokemon['evolution line']) return false;
+    const evoLine = pokemon['evolution line'].split(',').map(e => e.trim());
     const isFinalForm = evoLine.length === 1 || evoLine[evoLine.length - 1] === pokemonName;
     return !isFinalForm;
 }
@@ -136,6 +136,30 @@ function populatePokemonList(filter = '') {
     });
 }
 
+function updateHeldItemVisibility(pokemonName) {
+    const items = [
+        { id: 'lightBall', names: ['Pikachu', 'Raichu'] },
+        { id: 'thickClub', names: ['Cubone', 'Marowak', 'Marowak-Alola'] },
+        { id: 'metalPowder', names: ['Ditto'] },
+        { id: 'quickPowder', names: ['Ditto'] },
+        { id: 'deepSeaScale', names: ['Clamperl', 'Huntail'] },
+        { id: 'deepSeaTooth', names: ['Clamperl', 'Gorebyss'] },
+        { id: 'eviolite', check: (name) => canUseEviolite(name) },
+    ];
+    
+    items.forEach(item => {
+        const el = document.getElementById(item.id);
+        const label = el?.parentElement;
+        if (el && label) {
+            if (item.names) {
+                label.style.display = item.names.includes(pokemonName) ? '' : 'none';
+            } else if (item.check) {
+                label.style.display = item.check(pokemonName) ? '' : 'none';
+            }
+        }
+    });
+}
+
 function selectPokemon(name) {
     const pokemon = POKEMON_DATA[name];
     if (!pokemon) return;
@@ -147,6 +171,9 @@ function selectPokemon(name) {
         child.classList.toggle('selected', childName === name);
     });
     const imgId = pokemon.img || pokemon.id;
+    
+    // Update held item visibility based on species
+    updateHeldItemVisibility(name);
     
     const statLabels = ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spd'];
     const statValues = [pokemon.hp, pokemon.attack, pokemon.defense, pokemon.spAttack, pokemon.spDefense, pokemon.speed];
@@ -487,10 +514,26 @@ function drawStatPentagon(stats) {
         const natureName = document.getElementById('nature').value;
         const ivs = STAT_KEYS.map(key => parseInt(document.getElementById(`iv${key}`).value) || 15);
         
+        // Get base stats with Flip Stat, Shuckle Juice, Old Gateau
+        let baseStats = [pokemon.hp, pokemon.attack, pokemon.defense, pokemon.spAttack, pokemon.spDefense, pokemon.speed];
+        if (document.getElementById('flipStat')?.checked) baseStats = applyFlipStat(baseStats);
+        if (document.getElementById('shuckleJuice')?.checked) baseStats = applyShuckleJuice(baseStats);
+        if (document.getElementById('oldGateau')?.checked) baseStats = applyOldGateau(baseStats);
+        
+        // Apply held items
+        const machoBrace = parseInt(document.getElementById('machoBrace').value) || 0;
+        baseStats = applyHeldItems(baseStats, selectedPokemon, machoBrace, ivs);
+        
         stats = {};
         STAT_KEYS.forEach((key, i) => {
-            const base = pokemon[key === 'spAtk' ? 'spAttack' : key === 'spDef' ? 'spDefense' : key === 'spd' ? 'speed' : key === 'atk' ? 'attack' : key === 'def' ? 'defense' : key];
+            const base = baseStats[i];
             let natureMult = getNatureMultiplier(natureName, key);
+            // Apply Soul Dew
+            const soulDew = parseInt(document.getElementById('soulDew').value) || 0;
+            if (natureMult !== 1.0 && soulDew > 0) {
+                const sign = natureMult > 1 ? 1 : -1;
+                natureMult += sign * soulDew * 0.1;
+            }
             let calculated;
             if (key === 'hp') {
                 calculated = Math.floor(((2 * base + ivs[i]) * level / 100) + level + 10);
@@ -507,7 +550,7 @@ function drawStatPentagon(stats) {
     const h = canvas.height;
     const cx = w / 2;
     const cy = h / 2;
-    const maxR = 55;
+    const maxR = 65;
     const statNames = ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spd'];
     
     // Calculate min/max for each stat individually (IV=1 to IV=31)
@@ -573,7 +616,7 @@ function drawStatPentagon(stats) {
         ctx.textAlign = 'center';
         for (let i = 0; i < 6; i++) {
             const angle = (Math.PI * 2 * i / 6) - Math.PI / 2;
-            const labelR = maxR + 15;
+            const labelR = maxR + 8;
             const x = cx + Math.cos(angle) * labelR;
             const y = cy + Math.sin(angle) * labelR;
             ctx.fillText(statNames[i], x, y + 3);
@@ -610,7 +653,7 @@ function drawStatPentagon(stats) {
     ctx.textAlign = 'center';
     for (let i = 0; i < 6; i++) {
         const angle = (Math.PI * 2 * i / 6) - Math.PI / 2;
-        const labelR = maxR + 10;
+        const labelR = maxR + 8;
         const x = cx + Math.cos(angle) * labelR;
         const y = cy + Math.sin(angle) * labelR;
         ctx.fillText(statNames[i], x, y + 3);
@@ -647,6 +690,14 @@ function onClear() {
     document.getElementById('flipStat').checked = false;
     document.getElementById('shuckleJuice').checked = false;
     document.getElementById('oldGateau').checked = false;
+    
+    // Show all held items when no pokemon is selected (after clear)
+    ['lightBall', 'thickClub', 'metalPowder', 'quickPowder', 'deepSeaScale', 'deepSeaTooth'].forEach(id => {
+        const el = document.getElementById(id);
+        const label = el?.parentElement;
+        if (label) label.style.display = '';
+    });
+    
     clearLog();
     populatePokemonList();
     drawStatPentagon(null);
@@ -712,6 +763,7 @@ function init() {
     });
     
     populatePokemonList();
+    
     drawStatPentagon(null);
     setStatus('Ready - Select a Pokémon and enter your stats to calculate IVs');
 }

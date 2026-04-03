@@ -193,6 +193,7 @@ h4 small {
     border-radius: 4px;
     font-family: 'Consolas', 'Courier New', monospace;
     font-size: 13px;
+    min-height: 80px;
 }
 
 .pokemon-info-row {
@@ -200,18 +201,19 @@ h4 small {
     align-items: center;
     justify-content: space-between;
     margin-top: 5px;
+    min-height: 80px;
 }
 
 .stat-column {
-    text-align: left;
+    width: 100px;
 }
 
 .sprite-column {
-    text-align: center;
+    width: 80px;
 }
 
 .pentagon-column {
-    text-align: right;
+    width: 160px;
 }
 
 .sprite-column .pokemon-sprite {
@@ -486,15 +488,8 @@ h4 small {
 
 .item-checks {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 6px;
-}
-
-/* Responsive checkbox grid */
-@media (max-width: 550px) {
-    .item-checks {
-        grid-template-columns: 1fr;
-    }
 }
 
 .item-checks label {
@@ -502,6 +497,8 @@ h4 small {
     align-items: center;
     gap: 4px;
     font-size: 13px;
+    white-space: nowrap;
+}
     cursor: pointer;
     padding: 5px 8px;
     background: #3a3a3a;
