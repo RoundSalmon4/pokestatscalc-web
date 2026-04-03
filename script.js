@@ -509,6 +509,11 @@ function calculateIVs() {
         return null;
     }
     
+    if (level < 50) {
+        const ivsPerStat = (50 / level).toFixed(1);
+        addToLog(`<span class="warning">⚠ Warning: At level ${level}, each stat represents ~${ivsPerStat} IVs. IV calculation is approximate.</span>`, 'result');
+    }
+    
     return ivs;
 }
 

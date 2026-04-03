@@ -93,7 +93,7 @@
                             </select>
                         </div>
                         <div class="filter-section small">
-                            <label for="level">Level</label>
+                            <label for="level" title="IV calculation is exact at level 100+, approximate below 50">Level</label>
                             <input type="number" id="level" value="50" min="1" max="99999">
                         </div>
                     </div>
@@ -133,7 +133,7 @@
                 </div>
 
                 <div class="panel-section">
-                    <h4 title="Due to Math.floor() in stat formulas, multiple IVs may produce the same stat. The calculated IV is an approximation.">IVs</h4>
+                    <h4 title="Due to Math.floor() in stat formulas, IV calculation is ambiguous below level 50 (multiple IVs produce the same stat). At level 100+, IV is exact.">IVs</h4>
                     <div class="compact-stats-grid">
                         <div class="stat-input"><label>HP</label><input type="number" id="ivhp" value="15" min="0" max="31" class="default-value"></div>
                         <div class="stat-input"><label>Atk</label><input type="number" id="ivatk" value="15" min="0" max="31" class="default-value"></div>

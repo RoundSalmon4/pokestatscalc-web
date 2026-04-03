@@ -369,6 +369,16 @@ h4 small {
     font-weight: bold;
 }
 
+.terminal .error {
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+.terminal .warning {
+    color: #ffaa00;
+    font-style: italic;
+}
+
 /* Settings Row */
 .settings-row {
     display: flex;
