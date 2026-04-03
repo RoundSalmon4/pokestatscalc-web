@@ -475,6 +475,40 @@ function calculateIVs() {
     
     addToLog(`<span class="result">IVs: HP=${ivs.hp} Atk=${ivs.atk} Def=${ivs.def} SpA=${ivs.spAtk} SpD=${ivs.spDef} Spd=${ivs.spd}</span>`, 'result');
     
+    const impossibleStats = [];
+    STAT_KEYS.forEach((key, index) => {
+        const base = baseStats[index];
+        let natureMult = getNatureMultiplier(natureName, key);
+        if (natureMult !== 1.0 && soulDew > 0) {
+            const sign = natureMult > 1 ? 1 : -1;
+            natureMult += sign * soulDew * 0.1;
+        }
+        
+        let minPossible, maxPossible;
+        
+        if (key === 'hp') {
+            minPossible = Math.floor(((2 * base) * level / 100) + level + 10);
+            maxPossible = Math.floor(((2 * base + 31) * level / 100) + level + 10);
+        } else {
+            minPossible = Math.floor(((2 * base) * level / 100) + 5);
+            maxPossible = Math.floor(((2 * base + 31) * level / 100) + 5);
+            if (natureMult !== 1.0) {
+                minPossible = natureMult > 1 ? Math.ceil(minPossible * natureMult) : Math.floor(minPossible * natureMult);
+                maxPossible = natureMult > 1 ? Math.ceil(maxPossible * natureMult) : Math.floor(maxPossible * natureMult);
+            }
+        }
+        
+        if (actualStats[index] < minPossible || actualStats[index] > maxPossible) {
+            impossibleStats.push(`${STAT_NAMES[index]}: ${actualStats[index]} (range: ${minPossible}-${maxPossible})`);
+        }
+    });
+    
+    if (impossibleStats.length > 0) {
+        setStatus(`Error: Impossible stat(s) for this Pokémon/level: ${impossibleStats.join(', ')}`, true);
+        addToLog(`<span class="error">⚠ Impossible stat(s): ${impossibleStats.join(', ')}</span>`, 'result');
+        return null;
+    }
+    
     return ivs;
 }
 
