@@ -129,7 +129,7 @@ function populatePokemonList(filter = '') {
     const pokemonNames = getFilteredPokemonList(filter);
     pokemonNames.forEach(name => {
         const div = document.createElement('div');
-        div.innerHTML = `<span class="poke-id">#${POKEMON_DATA[name].id}</span> ${name}`;
+        div.textContent = name;
         div.onclick = () => selectPokemon(name);
         if (selectedPokemon === name) div.classList.add('selected');
         listContainer.appendChild(div);
@@ -163,9 +163,37 @@ function selectPokemon(name) {
     
     clearLog();
     addToLog(`> Selected: ${name}`, '');
-    setStatus(`Selected: ${name}`);
+    setStatus(`Selected: ${name} (#${pokemon.id})`);
     // Draw pentagon after DOM update
     setTimeout(() => drawStatPentagon(null), 0);
+}
+
+function updateBaseStatsDisplay() {
+    const pokemon = POKEMON_DATA[selectedPokemon];
+    if (!pokemon) return;
+    
+    const flipStat = document.getElementById('flipStat').checked;
+    const shuckleJuice = document.getElementById('shuckleJuice').checked;
+    const oldGateau = document.getElementById('oldGateau').checked;
+    
+    let baseStats = [pokemon.hp, pokemon.attack, pokemon.defense, pokemon.spAttack, pokemon.spDefense, pokemon.speed];
+    
+    // Apply modifiers
+    if (flipStat) baseStats = applyFlipStat(baseStats);
+    if (shuckleJuice) baseStats = applyShuckleJuice(baseStats);
+    if (oldGateau) baseStats = applyOldGateau(baseStats);
+    
+    const statLabels = ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spd'];
+    const statValues = baseStats;
+    let statsHtml = '<div class="stat-line-container">';
+    statLabels.forEach((label, i) => {
+        statsHtml += `<div class="stat-line"><span class="stat-label">${label}:</span><span class="stat-value">${statValues[i]}</span></div>`;
+    });
+    statsHtml += `<div class="total-bst">BST: ${baseStats.reduce((a, b) => a + b, 0)}</div>`;
+    statsHtml += `<div class="type-line">Type: ${pokemon.type1}${pokemon.type2 ? '/' + pokemon.type2 : ''}</div>`;
+    statsHtml += '</div>';
+    
+    document.getElementById('baseStatsDisplay').innerHTML = statsHtml;
 }
 
 function applyFlipStat(baseStats) {
@@ -627,6 +655,44 @@ function init() {
     document.getElementById('calculateBtn').addEventListener('click', onCalculateStats);
     document.getElementById('calculateIvBtn').addEventListener('click', onCalculateIVs);
     document.getElementById('clearBtn').addEventListener('click', onClear);
+    
+    // Max IVs toggle - lock IV inputs to 31
+    document.getElementById('maxIv').addEventListener('change', (e) => {
+        const isMax = e.target.checked;
+        STAT_KEYS.forEach(key => {
+            const el = document.getElementById(`iv${key}`);
+            if (el) {
+                if (isMax) {
+                    el.value = 31;
+                    el.readOnly = true;
+                    el.classList.remove('default-value');
+                } else {
+                    el.readOnly = false;
+                }
+            }
+        });
+        if (selectedPokemon) drawStatPentagon(null);
+    });
+    
+    // Live update when Flip Stat, Shuckle Juice, Old Gateau change
+    ['flipStat', 'shuckleJuice', 'oldGateau'].forEach(id => {
+        document.getElementById(id).addEventListener('change', () => {
+            if (selectedPokemon) {
+                updateBaseStatsDisplay();
+                drawStatPentagon(null);
+            }
+        });
+    });
+    
+    // Live update when held items change (pentagon shows final stats)
+    ['eviolite', 'lightBall', 'thickClub', 'metalPowder', 'quickPowder', 'deepSeaScale', 'deepSeaTooth', 'machoBrace', 'soulDew'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+            el.addEventListener('change', () => {
+                if (selectedPokemon) drawStatPentagon(null);
+            });
+        }
+    });
     
     // Redraw pentagon when IVs or level change
     ['level', 'nature'].forEach(id => {
