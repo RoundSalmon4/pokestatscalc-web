@@ -23,14 +23,13 @@ jobs:
         id: fetch
         run: |
           set -euxo pipefail
-          mkdir -p website/lang
 
           # Download SearchDex data (generated from the PokéRogue game source)
-          curl -fL -o website/pokedex_data.js \
+          curl -fL -o pokedex_data.js \
             https://raw.githubusercontent.com/Sandstormer/PokeRogue-Dex/main/pokedex_data.js
-          curl -fL -o website/filter_data.js \
+          curl -fL -o filter_data.js \
             https://raw.githubusercontent.com/Sandstormer/PokeRogue-Dex/main/filter_data.js
-          curl -fL -o website/lang/en.js \
+          curl -fL -o lang/en.js \
             https://raw.githubusercontent.com/Sandstormer/PokeRogue-Dex/main/lang/en.js
 
           # Download sprites from PokeRogue-Dex images folder
@@ -38,8 +37,8 @@ jobs:
           git clone --depth 1 --filter=blob:none --sparse https://github.com/Sandstormer/PokeRogue-Dex.git temp-pokedex
           cd temp-pokedex
           git sparse-checkout set images
-          # Copy images to website (use rsync to handle large number of files efficiently)
-          rsync -a --delete images/ ../website/images/
+          # Copy images to root (use rsync to handle large number of files efficiently)
+          rsync -a --delete images/ ../images/
           cd ..
           rm -rf temp-pokedex
 
@@ -55,9 +54,9 @@ jobs:
           const fs = require('fs');
           const vm = require('vm');
 
-          const PO = 'website/pokedex_data.js';
-          const FI = 'website/filter_data.js';
-          const LA = 'website/lang/en.js';
+          const PO = 'pokedex_data.js';
+          const FI = 'filter_data.js';
+          const LA = 'lang/en.js';
           const OUT = 'pokemon_data.csv';
 
           function stripExport(txt) {
@@ -229,8 +228,8 @@ jobs:
               img: r.img
             };
           }
-          fs.writeFileSync('website/pokemon_data.js', 'const POKEMON_DATA = ' + JSON.stringify(dataObj, null, 2) + ';\n', 'utf8');
-          console.log('Wrote website/pokemon_data.js');
+          fs.writeFileSync('pokemon_data.js', 'const POKEMON_DATA = ' + JSON.stringify(dataObj, null, 2) + ';\n', 'utf8');
+          console.log('Wrote pokemon_data.js');
           NODE
 
       - name: Write data_version.txt (Dex commit)
@@ -242,7 +241,7 @@ jobs:
           set -euxo pipefail
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add pokemon_data.csv data_version.txt website/pokemon_data.js website/images
+          git add pokemon_data.csv data_version.txt pokemon_data.js images
           if ! git diff --cached --quiet; then
             git commit -m "chore(data): auto-update from PokeRogue-Dex ${{ steps.fetch.outputs.dex_short }}"
             git push
