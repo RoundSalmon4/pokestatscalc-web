@@ -1,0 +1,18 @@
+{
+  "name": "pokerogue-stats-calculator",
+  "version": "1.0.0",
+  "description": "PokéRogue Stats Calculator - Calculate Pokemon stats and IVs",
+  "scripts": {
+    "deploy": "npx gh-pages -d website"
+  },
+  "homepage": "https://github.com/cwekselblatt/pokerogue-stats-calculator#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cwekselblatt/pokerogue-stats-calculator.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+  }
+}
