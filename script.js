@@ -619,11 +619,10 @@ function drawStatPentagon(stats) {
     ctx.textAlign = 'center';
     for (let i = 0; i < 6; i++) {
         const angle = (Math.PI * 2 * i / 6) - Math.PI / 2;
-        const iv = ivs[i];
         const labelR = maxR + 12;
         const x = cx + Math.cos(angle) * labelR;
         const y = cy + Math.sin(angle) * labelR;
-        ctx.fillText(`${statNames[i]}:${iv}`, x, y + 3);
+        ctx.fillText(statNames[i], x, y + 3);
     }
 }
 
