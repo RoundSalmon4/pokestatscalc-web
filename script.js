@@ -529,6 +529,7 @@ function onCalculateStats() {
     if (stats) {
         populateStats(stats);
         drawStatPentagon(stats);
+        STAT_KEYS.forEach(key => document.getElementById(`iv${key}`).classList.remove('default-value'));
         addToLog(`<span class="result">★ Stats populated in boxes above</span>`, 'result');
         setStatus('Stats calculated and populated');
     }
@@ -539,6 +540,7 @@ function onCalculateIVs() {
     const ivs = calculateIVs();
     if (ivs) {
         populateIVs(ivs);
+        STAT_KEYS.forEach(key => document.getElementById(`iv${key}`).classList.remove('default-value'));
         addToLog(`<span class="result">★ IVs populated in boxes above</span>`, 'result');
         setStatus('IVs calculated and populated');
     }
