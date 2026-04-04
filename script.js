@@ -498,14 +498,16 @@ function calculateIVs() {
             }
         }
         
-        if (actualStats[index] < minPossible || actualStats[index] > maxPossible) {
-            impossibleStats.push(`${STAT_NAMES[index]}: ${actualStats[index]} (range: ${minPossible}-${maxPossible})`);
+        if (actualStats[index] < minPossible) {
+            impossibleStats.push(`${STAT_NAMES[index]}: ${actualStats[index]} too low (min ${minPossible}) - IV cannot be determined`);
+        } else if (actualStats[index] > maxPossible) {
+            impossibleStats.push(`${STAT_NAMES[index]}: ${actualStats[index]} too high (max ${maxPossible}) - IV cannot be determined`);
         }
     });
     
     if (impossibleStats.length > 0) {
-        setStatus(`Error: Impossible stat(s) for this Pokémon/level: ${impossibleStats.join(', ')}`, true);
-        addToLog(`<span class="error">⚠ Impossible stat(s): ${impossibleStats.join(', ')}</span>`, 'result');
+        setStatus(`Error: ${impossibleStats.join('. ')}`, true);
+        addToLog(`<span class="error">⚠ Impossible: ${impossibleStats.join('. ')}</span>`, 'result');
         return null;
     }
     
