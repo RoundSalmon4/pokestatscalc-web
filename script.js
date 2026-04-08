@@ -49,7 +49,7 @@ const NATURE_MODIFIERS = {
 };
 
 const SPECIES_ITEMS = {
-    'Pikachu': 'lightBall', 'Raichu': 'lightBall',
+    'Pikachu': 'lightBall', 'Raichu': 'lightBall', 'Alola Raichu': 'lightBall',
     'Marowak': 'thickClub', 'Marowak-Alola': 'thickClub', 'Cubone': 'thickClub',
     'Ditto': 'metalPowder',
     'Clamperl': 'deepSeaScale',
@@ -138,7 +138,7 @@ function populatePokemonList(filter = '') {
 
 function updateHeldItemVisibility(pokemonName) {
     const items = [
-        { id: 'lightBall', names: ['Pikachu', 'Raichu'] },
+        { id: 'lightBall', names: ['Pikachu', 'Raichu', 'Alola Raichu'] },
         { id: 'thickClub', names: ['Cubone', 'Marowak', 'Marowak-Alola'] },
         { id: 'metalPowder', names: ['Ditto'] },
         { id: 'quickPowder', names: ['Ditto'] },
@@ -151,11 +151,14 @@ function updateHeldItemVisibility(pokemonName) {
         const el = document.getElementById(item.id);
         const label = el?.parentElement;
         if (el && label) {
+            let visible = false;
             if (item.names) {
-                label.style.display = item.names.includes(pokemonName) ? '' : 'none';
+                visible = item.names.includes(pokemonName);
             } else if (item.check) {
-                label.style.display = item.check(pokemonName) ? '' : 'none';
+                visible = item.check(pokemonName);
             }
+            label.style.display = visible ? '' : 'none';
+            el.disabled = false;
         }
     });
 }
@@ -661,11 +664,13 @@ function onClear() {
     document.getElementById('shuckleJuice').checked = false;
     document.getElementById('oldGateau').checked = false;
     
-    // Show all held items when no pokemon is selected (after clear)
-    ['lightBall', 'thickClub', 'metalPowder', 'quickPowder', 'deepSeaScale', 'deepSeaTooth'].forEach(id => {
+    ['lightBall', 'thickClub', 'metalPowder', 'quickPowder', 'deepSeaScale', 'deepSeaTooth', 'eviolite'].forEach(id => {
         const el = document.getElementById(id);
         const label = el?.parentElement;
-        if (label) label.style.display = '';
+        if (label) {
+            label.style.display = '';
+            el.disabled = true;
+        }
     });
     
     clearLog();
