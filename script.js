@@ -58,8 +58,8 @@ const SPECIES_ITEMS = {
 
 function canUseEviolite(pokemonName) {
     const pokemon = POKEMON_DATA[pokemonName];
-    if (!pokemon || !pokemon['evolution line']) return false;
-    const evoLine = pokemon['evolution line'].split(',').map(e => e.trim());
+    if (!pokemon || !pokemon['evolution']) return false;
+    const evoLine = pokemon['evolution'].split(',').map(e => e.trim());
     const isFinalForm = evoLine.length === 1 || evoLine[evoLine.length - 1] === pokemonName;
     return !isFinalForm;
 }
@@ -738,6 +738,11 @@ function init() {
     });
     
     populatePokemonList();
+    
+    ['eviolite', 'lightBall', 'thickClub', 'metalPowder', 'quickPowder', 'deepSeaScale', 'deepSeaTooth'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.disabled = true;
+    });
     
     drawStatPentagon(null);
     setStatus('Ready - Select a Pokémon and enter your stats to calculate IVs');
