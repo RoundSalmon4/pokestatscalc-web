@@ -44,7 +44,7 @@ Changes pushed to `main` branch automatically deploy to GitHub Pages via GitHub 
 
 ## Data Source
 
-Pokémon data is synced from the [PokéRogue source code](https://github.com/欺骗师/PokéRogue) via GitHub Actions.
+Pokémon data is synced from the [PokéRogue source code](https://github.com/Sandstormer/PokeRogue-Dex) via GitHub Actions.
 
 ## Related Projects
 
