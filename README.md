@@ -2,10 +2,6 @@
 
 A web-based calculator for calculating Pokémon stats and Individual Values (IVs) in PokéRogue endless mode.
 
-## Live Website
-
-**https://roundsalmon4.github.io/pokestatscalc-web/**
-
 ## Features
 
 - **Stat Calculation**: Calculate final stats from IVs, level, nature, vitamins, and held items
@@ -26,11 +22,7 @@ A web-based calculator for calculating Pokémon stats and Individual Values (IVs
 
 ### Running Locally
 
-Open `index.html` directly in a browser, or use a local server:
-
-```bash
-npx serve .
-```
+Open `index.html` directly in a browser.
 
 ### Deploying
 
@@ -45,10 +37,6 @@ Changes pushed to `main` branch automatically deploy to GitHub Pages via GitHub 
 ## Data Source
 
 Pokémon data is synced from the [PokeRogue-Dex](https://github.com/Sandstormer/PokeRogue-Dex) via GitHub Actions.
-
-## Related Projects
-
-- [Fusion Calculator](https://roundsalmon4.github.io/fusioncalc-web/) - Calculate fusion results
 
 ## License
 
