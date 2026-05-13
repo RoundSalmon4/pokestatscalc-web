@@ -243,7 +243,7 @@ function selectPokemon(name) {
     spriteContainer.appendChild(img);
     
     clearLog();
-    addToLog(`> Selected: ${name}`, '');
+    addToLog(`> Selected: ${escapeHtml(name)}`, '');
     setStatus(`Selected: ${name} (#${pokemon.id})`);
     // Draw pentagon after DOM update
     setTimeout(() => drawStatPentagon(null), 0);
