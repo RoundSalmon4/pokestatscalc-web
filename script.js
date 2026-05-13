@@ -64,6 +64,10 @@ function canUseEviolite(pokemonName) {
     return !isFinalForm;
 }
 
+function escapeHtml(str) {
+    return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
 function setStatus(msg, isError = false) {
     const statusBar = document.getElementById('status-bar');
     statusBar.textContent = msg;
@@ -76,17 +80,19 @@ function addToLog(text, type = '') {
     
     const line = document.createElement('div');
     line.className = 'terminal-line ' + type;
-    line.innerHTML = '';
+    const label = document.createElement('span');
+    label.textContent = '';
+    line.appendChild(label);
     log.appendChild(line);
     
-    // Typing effect
+    // Typing effect — use textContent to avoid HTML injection
     const fullText = text;
     let index = 0;
     const speed = 3;
     
     function typeChar() {
         if (index < fullText.length) {
-            line.innerHTML = fullText.substring(0, index + 1);
+            label.textContent = fullText.substring(0, index + 1);
             index++;
             setTimeout(typeChar, speed);
         }
@@ -182,14 +188,21 @@ function selectPokemon(name) {
     const statValues = [pokemon.hp, pokemon.attack, pokemon.defense, pokemon.spAttack, pokemon.spDefense, pokemon.speed];
     let statsHtml = '<div class="stat-line-container">';
     statLabels.forEach((label, i) => {
-        statsHtml += `<div class="stat-line"><span class="stat-label">${label}:</span><span class="stat-value">${statValues[i]}</span></div>`;
+        statsHtml += `<div class="stat-line"><span class="stat-label">${escapeHtml(label)}:</span><span class="stat-value">${escapeHtml(statValues[i])}</span></div>`;
     });
-    statsHtml += `<div class="total-bst">BST: ${pokemon.bst}</div>`;
-    statsHtml += `<div class="type-line">Type: ${pokemon.type1}${pokemon.type2 ? '/' + pokemon.type2 : ''}</div>`;
+    statsHtml += `<div class="total-bst">BST: ${escapeHtml(pokemon.bst)}</div>`;
+    statsHtml += `<div class="type-line">Type: ${escapeHtml(pokemon.type1)}${pokemon.type2 ? '/' + escapeHtml(pokemon.type2) : ''}</div>`;
     statsHtml += '</div>';
     
     document.getElementById('baseStatsDisplay').innerHTML = statsHtml;
-    document.getElementById('pokemonSprite').innerHTML = `<img src="images/${imgId}_0.png" alt="${name}" onerror="this.style.display='none'; this.parentElement.classList.add('no-sprite');">`;
+    // Use DOM APIs for the sprite — no innerHTML risk
+    const spriteContainer = document.getElementById('pokemonSprite');
+    spriteContainer.innerHTML = '';
+    const img = document.createElement('img');
+    img.src = `images/${imgId}_0.png`;
+    img.alt = name;
+    img.onerror = function() { this.style.display = 'none'; this.parentElement.classList.add('no-sprite'); };
+    spriteContainer.appendChild(img);
     
     clearLog();
     addToLog(`> Selected: ${name}`, '');
@@ -217,10 +230,10 @@ function updateBaseStatsDisplay() {
     const statValues = baseStats;
     let statsHtml = '<div class="stat-line-container">';
     statLabels.forEach((label, i) => {
-        statsHtml += `<div class="stat-line"><span class="stat-label">${label}:</span><span class="stat-value">${statValues[i]}</span></div>`;
+        statsHtml += `<div class="stat-line"><span class="stat-label">${escapeHtml(label)}:</span><span class="stat-value">${escapeHtml(statValues[i])}</span></div>`;
     });
-    statsHtml += `<div class="total-bst">BST: ${baseStats.reduce((a, b) => a + b, 0)}</div>`;
-    statsHtml += `<div class="type-line">Type: ${pokemon.type1}${pokemon.type2 ? '/' + pokemon.type2 : ''}</div>`;
+    statsHtml += `<div class="total-bst">BST: ${escapeHtml(baseStats.reduce((a, b) => a + b, 0))}</div>`;
+    statsHtml += `<div class="type-line">Type: ${escapeHtml(pokemon.type1)}${pokemon.type2 ? '/' + escapeHtml(pokemon.type2) : ''}</div>`;
     statsHtml += '</div>';
     
     document.getElementById('baseStatsDisplay').innerHTML = statsHtml;
@@ -358,7 +371,7 @@ function calculateStats() {
     
     let baseStats = [pokemon.hp, pokemon.attack, pokemon.defense, pokemon.spAttack, pokemon.spDefense, pokemon.speed];
     
-    addToLog(`<span class="label">Level:</span> ${level} | <span class="label">Nature:</span> ${natureName || 'Neutral'}`, '');
+    addToLog(`> Level: ${escapeHtml(level)} | Nature: ${escapeHtml(natureName || 'Neutral')}`, '');
     
     if (flipStat) baseStats = applyFlipStat(baseStats);
     if (shuckleJuice) baseStats = applyShuckleJuice(baseStats);
@@ -366,7 +379,7 @@ function calculateStats() {
     baseStats = applyVitaminsToBaseStats(baseStats, vitamins);
     baseStats = applyHeldItems(baseStats, selectedPokemon, machoBrace, ivs);
     
-    addToLog(`<span class="label">Base+Vit:</span> ${baseStats.join(' ')}`, '');
+    addToLog(`> Base+Vit: ${escapeHtml(baseStats.join(' '))}`, '');
     
     const stats = {};
     STAT_KEYS.forEach((key, index) => {
@@ -393,10 +406,10 @@ function calculateStats() {
         }
         stats[key] = Math.max(1, calculated);
         
-        addToLog(formula, 'formula');
+        addToLog(`  ${key.toUpperCase()}: ${stats[key]}`, 'formula');
     });
     
-    addToLog(`<span class="result">Final: HP=${stats.hp} Atk=${stats.atk} Def=${stats.def} SpA=${stats.spAtk} SpD=${stats.spDef} Spd=${stats.spd}</span>`, 'result');
+    addToLog(`> Final: HP=${stats.hp} Atk=${stats.atk} Def=${stats.def} SpA=${stats.spAtk} SpD=${stats.spDef} Spd=${stats.spd}`, 'result');
     
     return stats;
 }
@@ -476,7 +489,7 @@ function calculateIVs() {
         addToLog(`${statName}: IV=${ivs[key]} (base=${baseStats[index]})`, 'formula');
     });
     
-    addToLog(`<span class="result">IVs: HP=${ivs.hp} Atk=${ivs.atk} Def=${ivs.def} SpA=${ivs.spAtk} SpD=${ivs.spDef} Spd=${ivs.spd}</span>`, 'result');
+    addToLog(`> IVs: HP=${ivs.hp} Atk=${ivs.atk} Def=${ivs.def} SpA=${ivs.spAtk} SpD=${ivs.spDef} Spd=${ivs.spd}`, 'result');
     
     const impossibleStats = [];
     STAT_KEYS.forEach((key, index) => {
@@ -510,13 +523,13 @@ function calculateIVs() {
     
     if (impossibleStats.length > 0) {
         setStatus(`Error: ${impossibleStats.join('. ')}`, true);
-        addToLog(`<span class="error">⚠ Impossible: ${impossibleStats.join('. ')}</span>`, 'result');
+        addToLog(`! Impossible: ${impossibleStats.join('. ')}`, 'result');
         return null;
     }
     
     if (level < 50) {
         const ivsPerStat = (50 / level).toFixed(1);
-        addToLog(`<span class="warning">⚠ Warning: At level ${level}, each stat represents ~${ivsPerStat} IVs. IV calculation is approximate.</span>`, 'result');
+        addToLog(`! Warning: At level ${escapeHtml(level)}, each stat represents ~${escapeHtml(ivsPerStat)} IVs. IV calculation is approximate.`, 'result');
     }
     
     return ivs;
@@ -533,7 +546,7 @@ function onCalculateStats() {
         populateStats(stats);
         drawStatPentagon(stats);
         STAT_KEYS.forEach(key => document.getElementById(`iv${key}`).classList.remove('default-value'));
-        addToLog(`<span class="result">★ Stats populated in boxes above</span>`, 'result');
+        addToLog(`> Stats populated in boxes above`, 'result');
         setStatus('Stats calculated and populated');
     }
 }
@@ -544,7 +557,7 @@ function onCalculateIVs() {
     if (ivs) {
         populateIVs(ivs);
         STAT_KEYS.forEach(key => document.getElementById(`iv${key}`).classList.remove('default-value'));
-        addToLog(`<span class="result">★ IVs populated in boxes above</span>`, 'result');
+        addToLog(`> IVs populated in boxes above`, 'result');
         setStatus('IVs calculated and populated');
     }
 }
