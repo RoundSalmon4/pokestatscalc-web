@@ -80,25 +80,63 @@ function addToLog(text, type = '') {
     
     const line = document.createElement('div');
     line.className = 'terminal-line ' + type;
-    const label = document.createElement('span');
-    label.textContent = '';
-    line.appendChild(label);
     log.appendChild(line);
     
-    // Typing effect — use textContent to avoid HTML injection
-    const fullText = text;
-    let index = 0;
+    // Parse inline <span class="XXX">content</span> tags safely
+    const segments = [];
+    let lastIndex = 0;
+    const spanRe = /<span\s+class="([^"]+)">([^<]*)<\/span>/g;
+    let match;
+    while ((match = spanRe.exec(text)) !== null) {
+        if (match.index > lastIndex) {
+            segments.push({ content: text.substring(lastIndex, match.index) });
+        }
+        segments.push({ className: match[1], content: match[2] });
+        lastIndex = match.index + match[0].length;
+    }
+    if (lastIndex < text.length) {
+        segments.push({ content: text.substring(lastIndex) });
+    }
+    if (segments.length === 0) {
+        segments.push({ content: text });
+    }
+    
+    // Build DOM nodes for each segment
+    const nodes = segments.map(seg => {
+        if (seg.className) {
+            const span = document.createElement('span');
+            span.className = seg.className;
+            line.appendChild(span);
+            return { el: span, content: seg.content };
+        } else {
+            const node = document.createTextNode('');
+            line.appendChild(node);
+            return { el: node, content: seg.content };
+        }
+    });
+    
+    // Typing effect — write to textContent to avoid HTML injection
     const speed = 3;
+    let segIdx = 0;
+    let charIdx = 0;
     
     function typeChar() {
-        if (index < fullText.length) {
-            label.textContent = fullText.substring(0, index + 1);
-            index++;
+        if (segIdx >= nodes.length) {
+            log.scrollTop = log.scrollHeight;
+            return;
+        }
+        const seg = nodes[segIdx];
+        if (charIdx < seg.content.length) {
+            charIdx++;
+            seg.el.textContent = seg.content.substring(0, charIdx);
+            setTimeout(typeChar, speed);
+        } else {
+            segIdx++;
+            charIdx = 0;
             setTimeout(typeChar, speed);
         }
         log.scrollTop = log.scrollHeight;
     }
-    
     typeChar();
 }
 
@@ -205,7 +243,7 @@ function selectPokemon(name) {
     spriteContainer.appendChild(img);
     
     clearLog();
-    addToLog(`> Selected: ${name}`, '');
+    addToLog(`> Selected: ${escapeHtml(name)}`, '');
     setStatus(`Selected: ${name} (#${pokemon.id})`);
     // Draw pentagon after DOM update
     setTimeout(() => drawStatPentagon(null), 0);
@@ -371,7 +409,7 @@ function calculateStats() {
     
     let baseStats = [pokemon.hp, pokemon.attack, pokemon.defense, pokemon.spAttack, pokemon.spDefense, pokemon.speed];
     
-    addToLog(`> Level: ${escapeHtml(level)} | Nature: ${escapeHtml(natureName || 'Neutral')}`, '');
+    addToLog(`<span class="label">Level:</span> ${escapeHtml(level)} | <span class="label">Nature:</span> ${escapeHtml(natureName || 'Neutral')}`, '');
     
     if (flipStat) baseStats = applyFlipStat(baseStats);
     if (shuckleJuice) baseStats = applyShuckleJuice(baseStats);
@@ -379,7 +417,7 @@ function calculateStats() {
     baseStats = applyVitaminsToBaseStats(baseStats, vitamins);
     baseStats = applyHeldItems(baseStats, selectedPokemon, machoBrace, ivs);
     
-    addToLog(`> Base+Vit: ${escapeHtml(baseStats.join(' '))}`, '');
+    addToLog(`<span class="label">Base+Vit:</span> ${escapeHtml(baseStats.join(' '))}`, '');
     
     const stats = {};
     STAT_KEYS.forEach((key, index) => {
@@ -409,7 +447,7 @@ function calculateStats() {
         addToLog(`  ${key.toUpperCase()}: ${stats[key]}`, 'formula');
     });
     
-    addToLog(`> Final: HP=${stats.hp} Atk=${stats.atk} Def=${stats.def} SpA=${stats.spAtk} SpD=${stats.spDef} Spd=${stats.spd}`, 'result');
+    addToLog(`<span class="result">Final: HP=${escapeHtml(stats.hp)} Atk=${escapeHtml(stats.atk)} Def=${escapeHtml(stats.def)} SpA=${escapeHtml(stats.spAtk)} SpD=${escapeHtml(stats.spDef)} Spd=${escapeHtml(stats.spd)}</span>`, 'result');
     
     return stats;
 }
@@ -489,7 +527,7 @@ function calculateIVs() {
         addToLog(`${statName}: IV=${ivs[key]} (base=${baseStats[index]})`, 'formula');
     });
     
-    addToLog(`> IVs: HP=${ivs.hp} Atk=${ivs.atk} Def=${ivs.def} SpA=${ivs.spAtk} SpD=${ivs.spDef} Spd=${ivs.spd}`, 'result');
+    addToLog(`<span class="result">IVs: HP=${escapeHtml(ivs.hp)} Atk=${escapeHtml(ivs.atk)} Def=${escapeHtml(ivs.def)} SpA=${escapeHtml(ivs.spAtk)} SpD=${escapeHtml(ivs.spDef)} Spd=${escapeHtml(ivs.spd)}</span>`, 'result');
     
     const impossibleStats = [];
     STAT_KEYS.forEach((key, index) => {
@@ -523,13 +561,13 @@ function calculateIVs() {
     
     if (impossibleStats.length > 0) {
         setStatus(`Error: ${impossibleStats.join('. ')}`, true);
-        addToLog(`! Impossible: ${impossibleStats.join('. ')}`, 'result');
+        addToLog(`<span class="error">⚠ Impossible: ${escapeHtml(impossibleStats.join('. '))}</span>`, 'result');
         return null;
     }
     
     if (level < 50) {
         const ivsPerStat = (50 / level).toFixed(1);
-        addToLog(`! Warning: At level ${escapeHtml(level)}, each stat represents ~${escapeHtml(ivsPerStat)} IVs. IV calculation is approximate.`, 'result');
+        addToLog(`<span class="warning">⚠ Warning: At level ${escapeHtml(level)}, each stat represents ~${escapeHtml(ivsPerStat)} IVs. IV calculation is approximate.</span>`, 'result');
     }
     
     return ivs;
@@ -546,7 +584,7 @@ function onCalculateStats() {
         populateStats(stats);
         drawStatPentagon(stats);
         STAT_KEYS.forEach(key => document.getElementById(`iv${key}`).classList.remove('default-value'));
-        addToLog(`> Stats populated in boxes above`, 'result');
+        addToLog(`<span class="result">★ Stats populated in boxes above</span>`, 'result');
         setStatus('Stats calculated and populated');
     }
 }
@@ -557,7 +595,7 @@ function onCalculateIVs() {
     if (ivs) {
         populateIVs(ivs);
         STAT_KEYS.forEach(key => document.getElementById(`iv${key}`).classList.remove('default-value'));
-        addToLog(`> IVs populated in boxes above`, 'result');
+        addToLog(`<span class="result">★ IVs populated in boxes above</span>`, 'result');
         setStatus('IVs calculated and populated');
     }
 }
