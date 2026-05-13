@@ -1,7 +1,12 @@
 name: Build pokemon_data.csv and sync sprites
 
 on:
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      upstream_sha:
+        description: 'Override pinned PokeRogue-Dex commit SHA (leave empty to use pinned default)'
+        required: false
+        type: string
   schedule:
     - cron: "0 9 * * *"
 
@@ -10,6 +15,7 @@ permissions:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  DEX_PINNED_SHA: d78fb1d3015b8e554c80f6ab75437147fa9411f8
 
 jobs:
   build-csv:
@@ -25,26 +31,27 @@ jobs:
           set -euxo pipefail
           mkdir -p lang
 
-          # Download SearchDex data (generated from the PokéRogue game source)
-          curl -fL -o pokedex_data.js \
-            https://raw.githubusercontent.com/Sandstormer/PokeRogue-Dex/main/pokedex_data.js
-          curl -fL -o filter_data.js \
-            https://raw.githubusercontent.com/Sandstormer/PokeRogue-Dex/main/filter_data.js
-          curl -fL -o lang/en.js \
-            https://raw.githubusercontent.com/Sandstormer/PokeRogue-Dex/main/lang/en.js
+          # Use the upstream SHA: workflow_dispatch input overrides pinned default
+          DEX_SHA="${{ inputs.upstream_sha || env.DEX_PINNED_SHA }}"
 
-          # Download sprites from PokeRogue-Dex images folder
-          # Using sparse-checkout to only get images directory
-          git clone --depth 1 --filter=blob:none --sparse https://github.com/Sandstormer/PokeRogue-Dex.git temp-pokedex
+          # Download SearchDex data (generated from the PokéRogue game source) at pinned commit
+          curl -fL -o pokedex_data.js \
+            "https://raw.githubusercontent.com/Sandstormer/PokeRogue-Dex/${DEX_SHA}/pokedex_data.js"
+          curl -fL -o filter_data.js \
+            "https://raw.githubusercontent.com/Sandstormer/PokeRogue-Dex/${DEX_SHA}/filter_data.js"
+          curl -fL -o lang/en.js \
+            "https://raw.githubusercontent.com/Sandstormer/PokeRogue-Dex/${DEX_SHA}/lang/en.js"
+
+          # Download sprites from PokeRogue-Dex images folder at pinned commit
+          git init temp-pokedex
           cd temp-pokedex
-          git sparse-checkout set images
-          # Copy images to root (use rsync to handle large number of files efficiently)
+          git remote add origin https://github.com/Sandstormer/PokeRogue-Dex.git
+          git fetch --depth 1 origin "${DEX_SHA}"
+          git checkout FETCH_HEAD
           rsync -a --delete images/ ../images/
           cd ..
           rm -rf temp-pokedex
 
-          # Record the source version (Dex main SHA)
-          DEX_SHA="$(git ls-remote https://github.com/Sandstormer/PokeRogue-Dex.git refs/heads/main | awk '{print $1}')"
           echo "dex_sha=$DEX_SHA" >> "$GITHUB_OUTPUT"
           echo "dex_short=${DEX_SHA:0:7}" >> "$GITHUB_OUTPUT"
 
