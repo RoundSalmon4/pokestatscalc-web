@@ -48,189 +48,218 @@ jobs:
           echo "dex_sha=$DEX_SHA" >> "$GITHUB_OUTPUT"
           echo "dex_short=${DEX_SHA:0:7}" >> "$GITHUB_OUTPUT"
 
-      - name: Convert JS -> CSV (Node VM sandbox; shared context with stubs)
+      - name: Convert JS -> CSV (dynamic import — no vm sandbox)
         shell: bash
         run: |
-          node - <<'NODE'
+          node --experimental-vm-modules <<'NODE'
           const fs = require('fs');
-          const vm = require('vm');
+          const path = require('path');
+          const os = require('os');
 
           const PO = 'pokedex_data.js';
           const FI = 'filter_data.js';
           const LA = 'lang/en.js';
           const OUT = 'pokemon_data.csv';
 
-          function stripExport(txt) {
-            return txt.replace(/\bexport\s+(default\s+)?/g, '').trim();
-          }
-
-          function loadLiteralFromFile(path) {
-            let txt = fs.readFileSync(path, 'utf8');
-            txt = stripExport(txt);
-            const m = txt.match(/=\s*/);
-            if (m) txt = txt.slice(m.index + m[0].length).trim();
-            txt = txt.replace(/;\s*$/, '');
-            return vm.runInNewContext('(' + txt + ')', Object.create(null), { timeout: 3000 });
-          }
-
-          const colProxy = new Proxy({}, { get: () => '#cccccc' });
-          const ctx = { window: {}, col: colProxy };
-          ctx.window.col = ctx.col;
-          vm.createContext(ctx);
-
-          const filterCode = stripExport(fs.readFileSync(FI, 'utf8'));
-          vm.runInContext(filterCode, ctx, { timeout: 7000 });
-
-          if (Array.isArray(ctx.fidThreshold)) ctx.window.fidThreshold = ctx.fidThreshold;
-
-          const langCode = stripExport(fs.readFileSync(LA, 'utf8'));
-          vm.runInContext(langCode, ctx, { timeout: 7000 });
-
-          const speciesNames = Array.isArray(ctx.speciesNames) ? ctx.speciesNames
-                                  : Array.isArray(ctx.window.speciesNames) ? ctx.window.speciesNames : [];
-          const fidToName    = Array.isArray(ctx.fidToName) ? ctx.fidToName
-                                  : Array.isArray(ctx.window.fidToName) ? ctx.window.fidToName : [];
-          const fidThreshold = Array.isArray(ctx.fidThreshold) ? ctx.fidThreshold
-                                  : Array.isArray(ctx.window.fidThreshold) ? ctx.window.fidThreshold : [];
-
-          if (!Array.isArray(speciesNames) || !Array.isArray(fidToName)) {
-            throw new Error('Failed to extract speciesNames/fidToName from lang/en.js');
-          }
-
-          const pokedex = loadLiteralFromFile(PO);
-
-          const abilityUpper = Array.isArray(fidThreshold) && fidThreshold.length > 1
-            ? Number(fidThreshold[1]) : null;
-
-          const speciesMap = {};
-          for (let i = 0; i < speciesNames.length; i++) {
-            const nm = speciesNames[i];
-            if (typeof nm === 'string' && nm) speciesMap[i + 1] = nm;
-          }
-
-          const typeMap = {};
-          const abMap   = {};
-          if (fidToName.length >= 18) {
-            for (let i = 0; i < 18; i++) {
-              const v = fidToName[i];
-              if (typeof v === 'string' && v) typeMap[i] = v;
-            }
-            const end = abilityUpper && Number.isFinite(abilityUpper)
-              ? Math.min(abilityUpper, fidToName.length)
-              : fidToName.length;
-            for (let i = 18; i < end; i++) {
-              const v = fidToName[i];
-              if (typeof v === 'string' && v) abMap[i] = v;
+          /** Write content to a temp .mjs file and import it safely. */
+          async function importAsModule(content) {
+            const tmpDir = os.tmpdir();
+            const tmpFile = path.join(tmpDir, `pokedex-import-${Date.now()}-${Math.random().toString(36).slice(2)}.mjs`);
+            try {
+              fs.writeFileSync(tmpFile, content, 'utf8');
+              // file:// URL required for Windows compat
+              const url = require('url').pathToFileURL(tmpFile).href;
+              const mod = await import(url);
+              return mod;
+            } finally {
+              try { fs.unlinkSync(tmpFile); } catch { /* best effort */ }
             }
           }
 
-          const families = new Map();
-          pokedex.forEach((rec, idx0) => {
-            const idx = idx0 + 1;
-            if (!rec || typeof rec !== 'object') return;
-            const fa = rec.fa;
-            const fsVal = rec.fs;
-            const name = speciesMap[idx] || `Species #${idx}`;
-            if (Number.isInteger(fa)) {
-              const arr = families.get(fa) || [];
-              arr.push([Number.isInteger(fsVal) ? fsVal : 0, idx, name]);
-              families.set(fa, arr);
+          async function main() {
+            // Load filter_data.js as an ES module
+            let filterMod;
+            try {
+              filterMod = await importAsModule(fs.readFileSync(FI, 'utf8'));
+            } catch (e1) {
+              // Some files use export default vs named exports; try stripping export
+              let txt = fs.readFileSync(FI, 'utf8').replace(/\bexport\s+(default\s+)?/g, '').trim();
+              filterMod = await importAsModule(txt);
             }
-          });
+            const fidThreshold = filterMod.fidThreshold || [];
 
-          function num(v, d=0) { const n = Number(v); return Number.isFinite(n) ? n : d; }
+            // Load lang/en.js as an ES module
+            let langMod;
+            try {
+              langMod = await importAsModule(fs.readFileSync(LA, 'utf8'));
+            } catch (e2) {
+              let txt = fs.readFileSync(LA, 'utf8').replace(/\bexport\s+(default\s+)?/g, '').trim();
+              langMod = await importAsModule(txt);
+            }
+            const speciesNames = langMod.speciesNames || [];
+            const fidToName    = langMod.fidToName    || [];
 
-          const rows = [];
-          pokedex.forEach((rec, idx0) => {
-            const idx = idx0 + 1;
-            if (!rec || typeof rec !== 'object') return;
-            const name = speciesMap[idx] || `Species #${idx}`;
+            if (!Array.isArray(speciesNames) || !Array.isArray(fidToName)) {
+              throw new Error('Failed to extract speciesNames/fidToName from lang/en.js');
+            }
 
-            const hp  = num(rec.hp);
-            const atk = num(rec.atk);
-            const dfn = num(rec.def);
-            const spa = num(rec.spa);
-            const spd = num(rec.spd);
-            const spe = num(rec.spe);
-            const bst = Number.isFinite(Number(rec?.bst)) ? Number(rec.bst) : (hp + atk + dfn + spa + spd + spe);
-
-            const t1  = rec.t1; const t2 = rec.t2;
-            let type1 = (t1 != null && typeMap[Number(t1)]) ? typeMap[Number(t1)] : '';
-            let type2 = (t2 != null && typeMap[Number(t2)]) ? typeMap[Number(t2)] : '';
-            if (type2 === type1) type2 = '';
-
-            const abCodes = [];
-            for (const k of ['a1','a2','a3','ha']) {
-              if (k in rec && rec[k] != null && Number.isFinite(Number(rec[k]))) {
-                abCodes.push(Number(rec[k]));
+            // Load pokedex_data.js as an ES module — typically exports a named array "pokedex"
+            let pokedexMod;
+            try {
+              pokedexMod = await importAsModule(fs.readFileSync(PO, 'utf8'));
+            } catch (e3) {
+              // Fallback: strip export and treat as literal
+              let txt = fs.readFileSync(PO, 'utf8').replace(/\bexport\s+(default\s+)?/g, '').trim();
+              const m = txt.match(/=\s*/);
+              if (m) txt = txt.slice(m.index + m[0].length).trim();
+              txt = txt.replace(/;\s*$/, '');
+              const tmpDir = os.tmpdir();
+              const tmpFile = path.join(tmpDir, `pokedex-literal-${Date.now()}.mjs`);
+              fs.writeFileSync(tmpFile, 'export default ' + txt + ';', 'utf8');
+              try {
+                const url = require('url').pathToFileURL(tmpFile).href;
+                pokedexMod = await import(url);
+              } finally {
+                try { fs.unlinkSync(tmpFile); } catch {}
               }
             }
-            const abilities = abCodes.map(c => abMap[c] || String(c)).join(', ');
+            const pokedex = pokedexMod.pokedex || pokedexMod.default || [];
 
-            const passiveCode = rec.pa;
-            const passive = (passiveCode != null && abMap[Number(passiveCode)]) ? abMap[Number(passiveCode)] : '';
+            const abilityUpper = Array.isArray(fidThreshold) && fidThreshold.length > 1
+              ? Number(fidThreshold[1]) : null;
 
-            let evoLine = '';
-            const fa = rec.fa;
-            if (Number.isInteger(fa) && families.has(fa)) {
-              const fam = families.get(fa).slice().sort((a,b)=> (a[0]-b[0]) || (a[1]-b[1]));
-              const names = [];
-              const seen = new Set();
-              for (const [, , n] of fam) {
-                if (!seen.has(n)) { names.push(n); seen.add(n); }
-              }
-              evoLine = names.join(', ');
+            const speciesMap = {};
+            for (let i = 0; i < speciesNames.length; i++) {
+              const nm = speciesNames[i];
+              if (typeof nm === 'string' && nm) speciesMap[i + 1] = nm;
             }
 
-            let idVal = 0;
-            if (Number.isFinite(Number(rec?.id))) idVal = Number(rec.id);
-            else if (Number.isFinite(Number(rec?.dex))) idVal = Number(rec.dex);
+            const typeMap = {};
+            const abMap   = {};
+            if (fidToName.length >= 18) {
+              for (let i = 0; i < 18; i++) {
+                const v = fidToName[i];
+                if (typeof v === 'string' && v) typeMap[i] = v;
+              }
+              const end = abilityUpper && Number.isFinite(abilityUpper)
+                ? Math.min(abilityUpper, fidToName.length)
+                : fidToName.length;
+              for (let i = 18; i < end; i++) {
+                const v = fidToName[i];
+                if (typeof v === 'string' && v) abMap[i] = v;
+              }
+            }
 
-            const imgVal = rec.img || String(idVal);
-
-            rows.push({
-              name,
-              id: idVal,
-              hp, attack: atk, defense: dfn, spAttack: spa, spDefense: spd, speed: spe,
-              bst, type1, type2,
-              abilities, passive, 'evolution line': evoLine, img: imgVal
+            const families = new Map();
+            pokedex.forEach((rec, idx0) => {
+              const idx = idx0 + 1;
+              if (!rec || typeof rec !== 'object') return;
+              const fa = rec.fa;
+              const fsVal = rec.fs;
+              const name = speciesMap[idx] || `Species #${idx}`;
+              if (Number.isInteger(fa)) {
+                const arr = families.get(fa) || [];
+                arr.push([Number.isInteger(fsVal) ? fsVal : 0, idx, name]);
+                families.set(fa, arr);
+              }
             });
-          });
 
-          const cols = ['name','id','hp','attack','defense','spAttack','spDefense','speed','bst',
-                        'type1','type2','abilities','passive','evolution line','img'];
+            function num(v, d=0) { const n = Number(v); return Number.isFinite(n) ? n : d; }
 
-          function esc(v) {
-            if (v === null || v === undefined) v = '';
-            v = String(v);
-            return /[",\n]/.test(v) ? '"' + v.replace(/"/g,'""') + '"' : v;
+            const rows = [];
+            pokedex.forEach((rec, idx0) => {
+              const idx = idx0 + 1;
+              if (!rec || typeof rec !== 'object') return;
+              const name = speciesMap[idx] || `Species #${idx}`;
+
+              const hp  = num(rec.hp);
+              const atk = num(rec.atk);
+              const dfn = num(rec.def);
+              const spa = num(rec.spa);
+              const spd2 = num(rec.spd);
+              const spe = num(rec.spe);
+              const bst = Number.isFinite(Number(rec?.bst)) ? Number(rec.bst) : (hp + atk + dfn + spa + spd2 + spe);
+
+              const t1  = rec.t1; const t2 = rec.t2;
+              let type1 = (t1 != null && typeMap[Number(t1)]) ? typeMap[Number(t1)] : '';
+              let type2 = (t2 != null && typeMap[Number(t2)]) ? typeMap[Number(t2)] : '';
+              if (type2 === type1) type2 = '';
+
+              const abCodes = [];
+              for (const k of ['a1','a2','a3','ha']) {
+                if (k in rec && rec[k] != null && Number.isFinite(Number(rec[k]))) {
+                  abCodes.push(Number(rec[k]));
+                }
+              }
+              const abilities = abCodes.map(c => abMap[c] || String(c)).join(', ');
+
+              const passiveCode = rec.pa;
+              const passive = (passiveCode != null && abMap[Number(passiveCode)]) ? abMap[Number(passiveCode)] : '';
+
+              let evoLine = '';
+              const fa = rec.fa;
+              if (Number.isInteger(fa) && families.has(fa)) {
+                const fam = families.get(fa).slice().sort((a,b)=> (a[0]-b[0]) || (a[1]-b[1]));
+                const names = [];
+                const seen = new Set();
+                for (const [, , n] of fam) {
+                  if (!seen.has(n)) { names.push(n); seen.add(n); }
+                }
+                evoLine = names.join(', ');
+              }
+
+              let idVal = 0;
+              if (Number.isFinite(Number(rec?.id))) idVal = Number(rec.id);
+              else if (Number.isFinite(Number(rec?.dex))) idVal = Number(rec.dex);
+
+              const imgVal = rec.img || String(idVal);
+
+              rows.push({
+                name,
+                id: idVal,
+                hp, attack: atk, defense: dfn, spAttack: spa, spDefense: spd2, speed: spe,
+                bst, type1, type2,
+                abilities, passive, 'evolution line': evoLine, img: imgVal
+              });
+            });
+
+            const cols = ['name','id','hp','attack','defense','spAttack','spDefense','speed','bst',
+                          'type1','type2','abilities','passive','evolution line','img'];
+
+            function esc(v) {
+              if (v === null || v === undefined) v = '';
+              v = String(v);
+              return /[",\n]/.test(v) ? '"' + v.replace(/"/g,'""') + '"' : v;
+            }
+            const lines = [cols.join(',')];
+            for (const r of rows) lines.push(cols.map(c => esc(r[c])).join(','));
+            fs.writeFileSync(OUT, lines.join('\n'), 'utf8');
+            console.log('Wrote', OUT, 'rows=', rows.length);
+
+            const dataObj = {};
+            for (const r of rows) {
+              dataObj[r.name] = {
+                id: r.id,
+                hp: r.hp,
+                attack: r.attack,
+                defense: r.defense,
+                spAttack: r.spAttack,
+                spDefense: r.spDefense,
+                speed: r.speed,
+                bst: r.bst,
+                type1: r.type1,
+                type2: r.type2,
+                abilities: r.abilities,
+                passive: r.passive,
+                evolution: r['evolution line'],
+                img: r.img
+              };
+            }
+            fs.writeFileSync('pokemon_data.js', 'const POKEMON_DATA = ' + JSON.stringify(dataObj, null, 2) + ';\n', 'utf8');
+            console.log('Wrote pokemon_data.js');
           }
-          const lines = [cols.join(',')];
-          for (const r of rows) lines.push(cols.map(c => esc(r[c])).join(','));
-          fs.writeFileSync(OUT, lines.join('\n'), 'utf8');
-          console.log('Wrote', OUT, 'rows=', rows.length);
 
-          const dataObj = {};
-          for (const r of rows) {
-            dataObj[r.name] = {
-              id: r.id,
-              hp: r.hp,
-              attack: r.attack,
-              defense: r.defense,
-              spAttack: r.spAttack,
-              spDefense: r.spDefense,
-              speed: r.speed,
-              bst: r.bst,
-              type1: r.type1,
-              type2: r.type2,
-              abilities: r.abilities,
-              passive: r.passive,
-              evolution: r['evolution line'],
-              img: r.img
-            };
-          }
-          fs.writeFileSync('pokemon_data.js', 'const POKEMON_DATA = ' + JSON.stringify(dataObj, null, 2) + ';\n', 'utf8');
-          console.log('Wrote pokemon_data.js');
+          main().catch(err => { console.error(err); process.exit(1); });
           NODE
 
       - name: Write data_version.txt (Dex commit)
