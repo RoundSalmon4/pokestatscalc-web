@@ -71,13 +71,30 @@ jobs:
           const LA = 'lang/en.js';
           const OUT = 'pokemon_data.csv';
 
+          /**
+           * Detect implicit global assignments (no var/let/const) and prepend
+           * var declarations.  Upstream files like lang/en.js use bare
+           * `headerNames = [...]` which throws ReferenceError in ESM strict mode.
+           */
+          function patchImplicitGlobals(code) {
+            const kw = /^(const|let|var|function|class|import|export|return|typeof|void|delete|new|throw|yield|await)\b/;
+            const globals = new Set();
+            for (const line of code.split('\n')) {
+              const m = line.match(/^\s*(\w+)\s*=(?!=)/);
+              if (!m) continue;
+              if (!/^\w+$/.test(line.slice(0, line.indexOf('=')).trim())) continue;
+              if (kw.test(line.trimStart())) continue;
+              globals.add(m[1]);
+            }
+            return globals.size ? `var ${[...globals].join(', ')};\n${code}` : code;
+          }
+
           /** Write content to a temp .mjs file and import it safely. */
           async function importAsModule(content) {
             const tmpDir = os.tmpdir();
             const tmpFile = path.join(tmpDir, `pokedex-import-${Date.now()}-${Math.random().toString(36).slice(2)}.mjs`);
             try {
               fs.writeFileSync(tmpFile, content, 'utf8');
-              // file:// URL required for Windows compat
               const url = require('url').pathToFileURL(tmpFile).href;
               const mod = await import(url);
               return mod;
@@ -87,38 +104,40 @@ jobs:
           }
 
           async function main() {
-            // Load filter_data.js as an ES module
-            let filterMod;
-            try {
-              filterMod = await importAsModule(fs.readFileSync(FI, 'utf8'));
-            } catch (e1) {
-              // Some files use export default vs named exports; try stripping export
-              let txt = fs.readFileSync(FI, 'utf8').replace(/\bexport\s+(default\s+)?/g, '').trim();
-              filterMod = await importAsModule(txt);
-            }
-            const fidThreshold = filterMod.fidThreshold || [];
+            // ---- filter_data.js + lang/en.js — combined module scope ----
+            // The upstream files share a global scope: filter_data.js declares
+            // fidThreshold, en.js references it.  They must live in one module.
+            const filterCode = fs.readFileSync(FI, 'utf8');
+            let langCode = fs.readFileSync(LA, 'utf8');
+            langCode = patchImplicitGlobals(langCode);
 
-            // Load lang/en.js as an ES module
-            let langMod;
-            try {
-              langMod = await importAsModule(fs.readFileSync(LA, 'utf8'));
-            } catch (e2) {
-              let txt = fs.readFileSync(LA, 'utf8').replace(/\bexport\s+(default\s+)?/g, '').trim();
-              langMod = await importAsModule(txt);
-            }
-            const speciesNames = langMod.speciesNames || [];
-            const fidToName    = langMod.fidToName    || [];
+            // en.js references `col` from script.js (not fetched by workflow).
+            // Provide a stub — only needed by helpMenuText (irrelevant to CSV).
+            const colStub = 'var col = { or:"rgb(251,173,124)", bl:"rgb(131,182,239)", re:"rgb(239,131,131)" };\n';
+
+            // Combine everything into one temp .mjs and export the vars we need
+            const combinedCode = filterCode + '\n' + colStub + langCode + `
+            // Export variables needed by the CSV generator
+            export { fidThreshold, headerNames, altText, catToName, infoText,
+                     biomeText, biomeLongText, warningText, procToDesc, tagToDesc,
+                     fidToDesc, speciesNames, fidToName, helpMenuText };
+            `;
+            const dataMod = await importAsModule(combinedCode);
+
+            const fidThreshold = dataMod.fidThreshold || [];
+            const speciesNames = dataMod.speciesNames || [];
+            const fidToName    = dataMod.fidToName    || [];
 
             if (!Array.isArray(speciesNames) || !Array.isArray(fidToName)) {
               throw new Error('Failed to extract speciesNames/fidToName from lang/en.js');
             }
 
-            // Load pokedex_data.js as an ES module — typically exports a named array "pokedex"
-            let pokedexMod;
-            try {
-              pokedexMod = await importAsModule(fs.readFileSync(PO, 'utf8'));
-            } catch (e3) {
-              // Fallback: strip export and treat as literal
+            // ---- pokedex_data.js — extract the array literal ----
+            // pokedex_data.js uses `const items = [...]` (no export), so direct
+            // ESM import produces a module with no named exports.  Parse the
+            // array literal and re-export it as default.
+            let pokedex = [];
+            {
               let txt = fs.readFileSync(PO, 'utf8').replace(/\bexport\s+(default\s+)?/g, '').trim();
               const m = txt.match(/=\s*/);
               if (m) txt = txt.slice(m.index + m[0].length).trim();
@@ -128,12 +147,11 @@ jobs:
               fs.writeFileSync(tmpFile, 'export default ' + txt + ';', 'utf8');
               try {
                 const url = require('url').pathToFileURL(tmpFile).href;
-                pokedexMod = await import(url);
+                pokedex = (await import(url)).default || [];
               } finally {
                 try { fs.unlinkSync(tmpFile); } catch {}
               }
             }
-            const pokedex = pokedexMod.pokedex || pokedexMod.default || [];
 
             const abilityUpper = Array.isArray(fidThreshold) && fidThreshold.length > 1
               ? Number(fidThreshold[1]) : null;
