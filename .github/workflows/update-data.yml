@@ -31,8 +31,11 @@ jobs:
           set -euxo pipefail
           mkdir -p lang
 
-          # Use the upstream SHA: workflow_dispatch input overrides pinned default
-          DEX_SHA="${{ inputs.upstream_sha || env.DEX_PINNED_SHA }}"
+          # Determine upstream SHA: workflow_dispatch input overrides pinned default
+          DEX_SHA="$DEX_PINNED_SHA"
+          if [ -n "${{ github.event.inputs.upstream_sha }}" ]; then
+            DEX_SHA="${{ github.event.inputs.upstream_sha }}"
+          fi
 
           # Download SearchDex data (generated from the PokéRogue game source) at pinned commit
           curl -fL -o pokedex_data.js \
@@ -42,12 +45,12 @@ jobs:
           curl -fL -o lang/en.js \
             "https://raw.githubusercontent.com/Sandstormer/PokeRogue-Dex/${DEX_SHA}/lang/en.js"
 
-          # Download sprites from PokeRogue-Dex images folder at pinned commit
-          git init temp-pokedex
+          # Download sprites from PokeRogue-Dex images folder
+          # Using sparse-checkout to only get images directory
+          git clone --depth 1 --filter=blob:none --sparse https://github.com/Sandstormer/PokeRogue-Dex.git temp-pokedex
           cd temp-pokedex
-          git remote add origin https://github.com/Sandstormer/PokeRogue-Dex.git
-          git fetch --depth 1 origin "${DEX_SHA}"
-          git checkout FETCH_HEAD
+          git sparse-checkout set images
+          # Copy images to root (use rsync to handle large number of files efficiently)
           rsync -a --delete images/ ../images/
           cd ..
           rm -rf temp-pokedex
