@@ -67,7 +67,7 @@ jobs:
           fi
           
           # Other stats: floor(((2 * baseStat + IV) * level / 100) + 5) * natureMultiplier
-          if grep -qE "statHolder\.value\s*=.*\+ 5\b" "$POKEMON_TS"; then
+          if grep -qE "statHolder\.value\s*\+=\s*5\b" "$POKEMON_TS"; then
             echo "✓ Non-HP stat formula found"
           else
             echo "⚠ Non-HP stat formula may have changed"
