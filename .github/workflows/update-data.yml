@@ -1,0 +1,308 @@
+name: Build pokemon_data.csv and sync sprites
+
+on:
+  workflow_dispatch:
+    inputs:
+      upstream_sha:
+        description: 'Override pinned PokeRogue-Dex commit SHA (leave empty to use pinned default)'
+        required: false
+        type: string
+  schedule:
+    - cron: "0 9 * * *"
+
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  DEX_PINNED_SHA: main
+
+jobs:
+  build-csv:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout this repo
+        uses: actions/checkout@v6
+
+      - name: Fetch SearchDex data files (PokeRogue-Dex)
+        id: fetch
+        run: |
+          set -euxo pipefail
+          mkdir -p lang
+
+          # Determine upstream SHA: workflow_dispatch input overrides pinned default
+          DEX_SHA="$DEX_PINNED_SHA"
+          if [ -n "${{ github.event.inputs.upstream_sha }}" ]; then
+            DEX_SHA="${{ github.event.inputs.upstream_sha }}"
+          fi
+
+          # Download SearchDex data (generated from the PokéRogue game source) at pinned commit
+          curl -fL -o pokedex_data.js \
+            "https://raw.githubusercontent.com/Sandstormer/PokeRogue-Dex/${DEX_SHA}/pokedex_data.js"
+          curl -fL -o filter_data.js \
+            "https://raw.githubusercontent.com/Sandstormer/PokeRogue-Dex/${DEX_SHA}/filter_data.js"
+          curl -fL -o lang/en.js \
+            "https://raw.githubusercontent.com/Sandstormer/PokeRogue-Dex/${DEX_SHA}/lang/en.js"
+
+          # Download sprites from PokeRogue-Dex images folder
+          # Using sparse-checkout to only get images directory
+          git clone --depth 1 --filter=blob:none --sparse https://github.com/Sandstormer/PokeRogue-Dex.git temp-pokedex
+          cd temp-pokedex
+          git sparse-checkout set images
+          # Copy images to root (use rsync to handle large number of files efficiently)
+          rsync -a --delete images/ ../images/
+          cd ..
+          rm -rf temp-pokedex
+
+          echo "dex_sha=$DEX_SHA" >> "$GITHUB_OUTPUT"
+          echo "dex_short=${DEX_SHA:0:7}" >> "$GITHUB_OUTPUT"
+
+      - name: Convert JS -> CSV (dynamic import — no vm sandbox)
+        shell: bash
+        run: |
+          node --experimental-vm-modules <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const os = require('os');
+
+          const PO = 'pokedex_data.js';
+          const FI = 'filter_data.js';
+          const LA = 'lang/en.js';
+          const OUT = 'pokemon_data.csv';
+
+          /**
+           * Detect implicit global assignments (no var/let/const) and prepend
+           * var declarations.  Upstream files like lang/en.js use bare
+           * `headerNames = [...]` which throws ReferenceError in ESM strict mode.
+           */
+          function patchImplicitGlobals(code) {
+            const kw = /^(const|let|var|function|class|import|export|return|typeof|void|delete|new|throw|yield|await)\b/;
+            const globals = new Set();
+            for (const line of code.split('\n')) {
+              const m = line.match(/^\s*(\w+)\s*=(?!=)/);
+              if (!m) continue;
+              if (!/^\w+$/.test(line.slice(0, line.indexOf('=')).trim())) continue;
+              if (kw.test(line.trimStart())) continue;
+              globals.add(m[1]);
+            }
+            return globals.size ? `var ${[...globals].join(', ')};\n${code}` : code;
+          }
+
+          /** Write content to a temp .mjs file and import it safely. */
+          async function importAsModule(content) {
+            const tmpDir = os.tmpdir();
+            const tmpFile = path.join(tmpDir, `pokedex-import-${Date.now()}-${Math.random().toString(36).slice(2)}.mjs`);
+            try {
+              fs.writeFileSync(tmpFile, content, 'utf8');
+              const url = require('url').pathToFileURL(tmpFile).href;
+              const mod = await import(url);
+              return mod;
+            } finally {
+              try { fs.unlinkSync(tmpFile); } catch { /* best effort */ }
+            }
+          }
+
+          async function main() {
+            // ---- filter_data.js + lang/en.js — combined module scope ----
+            // The upstream files share a global scope: filter_data.js declares
+            // fidThreshold, en.js references it.  They must live in one module.
+            const filterCode = fs.readFileSync(FI, 'utf8');
+            let langCode = fs.readFileSync(LA, 'utf8');
+            langCode = patchImplicitGlobals(langCode);
+
+            // en.js references `col` from script.js (not fetched by workflow).
+            // Provide a stub — only needed by helpMenuText (irrelevant to CSV).
+            const colStub = 'var col = { or:"rgb(251,173,124)", bl:"rgb(131,182,239)", re:"rgb(239,131,131)" };\n';
+
+            // Combine everything into one temp .mjs and export the vars we need
+            const combinedCode = filterCode + '\n' + colStub + langCode + `
+            // Export variables needed by the CSV generator
+            export { fidThreshold, headerNames, altText, catToName, infoText,
+                     biomeText, biomeLongText, warningText, procToDesc, tagToDesc,
+                     fidToDesc, speciesNames, fidToName, helpMenuText };
+            `;
+            const dataMod = await importAsModule(combinedCode);
+
+            const fidThreshold = dataMod.fidThreshold || [];
+            const speciesNames = dataMod.speciesNames || [];
+            const fidToName    = dataMod.fidToName    || [];
+
+            if (!Array.isArray(speciesNames) || !Array.isArray(fidToName)) {
+              throw new Error('Failed to extract speciesNames/fidToName from lang/en.js');
+            }
+
+            // ---- pokedex_data.js — extract the array literal ----
+            // pokedex_data.js uses `const items = [...]` (no export), so direct
+            // ESM import produces a module with no named exports.  Parse the
+            // array literal and re-export it as default.
+            let pokedex = [];
+            {
+              let txt = fs.readFileSync(PO, 'utf8').replace(/\bexport\s+(default\s+)?/g, '').trim();
+              const m = txt.match(/=\s*/);
+              if (m) txt = txt.slice(m.index + m[0].length).trim();
+              txt = txt.replace(/;\s*$/, '');
+              const tmpDir = os.tmpdir();
+              const tmpFile = path.join(tmpDir, `pokedex-literal-${Date.now()}.mjs`);
+              fs.writeFileSync(tmpFile, 'export default ' + txt + ';', 'utf8');
+              try {
+                const url = require('url').pathToFileURL(tmpFile).href;
+                pokedex = (await import(url)).default || [];
+              } finally {
+                try { fs.unlinkSync(tmpFile); } catch {}
+              }
+            }
+
+            const abilityUpper = Array.isArray(fidThreshold) && fidThreshold.length > 1
+              ? Number(fidThreshold[1]) : null;
+
+            const speciesMap = {};
+            for (let i = 0; i < speciesNames.length; i++) {
+              const nm = speciesNames[i];
+              if (typeof nm === 'string' && nm) speciesMap[i + 1] = nm;
+            }
+
+            const typeMap = {};
+            const abMap   = {};
+            if (fidToName.length >= 18) {
+              for (let i = 0; i < 18; i++) {
+                const v = fidToName[i];
+                if (typeof v === 'string' && v) typeMap[i] = v;
+              }
+              const end = abilityUpper && Number.isFinite(abilityUpper)
+                ? Math.min(abilityUpper, fidToName.length)
+                : fidToName.length;
+              for (let i = 18; i < end; i++) {
+                const v = fidToName[i];
+                if (typeof v === 'string' && v) abMap[i] = v;
+              }
+            }
+
+            const families = new Map();
+            pokedex.forEach((rec, idx0) => {
+              const idx = idx0 + 1;
+              if (!rec || typeof rec !== 'object') return;
+              const fa = rec.fa;
+              const fsVal = rec.fs;
+              const name = speciesMap[idx] || `Species #${idx}`;
+              if (Number.isInteger(fa)) {
+                const arr = families.get(fa) || [];
+                arr.push([Number.isInteger(fsVal) ? fsVal : 0, idx, name]);
+                families.set(fa, arr);
+              }
+            });
+
+            function num(v, d=0) { const n = Number(v); return Number.isFinite(n) ? n : d; }
+
+            const rows = [];
+            pokedex.forEach((rec, idx0) => {
+              const idx = idx0 + 1;
+              if (!rec || typeof rec !== 'object') return;
+              const name = speciesMap[idx] || `Species #${idx}`;
+
+              const hp  = num(rec.hp);
+              const atk = num(rec.atk);
+              const dfn = num(rec.def);
+              const spa = num(rec.spa);
+              const spd2 = num(rec.spd);
+              const spe = num(rec.spe);
+              const bst = Number.isFinite(Number(rec?.bst)) ? Number(rec.bst) : (hp + atk + dfn + spa + spd2 + spe);
+
+              const t1  = rec.t1; const t2 = rec.t2;
+              let type1 = (t1 != null && typeMap[Number(t1)]) ? typeMap[Number(t1)] : '';
+              let type2 = (t2 != null && typeMap[Number(t2)]) ? typeMap[Number(t2)] : '';
+              if (type2 === type1) type2 = '';
+
+              const abCodes = [];
+              for (const k of ['a1','a2','a3','ha']) {
+                if (k in rec && rec[k] != null && Number.isFinite(Number(rec[k]))) {
+                  abCodes.push(Number(rec[k]));
+                }
+              }
+              const abilities = abCodes.map(c => abMap[c] || String(c)).join(', ');
+
+              const passiveCode = rec.pa;
+              const passive = (passiveCode != null && abMap[Number(passiveCode)]) ? abMap[Number(passiveCode)] : '';
+
+              let evoLine = '';
+              const fa = rec.fa;
+              if (Number.isInteger(fa) && families.has(fa)) {
+                const fam = families.get(fa).slice().sort((a,b)=> (a[0]-b[0]) || (a[1]-b[1]));
+                const names = [];
+                const seen = new Set();
+                for (const [, , n] of fam) {
+                  if (!seen.has(n)) { names.push(n); seen.add(n); }
+                }
+                evoLine = names.join(', ');
+              }
+
+              let idVal = 0;
+              if (Number.isFinite(Number(rec?.id))) idVal = Number(rec.id);
+              else if (Number.isFinite(Number(rec?.dex))) idVal = Number(rec.dex);
+
+              const imgVal = rec.img || String(idVal);
+
+              rows.push({
+                name,
+                id: idVal,
+                hp, attack: atk, defense: dfn, spAttack: spa, spDefense: spd2, speed: spe,
+                bst, type1, type2,
+                abilities, passive, 'evolution line': evoLine, img: imgVal
+              });
+            });
+
+            const cols = ['name','id','hp','attack','defense','spAttack','spDefense','speed','bst',
+                          'type1','type2','abilities','passive','evolution line','img'];
+
+            function esc(v) {
+              if (v === null || v === undefined) v = '';
+              v = String(v);
+              return /[",\n]/.test(v) ? '"' + v.replace(/"/g,'""') + '"' : v;
+            }
+            const lines = [cols.join(',')];
+            for (const r of rows) lines.push(cols.map(c => esc(r[c])).join(','));
+            fs.writeFileSync(OUT, lines.join('\n'), 'utf8');
+            console.log('Wrote', OUT, 'rows=', rows.length);
+
+            const dataObj = {};
+            for (const r of rows) {
+              dataObj[r.name] = {
+                id: r.id,
+                hp: r.hp,
+                attack: r.attack,
+                defense: r.defense,
+                spAttack: r.spAttack,
+                spDefense: r.spDefense,
+                speed: r.speed,
+                bst: r.bst,
+                type1: r.type1,
+                type2: r.type2,
+                abilities: r.abilities,
+                passive: r.passive,
+                evolution: r['evolution line'],
+                img: r.img
+              };
+            }
+            fs.writeFileSync('pokemon_data.js', 'const POKEMON_DATA = ' + JSON.stringify(dataObj, null, 2) + ';\n', 'utf8');
+            console.log('Wrote pokemon_data.js');
+          }
+
+          main().catch(err => { console.error(err); process.exit(1); });
+          NODE
+
+      - name: Write data_version.txt (Dex commit)
+        run: |
+          echo "PokeRogue-Dex ${{ steps.fetch.outputs.dex_short }}" > data_version.txt
+
+      - name: Commit updated data + version + sprites (if changed)
+        run: |
+          set -euxo pipefail
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add pokemon_data.csv data_version.txt pokemon_data.js images
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(data): auto-update from PokeRogue-Dex ${{ steps.fetch.outputs.dex_short }}"
+            git push
+          else
+            echo "No changes."
+          fi

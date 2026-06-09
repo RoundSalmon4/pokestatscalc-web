@@ -1,0 +1,802 @@
+/**
+ * PokéRogue Stats Calculator
+ * 
+ * Stat calculation formulas verified against PokéRogue source:
+ * - src/field/pokemon.ts (calculateStats method)
+ * - src/data/nature.ts (getNatureStatMultiplier)
+ * - src/modifier/modifier.ts (all stat modifiers)
+ */
+
+let selectedPokemon = null;
+
+function initPokemonData() {
+    if (typeof POKEMON_DATA !== 'undefined') {
+        console.log('Loaded ' + Object.keys(POKEMON_DATA).length + ' Pokemon');
+    } else {
+        console.error('POKEMON_DATA not found!');
+    }
+}
+
+const STAT_KEYS = ['hp', 'atk', 'def', 'spAtk', 'spDef', 'spd'];
+const STAT_NAMES = ['HP', 'Attack', 'Defense', 'Sp. Atk', 'Sp. Def', 'Speed'];
+
+const NATURE_MODIFIERS = {
+    'Adamant': { increases: 'atk', decreases: 'spAtk' },
+    'Bashful': { increases: 'spAtk', decreases: 'spAtk' },
+    'Bold': { increases: 'def', decreases: 'atk' },
+    'Brave': { increases: 'atk', decreases: 'spd' },
+    'Calm': { increases: 'spDef', decreases: 'atk' },
+    'Careful': { increases: 'spDef', decreases: 'spAtk' },
+    'Docile': { increases: 'def', decreases: 'def' },
+    'Gentle': { increases: 'spDef', decreases: 'def' },
+    'Hardy': { increases: 'atk', decreases: 'atk' },
+    'Hasty': { increases: 'spd', decreases: 'def' },
+    'Impish': { increases: 'def', decreases: 'spAtk' },
+    'Jolly': { increases: 'spd', decreases: 'spAtk' },
+    'Lax': { increases: 'def', decreases: 'spDef' },
+    'Lonely': { increases: 'atk', decreases: 'def' },
+    'Mild': { increases: 'spAtk', decreases: 'def' },
+    'Modest': { increases: 'spAtk', decreases: 'atk' },
+    'Naive': { increases: 'spd', decreases: 'spDef' },
+    'Naughty': { increases: 'atk', decreases: 'spDef' },
+    'Quiet': { increases: 'spAtk', decreases: 'spd' },
+    'Quirky': { increases: 'spDef', decreases: 'spDef' },
+    'Rash': { increases: 'spAtk', decreases: 'spDef' },
+    'Relaxed': { increases: 'def', decreases: 'spd' },
+    'Sassy': { increases: 'spDef', decreases: 'spd' },
+    'Serious': { increases: 'spd', decreases: 'spd' },
+    'Timid': { increases: 'spd', decreases: 'atk' }
+};
+
+const SPECIES_ITEMS = {
+    'Pikachu': 'lightBall', 'Raichu': 'lightBall', 'Alola Raichu': 'lightBall',
+    'Marowak': 'thickClub', 'Marowak-Alola': 'thickClub', 'Cubone': 'thickClub',
+    'Ditto': 'metalPowder',
+    'Clamperl': 'deepSeaScale',
+    'Gorebyss': 'deepSeaTooth', 'Huntail': 'deepSeaScale'
+};
+
+function canUseEviolite(pokemonName) {
+    const pokemon = POKEMON_DATA[pokemonName];
+    if (!pokemon || !pokemon['evolution']) return false;
+    const evoLine = pokemon['evolution'].split(',').map(e => e.trim());
+    const isFinalForm = evoLine.length === 1 || evoLine[evoLine.length - 1] === pokemonName;
+    return !isFinalForm;
+}
+
+function escapeHtml(str) {
+    return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
+function setStatus(msg, isError = false) {
+    const statusBar = document.getElementById('status-bar');
+    statusBar.textContent = msg;
+    statusBar.style.color = isError ? '#ff6b6b' : '#888';
+}
+
+function addToLog(text, type = '') {
+    const log = document.getElementById('calculationLog');
+    if (!log) return;
+    
+    const line = document.createElement('div');
+    line.className = 'terminal-line ' + type;
+    log.appendChild(line);
+    
+    // Parse inline <span class="XXX">content</span> tags safely
+    const segments = [];
+    let lastIndex = 0;
+    const spanRe = /<span\s+class="([^"]+)">([^<]*)<\/span>/g;
+    let match;
+    while ((match = spanRe.exec(text)) !== null) {
+        if (match.index > lastIndex) {
+            segments.push({ content: text.substring(lastIndex, match.index) });
+        }
+        segments.push({ className: match[1], content: match[2] });
+        lastIndex = match.index + match[0].length;
+    }
+    if (lastIndex < text.length) {
+        segments.push({ content: text.substring(lastIndex) });
+    }
+    if (segments.length === 0) {
+        segments.push({ content: text });
+    }
+    
+    // Build DOM nodes for each segment
+    const nodes = segments.map(seg => {
+        if (seg.className) {
+            const span = document.createElement('span');
+            span.className = seg.className;
+            line.appendChild(span);
+            return { el: span, content: seg.content };
+        } else {
+            const node = document.createTextNode('');
+            line.appendChild(node);
+            return { el: node, content: seg.content };
+        }
+    });
+    
+    // Typing effect — write to textContent to avoid HTML injection
+    const speed = 3;
+    let segIdx = 0;
+    let charIdx = 0;
+    
+    function typeChar() {
+        if (segIdx >= nodes.length) {
+            log.scrollTop = log.scrollHeight;
+            return;
+        }
+        const seg = nodes[segIdx];
+        if (charIdx < seg.content.length) {
+            charIdx++;
+            seg.el.textContent = seg.content.substring(0, charIdx);
+            setTimeout(typeChar, speed);
+        } else {
+            segIdx++;
+            charIdx = 0;
+            setTimeout(typeChar, speed);
+        }
+        log.scrollTop = log.scrollHeight;
+    }
+    typeChar();
+}
+
+function clearLog() {
+    const log = document.getElementById('calculationLog');
+    if (log) log.innerHTML = '<div class="terminal-line">> Select a Pokémon to begin</div>';
+}
+
+function clearHighlights() {
+    document.querySelectorAll('.stat-input-field, .iv-input-field, .vitamin-field, .item-field').forEach(el => {
+        el.classList.remove('error-highlight');
+    });
+    document.getElementById('search').classList.remove('error-highlight');
+    document.getElementById('level').classList.remove('error-highlight');
+}
+
+function highlightField(fieldId) {
+    const field = document.getElementById(fieldId);
+    if (field) field.classList.add('error-highlight');
+}
+
+function getPokemonList() {
+    return Object.keys(POKEMON_DATA).sort((a, b) => (POKEMON_DATA[a].id || 0) - (POKEMON_DATA[b].id || 0));
+}
+
+function getFilteredPokemonList(filter) {
+    const filterLower = filter.toLowerCase();
+    return getPokemonList().filter(name => name.toLowerCase().includes(filterLower)).slice(0, 100);
+}
+
+function populatePokemonList(filter = '') {
+    const listContainer = document.getElementById('pokemonList');
+    listContainer.innerHTML = '';
+    const pokemonNames = getFilteredPokemonList(filter);
+    pokemonNames.forEach(name => {
+        const div = document.createElement('div');
+        div.textContent = name;
+        div.onclick = () => selectPokemon(name);
+        if (selectedPokemon === name) div.classList.add('selected');
+        listContainer.appendChild(div);
+    });
+}
+
+function updateHeldItemVisibility(pokemonName) {
+    const items = [
+        { id: 'lightBall', names: ['Pikachu', 'Raichu', 'Alola Raichu'] },
+        { id: 'thickClub', names: ['Cubone', 'Marowak', 'Marowak-Alola'] },
+        { id: 'metalPowder', names: ['Ditto'] },
+        { id: 'quickPowder', names: ['Ditto'] },
+        { id: 'deepSeaScale', names: ['Clamperl', 'Huntail'] },
+        { id: 'deepSeaTooth', names: ['Clamperl', 'Gorebyss'] },
+        { id: 'eviolite', check: (name) => canUseEviolite(name) },
+    ];
+    
+    items.forEach(item => {
+        const el = document.getElementById(item.id);
+        const label = el?.parentElement;
+        if (el && label) {
+            let visible = false;
+            if (item.names) {
+                visible = item.names.includes(pokemonName);
+            } else if (item.check) {
+                visible = item.check(pokemonName);
+            }
+            label.style.display = visible ? '' : 'none';
+            el.disabled = false;
+        }
+    });
+}
+
+function selectPokemon(name) {
+    const pokemon = POKEMON_DATA[name];
+    if (!pokemon) return;
+    selectedPokemon = name;
+    document.getElementById('pokemonTitle').textContent = name;
+    const listContainer = document.getElementById('pokemonList');
+    Array.from(listContainer.children).forEach(child => {
+        const childName = child.textContent.replace('#', '').trim();
+        child.classList.toggle('selected', childName === name);
+    });
+    const imgId = pokemon.img || pokemon.id;
+    
+    // Update held item visibility based on species
+    updateHeldItemVisibility(name);
+    
+    const statLabels = ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spd'];
+    const statValues = [pokemon.hp, pokemon.attack, pokemon.defense, pokemon.spAttack, pokemon.spDefense, pokemon.speed];
+    let statsHtml = '<div class="stat-line-container">';
+    statLabels.forEach((label, i) => {
+        statsHtml += `<div class="stat-line"><span class="stat-label">${escapeHtml(label)}:</span><span class="stat-value">${escapeHtml(statValues[i])}</span></div>`;
+    });
+    statsHtml += `<div class="total-bst">BST: ${escapeHtml(pokemon.bst)}</div>`;
+    statsHtml += `<div class="type-line">Type: ${escapeHtml(pokemon.type1)}${pokemon.type2 ? '/' + escapeHtml(pokemon.type2) : ''}</div>`;
+    statsHtml += '</div>';
+    
+    document.getElementById('baseStatsDisplay').innerHTML = statsHtml;
+    // Use DOM APIs for the sprite — no innerHTML risk
+    const spriteContainer = document.getElementById('pokemonSprite');
+    spriteContainer.innerHTML = '';
+    const img = document.createElement('img');
+    img.src = `images/${imgId}_0.png`;
+    img.alt = name;
+    img.onerror = function() { this.style.display = 'none'; this.parentElement.classList.add('no-sprite'); };
+    spriteContainer.appendChild(img);
+    
+    clearLog();
+    addToLog(`> Selected: ${escapeHtml(name)}`, '');
+    setStatus(`Selected: ${name} (#${pokemon.id})`);
+    // Draw pentagon after DOM update
+    setTimeout(() => drawStatPentagon(null), 0);
+}
+
+function updateBaseStatsDisplay() {
+    const pokemon = POKEMON_DATA[selectedPokemon];
+    if (!pokemon) return;
+    
+    const flipStat = document.getElementById('flipStat').checked;
+    const shuckleJuice = document.getElementById('shuckleJuice').checked;
+    const oldGateau = document.getElementById('oldGateau').checked;
+    
+    let baseStats = [pokemon.hp, pokemon.attack, pokemon.defense, pokemon.spAttack, pokemon.spDefense, pokemon.speed];
+    
+    // Apply modifiers
+    if (flipStat) baseStats = applyFlipStat(baseStats);
+    if (shuckleJuice) baseStats = applyShuckleJuice(baseStats);
+    if (oldGateau) baseStats = applyOldGateau(baseStats);
+    
+    const statLabels = ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spd'];
+    const statValues = baseStats;
+    let statsHtml = '<div class="stat-line-container">';
+    statLabels.forEach((label, i) => {
+        statsHtml += `<div class="stat-line"><span class="stat-label">${escapeHtml(label)}:</span><span class="stat-value">${escapeHtml(statValues[i])}</span></div>`;
+    });
+    statsHtml += `<div class="total-bst">BST: ${escapeHtml(baseStats.reduce((a, b) => a + b, 0))}</div>`;
+    statsHtml += `<div class="type-line">Type: ${escapeHtml(pokemon.type1)}${pokemon.type2 ? '/' + escapeHtml(pokemon.type2) : ''}</div>`;
+    statsHtml += '</div>';
+    
+    document.getElementById('baseStatsDisplay').innerHTML = statsHtml;
+}
+
+function applyFlipStat(baseStats) {
+    const stats = baseStats.slice();
+    const temp = [...stats];
+    stats[0] = temp[5]; stats[1] = temp[4]; stats[2] = temp[3];
+    stats[3] = temp[2]; stats[4] = temp[1]; stats[5] = temp[0];
+    return stats;
+}
+
+function applyShuckleJuice(baseStats) {
+    // Shuckle Juice: +10 to total BST (HP gets +5, rest split +5)
+    const stats = [...baseStats];
+    stats[0] += 5;
+    const remaining = 5;
+    for (let i = 1; i < 6; i++) {
+        stats[i] += Math.floor(remaining / 5);
+    }
+    return stats;
+}
+
+function applyOldGateau(baseStats) {
+    // Old Gateau: +10 flat to ALL base stats
+    return baseStats.map(stat => stat + 10);
+}
+
+function applyVitaminsToBaseStats(baseStats, vitamins) {
+    return baseStats.map((stat, i) => Math.floor(stat * (1 + (vitamins[i] || 0) * 0.1)));
+}
+
+function getNatureMultiplier(natureName, statKey) {
+    const nature = NATURE_MODIFIERS[natureName];
+    if (!nature) return 1.0;
+    if (nature.increases === statKey) return 1.1;
+    if (nature.decreases === statKey) return 0.9;
+    return 1.0;
+}
+
+function applyHeldItems(baseStats, pokemonName, machoBraceStacks, ivs) {
+    const stats = [...baseStats];
+    
+    // Macho Brace: +2 HP, +1 other per stack, +10%/5% bonus at max (50)
+    if (machoBraceStacks > 0) {
+        stats[0] += 2 * machoBraceStacks;
+        for (let i = 1; i < 6; i++) stats[i] += machoBraceStacks;
+        if (machoBraceStacks >= 50) {
+            stats[0] = Math.floor(stats[0] * 1.1);
+            for (let i = 1; i < 6; i++) stats[i] = Math.floor(stats[i] * 1.05);
+        }
+    }
+    
+    // Species items (checkbox - single use)
+    const speciesItem = SPECIES_ITEMS[pokemonName];
+    if (document.getElementById('lightBall')?.checked && speciesItem === 'lightBall') {
+        stats[1] *= 2; stats[3] *= 2;
+    }
+    if (document.getElementById('thickClub')?.checked && speciesItem === 'thickClub') {
+        stats[1] *= 2;
+    }
+    if (document.getElementById('metalPowder')?.checked && speciesItem === 'metalPowder') {
+        stats[2] *= 2;
+    }
+    if (document.getElementById('quickPowder')?.checked && pokemonName === 'Ditto') {
+        stats[5] *= 2;
+    }
+    if (document.getElementById('deepSeaScale')?.checked && (speciesItem === 'deepSeaScale' || pokemonName === 'Huntail')) {
+        stats[4] *= 2;
+    }
+    if (document.getElementById('deepSeaTooth')?.checked && (speciesItem === 'deepSeaTooth' || pokemonName === 'Gorebyss')) {
+        stats[3] *= 2;
+    }
+    // Eviolite: 1.5x Def/SpDef if not fully evolved
+    if (document.getElementById('eviolite')?.checked && canUseEviolite(pokemonName)) {
+        stats[2] = Math.floor(stats[2] * 1.5);
+        stats[4] = Math.floor(stats[4] * 1.5);
+    }
+    
+    return stats;
+}
+
+function getVitamins() {
+    return [
+        parseInt(document.getElementById('vitHP').value) || 0,
+        parseInt(document.getElementById('vitAtk').value) || 0,
+        parseInt(document.getElementById('vitDef').value) || 0,
+        parseInt(document.getElementById('vitSpAtk').value) || 0,
+        parseInt(document.getElementById('vitSpDef').value) || 0,
+        parseInt(document.getElementById('vitSpd').value) || 0
+    ];
+}
+
+function calculateStats() {
+    clearHighlights();
+    
+    if (!selectedPokemon) {
+        setStatus('Error: Please select a Pokémon', true);
+        highlightField('search');
+        return null;
+    }
+    
+    const level = parseInt(document.getElementById('level').value);
+    if (!level || level < 1 || level > 99999) {
+        setStatus('Error: Please enter a valid level (1-99999)', true);
+        highlightField('level');
+        return null;
+    }
+    
+    const maxIv = document.getElementById('maxIv').checked;
+    const flipStat = document.getElementById('flipStat').checked;
+    const shuckleJuice = document.getElementById('shuckleJuice').checked;
+    const oldGateau = document.getElementById('oldGateau').checked;
+    const soulDew = parseInt(document.getElementById('soulDew').value) || 0;
+    
+    const ivs = STAT_KEYS.map((key, i) => {
+        if (maxIv) return 31;
+        const elem = document.getElementById(`iv${key}`);
+        if (!elem) return null;
+        const val = parseInt(elem.value);
+        if (isNaN(val) || val < 0 || val > 31) {
+            setStatus(`Error: Invalid IV for ${STAT_NAMES[i]} (must be 0-31)`, true);
+            highlightField(`iv${key}`);
+            return null;
+        }
+        return val || 0;
+    });
+    if (ivs.includes(null)) return null;
+    
+    const pokemon = POKEMON_DATA[selectedPokemon];
+    const natureName = document.getElementById('nature').value;
+    const machoBrace = parseInt(document.getElementById('machoBrace').value) || 0;
+    const vitamins = getVitamins();
+    
+    let baseStats = [pokemon.hp, pokemon.attack, pokemon.defense, pokemon.spAttack, pokemon.spDefense, pokemon.speed];
+    
+    addToLog(`<span class="label">Level:</span> ${escapeHtml(level)} | <span class="label">Nature:</span> ${escapeHtml(natureName || 'Neutral')}`, '');
+    
+    if (flipStat) baseStats = applyFlipStat(baseStats);
+    if (shuckleJuice) baseStats = applyShuckleJuice(baseStats);
+    if (oldGateau) baseStats = applyOldGateau(baseStats);
+    baseStats = applyVitaminsToBaseStats(baseStats, vitamins);
+    baseStats = applyHeldItems(baseStats, selectedPokemon, machoBrace, ivs);
+    
+    addToLog(`<span class="label">Base+Vit:</span> ${escapeHtml(baseStats.join(' '))}`, '');
+    
+    const stats = {};
+    STAT_KEYS.forEach((key, index) => {
+        let natureMult = getNatureMultiplier(natureName, key);
+        // Apply Soul Dew (extra nature boost)
+        if (natureMult !== 1.0 && soulDew > 0) {
+            const sign = natureMult > 1 ? 1 : -1;
+            natureMult += sign * soulDew * 0.1;
+        }
+        
+        let calculated;
+        let formula = '';
+        if (key === 'hp') {
+            const base = baseStats[index];
+            const iv = ivs[index];
+            calculated = Math.floor(((2 * base + iv) * level / 100) + level + 10);
+            formula = `HP: floor(((2*${base}+${iv})*${level}/100)+${level}+10) = ${calculated}`;
+        } else {
+            const base = baseStats[index];
+            const iv = ivs[index];
+            const baseCalc = Math.floor(((2 * base + iv) * level / 100) + 5);
+            calculated = natureMult > 1 ? Math.ceil(baseCalc * natureMult) : Math.floor(baseCalc * natureMult);
+            formula = `${key.toUpperCase()}: floor(((2*${base}+${iv})*${level}/100)+5) = ${baseCalc} → ${natureMult !== 1 ? 'x' + natureMult.toFixed(1) : ''} = ${calculated}`;
+        }
+        stats[key] = Math.max(1, calculated);
+        
+        addToLog(`  ${key.toUpperCase()}: ${stats[key]}`, 'formula');
+    });
+    
+    addToLog(`<span class="result">Final: HP=${escapeHtml(stats.hp)} Atk=${escapeHtml(stats.atk)} Def=${escapeHtml(stats.def)} SpA=${escapeHtml(stats.spAtk)} SpD=${escapeHtml(stats.spDef)} Spd=${escapeHtml(stats.spd)}</span>`, 'result');
+    
+    return stats;
+}
+
+function populateStats(stats) {
+    STAT_KEYS.forEach(key => document.getElementById(key).value = stats[key]);
+}
+
+function calculateIVs() {
+    clearHighlights();
+    
+    if (!selectedPokemon) {
+        setStatus('Error: Please select a Pokémon', true);
+        highlightField('search');
+        return null;
+    }
+    
+    const level = parseInt(document.getElementById('level').value);
+    if (!level || level < 1 || level > 99999) {
+        setStatus('Error: Please enter a valid level (1-99999)', true);
+        highlightField('level');
+        return null;
+    }
+    
+    const actualStats = STAT_KEYS.map((key, i) => {
+        const val = parseInt(document.getElementById(key).value);
+        if (isNaN(val) || val < 1) {
+            setStatus(`Error: Please enter a valid stat for ${STAT_NAMES[i]}`, true);
+            highlightField(key);
+            return null;
+        }
+        return val;
+    });
+    if (actualStats.includes(null)) return null;
+    
+    const pokemon = POKEMON_DATA[selectedPokemon];
+    const natureName = document.getElementById('nature').value;
+    const flipStat = document.getElementById('flipStat').checked;
+    const shuckleJuice = document.getElementById('shuckleJuice').checked;
+    const oldGateau = document.getElementById('oldGateau').checked;
+    const soulDew = parseInt(document.getElementById('soulDew').value) || 0;
+    const machoBrace = parseInt(document.getElementById('machoBrace').value) || 0;
+    const vitamins = getVitamins();
+    
+    let baseStats = [pokemon.hp, pokemon.attack, pokemon.defense, pokemon.spAttack, pokemon.spDefense, pokemon.speed];
+    if (flipStat) baseStats = applyFlipStat(baseStats);
+    if (shuckleJuice) baseStats = applyShuckleJuice(baseStats);
+    if (oldGateau) baseStats = applyOldGateau(baseStats);
+    baseStats = applyVitaminsToBaseStats(baseStats, vitamins);
+    baseStats = applyHeldItems(baseStats, selectedPokemon, machoBrace, null);
+    
+    const ivs = {};
+    STAT_KEYS.forEach((key, index) => {
+        let natureMult = getNatureMultiplier(natureName, key);
+        if (natureMult !== 1.0 && soulDew > 0) {
+            const sign = natureMult > 1 ? 1 : -1;
+            natureMult += sign * soulDew * 0.1;
+        }
+        
+        if (key === 'hp') {
+            ivs[key] = Math.max(0, Math.min(31, Math.round(((actualStats[index] - level - 10) * 100 / level - 2 * baseStats[index]))));
+        } else {
+            let iv = 0;
+            if (natureMult === 1.0) {
+                iv = Math.round(((actualStats[index] - 5) * 100 / level - 2 * baseStats[index]));
+            } else if (natureMult > 1) {
+                const baseCalc = Math.ceil(actualStats[index] / natureMult);
+                iv = Math.round((baseCalc - 5) * 100 / level - 2 * baseStats[index]);
+            } else {
+                const baseCalc = Math.floor(actualStats[index] / natureMult);
+                iv = Math.round((baseCalc - 5) * 100 / level - 2 * baseStats[index]);
+            }
+            ivs[key] = Math.max(0, Math.min(31, iv));
+        }
+        
+        const statName = key.toUpperCase();
+        addToLog(`${statName}: IV=${ivs[key]} (base=${baseStats[index]})`, 'formula');
+    });
+    
+    addToLog(`<span class="result">IVs: HP=${escapeHtml(ivs.hp)} Atk=${escapeHtml(ivs.atk)} Def=${escapeHtml(ivs.def)} SpA=${escapeHtml(ivs.spAtk)} SpD=${escapeHtml(ivs.spDef)} Spd=${escapeHtml(ivs.spd)}</span>`, 'result');
+    
+    const impossibleStats = [];
+    STAT_KEYS.forEach((key, index) => {
+        const base = baseStats[index];
+        let natureMult = getNatureMultiplier(natureName, key);
+        if (natureMult !== 1.0 && soulDew > 0) {
+            const sign = natureMult > 1 ? 1 : -1;
+            natureMult += sign * soulDew * 0.1;
+        }
+        
+        let minPossible, maxPossible;
+        
+        if (key === 'hp') {
+            minPossible = Math.floor(((2 * base) * level / 100) + level + 10);
+            maxPossible = Math.floor(((2 * base + 31) * level / 100) + level + 10);
+        } else {
+            minPossible = Math.floor(((2 * base) * level / 100) + 5);
+            maxPossible = Math.floor(((2 * base + 31) * level / 100) + 5);
+            if (natureMult !== 1.0) {
+                minPossible = natureMult > 1 ? Math.ceil(minPossible * natureMult) : Math.floor(minPossible * natureMult);
+                maxPossible = natureMult > 1 ? Math.ceil(maxPossible * natureMult) : Math.floor(maxPossible * natureMult);
+            }
+        }
+        
+        if (actualStats[index] < minPossible) {
+            impossibleStats.push(`${STAT_NAMES[index]}: ${actualStats[index]} too low (min ${minPossible}) - IV cannot be determined`);
+        } else if (actualStats[index] > maxPossible) {
+            impossibleStats.push(`${STAT_NAMES[index]}: ${actualStats[index]} too high (max ${maxPossible}) - IV cannot be determined`);
+        }
+    });
+    
+    if (impossibleStats.length > 0) {
+        setStatus(`Error: ${impossibleStats.join('. ')}`, true);
+        addToLog(`<span class="error">⚠ Impossible: ${escapeHtml(impossibleStats.join('. '))}</span>`, 'result');
+        return null;
+    }
+    
+    if (level < 50) {
+        const ivsPerStat = (50 / level).toFixed(1);
+        addToLog(`<span class="warning">⚠ Warning: At level ${escapeHtml(level)}, each stat represents ~${escapeHtml(ivsPerStat)} IVs. IV calculation is approximate.</span>`, 'result');
+    }
+    
+    return ivs;
+}
+
+function populateIVs(ivs) {
+    STAT_KEYS.forEach(key => document.getElementById(`iv${key}`).value = ivs[key]);
+}
+
+function onCalculateStats() {
+    clearLog();
+    const stats = calculateStats();
+    if (stats) {
+        populateStats(stats);
+        drawStatPentagon(stats);
+        STAT_KEYS.forEach(key => document.getElementById(`iv${key}`).classList.remove('default-value'));
+        addToLog(`<span class="result">★ Stats populated in boxes above</span>`, 'result');
+        setStatus('Stats calculated and populated');
+    }
+}
+
+function onCalculateIVs() {
+    clearLog();
+    const ivs = calculateIVs();
+    if (ivs) {
+        populateIVs(ivs);
+        STAT_KEYS.forEach(key => document.getElementById(`iv${key}`).classList.remove('default-value'));
+        addToLog(`<span class="result">★ IVs populated in boxes above</span>`, 'result');
+        setStatus('IVs calculated and populated');
+    }
+}
+
+function drawStatPentagon(stats) {
+    const canvas = document.getElementById('statPentagon');
+    if (!canvas) return;
+    
+    // Pentagon directly visualizes IV values (0-31) - simple spider web of IVs
+    const ivs = STAT_KEYS.map(key => {
+        const val = parseInt(document.getElementById(`iv${key}`).value);
+        return (isNaN(val) || val < 0) ? 0 : Math.min(31, val);
+    });
+    
+    const ctx = canvas.getContext('2d');
+    const w = canvas.width;
+    const h = canvas.height;
+    const cx = w / 2;
+    const cy = h / 2;
+    const maxR = 65;
+    const statNames = ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spd'];
+    
+    ctx.clearRect(0, 0, w, h);
+    
+    // Draw background pentagon with 5 inner rings (representing 0, 6, 12, 18, 24, 31 IV)
+    ctx.beginPath();
+    for (let i = 0; i < 6; i++) {
+        const angle = (Math.PI * 2 * i / 6) - Math.PI / 2;
+        const x = cx + Math.cos(angle) * maxR;
+        const y = cy + Math.sin(angle) * maxR;
+        if (i === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+    }
+    ctx.closePath();
+    ctx.fillStyle = '#333';
+    ctx.fill();
+    ctx.strokeStyle = '#555';
+    ctx.lineWidth = 1;
+    ctx.stroke();
+    
+    // Draw inner rings for IV levels (every ~6 IVs)
+    for (let r = maxR * 0.2; r < maxR; r += maxR * 0.2) {
+        ctx.beginPath();
+        for (let i = 0; i < 6; i++) {
+            const angle = (Math.PI * 2 * i / 6) - Math.PI / 2;
+            const x = cx + Math.cos(angle) * r;
+            const y = cy + Math.sin(angle) * r;
+            if (i === 0) ctx.moveTo(x, y);
+            else ctx.lineTo(x, y);
+        }
+        ctx.closePath();
+        ctx.strokeStyle = '#444';
+        ctx.lineWidth = 1;
+        ctx.stroke();
+    }
+    
+    // Draw IV values as points and connect them
+    ctx.beginPath();
+    for (let i = 0; i < 6; i++) {
+        const angle = (Math.PI * 2 * i / 6) - Math.PI / 2;
+        const iv = ivs[i];
+        // Map IV 0-31 to radius 0-maxR
+        const r = maxR * (iv / 31);
+        const x = cx + Math.cos(angle) * r;
+        const y = cy + Math.sin(angle) * r;
+        if (i === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+    }
+    ctx.closePath();
+    ctx.fillStyle = 'rgba(78, 205, 196, 0.4)';
+    ctx.fill();
+    ctx.strokeStyle = '#4ecdc4';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    
+    // Draw IV value labels
+    ctx.font = '9px Consolas, monospace';
+    ctx.fillStyle = '#4ecdc4';
+    ctx.textAlign = 'center';
+    for (let i = 0; i < 6; i++) {
+        const angle = (Math.PI * 2 * i / 6) - Math.PI / 2;
+        const labelR = maxR + 12;
+        const x = cx + Math.cos(angle) * labelR;
+        const y = cy + Math.sin(angle) * labelR;
+        ctx.fillText(statNames[i], x, y + 3);
+    }
+}
+
+function onClear() {
+    selectedPokemon = null;
+    clearHighlights();
+    document.getElementById('pokemonTitle').textContent = 'Select Pokémon';
+    document.getElementById('search').value = '';
+    document.getElementById('nature').value = '';
+    document.getElementById('level').value = 50;
+    document.getElementById('soulDew').value = 0;
+    document.getElementById('pokemonList').innerHTML = '';
+    document.getElementById('baseStatsDisplay').innerHTML = '';
+    document.getElementById('pokemonSprite').innerHTML = '';
+    STAT_KEYS.forEach(key => {
+        document.getElementById(key).value = 0;
+        const ivEl = document.getElementById(`iv${key}`);
+        ivEl.value = 15;
+        ivEl.readOnly = false;
+        ivEl.classList.add('default-value');
+    });
+    ['vitHP', 'vitAtk', 'vitDef', 'vitSpAtk', 'vitSpDef', 'vitSpd'].forEach(id => {
+        document.getElementById(id).value = 0;
+    });
+    document.getElementById('machoBrace').value = 0;
+    ['eviolite', 'lightBall', 'thickClub', 'metalPowder', 'quickPowder', 'deepSeaScale', 'deepSeaTooth'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.checked = false;
+    });
+    document.getElementById('maxIv').checked = false;
+    document.getElementById('flipStat').checked = false;
+    document.getElementById('shuckleJuice').checked = false;
+    document.getElementById('oldGateau').checked = false;
+    
+    ['lightBall', 'thickClub', 'metalPowder', 'quickPowder', 'deepSeaScale', 'deepSeaTooth', 'eviolite'].forEach(id => {
+        const el = document.getElementById(id);
+        const label = el?.parentElement;
+        if (label) {
+            label.style.display = '';
+            el.disabled = true;
+        }
+    });
+    
+    clearLog();
+    populatePokemonList();
+    drawStatPentagon(null);
+    setStatus('Cleared');
+}
+
+function init() {
+    initPokemonData();
+    document.getElementById('search').addEventListener('input', (e) => populatePokemonList(e.target.value));
+    document.getElementById('calculateBtn').addEventListener('click', onCalculateStats);
+    document.getElementById('calculateIvBtn').addEventListener('click', onCalculateIVs);
+    document.getElementById('clearBtn').addEventListener('click', onClear);
+    
+    // Max IVs toggle - lock IV inputs to 31
+    document.getElementById('maxIv').addEventListener('change', (e) => {
+        const isMax = e.target.checked;
+        STAT_KEYS.forEach(key => {
+            const el = document.getElementById(`iv${key}`);
+            if (el) {
+                if (isMax) {
+                    el.value = 31;
+                    el.readOnly = true;
+                    el.classList.remove('default-value');
+                } else {
+                    el.readOnly = false;
+                }
+            }
+        });
+        if (selectedPokemon) drawStatPentagon(null);
+    });
+    
+    // Live update when Flip Stat, Shuckle Juice, Old Gateau change
+    ['flipStat', 'shuckleJuice', 'oldGateau'].forEach(id => {
+        document.getElementById(id).addEventListener('change', () => {
+            if (selectedPokemon) {
+                updateBaseStatsDisplay();
+                drawStatPentagon(null);
+            }
+        });
+    });
+    
+    // Live update when held items change (pentagon shows final stats)
+    ['eviolite', 'lightBall', 'thickClub', 'metalPowder', 'quickPowder', 'deepSeaScale', 'deepSeaTooth', 'machoBrace', 'soulDew'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+            el.addEventListener('change', () => {
+                if (selectedPokemon) drawStatPentagon(null);
+            });
+        }
+    });
+    
+    // Redraw pentagon when IVs or level change
+    ['level', 'nature'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.addEventListener('change', () => { if (selectedPokemon) drawStatPentagon(null); });
+    });
+    STAT_KEYS.forEach(key => {
+        const el = document.getElementById(`iv${key}`);
+        if (el) el.addEventListener('input', () => { 
+            el.classList.remove('default-value');
+            if (selectedPokemon) drawStatPentagon(null); 
+        });
+    });
+    
+    populatePokemonList();
+    
+    ['eviolite', 'lightBall', 'thickClub', 'metalPowder', 'quickPowder', 'deepSeaScale', 'deepSeaTooth'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.disabled = true;
+    });
+    
+    drawStatPentagon(null);
+    setStatus('Ready - Select a Pokémon and enter your stats to calculate IVs');
+}
+
+document.addEventListener('DOMContentLoaded', init);
