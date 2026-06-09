@@ -195,6 +195,7 @@ jobs:
               echo "If these are real changes, update \`script.js\` and \`audit-formulas.yml\` patterns accordingly."
             } > "${WARN_FILE}.body"
             
+            gh label create automated 2>/dev/null || true
             gh issue create \
               --title "Formula audit: $WARN_COUNT potential change(s) detected" \
               --label "automated" \
