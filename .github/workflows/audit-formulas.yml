@@ -31,13 +31,15 @@ jobs:
           sparse-checkout-cone-mode: false
 
       - name: Audit stat calculation formulas
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -euxo pipefail
           
           WARN_FILE="$RUNNER_TEMP/audit_warnings.md"
           echo "# Formula Audit Warnings" > "$WARN_FILE"
           echo "" >> "$WARN_FILE"
-          echo "Found potential changes in the PokéRogue source that may need `script.js` updates." >> "$WARN_FILE"
+          echo "Found potential changes in the PokéRogue source that may need \`script.js\` updates." >> "$WARN_FILE"
           echo "" >> "$WARN_FILE"
           
           # Source files to check
