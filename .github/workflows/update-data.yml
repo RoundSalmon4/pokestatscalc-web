@@ -55,6 +55,10 @@ jobs:
           cd ..
           rm -rf temp-pokedex
 
+          # Sync images to website/ dir for GitHub Pages deployment
+          mkdir -p website/images
+          rsync -a --delete images/ website/images/
+
           echo "dex_sha=$DEX_SHA" >> "$GITHUB_OUTPUT"
           echo "dex_short=${DEX_SHA:0:7}" >> "$GITHUB_OUTPUT"
 
@@ -285,6 +289,11 @@ jobs:
             }
             fs.writeFileSync('pokemon_data.js', 'const POKEMON_DATA = ' + JSON.stringify(dataObj, null, 2) + ';\n', 'utf8');
             console.log('Wrote pokemon_data.js');
+
+            // Sync to website/ dir for GitHub Pages deployment
+            fs.mkdirSync('website', { recursive: true });
+            fs.cpSync('pokemon_data.js', 'website/pokemon_data.js', { force: true });
+            console.log('Synced pokemon_data.js -> website/pokemon_data.js');
           }
 
           main().catch(err => { console.error(err); process.exit(1); });
@@ -299,7 +308,7 @@ jobs:
           set -euxo pipefail
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add pokemon_data.csv data_version.txt pokemon_data.js images
+          git add pokemon_data.csv data_version.txt pokemon_data.js images website
           if ! git diff --cached --quiet; then
             git commit -m "chore(data): auto-update from PokeRogue-Dex ${{ steps.fetch.outputs.dex_short }}"
             git push
