@@ -13,9 +13,6 @@ on:
 permissions:
   contents: write
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 jobs:
   build-csv:
     runs-on: ubuntu-latest
@@ -210,7 +207,7 @@ jobs:
               const spa = num(rec.spa);
               const spd2 = num(rec.spd);
               const spe = num(rec.spe);
-              const bst = Number.isFinite(Number(rec?.bst)) ? Number(rec.bst) : (hp + atk + dfn + spa + spd2 + spe);
+              const bst = Number.isFinite(Number(rec.bst)) ? Number(rec.bst) : (hp + atk + dfn + spa + spd2 + spe);
 
               const t1  = rec.t1; const t2 = rec.t2;
               let type1 = (t1 != null && typeMap[Number(t1)]) ? typeMap[Number(t1)] : '';

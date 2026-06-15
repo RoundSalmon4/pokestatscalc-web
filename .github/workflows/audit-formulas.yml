@@ -46,6 +46,7 @@ jobs:
           POKEMON_TS="pokerogue-main/src/field/pokemon.ts"
           NATURE_TS="pokerogue-main/src/data/nature.ts"
           MODIFIER_TS="pokerogue-main/src/modifier/modifier.ts"
+          MODIFIER_TYPE_TS="pokerogue-main/src/modifier/modifier-type.ts"
           CHALLENGE_TS="pokerogue-main/src/data/challenge.ts"
           
           # Check if source files exist
@@ -89,9 +90,6 @@ jobs:
           # Check modifier-type.ts and modifier.ts for stat-affecting items
           echo ""
           echo "=== Checking for stat items ==="
-          
-          MODIFIER_TYPE_TS="pokerogue-main/src/modifier/modifier-type.ts"
-          
           declare -A STAT_ITEMS=(
             ["MachoBrace"]="MachoBrace|Macho.*Brace|MACHO_BRACE"
             ["Eviolite"]="Eviolite|EVOLITE"
