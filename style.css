@@ -356,10 +356,6 @@ h4 small {
     color: #ffff00;
 }
 
-.terminal .value {
-    color: #00ffff;
-}
-
 .terminal .formula {
     color: #888;
 }
@@ -395,27 +391,6 @@ h4 small {
 }
 
 .filter-section.small {
-    flex: 0 0 65px;
-}
-
-.filter-section label {
-    font-size: 11px;
-    color: #888;
-}
-
-.filter-section select,
-.filter-section input {
-    padding: 4px 5px;
-    border: 1px solid #555;
-    border-radius: 4px;
-    background: #2a2a2a;
-    color: #e0e0e0;
-    font-size: 12px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.filter-section.small {
     flex: 0 0 100px;
 }
 
@@ -432,6 +407,8 @@ h4 small {
     background: #2a2a2a;
     color: #e0e0e0;
     font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Panel Sections */
@@ -550,11 +527,6 @@ h4 small {
     width: 14px;
     height: 14px;
     cursor: pointer;
-}
-
-.item-input label {
-    font-size: 13px;
-    white-space: nowrap;
 }
 
 /* Status Bar */

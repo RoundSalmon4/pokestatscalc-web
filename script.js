@@ -289,9 +289,8 @@ function applyShuckleJuice(baseStats) {
     // Shuckle Juice: +10 to total BST (HP gets +5, rest split +5)
     const stats = [...baseStats];
     stats[0] += 5;
-    const remaining = 5;
     for (let i = 1; i < 6; i++) {
-        stats[i] += Math.floor(remaining / 5);
+        stats[i] += 1;
     }
     return stats;
 }
@@ -313,7 +312,7 @@ function getNatureMultiplier(natureName, statKey) {
     return 1.0;
 }
 
-function applyHeldItems(baseStats, pokemonName, machoBraceStacks, ivs) {
+function applyHeldItems(baseStats, pokemonName, machoBraceStacks) {
     const stats = [...baseStats];
     
     // Macho Brace: +2 HP, +1 other per stack, +10%/5% bonus at max (50)
@@ -415,7 +414,7 @@ function calculateStats() {
     if (shuckleJuice) baseStats = applyShuckleJuice(baseStats);
     if (oldGateau) baseStats = applyOldGateau(baseStats);
     baseStats = applyVitaminsToBaseStats(baseStats, vitamins);
-    baseStats = applyHeldItems(baseStats, selectedPokemon, machoBrace, ivs);
+    baseStats = applyHeldItems(baseStats, selectedPokemon, machoBrace);
     
     addToLog(`<span class="label">Base+Vit:</span> ${escapeHtml(baseStats.join(' '))}`, '');
     
@@ -497,7 +496,7 @@ function calculateIVs() {
     if (shuckleJuice) baseStats = applyShuckleJuice(baseStats);
     if (oldGateau) baseStats = applyOldGateau(baseStats);
     baseStats = applyVitaminsToBaseStats(baseStats, vitamins);
-    baseStats = applyHeldItems(baseStats, selectedPokemon, machoBrace, null);
+    baseStats = applyHeldItems(baseStats, selectedPokemon, machoBrace);
     
     const ivs = {};
     STAT_KEYS.forEach((key, index) => {
