@@ -30,174 +30,231 @@ jobs:
             src/data/challenge.ts
           sparse-checkout-cone-mode: false
 
-      - name: Audit stat calculation formulas
+      - name: Audit stat calculation formulas (semantic checks)
+        id: audit
         env:
           GH_TOKEN: ${{ github.token }}
+          AUDIT_WARN_FILE: "${{ runner.temp }}/audit_warnings.md"
         run: |
           set -euxo pipefail
-          
-          WARN_FILE="$RUNNER_TEMP/audit_warnings.md"
-          echo "# Formula Audit Warnings" > "$WARN_FILE"
-          echo "" >> "$WARN_FILE"
-          echo "Found potential changes in the PokéRogue source that may need \`script.js\` updates." >> "$WARN_FILE"
-          echo "" >> "$WARN_FILE"
-          
-          # Source files to check
-          POKEMON_TS="pokerogue-main/src/field/pokemon.ts"
-          NATURE_TS="pokerogue-main/src/data/nature.ts"
-          MODIFIER_TS="pokerogue-main/src/modifier/modifier.ts"
-          MODIFIER_TYPE_TS="pokerogue-main/src/modifier/modifier-type.ts"
-          CHALLENGE_TS="pokerogue-main/src/data/challenge.ts"
-          
-          # Check if source files exist
-          for f in "$POKEMON_TS" "$NATURE_TS" "$MODIFIER_TS" "$CHALLENGE_TS"; do
-            if [ ! -f "$f" ]; then
-              echo "WARNING: Source file $f not found!"
-            fi
-          done
-          
-          # Extract stat calculation methods from pokemon.ts
-          echo "=== Checking pokemon.ts stat calculations ==="
-          
-          # HP formula: floor(((2 * baseStat + IV) * level / 100) + level + 10)
-          if grep -qE "Math\.floor\(\(2\s*\*\s*baseStats\[.*\]\s*\+\s*this\.ivs\[.*\]\)\s*\*\s*this\.level\s*\*\s*0\.01\)" "$POKEMON_TS"; then
-            echo "✓ HP stat formula found"
-          else
-            echo "⚠ HP stat formula may have changed"
-            echo "- [ ] **HP formula** may have changed in \`pokemon.ts\`" >> "$WARN_FILE"
-          fi
-          
-          # Other stats: floor(((2 * baseStat + IV) * level / 100) + 5) * natureMultiplier
-          if grep -qE "statHolder\.value\s*\+=\s*5\b" "$POKEMON_TS"; then
-            echo "✓ Non-HP stat formula found"
-          else
-            echo "⚠ Non-HP stat formula may have changed"
-            echo "- [ ] **Non-HP formula** (\`+ 5\` base addition) may have changed in \`pokemon.ts\`" >> "$WARN_FILE"
-          fi
-          
-          # Check nature modifiers
-          echo ""
-          echo "=== Checking nature.ts ==="
-          if [ -f "$NATURE_TS" ]; then
-            if grep -q "1.1\|1.1.*increase\|boost.*10" "$NATURE_TS"; then
-              echo "✓ Nature boost (10%) found"
-            else
-              echo "⚠ Nature boost may have changed"
-              echo "- [ ] **Nature boost** (10% multiplier) may have changed in \`nature.ts\`" >> "$WARN_FILE"
-            fi
-          fi
-          
-          # Check modifier-type.ts and modifier.ts for stat-affecting items
-          echo ""
-          echo "=== Checking for stat items ==="
-          declare -A STAT_ITEMS=(
-            ["MachoBrace"]="MachoBrace|Macho.*Brace|MACHO_BRACE"
-            ["Eviolite"]="Eviolite|EVOLITE"
-            ["LightBall"]="LightBall|Light.*Ball|LIGHT_BALL"
-            ["ThickClub"]="ThickClub|Thick.*Club|THICK_CLUB"
-            ["MetalPowder"]="MetalPowder|Metal.*Powder|METAL_POWDER"
-            ["QuickPowder"]="QuickPowder|Quick.*Powder|QUICK_POWDER"
-            ["DeepSeaScale"]="DeepSea.*Scale|DEEP_SEA_SCALE"
-            ["DeepSeaTooth"]="DeepSea.*Tooth|DEEP_SEA_TOOTH"
-            ["SoulDew"]="SoulDew|Soul.*Dew|SOUL_DEW"
-            ["ShuckleJuice"]="ShuckleJuice|Shuckle.*Juice|SHUCKLE_JUICE"
-            ["OldGateau"]="OldGateau|Old.*Gateau|OLD_GATEAU"
-          )
-          
-          declare -A STAT_ITEM_NAMES=(
-            ["MachoBrace"]="Macho Brace"
-            ["Eviolite"]="Eviolite"
-            ["LightBall"]="Light Ball"
-            ["ThickClub"]="Thick Club"
-            ["MetalPowder"]="Metal Powder"
-            ["QuickPowder"]="Quick Powder"
-            ["DeepSeaScale"]="Deep Sea Scale"
-            ["DeepSeaTooth"]="Deep Sea Tooth"
-            ["SoulDew"]="Soul Dew"
-            ["ShuckleJuice"]="Shuckle Juice"
-            ["OldGateau"]="Old Gateau"
-          )
-          
-          # Check both modifier.ts and modifier-type.ts for each item
-          for item_key in "${!STAT_ITEMS[@]}"; do
-            item_name="${STAT_ITEM_NAMES[$item_key]}"
-            pattern="${STAT_ITEMS[$item_key]}"
-            found=false
-            for f in "$MODIFIER_TS" "$MODIFIER_TYPE_TS"; do
-              if [ -f "$f" ] && grep -iqE "$pattern" "$f" 2>/dev/null; then
-                found=true
-                break
-              fi
-            done
-            # Fallback: ShuckleJuice and OldGateau may live in challenge.ts rather than modifier files
-            if [ "$found" = false ]; then
-              if [ "$item_key" = "ShuckleJuice" ] || [ "$item_key" = "OldGateau" ]; then
-                if [ -f "$CHALLENGE_TS" ] && grep -iqE "$pattern" "$CHALLENGE_TS" 2>/dev/null; then
-                  found=true
-                fi
-              fi
-            fi
-            if [ "$found" = true ]; then
-              echo "✓ $item_name found"
-            else
-              echo "⚠ $item_name NOT found - may need to verify"
-              echo "- [ ] **$item_name** not found in modifier source files" >> "$WARN_FILE"
-            fi
-          done
-          
-          # Check challenge.ts for Flip Stat Challenge
-          echo ""
-          echo "=== Checking challenge.ts ==="
-          if [ -f "$CHALLENGE_TS" ]; then
-            if grep -qi "flipStat\|flip.*stat" "$CHALLENGE_TS"; then
-              echo "✓ Flip Stat Challenge found"
-            else
-              echo "⚠ Flip Stat Challenge not found"
-              echo "- [ ] **Flip Stat Challenge** pattern missing from \`challenge.ts\`" >> "$WARN_FILE"
-            fi
-          fi
-          
-          # Check if calculation formulas exist at all
-          if [ -f "$POKEMON_TS" ] && ! grep -q "calculateStat\|getStat" "$POKEMON_TS" 2>/dev/null; then
-            echo "- [ ] **Stat calculation methods** (\`calculateStat\` or \`getStat\`) missing from \`pokemon.ts\`" >> "$WARN_FILE"
-          fi
-          
-          # Output summary
-          echo ""
-          echo "=== Audit Complete ==="
-          
-          # Get data version
-          DEX_SHA="unknown"
-          if [ -f "data_version.txt" ]; then
-            DEX_SHA=$(cat data_version.txt)
-          fi
-          
-          # Count warnings (lines with "- [ ]" in the file, minus the header)
-          WARN_COUNT=$(grep -c "^- \[ \]" "$WARN_FILE" || true)
-          
+
+          echo "# Formula Audit Warnings" > "$AUDIT_WARN_FILE"
+          echo "" >> "$AUDIT_WARN_FILE"
+          echo "Found potential changes in the PokéRogue source that may need \`script.js\` updates." >> "$AUDIT_WARN_FILE"
+          echo "" >> "$AUDIT_WARN_FILE"
+
+          # Semantic checks: these pin the exact mechanics the calculator models
+          # (amounts, application order, species lists), not just that classes exist.
+          node <<'NODE'
+          'use strict';
+          const fs = require('fs');
+          const path = require('path');
+
+          const warnFile = process.env.AUDIT_WARN_FILE;
+          const FILES = {
+            pokemon: 'pokerogue-main/src/field/pokemon.ts',
+            nature: 'pokerogue-main/src/data/nature.ts',
+            modifier: 'pokerogue-main/src/modifier/modifier.ts',
+            modType: 'pokerogue-main/src/modifier/modifier-type.ts',
+            challenge: 'pokerogue-main/src/data/challenge.ts',
+          };
+
+          let warnings = 0;
+          function warn(msg) {
+            warnings++;
+            fs.appendFileSync(warnFile, `- [ ] **${msg}**\n`);
+            console.log(`  WARN ${msg}`);
+          }
+          function check(label, ok) { if (!ok) warn(label); }
+          function read(name) {
+            const p = FILES[name];
+            if (!fs.existsSync(p)) { warn(`Source file missing: ${p}`); return ''; }
+            return fs.readFileSync(p, 'utf8');
+          }
+          function idx(code, sig) { const i = code.indexOf(sig); return i < 0 ? -1 : i; }
+
+          const pokemon = read('pokemon');
+          const nature = read('nature');
+          const modifier = read('modifier');
+          const modType = read('modType');
+          const challenge = read('challenge');
+
+          // ---- Core stat formula shape ----
+          check('HP formula no longer matches expected shape in pokemon.ts',
+            /Math\.floor\(\(2 \* baseStats\[s\] \+ this\.ivs\[s\]\) \* this\.level \* 0\.01\)/.test(pokemon));
+          check('Non-HP +5 base addition missing in pokemon.ts',
+            /statHolder\.value \+= 5\b/.test(pokemon));
+          check('Nature ceil/floor application missing in pokemon.ts',
+            /Math\[natureStatMultiplier\.value > 1 \? "ceil" : "floor"\]/.test(pokemon));
+          check('Final stat clamp (>=1) changed in pokemon.ts',
+            /Phaser\.Math\.Clamp\(statHolder\.value, 1, Number\.MAX_SAFE_INTEGER\)/.test(pokemon));
+
+          // ---- Application points (which function each modifier runs in) ----
+          const calcStart = idx(pokemon, 'calculateStats(): void {');
+          const baseStart = idx(pokemon, 'calculateBaseStats(): number[] {');
+          const effStart = idx(pokemon, 'getEffectiveStat(');
+          const natureFn = idx(pokemon, 'getNature(): Nature');
+
+          const machoIdx = idx(pokemon, 'applyModifier(PokemonIncrementingStatModifier');
+          const soulDewIdx = idx(pokemon, 'applyModifier(PokemonNatureWeightModifier');
+          const boosterIdx = idx(pokemon, 'applyModifiers(StatBoosterModifier');
+          const shuckleIdx = idx(pokemon, 'applyModifiers(PokemonBaseStatTotalModifier');
+          const gateauIdx = idx(pokemon, 'applyModifiers(PokemonBaseStatFlatModifier');
+          const vitaminIdx = idx(pokemon, 'applyModifiers(BaseStatModifier');
+
+          function between(v, lo, hi) { return v > lo && v < hi; }
+
+          check('Species/evolution boosters no longer applied in getEffectiveStat',
+            between(boosterIdx, effStart, calcStart));
+          check('Macho Brace no longer applied inside calculateStats',
+            between(machoIdx, calcStart, baseStart));
+          check('Soul Dew no longer applied to the nature multiplier inside calculateStats',
+            between(soulDewIdx, calcStart, baseStart));
+          check('Shuckle Juice moved out of calculateBaseStats',
+            between(shuckleIdx, baseStart, natureFn));
+          check('Old Gateau moved out of calculateBaseStats',
+            between(gateauIdx, baseStart, natureFn));
+          check('Vitamins moved out of calculateBaseStats',
+            between(vitaminIdx, baseStart, natureFn));
+          check('Macho Brace leaked into calculateBaseStats',
+            machoIdx < 0 || machoIdx < baseStart);
+
+          // ---- Shuckle Juice magnitude (+5 HP, +10 others) ----
+          check('Shuckle Juice increment formula changed (HP half, others full)',
+            /i === 0 \? Math\.floor\(v \+ this\.statModifier \/ 2\) : Math\.floor\(v \+ this\.statModifier\)/.test(modifier));
+          check('Shuckle Juice GOOD variant no longer uses +10 modifier',
+            /new PokemonBaseStatTotalModifierType\(10\)/.test(modType));
+
+          // ---- Old Gateau (+20 to lower stat of each pair) ----
+          check('Old Gateau base stat bonus is no longer +20',
+            /const statModifier = 20;/.test(modifier));
+          check('Old Gateau no longer picks the lower of HP/Spd',
+            /baseStats\[Stat\.HP\] < baseStats\[Stat\.SPD\] \? Stat\.HP : Stat\.SPD/.test(modifier));
+          check('Old Gateau no longer picks the lower of Atk/SpAtk',
+            /baseStats\[Stat\.ATK\] < baseStats\[Stat\.SPATK\] \? Stat\.ATK : Stat\.SPATK/.test(modifier));
+          check('Old Gateau no longer picks the lower of Def/SpDef',
+            /baseStats\[Stat\.DEF\] < baseStats\[Stat\.SPDEF\] \? Stat\.DEF : Stat\.SPDEF/.test(modifier));
+
+          // ---- Macho Brace (post-nature, +2 HP / +1 other, x1.1/x1.05 at 50) ----
+          check('Macho Brace HP increment changed (should be +2 per stack)',
+            /statHolder\.value \+= 2 \* this\.stackCount;/.test(modifier));
+          check('Macho Brace other-stat increment changed (should be +1 per stack)',
+            /statHolder\.value \+= this\.stackCount;/.test(modifier));
+          check('Macho Brace max-stack bonus changed (should be x1.1 HP / x1.05 others)',
+            /statHolder\.value = Math\.floor\(statHolder\.value \* 1\.1\);/.test(modifier) &&
+            /statHolder\.value = Math\.floor\(statHolder\.value \* 1\.05\);/.test(modifier));
+          check('Macho Brace max stacks no longer 50',
+            /getMaxHeldItemCount\(_pokemon\?: Pokemon\): number \{\s*return 50;\s*\}/.test(modifier));
+
+          // ---- Stat booster multiplies the effective stat ----
+          {
+            const sbStart = idx(modifier, 'export class StatBoosterModifier');
+            check('StatBoosterModifier not found in modifier.ts', sbStart >= 0);
+            const sbApply = idx(modifier, 'statValue.value *= this.multiplier;');
+            check('StatBoosterModifier no longer multiplies the effective stat', sbApply > sbStart);
+          }
+
+          // ---- Vitamins (floor(base * (1 + 0.1*stacks)), max = IV) ----
+          check('Vitamin base-stat formula changed',
+            /Math\.floor\(baseStats\[this\.stat\] \* \(1 \+ this\.getStackCount\(\) \* 0\.1\)\)/.test(modifier));
+          check('Vitamin max stacks no longer equals the stat IV',
+            /return pokemon\.ivs\[this\.stat\];/.test(modifier));
+
+          // ---- Soul Dew (extra nature weight, max 10) ----
+          check('Soul Dew nature-weight formula changed',
+            /multiplier\.value \+= 0\.1 \* this\.getStackCount\(\) \* \(multiplier\.value > 1 \? 1 : -1\);/.test(modifier));
+          check('Soul Dew max stacks no longer 10',
+            /getMaxHeldItemCount\(_pokemon: Pokemon\): number \{\s*return 10;\s*\}/.test(modifier));
+
+          // ---- Eviolite (1.5x DEF/SPDEF on effective stat) ----
+          check('Eviolite definition changed (should be 1.5x DEF/SPDEF)',
+            /new EvolutionStatBoosterModifier\(type, \(args\[0\] as Pokemon\)\.id, \[Stat\.DEF, Stat\.SPDEF\], 1\.5\)/.test(modType));
+
+          // ---- Species stat booster items (stats, multiplier, species) ----
+          function extractBlock(code, sig) {
+            const at = code.indexOf(sig);
+            if (at < 0) return '';
+            const open = code.indexOf('{', at + sig.length);
+            if (open < 0) return '';
+            let depth = 0;
+            for (let i = open; i < code.length; i++) {
+              if (code[i] === '{') depth++;
+              else if (code[i] === '}') { depth--; if (depth === 0) return code.slice(at, i + 1); }
+            }
+            return '';
+          }
+          const speciesItems = [
+            { key: 'LIGHT_BALL', stats: /stats: \[Stat\.ATK, Stat\.SPATK\]/, mult: /multiplier: 2,/, species: ['[SpeciesId.PIKACHU]'], exclude: ['RAICHU'], name: 'Light Ball' },
+            { key: 'THICK_CLUB', stats: /stats: \[Stat\.ATK\]/, mult: /multiplier: 2,/, species: ['[SpeciesId.CUBONE, SpeciesId.MAROWAK, SpeciesId.ALOLA_MAROWAK]'], exclude: [], name: 'Thick Club' },
+            { key: 'METAL_POWDER', stats: /stats: \[Stat\.DEF\]/, mult: /multiplier: 2,/, species: ['[SpeciesId.DITTO]'], exclude: [], name: 'Metal Powder' },
+            { key: 'QUICK_POWDER', stats: /stats: \[Stat\.SPD\]/, mult: /multiplier: 2,/, species: ['[SpeciesId.DITTO]'], exclude: [], name: 'Quick Powder' },
+            { key: 'DEEP_SEA_SCALE', stats: /stats: \[Stat\.SPDEF\]/, mult: /multiplier: 2,/, species: ['[SpeciesId.CLAMPERL]'], exclude: ['HUNTAIL'], name: 'Deep Sea Scale' },
+            { key: 'DEEP_SEA_TOOTH', stats: /stats: \[Stat\.SPATK\]/, mult: /multiplier: 2,/, species: ['[SpeciesId.CLAMPERL]'], exclude: ['GOREBYSS'], name: 'Deep Sea Tooth' },
+          ];
+          for (const it of speciesItems) {
+            const blk = extractBlock(modType, `${it.key}: {`);
+            if (!blk) { warn(`Species item block not found in modifier-type.ts: ${it.name}`); continue; }
+            check(`${it.name} boosted stats changed`, it.stats.test(blk));
+            check(`${it.name} multiplier changed`, it.mult.test(blk));
+            check(`${it.name} species list changed`, it.species.every(s => blk.includes(s)));
+            for (const ex of it.exclude) {
+              check(`${it.name} species list unexpectedly includes ${ex}`, !blk.includes(ex));
+            }
+          }
+
+          // ---- Nature ----
+          check('Nature boost no longer 10% (nature.ts)', /return 1\.1;/.test(nature));
+          check('Nature decrease no longer 10% (nature.ts)', /return 0\.9;/.test(nature));
+
+          // ---- Flip Stat rotation ----
+          check('Flip Stat rotation changed in challenge.ts',
+            /baseStats\[0\] = origStats\[5\];/.test(challenge) &&
+            /baseStats\[1\] = origStats\[4\];/.test(challenge) &&
+            /baseStats\[2\] = origStats\[3\];/.test(challenge) &&
+            /baseStats\[5\] = origStats\[0\];/.test(challenge));
+
+          console.log(`[audit] ${warnings} warning(s)`);
+          NODE
+
+          WARN_COUNT=$(grep -c "^- \[ \]" "$AUDIT_WARN_FILE" || true)
+          echo "warn_count=$WARN_COUNT" >> "$GITHUB_OUTPUT"
+          echo "✓ ${WARN_COUNT} warnings"
+
+      - name: Open audit issue if warnings detected
+        env:
+          GH_TOKEN: ${{ github.token }}
+          AUDIT_WARN_FILE: "${{ runner.temp }}/audit_warnings.md"
+        run: |
+          set -euxo pipefail
+          WARN_COUNT=$(grep -c "^- \[ \]" "$AUDIT_WARN_FILE" || true)
+
           if [ "$WARN_COUNT" -gt 0 ]; then
             echo "⚠ $WARN_COUNT warnings found — creating issue"
-            
-            # Build issue body: preface + warnings + footer
+
+            DEX_SHA="unknown"
+            if [ -f "data_version.txt" ]; then
+              DEX_SHA=$(cat data_version.txt)
+            fi
+
             {
               echo "**Audit date:** $(date -u '+%Y-%m-%d %H:%M UTC')"
               echo "**Data version:** $DEX_SHA"
               echo "**Upstream repo:** pagefaultgames/pokerogue (main)"
               echo ""
-              echo "The following issues were detected:"
+              echo "The following potential changes were detected:"
               echo ""
-              cat "$WARN_FILE"
+              cat "$AUDIT_WARN_FILE"
               echo ""
               echo "---"
               echo "Review the [audit run](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) for details."
               echo "If these are real changes, update \`script.js\` and \`audit-formulas.yml\` patterns accordingly."
-            } > "${WARN_FILE}.body"
-            
+            } > "${AUDIT_WARN_FILE}.body"
+
             gh label create automated 2>/dev/null || true
             gh issue create \
               --title "Formula audit: $WARN_COUNT potential change(s) detected" \
               --label "automated" \
-              --body-file "${WARN_FILE}.body"
+              --body-file "${AUDIT_WARN_FILE}.body"
           else
             echo "✓ All checks passed, no issues to create."
           fi
