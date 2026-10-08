@@ -5,7 +5,7 @@ A web-based calculator for calculating Pokémon stats and Individual Values (IVs
 ## Features
 
 - **Stat Calculation**: Calculate final stats from IVs, level, nature, vitamins, and held items
-- **IV Calculation**: Reverse-engineer IVs from actual stats (exact at level 100+, approximate below)
+- **IV Calculation**: Reverse-engineer IVs from actual stats (exact at level 100+; shows the possible IV range when multiple IVs produce the same stat)
 - **Endless Mode Support**: Level cap up to 99,999
 - **Stat Modifiers**:
   - Flip Stat Challenge (rotates base stats)
@@ -16,7 +16,7 @@ A web-based calculator for calculating Pokémon stats and Individual Values (IVs
   - Macho Brace and Soul Dew support
 - **Stat Pentagon**: Visual representation of IV distribution
 - **Impossible Stat Detection**: Validates that entered stats are within possible ranges
-- **Cross-link**: Quick link to the [Fusion Calculator](https://roundsalmon4.github.io/fusioncalc-web/)
+- **Cross-link**: Quick link to the [Fusion Calculator](https://www.roundsalmon4.com/fusioncalc-web/)
 
 ## Getting Started
 
