@@ -1,0 +1,22 @@
+PokéRogue Stats Calculator
+==========================
+
+This is an unofficial fan project. The site's own code is released under the
+MIT License (see LICENSE).
+
+Third-party attributions and notices:
+
+* Pokémon © Nintendo / Creatures Inc. / GAME FREAK LLC.
+  Pokémon sprites and artwork are the property of their original creators and
+  are not affiliated with, endorsed by, or connected to Nintendo, Creatures Inc.,
+  or GAME FREAK.
+
+* The Pokémon data files and sprite images bundled with this project are synced
+  from Sandstormer/PokeRogue-Dex (https://github.com/Sandstormer/PokeRogue-Dex),
+  licensed under the GNU Affero General Public License v3.0 (AGPL-3.0), which in
+  turn derives its data from pagefaultgames/pokerogue
+  (https://github.com/pagefaultgames/pokerogue), also licensed under AGPL-3.0.
+  All asset rights are retained by their original creators.
+
+* The upstream commit used for the bundled data is recorded in data_version.txt
+  and in the provenance header of the generated data files.

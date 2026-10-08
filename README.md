@@ -36,7 +36,15 @@ Changes pushed to `main` are served on GitHub Pages (the site builds from the `m
 
 ## Data Source
 
-Pokémon data is synced from the [PokeRogue-Dex](https://github.com/Sandstormer/PokeRogue-Dex) via GitHub Actions.
+Pokémon data is synced from the [PokeRogue-Dex](https://github.com/Sandstormer/PokeRogue-Dex) via GitHub Actions. The exact upstream commit used is recorded in `data_version.txt`.
+
+## Attributions
+
+Pokémon is © Nintendo / Creatures Inc. / GAME FREAK LLC. This is an unofficial fan project: Pokémon sprites and artwork remain the property of their original creators and are not affiliated with or endorsed by Nintendo, Creatures Inc., or GAME FREAK.
+
+Pokémon data files and sprite images are synced from [Sandstormer/PokeRogue-Dex](https://github.com/Sandstormer/PokeRogue-Dex) (AGPL-3.0), which derives its data from [pagefaultgames/pokerogue](https://github.com/pagefaultgames/pokerogue) (AGPL-3.0). Generated data files carry a provenance header noting the upstream source and commit.
+
+This project's own code is released under the MIT License; the bundled data and sprites remain under their upstream licenses.
 
 ## License
 

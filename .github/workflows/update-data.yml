@@ -61,6 +61,8 @@ jobs:
 
       - name: Convert JS -> CSV (dynamic import — no vm sandbox)
         shell: bash
+        env:
+          DEX_SHA: ${{ steps.fetch.outputs.dex_short }}
         run: |
           node --experimental-vm-modules <<'NODE'
           const fs = require('fs');
@@ -284,7 +286,8 @@ jobs:
                 img: r.img
               };
             }
-            fs.writeFileSync('pokemon_data.js', 'const POKEMON_DATA = ' + JSON.stringify(dataObj, null, 2) + ';\n', 'utf8');
+            const header = `// Auto-generated from Sandstormer/PokeRogue-Dex (AGPL-3.0)\n// Source: https://github.com/Sandstormer/PokeRogue-Dex\n// Data derived from pagefaultgames/pokerogue (AGPL-3.0): https://github.com/pagefaultgames/pokerogue\n// Upstream commit: ${process.env.DEX_SHA || 'unknown'}\n// All Pokémon asset rights are retained by their original creators.\n`;
+            fs.writeFileSync('pokemon_data.js', header + 'const POKEMON_DATA = ' + JSON.stringify(dataObj, null, 2) + ';\n', 'utf8');
             console.log('Wrote pokemon_data.js');
 
             // Sync to website/ dir for GitHub Pages deployment
