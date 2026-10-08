@@ -49,11 +49,10 @@ const NATURE_MODIFIERS = {
 };
 
 const SPECIES_ITEMS = {
-    'Pikachu': 'lightBall', 'Raichu': 'lightBall', 'Alola Raichu': 'lightBall',
+    'Pikachu': 'lightBall',
     'Marowak': 'thickClub', 'Marowak-Alola': 'thickClub', 'Cubone': 'thickClub',
     'Ditto': 'metalPowder',
-    'Clamperl': 'deepSeaScale',
-    'Gorebyss': 'deepSeaTooth', 'Huntail': 'deepSeaScale'
+    'Clamperl': 'deepSeaScale'
 };
 
 function canUseEviolite(pokemonName) {
@@ -182,12 +181,12 @@ function populatePokemonList(filter = '') {
 
 function updateHeldItemVisibility(pokemonName) {
     const items = [
-        { id: 'lightBall', names: ['Pikachu', 'Raichu', 'Alola Raichu'] },
+        { id: 'lightBall', names: ['Pikachu'] },
         { id: 'thickClub', names: ['Cubone', 'Marowak', 'Marowak-Alola'] },
         { id: 'metalPowder', names: ['Ditto'] },
         { id: 'quickPowder', names: ['Ditto'] },
-        { id: 'deepSeaScale', names: ['Clamperl', 'Huntail'] },
-        { id: 'deepSeaTooth', names: ['Clamperl', 'Gorebyss'] },
+        { id: 'deepSeaScale', names: ['Clamperl'] },
+        { id: 'deepSeaTooth', names: ['Clamperl'] },
         { id: 'eviolite', check: (name) => canUseEviolite(name) },
     ];
     
@@ -258,11 +257,12 @@ function updateBaseStatsDisplay() {
     const oldGateau = document.getElementById('oldGateau').checked;
     
     let baseStats = [pokemon.hp, pokemon.attack, pokemon.defense, pokemon.spAttack, pokemon.spDefense, pokemon.speed];
+    const rawBase = baseStats.slice();
     
     // Apply modifiers
     if (flipStat) baseStats = applyFlipStat(baseStats);
     if (shuckleJuice) baseStats = applyShuckleJuice(baseStats);
-    if (oldGateau) baseStats = applyOldGateau(baseStats);
+    if (oldGateau) baseStats = applyOldGateau(baseStats, rawBase);
     
     const statLabels = ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spd'];
     const statValues = baseStats;
@@ -286,18 +286,24 @@ function applyFlipStat(baseStats) {
 }
 
 function applyShuckleJuice(baseStats) {
-    // Shuckle Juice: +10 to total BST (HP gets +5, rest split +5)
+    // Shuckle Juice: +10 to every base stat except HP, which gains +5 (HP is affected by half)
     const stats = [...baseStats];
-    stats[0] += 5;
+    stats[0] += Math.floor(10 / 2);
     for (let i = 1; i < 6; i++) {
-        stats[i] += 1;
+        stats[i] += 10;
     }
     return stats;
 }
 
-function applyOldGateau(baseStats) {
-    // Old Gateau: +10 flat to ALL base stats
-    return baseStats.map(stat => stat + 10);
+function applyOldGateau(baseStats, rawBase) {
+    // Old Gateau: +20 to the lower stat of each pair (HP/Spd, Atk/SpA, Def/SpD),
+    // decided against the species' own base stats. Ties favor the second stat.
+    const stats = [...baseStats];
+    const pairs = [[0, 5], [1, 3], [2, 4]];
+    pairs.forEach(([a, b]) => {
+        stats[rawBase[a] < rawBase[b] ? a : b] += 20;
+    });
+    return stats;
 }
 
 function applyVitaminsToBaseStats(baseStats, vitamins) {
@@ -312,46 +318,54 @@ function getNatureMultiplier(natureName, statKey) {
     return 1.0;
 }
 
-function applyHeldItems(baseStats, pokemonName, machoBraceStacks) {
-    const stats = [...baseStats];
-    
-    // Macho Brace: +2 HP, +1 other per stack, +10%/5% bonus at max (50)
-    if (machoBraceStacks > 0) {
-        stats[0] += 2 * machoBraceStacks;
-        for (let i = 1; i < 6; i++) stats[i] += machoBraceStacks;
-        if (machoBraceStacks >= 50) {
-            stats[0] = Math.floor(stats[0] * 1.1);
-            for (let i = 1; i < 6; i++) stats[i] = Math.floor(stats[i] * 1.05);
-        }
+function applyMachoToStat(statValue, isHp, machoBraceStacks) {
+    // Macho Brace applies to the computed stat (after nature, like calculateStats in the game):
+    // +2 HP / +1 other per stack, +10% HP / +5% others at max (50) stacks.
+    let value = statValue;
+    if (isHp) {
+        value += 2 * machoBraceStacks;
+        if (machoBraceStacks >= 50) value = Math.floor(value * 1.1);
+    } else {
+        value += machoBraceStacks;
+        if (machoBraceStacks >= 50) value = Math.floor(value * 1.05);
     }
-    
-    // Species items (checkbox - single use)
+    return value;
+}
+
+function applyFinalStatMultiplier(value, statIndex, pokemonName) {
+    // Species/evolution stat boosters apply to the final stat (getEffectiveStat in the game).
+    let result = value;
     const speciesItem = SPECIES_ITEMS[pokemonName];
-    if (document.getElementById('lightBall')?.checked && speciesItem === 'lightBall') {
-        stats[1] *= 2; stats[3] *= 2;
+    if (document.getElementById('lightBall')?.checked && speciesItem === 'lightBall' && (statIndex === 1 || statIndex === 3)) {
+        result *= 2;
     }
-    if (document.getElementById('thickClub')?.checked && speciesItem === 'thickClub') {
-        stats[1] *= 2;
+    if (document.getElementById('thickClub')?.checked && speciesItem === 'thickClub' && statIndex === 1) {
+        result *= 2;
     }
-    if (document.getElementById('metalPowder')?.checked && speciesItem === 'metalPowder') {
-        stats[2] *= 2;
+    if (document.getElementById('metalPowder')?.checked && speciesItem === 'metalPowder' && statIndex === 2) {
+        result *= 2;
     }
-    if (document.getElementById('quickPowder')?.checked && pokemonName === 'Ditto') {
-        stats[5] *= 2;
+    if (document.getElementById('quickPowder')?.checked && pokemonName === 'Ditto' && statIndex === 5) {
+        result *= 2;
     }
-    if (document.getElementById('deepSeaScale')?.checked && (speciesItem === 'deepSeaScale' || pokemonName === 'Huntail')) {
-        stats[4] *= 2;
+    if (document.getElementById('deepSeaScale')?.checked && (speciesItem === 'deepSeaScale' || pokemonName === 'Clamperl') && statIndex === 4) {
+        result *= 2;
     }
-    if (document.getElementById('deepSeaTooth')?.checked && (speciesItem === 'deepSeaTooth' || pokemonName === 'Gorebyss')) {
-        stats[3] *= 2;
+    if (document.getElementById('deepSeaTooth')?.checked && (speciesItem === 'deepSeaTooth' || pokemonName === 'Clamperl') && statIndex === 3) {
+        result *= 2;
     }
-    // Eviolite: 1.5x Def/SpDef if not fully evolved
-    if (document.getElementById('eviolite')?.checked && canUseEviolite(pokemonName)) {
-        stats[2] = Math.floor(stats[2] * 1.5);
-        stats[4] = Math.floor(stats[4] * 1.5);
+    if (document.getElementById('eviolite')?.checked && canUseEviolite(pokemonName) && (statIndex === 2 || statIndex === 4)) {
+        result = Math.floor(result * 1.5);
     }
-    
-    return stats;
+    return Math.max(1, result);
+}
+
+function applyFinalStatMultipliers(stats, pokemonName) {
+    const out = {};
+    STAT_KEYS.forEach((key, i) => {
+        out[key] = applyFinalStatMultiplier(stats[key], i, pokemonName);
+    });
+    return out;
 }
 
 function getVitamins() {
@@ -407,48 +421,55 @@ function calculateStats() {
     const vitamins = getVitamins();
     
     let baseStats = [pokemon.hp, pokemon.attack, pokemon.defense, pokemon.spAttack, pokemon.spDefense, pokemon.speed];
+    const rawBase = baseStats.slice();
+    const natureMults = STAT_KEYS.map(key => getNatureMultiplier(natureName, key));
     
     addToLog(`<span class="label">Level:</span> ${escapeHtml(level)} | <span class="label">Nature:</span> ${escapeHtml(natureName || 'Neutral')}`, '');
     
     if (flipStat) baseStats = applyFlipStat(baseStats);
     if (shuckleJuice) baseStats = applyShuckleJuice(baseStats);
-    if (oldGateau) baseStats = applyOldGateau(baseStats);
+    if (oldGateau) baseStats = applyOldGateau(baseStats, rawBase);
     baseStats = applyVitaminsToBaseStats(baseStats, vitamins);
-    baseStats = applyHeldItems(baseStats, selectedPokemon, machoBrace);
     
     addToLog(`<span class="label">Base+Vit:</span> ${escapeHtml(baseStats.join(' '))}`, '');
     
     const stats = {};
     STAT_KEYS.forEach((key, index) => {
-        let natureMult = getNatureMultiplier(natureName, key);
-        // Apply Soul Dew (extra nature boost)
+        let natureMult = natureMults[index];
+        // Apply Soul Dew (extra nature boost; neutral natures unaffected)
         if (natureMult !== 1.0 && soulDew > 0) {
             const sign = natureMult > 1 ? 1 : -1;
             natureMult += sign * soulDew * 0.1;
         }
         
-        let calculated;
-        let formula = '';
-        if (key === 'hp') {
-            const base = baseStats[index];
-            const iv = ivs[index];
-            calculated = Math.floor(((2 * base + iv) * level / 100) + level + 10);
-            formula = `HP: floor(((2*${base}+${iv})*${level}/100)+${level}+10) = ${calculated}`;
-        } else {
-            const base = baseStats[index];
-            const iv = ivs[index];
-            const baseCalc = Math.floor(((2 * base + iv) * level / 100) + 5);
-            calculated = natureMult > 1 ? Math.ceil(baseCalc * natureMult) : Math.floor(baseCalc * natureMult);
-            formula = `${key.toUpperCase()}: floor(((2*${base}+${iv})*${level}/100)+5) = ${baseCalc} → ${natureMult !== 1 ? 'x' + natureMult.toFixed(1) : ''} = ${calculated}`;
-        }
-        stats[key] = Math.max(1, calculated);
+        const calculated = calculateStatForBase(baseStats[index], ivs[index], level, key === 'hp', natureMult, machoBrace);
+        stats[key] = calculated;
         
         addToLog(`  ${key.toUpperCase()}: ${stats[key]}`, 'formula');
     });
     
-    addToLog(`<span class="result">Final: HP=${escapeHtml(stats.hp)} Atk=${escapeHtml(stats.atk)} Def=${escapeHtml(stats.def)} SpA=${escapeHtml(stats.spAtk)} SpD=${escapeHtml(stats.spDef)} Spd=${escapeHtml(stats.spd)}</span>`, 'result');
+    const finalStats = applyFinalStatMultipliers(stats, selectedPokemon);
     
-    return stats;
+    addToLog(`<span class="result">Final: HP=${escapeHtml(finalStats.hp)} Atk=${escapeHtml(finalStats.atk)} Def=${escapeHtml(finalStats.def)} SpA=${escapeHtml(finalStats.spAtk)} SpD=${escapeHtml(finalStats.spDef)} Spd=${escapeHtml(finalStats.spd)}</span>`, 'result');
+    
+    return finalStats;
+}
+
+function calculateStatForBase(base, iv, level, isHp, natureMult, machoBraceStacks) {
+    // Mirrors calculateStats() in the PokéRogue source: stat = floor((2*base+iv)*level/100),
+    // HP adds level+10, others add +5 then apply nature, then Macho Brace on the result.
+    let value = Math.floor((2 * base + iv) * level / 100);
+    if (isHp) {
+        value += level + 10;
+    } else {
+        value += 5;
+        if (natureMult !== 1.0) {
+            value = natureMult > 1 ? Math.ceil(value * natureMult) : Math.floor(value * natureMult);
+        }
+        value = Math.max(1, value);
+    }
+    if (machoBraceStacks > 0) value = applyMachoToStat(value, isHp, machoBraceStacks);
+    return Math.max(1, value);
 }
 
 function populateStats(stats) {
@@ -492,77 +513,59 @@ function calculateIVs() {
     const vitamins = getVitamins();
     
     let baseStats = [pokemon.hp, pokemon.attack, pokemon.defense, pokemon.spAttack, pokemon.spDefense, pokemon.speed];
+    const rawBase = baseStats.slice();
     if (flipStat) baseStats = applyFlipStat(baseStats);
     if (shuckleJuice) baseStats = applyShuckleJuice(baseStats);
-    if (oldGateau) baseStats = applyOldGateau(baseStats);
+    if (oldGateau) baseStats = applyOldGateau(baseStats, rawBase);
     baseStats = applyVitaminsToBaseStats(baseStats, vitamins);
-    baseStats = applyHeldItems(baseStats, selectedPokemon, machoBrace);
+    
+    const natureMults = STAT_KEYS.map(key => {
+        let mult = getNatureMultiplier(natureName, key);
+        if (mult !== 1.0 && soulDew > 0) {
+            mult += (mult > 1 ? 1 : -1) * soulDew * 0.1;
+        }
+        return mult;
+    });
     
     const ivs = {};
+    const ranges = {};
+    let hasImpossible = false;
     STAT_KEYS.forEach((key, index) => {
-        let natureMult = getNatureMultiplier(natureName, key);
-        if (natureMult !== 1.0 && soulDew > 0) {
-            const sign = natureMult > 1 ? 1 : -1;
-            natureMult += sign * soulDew * 0.1;
+        const isHp = key === 'hp';
+        const matches = [];
+        let minPossible = Infinity;
+        let maxPossible = -1;
+        for (let iv = 0; iv <= 31; iv++) {
+            const computed = calculateStatForBase(baseStats[index], iv, level, isHp, natureMults[index], machoBrace);
+            const finalStat = applyFinalStatMultiplier(computed, index, selectedPokemon);
+            if (finalStat < minPossible) minPossible = finalStat;
+            if (finalStat > maxPossible) maxPossible = finalStat;
+            if (finalStat === actualStats[index]) matches.push(iv);
         }
-        
-        if (key === 'hp') {
-            ivs[key] = Math.max(0, Math.min(31, Math.round(((actualStats[index] - level - 10) * 100 / level - 2 * baseStats[index]))));
+        ranges[key] = { min: minPossible, max: maxPossible };
+        if (matches.length === 0) {
+            hasImpossible = true;
         } else {
-            let iv = 0;
-            if (natureMult === 1.0) {
-                iv = Math.round(((actualStats[index] - 5) * 100 / level - 2 * baseStats[index]));
-            } else if (natureMult > 1) {
-                const baseCalc = Math.ceil(actualStats[index] / natureMult);
-                iv = Math.round((baseCalc - 5) * 100 / level - 2 * baseStats[index]);
-            } else {
-                const baseCalc = Math.floor(actualStats[index] / natureMult);
-                iv = Math.round((baseCalc - 5) * 100 / level - 2 * baseStats[index]);
-            }
-            ivs[key] = Math.max(0, Math.min(31, iv));
+            ivs[key] = matches[Math.floor((matches.length - 1) / 2)];
         }
         
-        const statName = key.toUpperCase();
-        addToLog(`${statName}: IV=${ivs[key]} (base=${baseStats[index]})`, 'formula');
+        const rangeText = matches.length ? `${matches[0]}${matches.length > 1 ? '-' + matches[matches.length - 1] : ''}` : 'none';
+        addToLog(`${key.toUpperCase()}: IV=${rangeText} (base=${baseStats[index]}, possible=${minPossible}-${maxPossible})`, 'formula');
     });
     
-    addToLog(`<span class="result">IVs: HP=${escapeHtml(ivs.hp)} Atk=${escapeHtml(ivs.atk)} Def=${escapeHtml(ivs.def)} SpA=${escapeHtml(ivs.spAtk)} SpD=${escapeHtml(ivs.spDef)} Spd=${escapeHtml(ivs.spd)}</span>`, 'result');
-    
-    const impossibleStats = [];
-    STAT_KEYS.forEach((key, index) => {
-        const base = baseStats[index];
-        let natureMult = getNatureMultiplier(natureName, key);
-        if (natureMult !== 1.0 && soulDew > 0) {
-            const sign = natureMult > 1 ? 1 : -1;
-            natureMult += sign * soulDew * 0.1;
-        }
-        
-        let minPossible, maxPossible;
-        
-        if (key === 'hp') {
-            minPossible = Math.floor(((2 * base) * level / 100) + level + 10);
-            maxPossible = Math.floor(((2 * base + 31) * level / 100) + level + 10);
-        } else {
-            minPossible = Math.floor(((2 * base) * level / 100) + 5);
-            maxPossible = Math.floor(((2 * base + 31) * level / 100) + 5);
-            if (natureMult !== 1.0) {
-                minPossible = natureMult > 1 ? Math.ceil(minPossible * natureMult) : Math.floor(minPossible * natureMult);
-                maxPossible = natureMult > 1 ? Math.ceil(maxPossible * natureMult) : Math.floor(maxPossible * natureMult);
+    if (hasImpossible) {
+        const impossibleStats = [];
+        STAT_KEYS.forEach((key, index) => {
+            if (!(key in ivs)) {
+                impossibleStats.push(`${STAT_NAMES[index]}: ${actualStats[index]} outside ${ranges[key].min}-${ranges[key].max} - IV cannot be determined`);
             }
-        }
-        
-        if (actualStats[index] < minPossible) {
-            impossibleStats.push(`${STAT_NAMES[index]}: ${actualStats[index]} too low (min ${minPossible}) - IV cannot be determined`);
-        } else if (actualStats[index] > maxPossible) {
-            impossibleStats.push(`${STAT_NAMES[index]}: ${actualStats[index]} too high (max ${maxPossible}) - IV cannot be determined`);
-        }
-    });
-    
-    if (impossibleStats.length > 0) {
+        });
         setStatus(`Error: ${impossibleStats.join('. ')}`, true);
         addToLog(`<span class="error">⚠ Impossible: ${escapeHtml(impossibleStats.join('. '))}</span>`, 'result');
         return null;
     }
+    
+    addToLog(`<span class="result">IVs: HP=${escapeHtml(ivs.hp)} Atk=${escapeHtml(ivs.atk)} Def=${escapeHtml(ivs.def)} SpA=${escapeHtml(ivs.spAtk)} SpD=${escapeHtml(ivs.spDef)} Spd=${escapeHtml(ivs.spd)}</span>`, 'result');
     
     if (level < 50) {
         const ivsPerStat = (50 / level).toFixed(1);

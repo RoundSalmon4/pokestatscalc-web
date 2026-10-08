@@ -9,10 +9,10 @@ A web-based calculator for calculating Pokémon stats and Individual Values (IVs
 - **Endless Mode Support**: Level cap up to 99,999
 - **Stat Modifiers**:
   - Flip Stat Challenge (rotates base stats)
-  - Shuckle Juice (+10 BST)
-  - Old Gateau (+10 to all base stats)
-  - Vitamins (+10% per vitamin, max 31)
-  - Held items (Eviolite, Light Ball, Thick Club, etc.)
+  - Shuckle Juice (+5 HP, +10 to other base stats)
+  - Old Gateau (+20 to the lower stat of each pair: HP/Spd, Atk/SpA, Def/SpD)
+  - Vitamins (+10% per vitamin, max 31, applied to base stats)
+  - Held items applied to the final stat (Eviolite, Light Ball, Thick Club, etc.)
   - Macho Brace and Soul Dew support
 - **Stat Pentagon**: Visual representation of IV distribution
 - **Impossible Stat Detection**: Validates that entered stats are within possible ranges
@@ -26,7 +26,7 @@ Open `index.html` directly in a browser.
 
 ### Deploying
 
-Changes pushed to `main` branch automatically deploy to GitHub Pages via GitHub Actions.
+Changes pushed to `main` are served on GitHub Pages (the site builds from the `main` branch root). Data auto-updates are also committed to `main` by the `update-data.yml` workflow.
 
 ## Tech Stack
 
