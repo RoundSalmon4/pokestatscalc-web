@@ -1,3 +1,8 @@
+// Auto-generated from Sandstormer/PokeRogue-Dex (AGPL-3.0)
+// Source: https://github.com/Sandstormer/PokeRogue-Dex
+// Data derived from pagefaultgames/pokerogue (AGPL-3.0): https://github.com/pagefaultgames/pokerogue
+// Upstream commit: 050ce2a
+// All Pokémon asset rights are retained by their original creators.
 const POKEMON_DATA = {
   "Bulbasaur": {
     "id": 1,
