@@ -1,7 +1,7 @@
 // Auto-generated from Sandstormer/PokeRogue-Dex (AGPL-3.0)
 // Source: https://github.com/Sandstormer/PokeRogue-Dex
 // Data derived from pagefaultgames/pokerogue (AGPL-3.0): https://github.com/pagefaultgames/pokerogue
-// Upstream commit: 578068e
+// Upstream commit: 723a824
 // All Pokémon asset rights are retained by their original creators.
 const POKEMON_DATA = {
   "Bulbasaur": {
@@ -15665,7 +15665,7 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Pickup, Frisk, Insomnia",
     "passive": "Illuminate",
-    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",
+    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Jumbo Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Jumbo Gourgeist",
     "img": "710"
   },
   "Small Pumpkaboo": {
@@ -15681,8 +15681,8 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Pickup, Frisk, Insomnia",
     "passive": "Adaptability",
-    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",
-    "img": "710"
+    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Jumbo Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Jumbo Gourgeist",
+    "img": "710-small"
   },
   "Large Pumpkaboo": {
     "id": 710,
@@ -15697,10 +15697,10 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Pickup, Frisk, Insomnia",
     "passive": "Well-Baked Body",
-    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",
-    "img": "710"
+    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Jumbo Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Jumbo Gourgeist",
+    "img": "710-large"
   },
-  "Super Pumpkaboo": {
+  "Jumbo Pumpkaboo": {
     "id": 710,
     "hp": 59,
     "attack": 66,
@@ -15713,8 +15713,8 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Pickup, Frisk, Insomnia",
     "passive": "Seed Sower",
-    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",
-    "img": "710"
+    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Jumbo Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Jumbo Gourgeist",
+    "img": "710-jumbo"
   },
   "Gourgeist": {
     "id": 711,
@@ -15729,7 +15729,7 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Pickup, Frisk, Insomnia",
     "passive": "Illuminate",
-    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",
+    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Jumbo Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Jumbo Gourgeist",
     "img": "711"
   },
   "Small Gourgeist": {
@@ -15745,8 +15745,8 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Pickup, Frisk, Insomnia",
     "passive": "Adaptability",
-    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",
-    "img": "711"
+    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Jumbo Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Jumbo Gourgeist",
+    "img": "711-small"
   },
   "Large Gourgeist": {
     "id": 711,
@@ -15761,10 +15761,10 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Pickup, Frisk, Insomnia",
     "passive": "Well-Baked Body",
-    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",
-    "img": "711"
+    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Jumbo Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Jumbo Gourgeist",
+    "img": "711-large"
   },
-  "Super Gourgeist": {
+  "Jumbo Gourgeist": {
     "id": 711,
     "hp": 85,
     "attack": 100,
@@ -15777,8 +15777,8 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Pickup, Frisk, Insomnia",
     "passive": "Seed Sower",
-    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",
-    "img": "711"
+    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Jumbo Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Jumbo Gourgeist",
+    "img": "711-jumbo"
   },
   "Bergmite": {
     "id": 712,
